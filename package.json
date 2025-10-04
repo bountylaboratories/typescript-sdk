@@ -1,5 +1,5 @@
 {
-  "name": "bountylab",
+  "name": "@bountylab/bountylab",
   "version": "0.0.1",
   "description": "The official TypeScript library for the Bountylab API",
   "author": "Bountylab <>",

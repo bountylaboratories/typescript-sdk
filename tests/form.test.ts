@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'bountylab/internal/uploads';
-import { toFile } from 'bountylab/core/uploads';
+import { multipartFormRequestOptions, createForm } from '@bountylab/bountylab/internal/uploads';
+import { toFile } from '@bountylab/bountylab/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

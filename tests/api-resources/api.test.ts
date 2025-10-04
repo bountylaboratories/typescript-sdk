@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Bountylab from 'bountylab';
+import Bountylab from '@bountylab/bountylab';
 
 const client = new Bountylab({
   apiKey: 'My API Key',
