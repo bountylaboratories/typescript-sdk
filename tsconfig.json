@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "bountylab/*": ["./src/*"],
-      "bountylab": ["./src/index.ts"]
+      "@bountylab/bountylab/*": ["./src/*"],
+      "@bountylab/bountylab": ["./src/index.ts"]
     },
     "noEmit": true,
 
