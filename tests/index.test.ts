@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'bountylab/core/api-promise';
+import { APIPromise } from '@bountylab/bountylab/core/api-promise';
 
 import util from 'node:util';
-import Bountylab from 'bountylab';
-import { APIUserAbortError } from 'bountylab';
+import Bountylab from '@bountylab/bountylab';
+import { APIUserAbortError } from '@bountylab/bountylab';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {

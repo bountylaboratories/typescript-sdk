@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "bountylab/*": ["./dist/src/*"],
-      "bountylab": ["./dist/src/index.ts"]
+      "@bountylab/bountylab/*": ["./dist/src/*"],
+      "@bountylab/bountylab": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
