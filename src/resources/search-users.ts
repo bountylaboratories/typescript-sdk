@@ -151,19 +151,19 @@ export interface SearchUserSearchParams {
   filters?:
     | SearchUserSearchParams.UnionMember0
     | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
-    | SearchUserSearchParams.UnionMember0
-    | SearchUserSearchParams.UnionMember1
+    | SearchUserSearchParams.UnionMember2
+    | SearchUserSearchParams.UnionMember3
+    | SearchUserSearchParams.UnionMember4
+    | SearchUserSearchParams.UnionMember5
+    | SearchUserSearchParams.UnionMember6
     | SearchUserSearchParams.UnionMember7
+    | SearchUserSearchParams.UnionMember8
+    | SearchUserSearchParams.UnionMember9
+    | SearchUserSearchParams.UnionMember10
+    | SearchUserSearchParams.UnionMember11
+    | SearchUserSearchParams.UnionMember12
+    | SearchUserSearchParams.UnionMember13
+    | SearchUserSearchParams.UserCompositeFilter
     | null;
 
   /**
@@ -174,136 +174,136 @@ export interface SearchUserSearchParams {
 
 export namespace SearchUserSearchParams {
   export interface UnionMember0 {
+    field: 'login';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'login';
   }
 
   export interface UnionMember1 {
+    field: 'login';
+
     op: 'In';
 
     value: Array<string>;
-
-    field?: 'login';
   }
 
-  export interface UnionMember0 {
+  export interface UnionMember2 {
+    field: 'company';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'company';
   }
 
-  export interface UnionMember1 {
+  export interface UnionMember3 {
+    field: 'company';
+
     op: 'In';
 
     value: Array<string>;
-
-    field?: 'company';
   }
 
-  export interface UnionMember0 {
+  export interface UnionMember4 {
+    field: 'location';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'location';
   }
 
-  export interface UnionMember1 {
+  export interface UnionMember5 {
+    field: 'location';
+
     op: 'In';
 
     value: Array<string>;
-
-    field?: 'location';
   }
 
-  export interface UnionMember0 {
+  export interface UnionMember6 {
+    field: 'emails';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'emails';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'emails';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: string;
-
-    field?: 'resolvedCountry';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'resolvedCountry';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: string;
-
-    field?: 'resolvedState';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'resolvedState';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: string;
-
-    field?: 'resolvedCity';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'resolvedCity';
   }
 
   export interface UnionMember7 {
+    field: 'emails';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember8 {
+    field: 'resolvedCountry';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember9 {
+    field: 'resolvedCountry';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember10 {
+    field: 'resolvedState';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember11 {
+    field: 'resolvedState';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember12 {
+    field: 'resolvedCity';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember13 {
+    field: 'resolvedCity';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UserCompositeFilter {
     /**
      * Array of field filters to combine with the logical operator
      */
     filters: Array<
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
+      | UserCompositeFilter.UnionMember0
+      | UserCompositeFilter.UnionMember1
+      | UserCompositeFilter.UnionMember2
+      | UserCompositeFilter.UnionMember3
+      | UserCompositeFilter.UnionMember4
+      | UserCompositeFilter.UnionMember5
+      | UserCompositeFilter.UnionMember6
+      | UserCompositeFilter.UnionMember7
+      | UserCompositeFilter.UnionMember8
+      | UserCompositeFilter.UnionMember9
+      | UserCompositeFilter.UnionMember10
+      | UserCompositeFilter.UnionMember11
+      | UserCompositeFilter.UnionMember12
+      | UserCompositeFilter.UnionMember13
     >;
 
     /**
@@ -312,117 +312,117 @@ export namespace SearchUserSearchParams {
     op: 'And' | 'Or';
   }
 
-  export namespace UnionMember7 {
+  export namespace UserCompositeFilter {
     export interface UnionMember0 {
+      field: 'login';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'login';
     }
 
     export interface UnionMember1 {
+      field: 'login';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'login';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember2 {
+      field: 'company';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'company';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember3 {
+      field: 'company';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'company';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember4 {
+      field: 'location';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'location';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember5 {
+      field: 'location';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'location';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember6 {
+      field: 'emails';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'emails';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember7 {
+      field: 'emails';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'emails';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember8 {
+      field: 'resolvedCountry';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'resolvedCountry';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember9 {
+      field: 'resolvedCountry';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'resolvedCountry';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember10 {
+      field: 'resolvedState';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'resolvedState';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember11 {
+      field: 'resolvedState';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'resolvedState';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember12 {
+      field: 'resolvedCity';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'resolvedCity';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember13 {
+      field: 'resolvedCity';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'resolvedCity';
     }
   }
 }
