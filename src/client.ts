@@ -16,12 +16,7 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import {
-  API as ApiapiAPI,
-  APIRetrieveExampleResponse,
-  APIRetrieveRawDataResponse,
-  APISearchResponse,
-} from './resources/api';
+import { API as ApiapiAPI } from './resources/api';
 import { Health, HealthCheckResponse } from './resources/health';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
@@ -732,10 +727,5 @@ export declare namespace Bountylab {
 
   export { Health as Health, type HealthCheckResponse as HealthCheckResponse };
 
-  export {
-    ApiapiAPI as API,
-    type APIRetrieveExampleResponse as APIRetrieveExampleResponse,
-    type APIRetrieveRawDataResponse as APIRetrieveRawDataResponse,
-    type APISearchResponse as APISearchResponse,
-  };
+  export { ApiapiAPI as API };
 }
