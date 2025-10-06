@@ -8,4 +8,6 @@ Methods:
 
 - <code title="get /health">client.health.<a href="./src/resources/health.ts">check</a>() -> HealthCheckResponse</code>
 
-# API
+# Raw
+
+# Search
