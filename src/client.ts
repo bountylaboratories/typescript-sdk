@@ -17,8 +17,20 @@ import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
 import { Health, HealthCheckResponse } from './resources/health';
-import { Raw } from './resources/raw';
-import { Search } from './resources/search';
+import {
+  RawRepoByFullnameParams,
+  RawRepoByFullnameResponse,
+  RawRepoRetrieveResponse,
+  RawRepos,
+} from './resources/raw-repos';
+import {
+  RawUserByLoginParams,
+  RawUserByLoginResponse,
+  RawUserRetrieveResponse,
+  RawUsers,
+} from './resources/raw-users';
+import { SearchRepoSearchParams, SearchRepoSearchResponse, SearchRepos } from './resources/search-repos';
+import { SearchUserSearchParams, SearchUserSearchResponse, SearchUsers } from './resources/search-users';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -717,20 +729,46 @@ export class Bountylab {
   static toFile = Uploads.toFile;
 
   health: API.Health = new API.Health(this);
-  raw: API.Raw = new API.Raw(this);
-  search: API.Search = new API.Search(this);
+  rawUsers: API.RawUsers = new API.RawUsers(this);
+  rawRepos: API.RawRepos = new API.RawRepos(this);
+  searchUsers: API.SearchUsers = new API.SearchUsers(this);
+  searchRepos: API.SearchRepos = new API.SearchRepos(this);
 }
 
 Bountylab.Health = Health;
-Bountylab.Raw = Raw;
-Bountylab.Search = Search;
+Bountylab.RawUsers = RawUsers;
+Bountylab.RawRepos = RawRepos;
+Bountylab.SearchUsers = SearchUsers;
+Bountylab.SearchRepos = SearchRepos;
 
 export declare namespace Bountylab {
   export type RequestOptions = Opts.RequestOptions;
 
   export { Health as Health, type HealthCheckResponse as HealthCheckResponse };
 
-  export { Raw as Raw };
+  export {
+    RawUsers as RawUsers,
+    type RawUserRetrieveResponse as RawUserRetrieveResponse,
+    type RawUserByLoginResponse as RawUserByLoginResponse,
+    type RawUserByLoginParams as RawUserByLoginParams,
+  };
 
-  export { Search as Search };
+  export {
+    RawRepos as RawRepos,
+    type RawRepoRetrieveResponse as RawRepoRetrieveResponse,
+    type RawRepoByFullnameResponse as RawRepoByFullnameResponse,
+    type RawRepoByFullnameParams as RawRepoByFullnameParams,
+  };
+
+  export {
+    SearchUsers as SearchUsers,
+    type SearchUserSearchResponse as SearchUserSearchResponse,
+    type SearchUserSearchParams as SearchUserSearchParams,
+  };
+
+  export {
+    SearchRepos as SearchRepos,
+    type SearchRepoSearchResponse as SearchRepoSearchResponse,
+    type SearchRepoSearchParams as SearchRepoSearchParams,
+  };
 }

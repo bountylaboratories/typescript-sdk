@@ -26,9 +26,9 @@ const client = new Bountylab({
   apiKey: process.env['BOUNTYLAB_API_KEY'], // This is the default and can be omitted
 });
 
-const response = await client.health.check();
+const response = await client.searchUsers.search({ query: 'machine learning engineer', maxResults: 10 });
 
-console.log(response.status);
+console.log(response.count);
 ```
 
 ### Request & Response types
@@ -222,7 +222,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.health.check({
+client.searchUsers.search({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
