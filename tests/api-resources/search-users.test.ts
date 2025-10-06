@@ -24,7 +24,7 @@ describe('resource searchUsers', () => {
   test.skip('search: required and optional params', async () => {
     const response = await client.searchUsers.search({
       query: 'machine learning engineer san francisco',
-      filters: { op: 'Eq', value: 'GitHub', field: 'company' },
+      filters: { field: 'company', op: 'Eq', value: 'GitHub' },
       maxResults: 50,
     });
   });

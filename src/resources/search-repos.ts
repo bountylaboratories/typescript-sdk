@@ -140,29 +140,29 @@ export interface SearchRepoSearchParams {
   filters?:
     | SearchRepoSearchParams.UnionMember0
     | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
     | SearchRepoSearchParams.UnionMember2
     | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember2
-    | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember2
-    | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember2
-    | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
+    | SearchRepoSearchParams.UnionMember4
+    | SearchRepoSearchParams.UnionMember5
+    | SearchRepoSearchParams.UnionMember6
+    | SearchRepoSearchParams.UnionMember7
     | SearchRepoSearchParams.UnionMember8
+    | SearchRepoSearchParams.UnionMember9
+    | SearchRepoSearchParams.UnionMember10
+    | SearchRepoSearchParams.UnionMember11
+    | SearchRepoSearchParams.UnionMember12
+    | SearchRepoSearchParams.UnionMember13
+    | SearchRepoSearchParams.UnionMember14
+    | SearchRepoSearchParams.UnionMember15
+    | SearchRepoSearchParams.UnionMember16
+    | SearchRepoSearchParams.UnionMember17
+    | SearchRepoSearchParams.UnionMember18
+    | SearchRepoSearchParams.UnionMember19
+    | SearchRepoSearchParams.UnionMember20
+    | SearchRepoSearchParams.UnionMember21
+    | SearchRepoSearchParams.UnionMember22
+    | SearchRepoSearchParams.UnionMember23
+    | SearchRepoSearchParams.RepoCompositeFilter
     | null;
 
   /**
@@ -173,226 +173,226 @@ export interface SearchRepoSearchParams {
 
 export namespace SearchRepoSearchParams {
   export interface UnionMember0 {
+    field: 'ownerLogin';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'ownerLogin';
   }
 
   export interface UnionMember1 {
+    field: 'ownerLogin';
+
     op: 'In';
 
     value: Array<string>;
-
-    field?: 'ownerLogin';
   }
 
-  export interface UnionMember0 {
+  export interface UnionMember2 {
+    field: 'name';
+
     op: 'Eq';
 
     value: string;
-
-    field?: 'name';
   }
 
-  export interface UnionMember1 {
+  export interface UnionMember3 {
+    field: 'name';
+
     op: 'In';
 
     value: Array<string>;
-
-    field?: 'name';
   }
 
-  export interface UnionMember0 {
+  export interface UnionMember4 {
+    field: 'stargazerCount';
+
     op: 'Eq';
 
     value: number;
-
-    field?: 'stargazerCount';
   }
 
-  export interface UnionMember1 {
+  export interface UnionMember5 {
+    field: 'stargazerCount';
+
     op: 'In';
 
     value: Array<number>;
-
-    field?: 'stargazerCount';
   }
 
-  export interface UnionMember2 {
+  export interface UnionMember6 {
+    field: 'stargazerCount';
+
     op: 'Gte';
 
     value: number;
-
-    field?: 'stargazerCount';
   }
 
-  export interface UnionMember3 {
+  export interface UnionMember7 {
+    field: 'stargazerCount';
+
     op: 'Lte';
 
     value: number;
-
-    field?: 'stargazerCount';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: string;
-
-    field?: 'language';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'language';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: number;
-
-    field?: 'totalIssuesCount';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<number>;
-
-    field?: 'totalIssuesCount';
-  }
-
-  export interface UnionMember2 {
-    op: 'Gte';
-
-    value: number;
-
-    field?: 'totalIssuesCount';
-  }
-
-  export interface UnionMember3 {
-    op: 'Lte';
-
-    value: number;
-
-    field?: 'totalIssuesCount';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: number;
-
-    field?: 'totalIssuesOpen';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<number>;
-
-    field?: 'totalIssuesOpen';
-  }
-
-  export interface UnionMember2 {
-    op: 'Gte';
-
-    value: number;
-
-    field?: 'totalIssuesOpen';
-  }
-
-  export interface UnionMember3 {
-    op: 'Lte';
-
-    value: number;
-
-    field?: 'totalIssuesOpen';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: number;
-
-    field?: 'totalIssuesClosed';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<number>;
-
-    field?: 'totalIssuesClosed';
-  }
-
-  export interface UnionMember2 {
-    op: 'Gte';
-
-    value: number;
-
-    field?: 'totalIssuesClosed';
-  }
-
-  export interface UnionMember3 {
-    op: 'Lte';
-
-    value: number;
-
-    field?: 'totalIssuesClosed';
-  }
-
-  export interface UnionMember0 {
-    op: 'Eq';
-
-    value: string;
-
-    field?: 'lastContributorLocations';
-  }
-
-  export interface UnionMember1 {
-    op: 'In';
-
-    value: Array<string>;
-
-    field?: 'lastContributorLocations';
   }
 
   export interface UnionMember8 {
+    field: 'language';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember9 {
+    field: 'language';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember10 {
+    field: 'totalIssuesCount';
+
+    op: 'Eq';
+
+    value: number;
+  }
+
+  export interface UnionMember11 {
+    field: 'totalIssuesCount';
+
+    op: 'In';
+
+    value: Array<number>;
+  }
+
+  export interface UnionMember12 {
+    field: 'totalIssuesCount';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember13 {
+    field: 'totalIssuesCount';
+
+    op: 'Lte';
+
+    value: number;
+  }
+
+  export interface UnionMember14 {
+    field: 'totalIssuesOpen';
+
+    op: 'Eq';
+
+    value: number;
+  }
+
+  export interface UnionMember15 {
+    field: 'totalIssuesOpen';
+
+    op: 'In';
+
+    value: Array<number>;
+  }
+
+  export interface UnionMember16 {
+    field: 'totalIssuesOpen';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember17 {
+    field: 'totalIssuesOpen';
+
+    op: 'Lte';
+
+    value: number;
+  }
+
+  export interface UnionMember18 {
+    field: 'totalIssuesClosed';
+
+    op: 'Eq';
+
+    value: number;
+  }
+
+  export interface UnionMember19 {
+    field: 'totalIssuesClosed';
+
+    op: 'In';
+
+    value: Array<number>;
+  }
+
+  export interface UnionMember20 {
+    field: 'totalIssuesClosed';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember21 {
+    field: 'totalIssuesClosed';
+
+    op: 'Lte';
+
+    value: number;
+  }
+
+  export interface UnionMember22 {
+    field: 'lastContributorLocations';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember23 {
+    field: 'lastContributorLocations';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface RepoCompositeFilter {
     /**
      * Array of field filters to combine with the logical operator
      */
     filters: Array<
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember2
-      | UnionMember8.UnionMember3
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember2
-      | UnionMember8.UnionMember3
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember2
-      | UnionMember8.UnionMember3
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
-      | UnionMember8.UnionMember2
-      | UnionMember8.UnionMember3
-      | UnionMember8.UnionMember0
-      | UnionMember8.UnionMember1
+      | RepoCompositeFilter.UnionMember0
+      | RepoCompositeFilter.UnionMember1
+      | RepoCompositeFilter.UnionMember2
+      | RepoCompositeFilter.UnionMember3
+      | RepoCompositeFilter.UnionMember4
+      | RepoCompositeFilter.UnionMember5
+      | RepoCompositeFilter.UnionMember6
+      | RepoCompositeFilter.UnionMember7
+      | RepoCompositeFilter.UnionMember8
+      | RepoCompositeFilter.UnionMember9
+      | RepoCompositeFilter.UnionMember10
+      | RepoCompositeFilter.UnionMember11
+      | RepoCompositeFilter.UnionMember12
+      | RepoCompositeFilter.UnionMember13
+      | RepoCompositeFilter.UnionMember14
+      | RepoCompositeFilter.UnionMember15
+      | RepoCompositeFilter.UnionMember16
+      | RepoCompositeFilter.UnionMember17
+      | RepoCompositeFilter.UnionMember18
+      | RepoCompositeFilter.UnionMember19
+      | RepoCompositeFilter.UnionMember20
+      | RepoCompositeFilter.UnionMember21
+      | RepoCompositeFilter.UnionMember22
+      | RepoCompositeFilter.UnionMember23
     >;
 
     /**
@@ -401,197 +401,197 @@ export namespace SearchRepoSearchParams {
     op: 'And' | 'Or';
   }
 
-  export namespace UnionMember8 {
+  export namespace RepoCompositeFilter {
     export interface UnionMember0 {
+      field: 'ownerLogin';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'ownerLogin';
     }
 
     export interface UnionMember1 {
+      field: 'ownerLogin';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'ownerLogin';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember2 {
+      field: 'name';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'name';
-    }
-
-    export interface UnionMember1 {
-      op: 'In';
-
-      value: Array<string>;
-
-      field?: 'name';
-    }
-
-    export interface UnionMember0 {
-      op: 'Eq';
-
-      value: number;
-
-      field?: 'stargazerCount';
-    }
-
-    export interface UnionMember1 {
-      op: 'In';
-
-      value: Array<number>;
-
-      field?: 'stargazerCount';
-    }
-
-    export interface UnionMember2 {
-      op: 'Gte';
-
-      value: number;
-
-      field?: 'stargazerCount';
     }
 
     export interface UnionMember3 {
+      field: 'name';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember4 {
+      field: 'stargazerCount';
+
+      op: 'Eq';
+
+      value: number;
+    }
+
+    export interface UnionMember5 {
+      field: 'stargazerCount';
+
+      op: 'In';
+
+      value: Array<number>;
+    }
+
+    export interface UnionMember6 {
+      field: 'stargazerCount';
+
+      op: 'Gte';
+
+      value: number;
+    }
+
+    export interface UnionMember7 {
+      field: 'stargazerCount';
+
       op: 'Lte';
 
       value: number;
-
-      field?: 'stargazerCount';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember8 {
+      field: 'language';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'language';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember9 {
+      field: 'language';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'language';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember10 {
+      field: 'totalIssuesCount';
+
       op: 'Eq';
 
       value: number;
-
-      field?: 'totalIssuesCount';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember11 {
+      field: 'totalIssuesCount';
+
       op: 'In';
 
       value: Array<number>;
-
-      field?: 'totalIssuesCount';
     }
 
-    export interface UnionMember2 {
+    export interface UnionMember12 {
+      field: 'totalIssuesCount';
+
       op: 'Gte';
 
       value: number;
-
-      field?: 'totalIssuesCount';
     }
 
-    export interface UnionMember3 {
+    export interface UnionMember13 {
+      field: 'totalIssuesCount';
+
       op: 'Lte';
 
       value: number;
-
-      field?: 'totalIssuesCount';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember14 {
+      field: 'totalIssuesOpen';
+
       op: 'Eq';
 
       value: number;
-
-      field?: 'totalIssuesOpen';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember15 {
+      field: 'totalIssuesOpen';
+
       op: 'In';
 
       value: Array<number>;
-
-      field?: 'totalIssuesOpen';
     }
 
-    export interface UnionMember2 {
+    export interface UnionMember16 {
+      field: 'totalIssuesOpen';
+
       op: 'Gte';
 
       value: number;
-
-      field?: 'totalIssuesOpen';
     }
 
-    export interface UnionMember3 {
+    export interface UnionMember17 {
+      field: 'totalIssuesOpen';
+
       op: 'Lte';
 
       value: number;
-
-      field?: 'totalIssuesOpen';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember18 {
+      field: 'totalIssuesClosed';
+
       op: 'Eq';
 
       value: number;
-
-      field?: 'totalIssuesClosed';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember19 {
+      field: 'totalIssuesClosed';
+
       op: 'In';
 
       value: Array<number>;
-
-      field?: 'totalIssuesClosed';
     }
 
-    export interface UnionMember2 {
+    export interface UnionMember20 {
+      field: 'totalIssuesClosed';
+
       op: 'Gte';
 
       value: number;
-
-      field?: 'totalIssuesClosed';
     }
 
-    export interface UnionMember3 {
+    export interface UnionMember21 {
+      field: 'totalIssuesClosed';
+
       op: 'Lte';
 
       value: number;
-
-      field?: 'totalIssuesClosed';
     }
 
-    export interface UnionMember0 {
+    export interface UnionMember22 {
+      field: 'lastContributorLocations';
+
       op: 'Eq';
 
       value: string;
-
-      field?: 'lastContributorLocations';
     }
 
-    export interface UnionMember1 {
+    export interface UnionMember23 {
+      field: 'lastContributorLocations';
+
       op: 'In';
 
       value: Array<string>;
-
-      field?: 'lastContributorLocations';
     }
   }
 }

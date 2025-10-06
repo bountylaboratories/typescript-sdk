@@ -24,7 +24,7 @@ describe('resource searchRepos', () => {
   test.skip('search: required and optional params', async () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
-      filters: { op: 'Eq', value: 'TypeScript', field: 'language' },
+      filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
       maxResults: 50,
     });
   });
