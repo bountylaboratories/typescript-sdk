@@ -16,8 +16,9 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { API as ApiapiAPI } from './resources/api';
 import { Health, HealthCheckResponse } from './resources/health';
+import { Raw } from './resources/raw';
+import { Search } from './resources/search';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -716,16 +717,20 @@ export class Bountylab {
   static toFile = Uploads.toFile;
 
   health: API.Health = new API.Health(this);
-  api: API.API = new API.API(this);
+  raw: API.Raw = new API.Raw(this);
+  search: API.Search = new API.Search(this);
 }
 
 Bountylab.Health = Health;
-Bountylab.API = ApiapiAPI;
+Bountylab.Raw = Raw;
+Bountylab.Search = Search;
 
 export declare namespace Bountylab {
   export type RequestOptions = Opts.RequestOptions;
 
   export { Health as Health, type HealthCheckResponse as HealthCheckResponse };
 
-  export { ApiapiAPI as API };
+  export { Raw as Raw };
+
+  export { Search as Search };
 }

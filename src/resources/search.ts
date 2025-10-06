@@ -2,4 +2,4 @@
 
 import { APIResource } from '../core/resource';
 
-export class API extends APIResource {}
+export class Search extends APIResource {}
