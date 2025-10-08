@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.3.0 (2025-10-08)
+
+Full Changelog: [v0.2.0...v0.3.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.2.0...v0.3.0)
+
+### Features
+
+* **api:** api update ([34adb28](https://github.com/bountylaboratories/typescript-sdk/commit/34adb28e119b3b2e2934cccb18c7b784fcd60292))
+
+
+### Chores
+
+* **internal:** use npm pack for build uploads ([588faae](https://github.com/bountylaboratories/typescript-sdk/commit/588faae4eeb890390414e6e8a48c319d6506a4af))
+
 ## 0.2.0 (2025-10-06)
 
 Full Changelog: [v0.1.0...v0.2.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.1.0...v0.2.0)
