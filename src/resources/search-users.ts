@@ -132,8 +132,8 @@ export interface SearchUserSearchParams {
   query: string;
 
   /**
-   * Optional filters for narrowing search results. Supports filtering on: login,
-   * company, location, emails, resolvedCountry, resolvedState, resolvedCity.
+   * Optional filters for narrowing search results. Supports filtering on: githubId,
+   * login, company, location, emails, resolvedCountry, resolvedState, resolvedCity.
    *
    * Full-text searchable fields (automatically searched): login, displayName, bio,
    * company, location, emails, resolvedCountry, resolvedState, resolvedCity.
@@ -163,6 +163,8 @@ export interface SearchUserSearchParams {
     | SearchUserSearchParams.UnionMember11
     | SearchUserSearchParams.UnionMember12
     | SearchUserSearchParams.UnionMember13
+    | SearchUserSearchParams.UnionMember14
+    | SearchUserSearchParams.UnionMember15
     | SearchUserSearchParams.UserCompositeFilter
     | null;
 
@@ -174,7 +176,7 @@ export interface SearchUserSearchParams {
 
 export namespace SearchUserSearchParams {
   export interface UnionMember0 {
-    field: 'login';
+    field: 'githubId';
 
     op: 'Eq';
 
@@ -182,7 +184,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember1 {
-    field: 'login';
+    field: 'githubId';
 
     op: 'In';
 
@@ -190,7 +192,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember2 {
-    field: 'company';
+    field: 'login';
 
     op: 'Eq';
 
@@ -198,7 +200,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember3 {
-    field: 'company';
+    field: 'login';
 
     op: 'In';
 
@@ -206,7 +208,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember4 {
-    field: 'location';
+    field: 'company';
 
     op: 'Eq';
 
@@ -214,7 +216,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember5 {
-    field: 'location';
+    field: 'company';
 
     op: 'In';
 
@@ -222,7 +224,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember6 {
-    field: 'emails';
+    field: 'location';
 
     op: 'Eq';
 
@@ -230,7 +232,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember7 {
-    field: 'emails';
+    field: 'location';
 
     op: 'In';
 
@@ -238,7 +240,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember8 {
-    field: 'resolvedCountry';
+    field: 'emails';
 
     op: 'Eq';
 
@@ -246,7 +248,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember9 {
-    field: 'resolvedCountry';
+    field: 'emails';
 
     op: 'In';
 
@@ -254,7 +256,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember10 {
-    field: 'resolvedState';
+    field: 'resolvedCountry';
 
     op: 'Eq';
 
@@ -262,7 +264,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember11 {
-    field: 'resolvedState';
+    field: 'resolvedCountry';
 
     op: 'In';
 
@@ -270,7 +272,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember12 {
-    field: 'resolvedCity';
+    field: 'resolvedState';
 
     op: 'Eq';
 
@@ -278,6 +280,22 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember13 {
+    field: 'resolvedState';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember14 {
+    field: 'resolvedCity';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember15 {
     field: 'resolvedCity';
 
     op: 'In';
@@ -304,6 +322,8 @@ export namespace SearchUserSearchParams {
       | UserCompositeFilter.UnionMember11
       | UserCompositeFilter.UnionMember12
       | UserCompositeFilter.UnionMember13
+      | UserCompositeFilter.UnionMember14
+      | UserCompositeFilter.UnionMember15
     >;
 
     /**
@@ -314,7 +334,7 @@ export namespace SearchUserSearchParams {
 
   export namespace UserCompositeFilter {
     export interface UnionMember0 {
-      field: 'login';
+      field: 'githubId';
 
       op: 'Eq';
 
@@ -322,7 +342,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember1 {
-      field: 'login';
+      field: 'githubId';
 
       op: 'In';
 
@@ -330,7 +350,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember2 {
-      field: 'company';
+      field: 'login';
 
       op: 'Eq';
 
@@ -338,7 +358,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember3 {
-      field: 'company';
+      field: 'login';
 
       op: 'In';
 
@@ -346,7 +366,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember4 {
-      field: 'location';
+      field: 'company';
 
       op: 'Eq';
 
@@ -354,7 +374,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember5 {
-      field: 'location';
+      field: 'company';
 
       op: 'In';
 
@@ -362,7 +382,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember6 {
-      field: 'emails';
+      field: 'location';
 
       op: 'Eq';
 
@@ -370,7 +390,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember7 {
-      field: 'emails';
+      field: 'location';
 
       op: 'In';
 
@@ -378,7 +398,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember8 {
-      field: 'resolvedCountry';
+      field: 'emails';
 
       op: 'Eq';
 
@@ -386,7 +406,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember9 {
-      field: 'resolvedCountry';
+      field: 'emails';
 
       op: 'In';
 
@@ -394,7 +414,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember10 {
-      field: 'resolvedState';
+      field: 'resolvedCountry';
 
       op: 'Eq';
 
@@ -402,7 +422,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember11 {
-      field: 'resolvedState';
+      field: 'resolvedCountry';
 
       op: 'In';
 
@@ -410,7 +430,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember12 {
-      field: 'resolvedCity';
+      field: 'resolvedState';
 
       op: 'Eq';
 
@@ -418,6 +438,22 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember13 {
+      field: 'resolvedState';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember14 {
+      field: 'resolvedCity';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember15 {
       field: 'resolvedCity';
 
       op: 'In';
