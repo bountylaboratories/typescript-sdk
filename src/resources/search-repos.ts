@@ -121,7 +121,7 @@ export interface SearchRepoSearchParams {
   query: string;
 
   /**
-   * Optional filters for narrowing search results. Supports filtering on:
+   * Optional filters for narrowing search results. Supports filtering on: githubId,
    * ownerLogin, name, stargazerCount, language, totalIssuesCount, totalIssuesOpen,
    * totalIssuesClosed, lastContributorLocations.
    *
@@ -162,6 +162,8 @@ export interface SearchRepoSearchParams {
     | SearchRepoSearchParams.UnionMember21
     | SearchRepoSearchParams.UnionMember22
     | SearchRepoSearchParams.UnionMember23
+    | SearchRepoSearchParams.UnionMember24
+    | SearchRepoSearchParams.UnionMember25
     | SearchRepoSearchParams.RepoCompositeFilter
     | null;
 
@@ -173,7 +175,7 @@ export interface SearchRepoSearchParams {
 
 export namespace SearchRepoSearchParams {
   export interface UnionMember0 {
-    field: 'ownerLogin';
+    field: 'githubId';
 
     op: 'Eq';
 
@@ -181,7 +183,7 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface UnionMember1 {
-    field: 'ownerLogin';
+    field: 'githubId';
 
     op: 'In';
 
@@ -189,7 +191,7 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface UnionMember2 {
-    field: 'name';
+    field: 'ownerLogin';
 
     op: 'Eq';
 
@@ -197,7 +199,7 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface UnionMember3 {
-    field: 'name';
+    field: 'ownerLogin';
 
     op: 'In';
 
@@ -205,25 +207,25 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface UnionMember4 {
-    field: 'stargazerCount';
+    field: 'name';
 
     op: 'Eq';
 
-    value: number;
+    value: string;
   }
 
   export interface UnionMember5 {
-    field: 'stargazerCount';
+    field: 'name';
 
     op: 'In';
 
-    value: Array<number>;
+    value: Array<string>;
   }
 
   export interface UnionMember6 {
     field: 'stargazerCount';
 
-    op: 'Gte';
+    op: 'Eq';
 
     value: number;
   }
@@ -231,12 +233,28 @@ export namespace SearchRepoSearchParams {
   export interface UnionMember7 {
     field: 'stargazerCount';
 
+    op: 'In';
+
+    value: Array<number>;
+  }
+
+  export interface UnionMember8 {
+    field: 'stargazerCount';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember9 {
+    field: 'stargazerCount';
+
     op: 'Lte';
 
     value: number;
   }
 
-  export interface UnionMember8 {
+  export interface UnionMember10 {
     field: 'language';
 
     op: 'Eq';
@@ -244,7 +262,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember9 {
+  export interface UnionMember11 {
     field: 'language';
 
     op: 'In';
@@ -252,26 +270,10 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember10 {
-    field: 'totalIssuesCount';
-
-    op: 'Eq';
-
-    value: number;
-  }
-
-  export interface UnionMember11 {
-    field: 'totalIssuesCount';
-
-    op: 'In';
-
-    value: Array<number>;
-  }
-
   export interface UnionMember12 {
     field: 'totalIssuesCount';
 
-    op: 'Gte';
+    op: 'Eq';
 
     value: number;
   }
@@ -279,31 +281,31 @@ export namespace SearchRepoSearchParams {
   export interface UnionMember13 {
     field: 'totalIssuesCount';
 
-    op: 'Lte';
-
-    value: number;
-  }
-
-  export interface UnionMember14 {
-    field: 'totalIssuesOpen';
-
-    op: 'Eq';
-
-    value: number;
-  }
-
-  export interface UnionMember15 {
-    field: 'totalIssuesOpen';
-
     op: 'In';
 
     value: Array<number>;
   }
 
+  export interface UnionMember14 {
+    field: 'totalIssuesCount';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember15 {
+    field: 'totalIssuesCount';
+
+    op: 'Lte';
+
+    value: number;
+  }
+
   export interface UnionMember16 {
     field: 'totalIssuesOpen';
 
-    op: 'Gte';
+    op: 'Eq';
 
     value: number;
   }
@@ -311,31 +313,31 @@ export namespace SearchRepoSearchParams {
   export interface UnionMember17 {
     field: 'totalIssuesOpen';
 
-    op: 'Lte';
-
-    value: number;
-  }
-
-  export interface UnionMember18 {
-    field: 'totalIssuesClosed';
-
-    op: 'Eq';
-
-    value: number;
-  }
-
-  export interface UnionMember19 {
-    field: 'totalIssuesClosed';
-
     op: 'In';
 
     value: Array<number>;
   }
 
+  export interface UnionMember18 {
+    field: 'totalIssuesOpen';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember19 {
+    field: 'totalIssuesOpen';
+
+    op: 'Lte';
+
+    value: number;
+  }
+
   export interface UnionMember20 {
     field: 'totalIssuesClosed';
 
-    op: 'Gte';
+    op: 'Eq';
 
     value: number;
   }
@@ -343,12 +345,28 @@ export namespace SearchRepoSearchParams {
   export interface UnionMember21 {
     field: 'totalIssuesClosed';
 
+    op: 'In';
+
+    value: Array<number>;
+  }
+
+  export interface UnionMember22 {
+    field: 'totalIssuesClosed';
+
+    op: 'Gte';
+
+    value: number;
+  }
+
+  export interface UnionMember23 {
+    field: 'totalIssuesClosed';
+
     op: 'Lte';
 
     value: number;
   }
 
-  export interface UnionMember22 {
+  export interface UnionMember24 {
     field: 'lastContributorLocations';
 
     op: 'Eq';
@@ -356,7 +374,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember23 {
+  export interface UnionMember25 {
     field: 'lastContributorLocations';
 
     op: 'In';
@@ -393,6 +411,8 @@ export namespace SearchRepoSearchParams {
       | RepoCompositeFilter.UnionMember21
       | RepoCompositeFilter.UnionMember22
       | RepoCompositeFilter.UnionMember23
+      | RepoCompositeFilter.UnionMember24
+      | RepoCompositeFilter.UnionMember25
     >;
 
     /**
@@ -403,7 +423,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace RepoCompositeFilter {
     export interface UnionMember0 {
-      field: 'ownerLogin';
+      field: 'githubId';
 
       op: 'Eq';
 
@@ -411,7 +431,7 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember1 {
-      field: 'ownerLogin';
+      field: 'githubId';
 
       op: 'In';
 
@@ -419,7 +439,7 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
-      field: 'name';
+      field: 'ownerLogin';
 
       op: 'Eq';
 
@@ -427,7 +447,7 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember3 {
-      field: 'name';
+      field: 'ownerLogin';
 
       op: 'In';
 
@@ -435,25 +455,25 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember4 {
-      field: 'stargazerCount';
+      field: 'name';
 
       op: 'Eq';
 
-      value: number;
+      value: string;
     }
 
     export interface UnionMember5 {
-      field: 'stargazerCount';
+      field: 'name';
 
       op: 'In';
 
-      value: Array<number>;
+      value: Array<string>;
     }
 
     export interface UnionMember6 {
       field: 'stargazerCount';
 
-      op: 'Gte';
+      op: 'Eq';
 
       value: number;
     }
@@ -461,12 +481,28 @@ export namespace SearchRepoSearchParams {
     export interface UnionMember7 {
       field: 'stargazerCount';
 
+      op: 'In';
+
+      value: Array<number>;
+    }
+
+    export interface UnionMember8 {
+      field: 'stargazerCount';
+
+      op: 'Gte';
+
+      value: number;
+    }
+
+    export interface UnionMember9 {
+      field: 'stargazerCount';
+
       op: 'Lte';
 
       value: number;
     }
 
-    export interface UnionMember8 {
+    export interface UnionMember10 {
       field: 'language';
 
       op: 'Eq';
@@ -474,7 +510,7 @@ export namespace SearchRepoSearchParams {
       value: string;
     }
 
-    export interface UnionMember9 {
+    export interface UnionMember11 {
       field: 'language';
 
       op: 'In';
@@ -482,26 +518,10 @@ export namespace SearchRepoSearchParams {
       value: Array<string>;
     }
 
-    export interface UnionMember10 {
-      field: 'totalIssuesCount';
-
-      op: 'Eq';
-
-      value: number;
-    }
-
-    export interface UnionMember11 {
-      field: 'totalIssuesCount';
-
-      op: 'In';
-
-      value: Array<number>;
-    }
-
     export interface UnionMember12 {
       field: 'totalIssuesCount';
 
-      op: 'Gte';
+      op: 'Eq';
 
       value: number;
     }
@@ -509,31 +529,31 @@ export namespace SearchRepoSearchParams {
     export interface UnionMember13 {
       field: 'totalIssuesCount';
 
-      op: 'Lte';
-
-      value: number;
-    }
-
-    export interface UnionMember14 {
-      field: 'totalIssuesOpen';
-
-      op: 'Eq';
-
-      value: number;
-    }
-
-    export interface UnionMember15 {
-      field: 'totalIssuesOpen';
-
       op: 'In';
 
       value: Array<number>;
     }
 
+    export interface UnionMember14 {
+      field: 'totalIssuesCount';
+
+      op: 'Gte';
+
+      value: number;
+    }
+
+    export interface UnionMember15 {
+      field: 'totalIssuesCount';
+
+      op: 'Lte';
+
+      value: number;
+    }
+
     export interface UnionMember16 {
       field: 'totalIssuesOpen';
 
-      op: 'Gte';
+      op: 'Eq';
 
       value: number;
     }
@@ -541,31 +561,31 @@ export namespace SearchRepoSearchParams {
     export interface UnionMember17 {
       field: 'totalIssuesOpen';
 
-      op: 'Lte';
-
-      value: number;
-    }
-
-    export interface UnionMember18 {
-      field: 'totalIssuesClosed';
-
-      op: 'Eq';
-
-      value: number;
-    }
-
-    export interface UnionMember19 {
-      field: 'totalIssuesClosed';
-
       op: 'In';
 
       value: Array<number>;
     }
 
+    export interface UnionMember18 {
+      field: 'totalIssuesOpen';
+
+      op: 'Gte';
+
+      value: number;
+    }
+
+    export interface UnionMember19 {
+      field: 'totalIssuesOpen';
+
+      op: 'Lte';
+
+      value: number;
+    }
+
     export interface UnionMember20 {
       field: 'totalIssuesClosed';
 
-      op: 'Gte';
+      op: 'Eq';
 
       value: number;
     }
@@ -573,12 +593,28 @@ export namespace SearchRepoSearchParams {
     export interface UnionMember21 {
       field: 'totalIssuesClosed';
 
+      op: 'In';
+
+      value: Array<number>;
+    }
+
+    export interface UnionMember22 {
+      field: 'totalIssuesClosed';
+
+      op: 'Gte';
+
+      value: number;
+    }
+
+    export interface UnionMember23 {
+      field: 'totalIssuesClosed';
+
       op: 'Lte';
 
       value: number;
     }
 
-    export interface UnionMember22 {
+    export interface UnionMember24 {
       field: 'lastContributorLocations';
 
       op: 'Eq';
@@ -586,7 +622,7 @@ export namespace SearchRepoSearchParams {
       value: string;
     }
 
-    export interface UnionMember23 {
+    export interface UnionMember25 {
       field: 'lastContributorLocations';
 
       op: 'In';
