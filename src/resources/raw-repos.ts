@@ -56,9 +56,14 @@ export namespace RawRepoRetrieveResponse {
    */
   export interface Repository {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * Repository name
@@ -147,9 +152,14 @@ export interface RawRepoByFullnameResponse {
 export namespace RawRepoByFullnameResponse {
   export interface Repository {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * Repository name

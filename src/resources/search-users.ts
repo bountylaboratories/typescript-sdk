@@ -42,9 +42,14 @@ export interface SearchUserSearchResponse {
 export namespace SearchUserSearchResponse {
   export interface User {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * GitHub username

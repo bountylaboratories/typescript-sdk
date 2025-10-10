@@ -42,9 +42,14 @@ export interface SearchRepoSearchResponse {
 export namespace SearchRepoSearchResponse {
   export interface Repository {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * Repository name
