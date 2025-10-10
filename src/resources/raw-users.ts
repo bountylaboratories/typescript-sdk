@@ -55,9 +55,14 @@ export namespace RawUserRetrieveResponse {
    */
   export interface User {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * GitHub username
@@ -156,9 +161,14 @@ export interface RawUserByLoginResponse {
 export namespace RawUserByLoginResponse {
   export interface User {
     /**
-     * GitHub node ID
+     * BountyLab internal ID
      */
     id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
 
     /**
      * GitHub username
