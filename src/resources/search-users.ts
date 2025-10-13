@@ -77,9 +77,9 @@ export namespace SearchUserSearchResponse {
     displayName?: string | null;
 
     /**
-     * Email addresses as JSON string
+     * Email addresses
      */
-    emails?: string | null;
+    emails?: Array<string> | null;
 
     /**
      * ISO 8601 timestamp when metadata was extracted
@@ -112,9 +112,9 @@ export namespace SearchUserSearchResponse {
     score?: number;
 
     /**
-     * Social accounts as JSON string
+     * Social media accounts
      */
-    socialAccounts?: string | null;
+    socialAccounts?: Array<User.SocialAccount> | null;
 
     /**
      * ISO 8601 timestamp when user was last updated
@@ -125,6 +125,14 @@ export namespace SearchUserSearchResponse {
      * User website URL
      */
     websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
   }
 }
 

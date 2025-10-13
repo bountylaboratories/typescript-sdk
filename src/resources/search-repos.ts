@@ -102,6 +102,11 @@ export namespace SearchRepoSearchResponse {
     language?: string | null;
 
     /**
+     * Locations of last contributors to this repository
+     */
+    lastContributorLocations?: Array<string> | null;
+
+    /**
      * Preview of repository README (first ~500 chars)
      */
     readmePreview?: string | null;
