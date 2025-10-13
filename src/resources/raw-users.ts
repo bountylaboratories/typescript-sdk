@@ -90,9 +90,9 @@ export namespace RawUserRetrieveResponse {
     displayName?: string | null;
 
     /**
-     * Email addresses as JSON string
+     * Email addresses
      */
-    emails?: string | null;
+    emails?: Array<string> | null;
 
     /**
      * ISO 8601 timestamp when metadata was extracted
@@ -125,9 +125,9 @@ export namespace RawUserRetrieveResponse {
     score?: number;
 
     /**
-     * Social accounts as JSON string
+     * Social media accounts
      */
-    socialAccounts?: string | null;
+    socialAccounts?: Array<User.SocialAccount> | null;
 
     /**
      * ISO 8601 timestamp when user was last updated
@@ -138,6 +138,14 @@ export namespace RawUserRetrieveResponse {
      * User website URL
      */
     websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
   }
 }
 
@@ -196,9 +204,9 @@ export namespace RawUserByLoginResponse {
     displayName?: string | null;
 
     /**
-     * Email addresses as JSON string
+     * Email addresses
      */
-    emails?: string | null;
+    emails?: Array<string> | null;
 
     /**
      * ISO 8601 timestamp when metadata was extracted
@@ -231,9 +239,9 @@ export namespace RawUserByLoginResponse {
     score?: number;
 
     /**
-     * Social accounts as JSON string
+     * Social media accounts
      */
-    socialAccounts?: string | null;
+    socialAccounts?: Array<User.SocialAccount> | null;
 
     /**
      * ISO 8601 timestamp when user was last updated
@@ -244,6 +252,14 @@ export namespace RawUserByLoginResponse {
      * User website URL
      */
     websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
   }
 }
 
