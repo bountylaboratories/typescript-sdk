@@ -25,6 +25,7 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
       filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
+      includeAttributes: { contributors: { limit: 10 }, owner: true, starrers: { limit: 5 } },
       maxResults: 50,
     });
   });

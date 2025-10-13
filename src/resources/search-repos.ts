@@ -29,12 +29,13 @@ export interface SearchRepoSearchResponse {
   count: number;
 
   /**
-   * Credits consumed (1 per result)
+   * Credits consumed (1 per result + graph relationship costs)
    */
   creditsUsed: number;
 
   /**
-   * Array of repository search results with relevance scores
+   * Array of repository search results with relevance scores and optional graph
+   * relationships
    */
   repositories: Array<SearchRepoSearchResponse.Repository | null>;
 }
@@ -82,6 +83,11 @@ export namespace SearchRepoSearchResponse {
     totalIssuesOpen: number;
 
     /**
+     * Repository contributors (when includeAttributes.contributors is specified)
+     */
+    contributors?: Array<Repository.Contributor | null>;
+
+    /**
      * ISO 8601 timestamp when repository was created
      */
     createdAt?: string | null;
@@ -106,6 +112,8 @@ export namespace SearchRepoSearchResponse {
      */
     lastContributorLocations?: Array<string> | null;
 
+    owner?: Repository.Owner;
+
     /**
      * Preview of repository README (first ~500 chars)
      */
@@ -117,9 +125,301 @@ export namespace SearchRepoSearchResponse {
     score?: number;
 
     /**
+     * Users who starred this repository (when includeAttributes.starrers is specified)
+     */
+    starrers?: Array<Repository.Starrer | null>;
+
+    /**
      * ISO 8601 timestamp when repository was last updated
      */
     updatedAt?: string | null;
+  }
+
+  export namespace Repository {
+    export interface Contributor {
+      /**
+       * BountyLab internal ID
+       */
+      id: string;
+
+      /**
+       * GitHub node ID
+       */
+      githubId: string;
+
+      /**
+       * GitHub username
+       */
+      login: string;
+
+      /**
+       * User biography
+       */
+      bio?: string | null;
+
+      /**
+       * Company name
+       */
+      company?: string | null;
+
+      /**
+       * ISO 8601 timestamp when user account was created
+       */
+      createdAt?: string | null;
+
+      /**
+       * User display name
+       */
+      displayName?: string | null;
+
+      /**
+       * Email addresses
+       */
+      emails?: Array<string> | null;
+
+      /**
+       * ISO 8601 timestamp when metadata was extracted
+       */
+      embeddedAt?: string | null;
+
+      /**
+       * User location
+       */
+      location?: string | null;
+
+      /**
+       * Resolved city from location
+       */
+      resolvedCity?: string | null;
+
+      /**
+       * Resolved country from location
+       */
+      resolvedCountry?: string | null;
+
+      /**
+       * Resolved state/region from location
+       */
+      resolvedState?: string | null;
+
+      /**
+       * Relevance score from search (0-1, lower is more relevant for distance metrics)
+       */
+      score?: number;
+
+      /**
+       * Social media accounts
+       */
+      socialAccounts?: Array<Contributor.SocialAccount> | null;
+
+      /**
+       * ISO 8601 timestamp when user was last updated
+       */
+      updatedAt?: string | null;
+
+      /**
+       * User website URL
+       */
+      websiteUrl?: string | null;
+    }
+
+    export namespace Contributor {
+      export interface SocialAccount {
+        provider: string;
+
+        url: string;
+      }
+    }
+
+    export interface Owner {
+      /**
+       * BountyLab internal ID
+       */
+      id: string;
+
+      /**
+       * GitHub node ID
+       */
+      githubId: string;
+
+      /**
+       * GitHub username
+       */
+      login: string;
+
+      /**
+       * User biography
+       */
+      bio?: string | null;
+
+      /**
+       * Company name
+       */
+      company?: string | null;
+
+      /**
+       * ISO 8601 timestamp when user account was created
+       */
+      createdAt?: string | null;
+
+      /**
+       * User display name
+       */
+      displayName?: string | null;
+
+      /**
+       * Email addresses
+       */
+      emails?: Array<string> | null;
+
+      /**
+       * ISO 8601 timestamp when metadata was extracted
+       */
+      embeddedAt?: string | null;
+
+      /**
+       * User location
+       */
+      location?: string | null;
+
+      /**
+       * Resolved city from location
+       */
+      resolvedCity?: string | null;
+
+      /**
+       * Resolved country from location
+       */
+      resolvedCountry?: string | null;
+
+      /**
+       * Resolved state/region from location
+       */
+      resolvedState?: string | null;
+
+      /**
+       * Relevance score from search (0-1, lower is more relevant for distance metrics)
+       */
+      score?: number;
+
+      /**
+       * Social media accounts
+       */
+      socialAccounts?: Array<Owner.SocialAccount> | null;
+
+      /**
+       * ISO 8601 timestamp when user was last updated
+       */
+      updatedAt?: string | null;
+
+      /**
+       * User website URL
+       */
+      websiteUrl?: string | null;
+    }
+
+    export namespace Owner {
+      export interface SocialAccount {
+        provider: string;
+
+        url: string;
+      }
+    }
+
+    export interface Starrer {
+      /**
+       * BountyLab internal ID
+       */
+      id: string;
+
+      /**
+       * GitHub node ID
+       */
+      githubId: string;
+
+      /**
+       * GitHub username
+       */
+      login: string;
+
+      /**
+       * User biography
+       */
+      bio?: string | null;
+
+      /**
+       * Company name
+       */
+      company?: string | null;
+
+      /**
+       * ISO 8601 timestamp when user account was created
+       */
+      createdAt?: string | null;
+
+      /**
+       * User display name
+       */
+      displayName?: string | null;
+
+      /**
+       * Email addresses
+       */
+      emails?: Array<string> | null;
+
+      /**
+       * ISO 8601 timestamp when metadata was extracted
+       */
+      embeddedAt?: string | null;
+
+      /**
+       * User location
+       */
+      location?: string | null;
+
+      /**
+       * Resolved city from location
+       */
+      resolvedCity?: string | null;
+
+      /**
+       * Resolved country from location
+       */
+      resolvedCountry?: string | null;
+
+      /**
+       * Resolved state/region from location
+       */
+      resolvedState?: string | null;
+
+      /**
+       * Relevance score from search (0-1, lower is more relevant for distance metrics)
+       */
+      score?: number;
+
+      /**
+       * Social media accounts
+       */
+      socialAccounts?: Array<Starrer.SocialAccount> | null;
+
+      /**
+       * ISO 8601 timestamp when user was last updated
+       */
+      updatedAt?: string | null;
+
+      /**
+       * User website URL
+       */
+      websiteUrl?: string | null;
+    }
+
+    export namespace Starrer {
+      export interface SocialAccount {
+        provider: string;
+
+        url: string;
+      }
+    }
   }
 }
 
@@ -243,6 +543,11 @@ export interface SearchRepoSearchParams {
     | SearchRepoSearchParams.UnionMember92
     | SearchRepoSearchParams.RepoCompositeFilter
     | null;
+
+  /**
+   * Optional graph relationships to include (owner, contributors, starrers)
+   */
+  includeAttributes?: SearchRepoSearchParams.IncludeAttributes;
 
   /**
    * Maximum number of results to return (default: 100, max: 1000)
@@ -1844,6 +2149,48 @@ export namespace SearchRepoSearchParams {
       op: 'ContainsAllTokens';
 
       value: string;
+    }
+  }
+
+  /**
+   * Optional graph relationships to include (owner, contributors, starrers)
+   */
+  export interface IncludeAttributes {
+    /**
+     * Include repository contributors with limit
+     */
+    contributors?: IncludeAttributes.Contributors;
+
+    /**
+     * Include repository owner information
+     */
+    owner?: boolean;
+
+    /**
+     * Include users who starred the repository with limit
+     */
+    starrers?: IncludeAttributes.Starrers;
+  }
+
+  export namespace IncludeAttributes {
+    /**
+     * Include repository contributors with limit
+     */
+    export interface Contributors {
+      /**
+       * Maximum number of contributors to return (max: 100)
+       */
+      limit: number;
+    }
+
+    /**
+     * Include users who starred the repository with limit
+     */
+    export interface Starrers {
+      /**
+       * Maximum number of starrers to return (max: 100)
+       */
+      limit: number;
     }
   }
 }
