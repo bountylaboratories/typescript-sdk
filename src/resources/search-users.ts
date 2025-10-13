@@ -146,7 +146,8 @@ export interface SearchUserSearchParams {
 
   /**
    * Optional filters for narrowing search results. Supports filtering on: githubId,
-   * login, company, location, emails, resolvedCountry, resolvedState, resolvedCity.
+   * login, displayName, bio, company, location, emails, resolvedCountry,
+   * resolvedState, resolvedCity.
    *
    * Full-text searchable fields (automatically searched): login, displayName, bio,
    * company, location, emails, resolvedCountry, resolvedState, resolvedCity.
@@ -273,6 +274,34 @@ export interface SearchUserSearchParams {
     | SearchUserSearchParams.UnionMember108
     | SearchUserSearchParams.UnionMember109
     | SearchUserSearchParams.UnionMember110
+    | SearchUserSearchParams.UnionMember111
+    | SearchUserSearchParams.UnionMember112
+    | SearchUserSearchParams.UnionMember113
+    | SearchUserSearchParams.UnionMember114
+    | SearchUserSearchParams.UnionMember115
+    | SearchUserSearchParams.UnionMember116
+    | SearchUserSearchParams.UnionMember117
+    | SearchUserSearchParams.UnionMember118
+    | SearchUserSearchParams.UnionMember119
+    | SearchUserSearchParams.UnionMember120
+    | SearchUserSearchParams.UnionMember121
+    | SearchUserSearchParams.UnionMember122
+    | SearchUserSearchParams.UnionMember123
+    | SearchUserSearchParams.UnionMember124
+    | SearchUserSearchParams.UnionMember125
+    | SearchUserSearchParams.UnionMember126
+    | SearchUserSearchParams.UnionMember127
+    | SearchUserSearchParams.UnionMember128
+    | SearchUserSearchParams.UnionMember129
+    | SearchUserSearchParams.UnionMember130
+    | SearchUserSearchParams.UnionMember131
+    | SearchUserSearchParams.UnionMember132
+    | SearchUserSearchParams.UnionMember133
+    | SearchUserSearchParams.UnionMember134
+    | SearchUserSearchParams.UnionMember135
+    | SearchUserSearchParams.UnionMember136
+    | SearchUserSearchParams.UnionMember137
+    | SearchUserSearchParams.UnionMember138
     | SearchUserSearchParams.UserCompositeFilter
     | null;
 
@@ -500,7 +529,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember27 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Eq';
 
@@ -508,7 +537,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember28 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'NotEq';
 
@@ -516,7 +545,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember29 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'In';
 
@@ -524,7 +553,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember30 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'NotIn';
 
@@ -532,7 +561,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember31 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Lt';
 
@@ -540,7 +569,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember32 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Lte';
 
@@ -548,7 +577,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember33 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Gt';
 
@@ -556,7 +585,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember34 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Gte';
 
@@ -564,7 +593,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember35 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Glob';
 
@@ -572,7 +601,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember36 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'NotGlob';
 
@@ -580,7 +609,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember37 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'IGlob';
 
@@ -588,7 +617,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember38 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'NotIGlob';
 
@@ -596,7 +625,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember39 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'Regex';
 
@@ -604,7 +633,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember40 {
-    field: 'company';
+    field: 'displayName';
 
     op: 'ContainsAllTokens';
 
@@ -612,7 +641,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember41 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Eq';
 
@@ -620,7 +649,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember42 {
-    field: 'location';
+    field: 'bio';
 
     op: 'NotEq';
 
@@ -628,7 +657,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember43 {
-    field: 'location';
+    field: 'bio';
 
     op: 'In';
 
@@ -636,7 +665,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember44 {
-    field: 'location';
+    field: 'bio';
 
     op: 'NotIn';
 
@@ -644,7 +673,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember45 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Lt';
 
@@ -652,7 +681,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember46 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Lte';
 
@@ -660,7 +689,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember47 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Gt';
 
@@ -668,7 +697,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember48 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Gte';
 
@@ -676,7 +705,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember49 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Glob';
 
@@ -684,7 +713,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember50 {
-    field: 'location';
+    field: 'bio';
 
     op: 'NotGlob';
 
@@ -692,7 +721,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember51 {
-    field: 'location';
+    field: 'bio';
 
     op: 'IGlob';
 
@@ -700,7 +729,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember52 {
-    field: 'location';
+    field: 'bio';
 
     op: 'NotIGlob';
 
@@ -708,7 +737,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember53 {
-    field: 'location';
+    field: 'bio';
 
     op: 'Regex';
 
@@ -716,7 +745,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember54 {
-    field: 'location';
+    field: 'bio';
 
     op: 'ContainsAllTokens';
 
@@ -724,7 +753,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember55 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Eq';
 
@@ -732,7 +761,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember56 {
-    field: 'emails';
+    field: 'company';
 
     op: 'NotEq';
 
@@ -740,7 +769,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember57 {
-    field: 'emails';
+    field: 'company';
 
     op: 'In';
 
@@ -748,7 +777,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember58 {
-    field: 'emails';
+    field: 'company';
 
     op: 'NotIn';
 
@@ -756,7 +785,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember59 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Lt';
 
@@ -764,7 +793,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember60 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Lte';
 
@@ -772,7 +801,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember61 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Gt';
 
@@ -780,7 +809,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember62 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Gte';
 
@@ -788,7 +817,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember63 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Glob';
 
@@ -796,7 +825,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember64 {
-    field: 'emails';
+    field: 'company';
 
     op: 'NotGlob';
 
@@ -804,7 +833,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember65 {
-    field: 'emails';
+    field: 'company';
 
     op: 'IGlob';
 
@@ -812,7 +841,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember66 {
-    field: 'emails';
+    field: 'company';
 
     op: 'NotIGlob';
 
@@ -820,7 +849,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember67 {
-    field: 'emails';
+    field: 'company';
 
     op: 'Regex';
 
@@ -828,7 +857,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember68 {
-    field: 'emails';
+    field: 'company';
 
     op: 'ContainsAllTokens';
 
@@ -836,7 +865,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember69 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Eq';
 
@@ -844,7 +873,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember70 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'NotEq';
 
@@ -852,7 +881,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember71 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'In';
 
@@ -860,7 +889,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember72 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'NotIn';
 
@@ -868,7 +897,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember73 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Lt';
 
@@ -876,7 +905,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember74 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Lte';
 
@@ -884,7 +913,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember75 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Gt';
 
@@ -892,7 +921,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember76 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Gte';
 
@@ -900,7 +929,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember77 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Glob';
 
@@ -908,7 +937,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember78 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'NotGlob';
 
@@ -916,7 +945,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember79 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'IGlob';
 
@@ -924,7 +953,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember80 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'NotIGlob';
 
@@ -932,7 +961,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember81 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'Regex';
 
@@ -940,7 +969,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember82 {
-    field: 'resolvedCountry';
+    field: 'location';
 
     op: 'ContainsAllTokens';
 
@@ -948,7 +977,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember83 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Eq';
 
@@ -956,7 +985,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember84 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'NotEq';
 
@@ -964,7 +993,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember85 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'In';
 
@@ -972,7 +1001,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember86 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'NotIn';
 
@@ -980,7 +1009,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember87 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Lt';
 
@@ -988,7 +1017,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember88 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Lte';
 
@@ -996,7 +1025,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember89 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Gt';
 
@@ -1004,7 +1033,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember90 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Gte';
 
@@ -1012,7 +1041,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember91 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Glob';
 
@@ -1020,7 +1049,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember92 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'NotGlob';
 
@@ -1028,7 +1057,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember93 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'IGlob';
 
@@ -1036,7 +1065,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember94 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'NotIGlob';
 
@@ -1044,7 +1073,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember95 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'Regex';
 
@@ -1052,7 +1081,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember96 {
-    field: 'resolvedState';
+    field: 'emails';
 
     op: 'ContainsAllTokens';
 
@@ -1060,7 +1089,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember97 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Eq';
 
@@ -1068,7 +1097,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember98 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'NotEq';
 
@@ -1076,7 +1105,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember99 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'In';
 
@@ -1084,7 +1113,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember100 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'NotIn';
 
@@ -1092,7 +1121,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember101 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Lt';
 
@@ -1100,7 +1129,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember102 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Lte';
 
@@ -1108,7 +1137,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember103 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Gt';
 
@@ -1116,7 +1145,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember104 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Gte';
 
@@ -1124,7 +1153,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember105 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Glob';
 
@@ -1132,7 +1161,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember106 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'NotGlob';
 
@@ -1140,7 +1169,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember107 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'IGlob';
 
@@ -1148,7 +1177,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember108 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'NotIGlob';
 
@@ -1156,7 +1185,7 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember109 {
-    field: 'resolvedCity';
+    field: 'resolvedCountry';
 
     op: 'Regex';
 
@@ -1164,6 +1193,230 @@ export namespace SearchUserSearchParams {
   }
 
   export interface UnionMember110 {
+    field: 'resolvedCountry';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember111 {
+    field: 'resolvedState';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember112 {
+    field: 'resolvedState';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember113 {
+    field: 'resolvedState';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember114 {
+    field: 'resolvedState';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember115 {
+    field: 'resolvedState';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember116 {
+    field: 'resolvedState';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember117 {
+    field: 'resolvedState';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember118 {
+    field: 'resolvedState';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember119 {
+    field: 'resolvedState';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember120 {
+    field: 'resolvedState';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember121 {
+    field: 'resolvedState';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember122 {
+    field: 'resolvedState';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember123 {
+    field: 'resolvedState';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember124 {
+    field: 'resolvedState';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember125 {
+    field: 'resolvedCity';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember126 {
+    field: 'resolvedCity';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember127 {
+    field: 'resolvedCity';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember128 {
+    field: 'resolvedCity';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember129 {
+    field: 'resolvedCity';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember130 {
+    field: 'resolvedCity';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember131 {
+    field: 'resolvedCity';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember132 {
+    field: 'resolvedCity';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember133 {
+    field: 'resolvedCity';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember134 {
+    field: 'resolvedCity';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember135 {
+    field: 'resolvedCity';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember136 {
+    field: 'resolvedCity';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember137 {
+    field: 'resolvedCity';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember138 {
     field: 'resolvedCity';
 
     op: 'ContainsAllTokens';
@@ -1287,6 +1540,34 @@ export namespace SearchUserSearchParams {
       | UserCompositeFilter.UnionMember108
       | UserCompositeFilter.UnionMember109
       | UserCompositeFilter.UnionMember110
+      | UserCompositeFilter.UnionMember111
+      | UserCompositeFilter.UnionMember112
+      | UserCompositeFilter.UnionMember113
+      | UserCompositeFilter.UnionMember114
+      | UserCompositeFilter.UnionMember115
+      | UserCompositeFilter.UnionMember116
+      | UserCompositeFilter.UnionMember117
+      | UserCompositeFilter.UnionMember118
+      | UserCompositeFilter.UnionMember119
+      | UserCompositeFilter.UnionMember120
+      | UserCompositeFilter.UnionMember121
+      | UserCompositeFilter.UnionMember122
+      | UserCompositeFilter.UnionMember123
+      | UserCompositeFilter.UnionMember124
+      | UserCompositeFilter.UnionMember125
+      | UserCompositeFilter.UnionMember126
+      | UserCompositeFilter.UnionMember127
+      | UserCompositeFilter.UnionMember128
+      | UserCompositeFilter.UnionMember129
+      | UserCompositeFilter.UnionMember130
+      | UserCompositeFilter.UnionMember131
+      | UserCompositeFilter.UnionMember132
+      | UserCompositeFilter.UnionMember133
+      | UserCompositeFilter.UnionMember134
+      | UserCompositeFilter.UnionMember135
+      | UserCompositeFilter.UnionMember136
+      | UserCompositeFilter.UnionMember137
+      | UserCompositeFilter.UnionMember138
     >;
 
     /**
@@ -1513,7 +1794,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember27 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Eq';
 
@@ -1521,7 +1802,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember28 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'NotEq';
 
@@ -1529,7 +1810,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember29 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'In';
 
@@ -1537,7 +1818,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember30 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'NotIn';
 
@@ -1545,7 +1826,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember31 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Lt';
 
@@ -1553,7 +1834,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember32 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Lte';
 
@@ -1561,7 +1842,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember33 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Gt';
 
@@ -1569,7 +1850,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember34 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Gte';
 
@@ -1577,7 +1858,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember35 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Glob';
 
@@ -1585,7 +1866,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember36 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'NotGlob';
 
@@ -1593,7 +1874,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember37 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'IGlob';
 
@@ -1601,7 +1882,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember38 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'NotIGlob';
 
@@ -1609,7 +1890,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember39 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'Regex';
 
@@ -1617,7 +1898,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember40 {
-      field: 'company';
+      field: 'displayName';
 
       op: 'ContainsAllTokens';
 
@@ -1625,7 +1906,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember41 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Eq';
 
@@ -1633,7 +1914,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember42 {
-      field: 'location';
+      field: 'bio';
 
       op: 'NotEq';
 
@@ -1641,7 +1922,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember43 {
-      field: 'location';
+      field: 'bio';
 
       op: 'In';
 
@@ -1649,7 +1930,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember44 {
-      field: 'location';
+      field: 'bio';
 
       op: 'NotIn';
 
@@ -1657,7 +1938,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember45 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Lt';
 
@@ -1665,7 +1946,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember46 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Lte';
 
@@ -1673,7 +1954,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember47 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Gt';
 
@@ -1681,7 +1962,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember48 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Gte';
 
@@ -1689,7 +1970,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember49 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Glob';
 
@@ -1697,7 +1978,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember50 {
-      field: 'location';
+      field: 'bio';
 
       op: 'NotGlob';
 
@@ -1705,7 +1986,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember51 {
-      field: 'location';
+      field: 'bio';
 
       op: 'IGlob';
 
@@ -1713,7 +1994,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember52 {
-      field: 'location';
+      field: 'bio';
 
       op: 'NotIGlob';
 
@@ -1721,7 +2002,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember53 {
-      field: 'location';
+      field: 'bio';
 
       op: 'Regex';
 
@@ -1729,7 +2010,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember54 {
-      field: 'location';
+      field: 'bio';
 
       op: 'ContainsAllTokens';
 
@@ -1737,7 +2018,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember55 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Eq';
 
@@ -1745,7 +2026,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember56 {
-      field: 'emails';
+      field: 'company';
 
       op: 'NotEq';
 
@@ -1753,7 +2034,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember57 {
-      field: 'emails';
+      field: 'company';
 
       op: 'In';
 
@@ -1761,7 +2042,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember58 {
-      field: 'emails';
+      field: 'company';
 
       op: 'NotIn';
 
@@ -1769,7 +2050,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember59 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Lt';
 
@@ -1777,7 +2058,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember60 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Lte';
 
@@ -1785,7 +2066,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember61 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Gt';
 
@@ -1793,7 +2074,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember62 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Gte';
 
@@ -1801,7 +2082,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember63 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Glob';
 
@@ -1809,7 +2090,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember64 {
-      field: 'emails';
+      field: 'company';
 
       op: 'NotGlob';
 
@@ -1817,7 +2098,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember65 {
-      field: 'emails';
+      field: 'company';
 
       op: 'IGlob';
 
@@ -1825,7 +2106,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember66 {
-      field: 'emails';
+      field: 'company';
 
       op: 'NotIGlob';
 
@@ -1833,7 +2114,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember67 {
-      field: 'emails';
+      field: 'company';
 
       op: 'Regex';
 
@@ -1841,7 +2122,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember68 {
-      field: 'emails';
+      field: 'company';
 
       op: 'ContainsAllTokens';
 
@@ -1849,7 +2130,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember69 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Eq';
 
@@ -1857,7 +2138,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember70 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'NotEq';
 
@@ -1865,7 +2146,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember71 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'In';
 
@@ -1873,7 +2154,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember72 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'NotIn';
 
@@ -1881,7 +2162,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember73 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Lt';
 
@@ -1889,7 +2170,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember74 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Lte';
 
@@ -1897,7 +2178,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember75 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Gt';
 
@@ -1905,7 +2186,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember76 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Gte';
 
@@ -1913,7 +2194,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember77 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Glob';
 
@@ -1921,7 +2202,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember78 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'NotGlob';
 
@@ -1929,7 +2210,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember79 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'IGlob';
 
@@ -1937,7 +2218,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember80 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'NotIGlob';
 
@@ -1945,7 +2226,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember81 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'Regex';
 
@@ -1953,7 +2234,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember82 {
-      field: 'resolvedCountry';
+      field: 'location';
 
       op: 'ContainsAllTokens';
 
@@ -1961,7 +2242,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember83 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Eq';
 
@@ -1969,7 +2250,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember84 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'NotEq';
 
@@ -1977,7 +2258,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember85 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'In';
 
@@ -1985,7 +2266,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember86 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'NotIn';
 
@@ -1993,7 +2274,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember87 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Lt';
 
@@ -2001,7 +2282,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember88 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Lte';
 
@@ -2009,7 +2290,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember89 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Gt';
 
@@ -2017,7 +2298,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember90 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Gte';
 
@@ -2025,7 +2306,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember91 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Glob';
 
@@ -2033,7 +2314,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember92 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'NotGlob';
 
@@ -2041,7 +2322,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember93 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'IGlob';
 
@@ -2049,7 +2330,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember94 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'NotIGlob';
 
@@ -2057,7 +2338,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember95 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'Regex';
 
@@ -2065,7 +2346,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember96 {
-      field: 'resolvedState';
+      field: 'emails';
 
       op: 'ContainsAllTokens';
 
@@ -2073,7 +2354,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember97 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Eq';
 
@@ -2081,7 +2362,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember98 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'NotEq';
 
@@ -2089,7 +2370,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember99 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'In';
 
@@ -2097,7 +2378,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember100 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'NotIn';
 
@@ -2105,7 +2386,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember101 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Lt';
 
@@ -2113,7 +2394,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember102 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Lte';
 
@@ -2121,7 +2402,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember103 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Gt';
 
@@ -2129,7 +2410,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember104 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Gte';
 
@@ -2137,7 +2418,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember105 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Glob';
 
@@ -2145,7 +2426,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember106 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'NotGlob';
 
@@ -2153,7 +2434,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember107 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'IGlob';
 
@@ -2161,7 +2442,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember108 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'NotIGlob';
 
@@ -2169,7 +2450,7 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember109 {
-      field: 'resolvedCity';
+      field: 'resolvedCountry';
 
       op: 'Regex';
 
@@ -2177,6 +2458,230 @@ export namespace SearchUserSearchParams {
     }
 
     export interface UnionMember110 {
+      field: 'resolvedCountry';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember111 {
+      field: 'resolvedState';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember112 {
+      field: 'resolvedState';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember113 {
+      field: 'resolvedState';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember114 {
+      field: 'resolvedState';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember115 {
+      field: 'resolvedState';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember116 {
+      field: 'resolvedState';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember117 {
+      field: 'resolvedState';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember118 {
+      field: 'resolvedState';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember119 {
+      field: 'resolvedState';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember120 {
+      field: 'resolvedState';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember121 {
+      field: 'resolvedState';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember122 {
+      field: 'resolvedState';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember123 {
+      field: 'resolvedState';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember124 {
+      field: 'resolvedState';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember125 {
+      field: 'resolvedCity';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember126 {
+      field: 'resolvedCity';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember127 {
+      field: 'resolvedCity';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember128 {
+      field: 'resolvedCity';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember129 {
+      field: 'resolvedCity';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember130 {
+      field: 'resolvedCity';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember131 {
+      field: 'resolvedCity';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember132 {
+      field: 'resolvedCity';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember133 {
+      field: 'resolvedCity';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember134 {
+      field: 'resolvedCity';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember135 {
+      field: 'resolvedCity';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember136 {
+      field: 'resolvedCity';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember137 {
+      field: 'resolvedCity';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember138 {
       field: 'resolvedCity';
 
       op: 'ContainsAllTokens';
