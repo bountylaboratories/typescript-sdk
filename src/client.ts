@@ -16,7 +16,7 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { Health, HealthCheckResponse } from './resources/health';
+import { Health } from './resources/health';
 import {
   RawRepoByFullnameParams,
   RawRepoByFullnameResponse,
@@ -744,7 +744,7 @@ Bountylab.SearchRepos = SearchRepos;
 export declare namespace Bountylab {
   export type RequestOptions = Opts.RequestOptions;
 
-  export { Health as Health, type HealthCheckResponse as HealthCheckResponse };
+  export { Health as Health };
 
   export {
     RawUsers as RawUsers,

@@ -29,11 +29,6 @@ export interface SearchUserSearchResponse {
   count: number;
 
   /**
-   * Credits consumed (1 per result)
-   */
-  creditsUsed: number;
-
-  /**
    * Array of user search results with relevance scores
    */
   users: Array<SearchUserSearchResponse.User | null>;
