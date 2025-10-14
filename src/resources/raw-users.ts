@@ -39,11 +39,6 @@ export class RawUsers extends APIResource {
 
 export interface RawUserRetrieveResponse {
   /**
-   * Credits consumed (1 per result)
-   */
-  creditsUsed: number;
-
-  /**
    * User object or null if not found
    */
   user: RawUserRetrieveResponse.User | null;
@@ -154,11 +149,6 @@ export interface RawUserByLoginResponse {
    * Number of users returned
    */
   count: number;
-
-  /**
-   * Credits consumed (1 per result)
-   */
-  creditsUsed: number;
 
   /**
    * Array of user objects
