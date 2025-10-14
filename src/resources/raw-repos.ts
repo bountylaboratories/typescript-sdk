@@ -40,11 +40,6 @@ export class RawRepos extends APIResource {
 
 export interface RawRepoRetrieveResponse {
   /**
-   * Credits consumed (1 per result)
-   */
-  creditsUsed: number;
-
-  /**
    * Repository object or null if not found
    */
   repository: RawRepoRetrieveResponse.Repository | null;
@@ -142,11 +137,6 @@ export interface RawRepoByFullnameResponse {
    * Number of repositories returned
    */
   count: number;
-
-  /**
-   * Credits consumed (1 per result)
-   */
-  creditsUsed: number;
 
   /**
    * Array of repository objects

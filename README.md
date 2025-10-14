@@ -43,7 +43,7 @@ const client = new Bountylab({
   apiKey: process.env['BOUNTYLAB_API_KEY'], // This is the default and can be omitted
 });
 
-const response: Bountylab.HealthCheckResponse = await client.health.check();
+const rawUser: Bountylab.RawUserRetrieveResponse = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==');
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -56,7 +56,7 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const response = await client.health.check().catch(async (err) => {
+const rawUser = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==').catch(async (err) => {
   if (err instanceof Bountylab.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
@@ -96,7 +96,7 @@ const client = new Bountylab({
 });
 
 // Or, configure per-request:
-await client.health.check({
+await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==', {
   maxRetries: 5,
 });
 ```
@@ -113,7 +113,7 @@ const client = new Bountylab({
 });
 
 // Override per-request:
-await client.health.check({
+await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==', {
   timeout: 5 * 1000,
 });
 ```
@@ -136,13 +136,15 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new Bountylab();
 
-const response = await client.health.check().asResponse();
+const response = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==').asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await client.health.check().withResponse();
+const { data: rawUser, response: raw } = await client.rawUsers
+  .retrieve('MDQ6VXNlcjU4MzIzMQ==')
+  .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(response.status);
+console.log(rawUser.user);
 ```
 
 ### Logging

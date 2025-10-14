@@ -29,11 +29,6 @@ export interface SearchRepoSearchResponse {
   count: number;
 
   /**
-   * Credits consumed (1 per result + graph relationship costs)
-   */
-  creditsUsed: number;
-
-  /**
    * Array of repository search results with relevance scores and optional graph
    * relationships
    */
