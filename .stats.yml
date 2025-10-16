@@ -1,4 +1,4 @@
-configured_endpoints: 6
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/bounty-lab%2Fbountylab-07c3e93086748ad350a6bd323239a942e87fbf9538dd6e43261b1ed3db466245.yml
-openapi_spec_hash: 38b390c9df59623382f5d8424a939641
+configured_endpoints: 8
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/bounty-lab%2Fbountylab-24df28b4721c59052b0db9a86f2af716c1185bbe2d9b57a4a74cbccac12d53cf.yml
+openapi_spec_hash: a4e32c58278a8a23ce528de2381d5b51
 config_hash: aba5e3639c4eaae3ac06f1489bbfdf62

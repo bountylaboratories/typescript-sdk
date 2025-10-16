@@ -28,8 +28,20 @@ import {
   RawUserRetrieveResponse,
   RawUsers,
 } from './resources/raw-users';
-import { SearchRepoSearchParams, SearchRepoSearchResponse, SearchRepos } from './resources/search-repos';
-import { SearchUserSearchParams, SearchUserSearchResponse, SearchUsers } from './resources/search-users';
+import {
+  SearchRepoNaturalLanguageParams,
+  SearchRepoNaturalLanguageResponse,
+  SearchRepoSearchParams,
+  SearchRepoSearchResponse,
+  SearchRepos,
+} from './resources/search-repos';
+import {
+  SearchUserNaturalLanguageParams,
+  SearchUserNaturalLanguageResponse,
+  SearchUserSearchParams,
+  SearchUserSearchResponse,
+  SearchUsers,
+} from './resources/search-users';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -757,13 +769,17 @@ export declare namespace Bountylab {
 
   export {
     SearchUsers as SearchUsers,
+    type SearchUserNaturalLanguageResponse as SearchUserNaturalLanguageResponse,
     type SearchUserSearchResponse as SearchUserSearchResponse,
+    type SearchUserNaturalLanguageParams as SearchUserNaturalLanguageParams,
     type SearchUserSearchParams as SearchUserSearchParams,
   };
 
   export {
     SearchRepos as SearchRepos,
+    type SearchRepoNaturalLanguageResponse as SearchRepoNaturalLanguageResponse,
     type SearchRepoSearchResponse as SearchRepoSearchResponse,
+    type SearchRepoNaturalLanguageParams as SearchRepoNaturalLanguageParams,
     type SearchRepoSearchParams as SearchRepoSearchParams,
   };
 }
