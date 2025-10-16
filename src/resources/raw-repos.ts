@@ -36,6 +36,63 @@ export class RawRepos extends APIResource {
   byFullname(body: RawRepoByFullnameParams, options?: RequestOptions): APIPromise<RawRepoByFullnameResponse> {
     return this._client.post('/api/raw/repos/by-fullname', { body, ...options });
   }
+
+  /**
+   * Get users who contribute to this repository (incoming "contributes" edges).
+   * Supports pagination. Requires RAW service. Credits: 1 per result.
+   *
+   * @example
+   * ```ts
+   * const response = await client.rawRepos.contributes(
+   *   'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
+   * );
+   * ```
+   */
+  contributes(
+    id: string,
+    query: RawRepoContributesParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RawRepoContributesResponse> {
+    return this._client.get(path`/api/raw/repos/${id}/contributes`, { query, ...options });
+  }
+
+  /**
+   * Get users who own this repository (incoming "owns" edges, typically 1 user).
+   * Supports pagination. Requires RAW service. Credits: 1 per result.
+   *
+   * @example
+   * ```ts
+   * const response = await client.rawRepos.owns(
+   *   'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
+   * );
+   * ```
+   */
+  owns(
+    id: string,
+    query: RawRepoOwnsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RawRepoOwnsResponse> {
+    return this._client.get(path`/api/raw/repos/${id}/owns`, { query, ...options });
+  }
+
+  /**
+   * Get users who starred this repository (incoming "stars" edges). Supports
+   * pagination. Requires RAW service. Credits: 1 per result.
+   *
+   * @example
+   * ```ts
+   * const response = await client.rawRepos.stars(
+   *   'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
+   * );
+   * ```
+   */
+  stars(
+    id: string,
+    query: RawRepoStarsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RawRepoStarsResponse> {
+    return this._client.get(path`/api/raw/repos/${id}/stars`, { query, ...options });
+  }
 }
 
 export interface RawRepoRetrieveResponse {
@@ -228,6 +285,348 @@ export namespace RawRepoByFullnameResponse {
   }
 }
 
+export interface RawRepoContributesResponse {
+  /**
+   * Number of users in current page
+   */
+  count: number;
+
+  /**
+   * Total number of contributors
+   */
+  total: number;
+
+  /**
+   * Array of users who contribute to this repository
+   */
+  users: Array<RawRepoContributesResponse.User | null>;
+}
+
+export namespace RawRepoContributesResponse {
+  export interface User {
+    /**
+     * BountyLab internal ID
+     */
+    id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
+
+    /**
+     * GitHub username
+     */
+    login: string;
+
+    /**
+     * User biography
+     */
+    bio?: string | null;
+
+    /**
+     * Company name
+     */
+    company?: string | null;
+
+    /**
+     * ISO 8601 timestamp when user account was created
+     */
+    createdAt?: string | null;
+
+    /**
+     * User display name
+     */
+    displayName?: string | null;
+
+    /**
+     * Email addresses
+     */
+    emails?: Array<string> | null;
+
+    /**
+     * ISO 8601 timestamp when metadata was extracted
+     */
+    embeddedAt?: string | null;
+
+    /**
+     * User location
+     */
+    location?: string | null;
+
+    /**
+     * Resolved city from location
+     */
+    resolvedCity?: string | null;
+
+    /**
+     * Resolved country from location
+     */
+    resolvedCountry?: string | null;
+
+    /**
+     * Resolved state/region from location
+     */
+    resolvedState?: string | null;
+
+    /**
+     * Relevance score from search (0-1, lower is more relevant for distance metrics)
+     */
+    score?: number;
+
+    /**
+     * Social media accounts
+     */
+    socialAccounts?: Array<User.SocialAccount> | null;
+
+    /**
+     * ISO 8601 timestamp when user was last updated
+     */
+    updatedAt?: string | null;
+
+    /**
+     * User website URL
+     */
+    websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
+  }
+}
+
+export interface RawRepoOwnsResponse {
+  /**
+   * Number of users in current page
+   */
+  count: number;
+
+  /**
+   * Total number of owners
+   */
+  total: number;
+
+  /**
+   * Array of users who own this repository (typically 1)
+   */
+  users: Array<RawRepoOwnsResponse.User | null>;
+}
+
+export namespace RawRepoOwnsResponse {
+  export interface User {
+    /**
+     * BountyLab internal ID
+     */
+    id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
+
+    /**
+     * GitHub username
+     */
+    login: string;
+
+    /**
+     * User biography
+     */
+    bio?: string | null;
+
+    /**
+     * Company name
+     */
+    company?: string | null;
+
+    /**
+     * ISO 8601 timestamp when user account was created
+     */
+    createdAt?: string | null;
+
+    /**
+     * User display name
+     */
+    displayName?: string | null;
+
+    /**
+     * Email addresses
+     */
+    emails?: Array<string> | null;
+
+    /**
+     * ISO 8601 timestamp when metadata was extracted
+     */
+    embeddedAt?: string | null;
+
+    /**
+     * User location
+     */
+    location?: string | null;
+
+    /**
+     * Resolved city from location
+     */
+    resolvedCity?: string | null;
+
+    /**
+     * Resolved country from location
+     */
+    resolvedCountry?: string | null;
+
+    /**
+     * Resolved state/region from location
+     */
+    resolvedState?: string | null;
+
+    /**
+     * Relevance score from search (0-1, lower is more relevant for distance metrics)
+     */
+    score?: number;
+
+    /**
+     * Social media accounts
+     */
+    socialAccounts?: Array<User.SocialAccount> | null;
+
+    /**
+     * ISO 8601 timestamp when user was last updated
+     */
+    updatedAt?: string | null;
+
+    /**
+     * User website URL
+     */
+    websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
+  }
+}
+
+export interface RawRepoStarsResponse {
+  /**
+   * Number of users in current page
+   */
+  count: number;
+
+  /**
+   * Total number of users who starred
+   */
+  total: number;
+
+  /**
+   * Array of users who starred this repository
+   */
+  users: Array<RawRepoStarsResponse.User | null>;
+}
+
+export namespace RawRepoStarsResponse {
+  export interface User {
+    /**
+     * BountyLab internal ID
+     */
+    id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
+
+    /**
+     * GitHub username
+     */
+    login: string;
+
+    /**
+     * User biography
+     */
+    bio?: string | null;
+
+    /**
+     * Company name
+     */
+    company?: string | null;
+
+    /**
+     * ISO 8601 timestamp when user account was created
+     */
+    createdAt?: string | null;
+
+    /**
+     * User display name
+     */
+    displayName?: string | null;
+
+    /**
+     * Email addresses
+     */
+    emails?: Array<string> | null;
+
+    /**
+     * ISO 8601 timestamp when metadata was extracted
+     */
+    embeddedAt?: string | null;
+
+    /**
+     * User location
+     */
+    location?: string | null;
+
+    /**
+     * Resolved city from location
+     */
+    resolvedCity?: string | null;
+
+    /**
+     * Resolved country from location
+     */
+    resolvedCountry?: string | null;
+
+    /**
+     * Resolved state/region from location
+     */
+    resolvedState?: string | null;
+
+    /**
+     * Relevance score from search (0-1, lower is more relevant for distance metrics)
+     */
+    score?: number;
+
+    /**
+     * Social media accounts
+     */
+    socialAccounts?: Array<User.SocialAccount> | null;
+
+    /**
+     * ISO 8601 timestamp when user was last updated
+     */
+    updatedAt?: string | null;
+
+    /**
+     * User website URL
+     */
+    websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
+  }
+}
+
 export interface RawRepoByFullnameParams {
   /**
    * Array of repository full names in "owner/name" format (1-100)
@@ -235,10 +634,52 @@ export interface RawRepoByFullnameParams {
   fullNames: Array<string>;
 }
 
+export interface RawRepoContributesParams {
+  /**
+   * Maximum number of results to return (default: 100, max: 1000)
+   */
+  limit?: string;
+
+  /**
+   * Number of results to skip (default: 0)
+   */
+  offset?: string;
+}
+
+export interface RawRepoOwnsParams {
+  /**
+   * Maximum number of results to return (default: 100, max: 1000)
+   */
+  limit?: string;
+
+  /**
+   * Number of results to skip (default: 0)
+   */
+  offset?: string;
+}
+
+export interface RawRepoStarsParams {
+  /**
+   * Maximum number of results to return (default: 100, max: 1000)
+   */
+  limit?: string;
+
+  /**
+   * Number of results to skip (default: 0)
+   */
+  offset?: string;
+}
+
 export declare namespace RawRepos {
   export {
     type RawRepoRetrieveResponse as RawRepoRetrieveResponse,
     type RawRepoByFullnameResponse as RawRepoByFullnameResponse,
+    type RawRepoContributesResponse as RawRepoContributesResponse,
+    type RawRepoOwnsResponse as RawRepoOwnsResponse,
+    type RawRepoStarsResponse as RawRepoStarsResponse,
     type RawRepoByFullnameParams as RawRepoByFullnameParams,
+    type RawRepoContributesParams as RawRepoContributesParams,
+    type RawRepoOwnsParams as RawRepoOwnsParams,
+    type RawRepoStarsParams as RawRepoStarsParams,
   };
 }
