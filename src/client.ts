@@ -19,13 +19,29 @@ import { APIPromise } from './core/api-promise';
 import {
   RawRepoByFullnameParams,
   RawRepoByFullnameResponse,
+  RawRepoContributesParams,
+  RawRepoContributesResponse,
+  RawRepoOwnsParams,
+  RawRepoOwnsResponse,
   RawRepoRetrieveResponse,
+  RawRepoStarsParams,
+  RawRepoStarsResponse,
   RawRepos,
 } from './resources/raw-repos';
 import {
   RawUserByLoginParams,
   RawUserByLoginResponse,
+  RawUserContributesParams,
+  RawUserContributesResponse,
+  RawUserFollowersParams,
+  RawUserFollowersResponse,
+  RawUserFollowingParams,
+  RawUserFollowingResponse,
+  RawUserOwnsParams,
+  RawUserOwnsResponse,
   RawUserRetrieveResponse,
+  RawUserStarsParams,
+  RawUserStarsResponse,
   RawUsers,
 } from './resources/raw-users';
 import {
@@ -757,14 +773,30 @@ export declare namespace Bountylab {
     RawUsers as RawUsers,
     type RawUserRetrieveResponse as RawUserRetrieveResponse,
     type RawUserByLoginResponse as RawUserByLoginResponse,
+    type RawUserContributesResponse as RawUserContributesResponse,
+    type RawUserFollowersResponse as RawUserFollowersResponse,
+    type RawUserFollowingResponse as RawUserFollowingResponse,
+    type RawUserOwnsResponse as RawUserOwnsResponse,
+    type RawUserStarsResponse as RawUserStarsResponse,
     type RawUserByLoginParams as RawUserByLoginParams,
+    type RawUserContributesParams as RawUserContributesParams,
+    type RawUserFollowersParams as RawUserFollowersParams,
+    type RawUserFollowingParams as RawUserFollowingParams,
+    type RawUserOwnsParams as RawUserOwnsParams,
+    type RawUserStarsParams as RawUserStarsParams,
   };
 
   export {
     RawRepos as RawRepos,
     type RawRepoRetrieveResponse as RawRepoRetrieveResponse,
     type RawRepoByFullnameResponse as RawRepoByFullnameResponse,
+    type RawRepoContributesResponse as RawRepoContributesResponse,
+    type RawRepoOwnsResponse as RawRepoOwnsResponse,
+    type RawRepoStarsResponse as RawRepoStarsResponse,
     type RawRepoByFullnameParams as RawRepoByFullnameParams,
+    type RawRepoContributesParams as RawRepoContributesParams,
+    type RawRepoOwnsParams as RawRepoOwnsParams,
+    type RawRepoStarsParams as RawRepoStarsParams,
   };
 
   export {
