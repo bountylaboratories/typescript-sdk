@@ -1,5 +1,3 @@
-# Health
-
 # RawUsers
 
 Types:
