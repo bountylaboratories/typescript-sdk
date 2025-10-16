@@ -12,5 +12,17 @@ export {
   type RawUserByLoginResponse,
   type RawUserByLoginParams,
 } from './raw-users';
-export { SearchRepos, type SearchRepoSearchResponse, type SearchRepoSearchParams } from './search-repos';
-export { SearchUsers, type SearchUserSearchResponse, type SearchUserSearchParams } from './search-users';
+export {
+  SearchRepos,
+  type SearchRepoNaturalLanguageResponse,
+  type SearchRepoSearchResponse,
+  type SearchRepoNaturalLanguageParams,
+  type SearchRepoSearchParams,
+} from './search-repos';
+export {
+  SearchUsers,
+  type SearchUserNaturalLanguageResponse,
+  type SearchUserSearchResponse,
+  type SearchUserNaturalLanguageParams,
+  type SearchUserSearchParams,
+} from './search-users';

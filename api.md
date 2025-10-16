@@ -26,18 +26,22 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/search-users.ts">SearchUserNaturalLanguageResponse</a></code>
 - <code><a href="./src/resources/search-users.ts">SearchUserSearchResponse</a></code>
 
 Methods:
 
+- <code title="post /api/search/users/natural-language">client.searchUsers.<a href="./src/resources/search-users.ts">naturalLanguage</a>({ ...params }) -> SearchUserNaturalLanguageResponse</code>
 - <code title="post /api/search/users">client.searchUsers.<a href="./src/resources/search-users.ts">search</a>({ ...params }) -> SearchUserSearchResponse</code>
 
 # SearchRepos
 
 Types:
 
+- <code><a href="./src/resources/search-repos.ts">SearchRepoNaturalLanguageResponse</a></code>
 - <code><a href="./src/resources/search-repos.ts">SearchRepoSearchResponse</a></code>
 
 Methods:
 
+- <code title="post /api/search/repos/natural-language">client.searchRepos.<a href="./src/resources/search-repos.ts">naturalLanguage</a>({ ...params }) -> SearchRepoNaturalLanguageResponse</code>
 - <code title="post /api/search/repos">client.searchRepos.<a href="./src/resources/search-repos.ts">search</a>({ ...params }) -> SearchRepoSearchResponse</code>
