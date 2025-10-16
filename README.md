@@ -26,7 +26,7 @@ const client = new Bountylab({
   apiKey: process.env['BOUNTYLAB_API_KEY'], // This is the default and can be omitted
 });
 
-const response = await client.searchUsers.search({ query: 'machine learning engineer', maxResults: 10 });
+const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 });
 
 console.log(response.count);
 ```
@@ -43,7 +43,8 @@ const client = new Bountylab({
   apiKey: process.env['BOUNTYLAB_API_KEY'], // This is the default and can be omitted
 });
 
-const rawUser: Bountylab.RawUserRetrieveResponse = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==');
+const params: Bountylab.SearchUserSearchParams = { query: 'developer', maxResults: 5 };
+const response: Bountylab.SearchUserSearchResponse = await client.searchUsers.search(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -56,7 +57,7 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const rawUser = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==').catch(async (err) => {
+const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 }).catch(async (err) => {
   if (err instanceof Bountylab.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
@@ -96,7 +97,7 @@ const client = new Bountylab({
 });
 
 // Or, configure per-request:
-await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==', {
+await client.searchUsers.search({ query: 'developer', maxResults: 5 }, {
   maxRetries: 5,
 });
 ```
@@ -113,7 +114,7 @@ const client = new Bountylab({
 });
 
 // Override per-request:
-await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==', {
+await client.searchUsers.search({ query: 'developer', maxResults: 5 }, {
   timeout: 5 * 1000,
 });
 ```
@@ -136,15 +137,15 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new Bountylab();
 
-const response = await client.rawUsers.retrieve('MDQ6VXNlcjU4MzIzMQ==').asResponse();
+const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: rawUser, response: raw } = await client.rawUsers
-  .retrieve('MDQ6VXNlcjU4MzIzMQ==')
+const { data: response, response: raw } = await client.searchUsers
+  .search({ query: 'developer', maxResults: 5 })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(rawUser.user);
+console.log(response.count);
 ```
 
 ### Logging

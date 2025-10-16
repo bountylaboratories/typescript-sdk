@@ -16,7 +16,6 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { Health } from './resources/health';
 import {
   RawRepoByFullnameParams,
   RawRepoByFullnameResponse,
@@ -728,14 +727,12 @@ export class Bountylab {
 
   static toFile = Uploads.toFile;
 
-  health: API.Health = new API.Health(this);
   rawUsers: API.RawUsers = new API.RawUsers(this);
   rawRepos: API.RawRepos = new API.RawRepos(this);
   searchUsers: API.SearchUsers = new API.SearchUsers(this);
   searchRepos: API.SearchRepos = new API.SearchRepos(this);
 }
 
-Bountylab.Health = Health;
 Bountylab.RawUsers = RawUsers;
 Bountylab.RawRepos = RawRepos;
 Bountylab.SearchUsers = SearchUsers;
@@ -743,8 +740,6 @@ Bountylab.SearchRepos = SearchRepos;
 
 export declare namespace Bountylab {
   export type RequestOptions = Opts.RequestOptions;
-
-  export { Health as Health };
 
   export {
     RawUsers as RawUsers,
