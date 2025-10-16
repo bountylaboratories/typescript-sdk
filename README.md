@@ -26,7 +26,10 @@ const client = new Bountylab({
   apiKey: process.env['BOUNTYLAB_API_KEY'], // This is the default and can be omitted
 });
 
-const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 });
+const response = await client.searchUsers.naturalLanguage({
+  query: 'Find me senior engineers who work on machine learning at big tech companies',
+  maxResults: 10,
+});
 
 console.log(response.count);
 ```
@@ -225,7 +228,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.searchUsers.search({
+client.searchUsers.naturalLanguage({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
