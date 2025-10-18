@@ -23,7 +23,6 @@ import {
   RawRepoContributesResponse,
   RawRepoOwnsParams,
   RawRepoOwnsResponse,
-  RawRepoRetrieveResponse,
   RawRepoStarsParams,
   RawRepoStarsResponse,
   RawRepos,
@@ -39,7 +38,6 @@ import {
   RawUserFollowingResponse,
   RawUserOwnsParams,
   RawUserOwnsResponse,
-  RawUserRetrieveResponse,
   RawUserStarsParams,
   RawUserStarsResponse,
   RawUsers,
@@ -771,7 +769,6 @@ export declare namespace Bountylab {
 
   export {
     RawUsers as RawUsers,
-    type RawUserRetrieveResponse as RawUserRetrieveResponse,
     type RawUserByLoginResponse as RawUserByLoginResponse,
     type RawUserContributesResponse as RawUserContributesResponse,
     type RawUserFollowersResponse as RawUserFollowersResponse,
@@ -788,7 +785,6 @@ export declare namespace Bountylab {
 
   export {
     RawRepos as RawRepos,
-    type RawRepoRetrieveResponse as RawRepoRetrieveResponse,
     type RawRepoByFullnameResponse as RawRepoByFullnameResponse,
     type RawRepoContributesResponse as RawRepoContributesResponse,
     type RawRepoOwnsResponse as RawRepoOwnsResponse,

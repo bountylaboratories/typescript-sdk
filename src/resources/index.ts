@@ -2,7 +2,6 @@
 
 export {
   RawRepos,
-  type RawRepoRetrieveResponse,
   type RawRepoByFullnameResponse,
   type RawRepoContributesResponse,
   type RawRepoOwnsResponse,
@@ -14,7 +13,6 @@ export {
 } from './raw-repos';
 export {
   RawUsers,
-  type RawUserRetrieveResponse,
   type RawUserByLoginResponse,
   type RawUserContributesResponse,
   type RawUserFollowersResponse,

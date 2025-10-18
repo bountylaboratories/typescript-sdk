@@ -49,9 +49,14 @@ export interface SearchUserNaturalLanguageResponse {
   count: number;
 
   /**
+   * The generated search query used for the search
+   */
+  searchQuery: string;
+
+  /**
    * Array of user search results with relevance scores
    */
-  users: Array<SearchUserNaturalLanguageResponse.User | null>;
+  users: Array<SearchUserNaturalLanguageResponse.User>;
 }
 
 export namespace SearchUserNaturalLanguageResponse {
@@ -160,7 +165,7 @@ export interface SearchUserSearchResponse {
   /**
    * Array of user search results with relevance scores
    */
-  users: Array<SearchUserSearchResponse.User | null>;
+  users: Array<SearchUserSearchResponse.User>;
 }
 
 export namespace SearchUserSearchResponse {
