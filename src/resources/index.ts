@@ -2,29 +2,17 @@
 
 export {
   RawRepos,
+  type RawRepoRetrieveResponse,
   type RawRepoByFullnameResponse,
-  type RawRepoContributesResponse,
-  type RawRepoOwnsResponse,
-  type RawRepoStarsResponse,
+  type RawRepoRetrieveParams,
   type RawRepoByFullnameParams,
-  type RawRepoContributesParams,
-  type RawRepoOwnsParams,
-  type RawRepoStarsParams,
 } from './raw-repos';
 export {
   RawUsers,
+  type RawUserRetrieveResponse,
   type RawUserByLoginResponse,
-  type RawUserContributesResponse,
-  type RawUserFollowersResponse,
-  type RawUserFollowingResponse,
-  type RawUserOwnsResponse,
-  type RawUserStarsResponse,
+  type RawUserRetrieveParams,
   type RawUserByLoginParams,
-  type RawUserContributesParams,
-  type RawUserFollowersParams,
-  type RawUserFollowingParams,
-  type RawUserOwnsParams,
-  type RawUserStarsParams,
 } from './raw-users';
 export {
   SearchRepos,

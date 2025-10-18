@@ -9,6 +9,32 @@ const client = new Bountylab({
 
 describe('resource rawRepos', () => {
   // Prism tests are disabled
+  test.skip('retrieve: only required params', async () => {
+    const responsePromise = client.rawRepos.retrieve({
+      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('retrieve: required and optional params', async () => {
+    const response = await client.rawRepos.retrieve({
+      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
+      includeAttributes: {
+        contributors: { first: 10, after: 'after' },
+        owner: true,
+        starrers: { first: 1, after: 'after' },
+      },
+    });
+  });
+
+  // Prism tests are disabled
   test.skip('byFullname: only required params', async () => {
     const responsePromise = client.rawRepos.byFullname({
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
@@ -32,77 +58,5 @@ describe('resource rawRepos', () => {
         starrers: { first: 1, after: 'after' },
       },
     });
-  });
-
-  // Prism tests are disabled
-  test.skip('contributes', async () => {
-    const responsePromise = client.rawRepos.contributes('MDEwOlJlcG9zaXRvcnkxMjk2MjY5');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('contributes: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.rawRepos.contributes(
-        'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
-        { after: 'eyJvZmZzZXQiOjEwMH0=', first: '100' },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(Bountylab.NotFoundError);
-  });
-
-  // Prism tests are disabled
-  test.skip('owns', async () => {
-    const responsePromise = client.rawRepos.owns('MDEwOlJlcG9zaXRvcnkxMjk2MjY5');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('owns: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.rawRepos.owns(
-        'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
-        { after: 'eyJvZmZzZXQiOjEwMH0=', first: '100' },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(Bountylab.NotFoundError);
-  });
-
-  // Prism tests are disabled
-  test.skip('stars', async () => {
-    const responsePromise = client.rawRepos.stars('MDEwOlJlcG9zaXRvcnkxMjk2MjY5');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('stars: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.rawRepos.stars(
-        'MDEwOlJlcG9zaXRvcnkxMjk2MjY5',
-        { after: 'eyJvZmZzZXQiOjEwMH0=', first: '100' },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(Bountylab.NotFoundError);
   });
 });
