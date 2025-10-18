@@ -1,6 +1,6 @@
 {
   "name": "@bountylab/bountylab",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "The official TypeScript library for the Bountylab API",
   "author": "Bountylab <alec@bountylab.io>",
   "types": "dist/index.d.ts",
