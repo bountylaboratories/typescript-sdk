@@ -4,19 +4,15 @@ export {
   RawRepos,
   type RawRepoRetrieveResponse,
   type RawRepoByFullnameResponse,
-  type RawRepoGraphResponse,
   type RawRepoRetrieveParams,
   type RawRepoByFullnameParams,
-  type RawRepoGraphParams,
 } from './raw-repos';
 export {
   RawUsers,
   type RawUserRetrieveResponse,
   type RawUserByLoginResponse,
-  type RawUserGraphResponse,
   type RawUserRetrieveParams,
   type RawUserByLoginParams,
-  type RawUserGraphParams,
 } from './raw-users';
 export {
   SearchRepos,

@@ -59,26 +59,4 @@ describe('resource rawRepos', () => {
       },
     });
   });
-
-  // Prism tests are disabled
-  test.skip('graph: only required params', async () => {
-    const responsePromise = client.rawRepos.graph('stars', { id: 'id' });
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('graph: required and optional params', async () => {
-    const response = await client.rawRepos.graph('stars', {
-      id: 'id',
-      after: 'eyJvZmZzZXQiOjEwMH0=',
-      first: '100',
-      includeAttributes: {},
-    });
-  });
 });
