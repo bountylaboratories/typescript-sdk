@@ -53,7 +53,12 @@ export interface SearchRepoNaturalLanguageResponse {
    * Array of repository search results with relevance scores and optional graph
    * relationships
    */
-  repositories: Array<SearchRepoNaturalLanguageResponse.Repository | null>;
+  repositories: Array<SearchRepoNaturalLanguageResponse.Repository>;
+
+  /**
+   * The generated search query used for semantic search
+   */
+  searchQuery: string;
 }
 
 export namespace SearchRepoNaturalLanguageResponse {
@@ -101,7 +106,7 @@ export namespace SearchRepoNaturalLanguageResponse {
     /**
      * Repository contributors (when includeAttributes.contributors is specified)
      */
-    contributors?: Array<Repository.Contributor | null>;
+    contributors?: Array<Repository.Contributor>;
 
     /**
      * ISO 8601 timestamp when repository was created
@@ -128,6 +133,9 @@ export namespace SearchRepoNaturalLanguageResponse {
      */
     lastContributorLocations?: Array<string> | null;
 
+    /**
+     * Repository owner (when includeAttributes.owner = true)
+     */
     owner?: Repository.Owner;
 
     /**
@@ -143,7 +151,7 @@ export namespace SearchRepoNaturalLanguageResponse {
     /**
      * Users who starred this repository (when includeAttributes.starrers is specified)
      */
-    starrers?: Array<Repository.Starrer | null>;
+    starrers?: Array<Repository.Starrer>;
 
     /**
      * ISO 8601 timestamp when repository was last updated
@@ -247,6 +255,9 @@ export namespace SearchRepoNaturalLanguageResponse {
       }
     }
 
+    /**
+     * Repository owner (when includeAttributes.owner = true)
+     */
     export interface Owner {
       /**
        * BountyLab internal ID
@@ -449,7 +460,7 @@ export interface SearchRepoSearchResponse {
    * Array of repository search results with relevance scores and optional graph
    * relationships
    */
-  repositories: Array<SearchRepoSearchResponse.Repository | null>;
+  repositories: Array<SearchRepoSearchResponse.Repository>;
 }
 
 export namespace SearchRepoSearchResponse {
@@ -497,7 +508,7 @@ export namespace SearchRepoSearchResponse {
     /**
      * Repository contributors (when includeAttributes.contributors is specified)
      */
-    contributors?: Array<Repository.Contributor | null>;
+    contributors?: Array<Repository.Contributor>;
 
     /**
      * ISO 8601 timestamp when repository was created
@@ -524,6 +535,9 @@ export namespace SearchRepoSearchResponse {
      */
     lastContributorLocations?: Array<string> | null;
 
+    /**
+     * Repository owner (when includeAttributes.owner = true)
+     */
     owner?: Repository.Owner;
 
     /**
@@ -539,7 +553,7 @@ export namespace SearchRepoSearchResponse {
     /**
      * Users who starred this repository (when includeAttributes.starrers is specified)
      */
-    starrers?: Array<Repository.Starrer | null>;
+    starrers?: Array<Repository.Starrer>;
 
     /**
      * ISO 8601 timestamp when repository was last updated
@@ -643,6 +657,9 @@ export namespace SearchRepoSearchResponse {
       }
     }
 
+    /**
+     * Repository owner (when includeAttributes.owner = true)
+     */
     export interface Owner {
       /**
        * BountyLab internal ID
@@ -858,7 +875,7 @@ export namespace SearchRepoNaturalLanguageParams {
    */
   export interface IncludeAttributes {
     /**
-     * Include repository contributors with limit
+     * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
 
@@ -868,30 +885,40 @@ export namespace SearchRepoNaturalLanguageParams {
     owner?: boolean;
 
     /**
-     * Include users who starred the repository with limit
+     * Include users who starred the repository with cursor pagination
      */
     starrers?: IncludeAttributes.Starrers;
   }
 
   export namespace IncludeAttributes {
     /**
-     * Include repository contributors with limit
+     * Include repository contributors with cursor pagination
      */
     export interface Contributors {
       /**
-       * Maximum number of contributors to return (max: 100)
+       * Number of items to return (max: 100)
        */
-      limit: number;
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
     }
 
     /**
-     * Include users who starred the repository with limit
+     * Include users who starred the repository with cursor pagination
      */
     export interface Starrers {
       /**
-       * Maximum number of starrers to return (max: 100)
+       * Number of items to return (max: 100)
        */
-      limit: number;
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
     }
   }
 }
@@ -987,7 +1014,7 @@ export namespace SearchRepoSearchParams {
    */
   export interface IncludeAttributes {
     /**
-     * Include repository contributors with limit
+     * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
 
@@ -997,30 +1024,40 @@ export namespace SearchRepoSearchParams {
     owner?: boolean;
 
     /**
-     * Include users who starred the repository with limit
+     * Include users who starred the repository with cursor pagination
      */
     starrers?: IncludeAttributes.Starrers;
   }
 
   export namespace IncludeAttributes {
     /**
-     * Include repository contributors with limit
+     * Include repository contributors with cursor pagination
      */
     export interface Contributors {
       /**
-       * Maximum number of contributors to return (max: 100)
+       * Number of items to return (max: 100)
        */
-      limit: number;
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
     }
 
     /**
-     * Include users who starred the repository with limit
+     * Include users who starred the repository with cursor pagination
      */
     export interface Starrers {
       /**
-       * Maximum number of starrers to return (max: 100)
+       * Number of items to return (max: 100)
        */
-      limit: number;
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
     }
   }
 }
