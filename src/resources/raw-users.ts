@@ -157,10 +157,9 @@ export namespace RawUserByLoginResponse {
     company?: string | null;
 
     /**
-     * Repositories this user contributes to (when includeAttributes.contributes is
-     * specified)
+     * Repositories this user starred (when includeAttributes.stars is specified)
      */
-    contributes?: Array<User.Contribute>;
+    contributes?: User.Contributes;
 
     /**
      * ISO 8601 timestamp when user account was created
@@ -185,12 +184,12 @@ export namespace RawUserByLoginResponse {
     /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
-    followers?: Array<User.Follower>;
+    followers?: User.Followers;
 
     /**
-     * Users this user follows (when includeAttributes.following is specified)
+     * Users who follow this user (when includeAttributes.followers is specified)
      */
-    following?: Array<User.Following>;
+    following?: User.Following;
 
     /**
      * User location
@@ -198,9 +197,9 @@ export namespace RawUserByLoginResponse {
     location?: string | null;
 
     /**
-     * Repositories this user owns (when includeAttributes.owns is specified)
+     * Repositories this user starred (when includeAttributes.stars is specified)
      */
-    owns?: Array<User.Own>;
+    owns?: User.Owns;
 
     /**
      * Resolved city from location
@@ -230,7 +229,7 @@ export namespace RawUserByLoginResponse {
     /**
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
-    stars?: Array<User.Star>;
+    stars?: User.Stars;
 
     /**
      * ISO 8601 timestamp when user was last updated
@@ -244,105 +243,506 @@ export namespace RawUserByLoginResponse {
   }
 
   export namespace User {
-    export interface Contribute {
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Contributes {
       /**
-       * BountyLab internal ID
+       * Array of repository objects
        */
-      id: string;
+      edges: Array<Contributes.Edge>;
 
       /**
-       * GitHub node ID
+       * Pagination information
        */
-      githubId: string;
-
-      /**
-       * Repository name
-       */
-      name: string;
-
-      /**
-       * Repository owner username
-       */
-      ownerLogin: string;
-
-      /**
-       * Number of stars
-       */
-      stargazerCount: number;
-
-      /**
-       * Number of closed issues
-       */
-      totalIssuesClosed: number;
-
-      /**
-       * Total number of issues (open + closed)
-       */
-      totalIssuesCount: number;
-
-      /**
-       * Number of open issues
-       */
-      totalIssuesOpen: number;
-
-      /**
-       * Repository contributors (when includeAttributes.contributors is specified)
-       */
-      contributors?: Array<Contribute.Contributor>;
-
-      /**
-       * ISO 8601 timestamp when repository was created
-       */
-      createdAt?: string | null;
-
-      /**
-       * Repository description
-       */
-      description?: string | null;
-
-      /**
-       * ISO 8601 timestamp when embedding was created
-       */
-      embeddedAt?: string | null;
-
-      /**
-       * Primary programming language
-       */
-      language?: string | null;
-
-      /**
-       * Locations of last contributors to this repository
-       */
-      lastContributorLocations?: Array<string> | null;
-
-      /**
-       * Repository owner (when includeAttributes.owner = true)
-       */
-      owner?: Contribute.Owner;
-
-      /**
-       * Preview of repository README (first ~500 chars)
-       */
-      readmePreview?: string | null;
-
-      /**
-       * Relevance score from search (0-1, lower is more relevant for cosine distance)
-       */
-      score?: number;
-
-      /**
-       * Users who starred this repository (when includeAttributes.starrers is specified)
-       */
-      starrers?: Array<Contribute.Starrer>;
-
-      /**
-       * ISO 8601 timestamp when repository was last updated
-       */
-      updatedAt?: string | null;
+      pageInfo: Contributes.PageInfo;
     }
 
-    export namespace Contribute {
-      export interface Contributor {
+    export namespace Contributes {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Followers {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Followers.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Followers.PageInfo;
+    }
+
+    export namespace Followers {
+      export interface Edge {
         /**
          * BountyLab internal ID
          */
@@ -416,7 +816,7 @@ export namespace RawUserByLoginResponse {
         /**
          * Social media accounts
          */
-        socialAccounts?: Array<Contributor.SocialAccount> | null;
+        socialAccounts?: Array<Edge.SocialAccount> | null;
 
         /**
          * ISO 8601 timestamp when user was last updated
@@ -429,7 +829,7 @@ export namespace RawUserByLoginResponse {
         websiteUrl?: string | null;
       }
 
-      export namespace Contributor {
+      export namespace Edge {
         export interface SocialAccount {
           provider: string;
 
@@ -438,488 +838,165 @@ export namespace RawUserByLoginResponse {
       }
 
       /**
-       * Repository owner (when includeAttributes.owner = true)
+       * Pagination information
        */
-      export interface Owner {
+      export interface PageInfo {
         /**
-         * BountyLab internal ID
+         * Cursor to fetch next page (null if no more items)
          */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
+        endCursor: string | null;
 
         /**
-         * GitHub username
+         * Whether there are more items available
          */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Owner.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Owner {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
-      }
-
-      export interface Starrer {
-        /**
-         * BountyLab internal ID
-         */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
-
-        /**
-         * GitHub username
-         */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Starrer.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Starrer {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
+        hasNextPage: boolean;
       }
     }
 
-    export interface Follower {
-      /**
-       * BountyLab internal ID
-       */
-      id: string;
-
-      /**
-       * GitHub node ID
-       */
-      githubId: string;
-
-      /**
-       * GitHub username
-       */
-      login: string;
-
-      /**
-       * User biography
-       */
-      bio?: string | null;
-
-      /**
-       * Company name
-       */
-      company?: string | null;
-
-      /**
-       * ISO 8601 timestamp when user account was created
-       */
-      createdAt?: string | null;
-
-      /**
-       * User display name
-       */
-      displayName?: string | null;
-
-      /**
-       * Email addresses
-       */
-      emails?: Array<string> | null;
-
-      /**
-       * ISO 8601 timestamp when metadata was extracted
-       */
-      embeddedAt?: string | null;
-
-      /**
-       * User location
-       */
-      location?: string | null;
-
-      /**
-       * Resolved city from location
-       */
-      resolvedCity?: string | null;
-
-      /**
-       * Resolved country from location
-       */
-      resolvedCountry?: string | null;
-
-      /**
-       * Resolved state/region from location
-       */
-      resolvedState?: string | null;
-
-      /**
-       * Relevance score from search (0-1, lower is more relevant for distance metrics)
-       */
-      score?: number;
-
-      /**
-       * Social media accounts
-       */
-      socialAccounts?: Array<Follower.SocialAccount> | null;
-
-      /**
-       * ISO 8601 timestamp when user was last updated
-       */
-      updatedAt?: string | null;
-
-      /**
-       * User website URL
-       */
-      websiteUrl?: string | null;
-    }
-
-    export namespace Follower {
-      export interface SocialAccount {
-        provider: string;
-
-        url: string;
-      }
-    }
-
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
     export interface Following {
       /**
-       * BountyLab internal ID
+       * Array of user objects
        */
-      id: string;
+      edges: Array<Following.Edge>;
 
       /**
-       * GitHub node ID
+       * Pagination information
        */
-      githubId: string;
-
-      /**
-       * GitHub username
-       */
-      login: string;
-
-      /**
-       * User biography
-       */
-      bio?: string | null;
-
-      /**
-       * Company name
-       */
-      company?: string | null;
-
-      /**
-       * ISO 8601 timestamp when user account was created
-       */
-      createdAt?: string | null;
-
-      /**
-       * User display name
-       */
-      displayName?: string | null;
-
-      /**
-       * Email addresses
-       */
-      emails?: Array<string> | null;
-
-      /**
-       * ISO 8601 timestamp when metadata was extracted
-       */
-      embeddedAt?: string | null;
-
-      /**
-       * User location
-       */
-      location?: string | null;
-
-      /**
-       * Resolved city from location
-       */
-      resolvedCity?: string | null;
-
-      /**
-       * Resolved country from location
-       */
-      resolvedCountry?: string | null;
-
-      /**
-       * Resolved state/region from location
-       */
-      resolvedState?: string | null;
-
-      /**
-       * Relevance score from search (0-1, lower is more relevant for distance metrics)
-       */
-      score?: number;
-
-      /**
-       * Social media accounts
-       */
-      socialAccounts?: Array<Following.SocialAccount> | null;
-
-      /**
-       * ISO 8601 timestamp when user was last updated
-       */
-      updatedAt?: string | null;
-
-      /**
-       * User website URL
-       */
-      websiteUrl?: string | null;
+      pageInfo: Following.PageInfo;
     }
 
     export namespace Following {
-      export interface SocialAccount {
-        provider: string;
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
 
-        url: string;
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Email addresses
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
       }
     }
 
-    export interface Own {
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Owns {
       /**
-       * BountyLab internal ID
+       * Array of repository objects
        */
-      id: string;
+      edges: Array<Owns.Edge>;
 
       /**
-       * GitHub node ID
+       * Pagination information
        */
-      githubId: string;
-
-      /**
-       * Repository name
-       */
-      name: string;
-
-      /**
-       * Repository owner username
-       */
-      ownerLogin: string;
-
-      /**
-       * Number of stars
-       */
-      stargazerCount: number;
-
-      /**
-       * Number of closed issues
-       */
-      totalIssuesClosed: number;
-
-      /**
-       * Total number of issues (open + closed)
-       */
-      totalIssuesCount: number;
-
-      /**
-       * Number of open issues
-       */
-      totalIssuesOpen: number;
-
-      /**
-       * Repository contributors (when includeAttributes.contributors is specified)
-       */
-      contributors?: Array<Own.Contributor>;
-
-      /**
-       * ISO 8601 timestamp when repository was created
-       */
-      createdAt?: string | null;
-
-      /**
-       * Repository description
-       */
-      description?: string | null;
-
-      /**
-       * ISO 8601 timestamp when embedding was created
-       */
-      embeddedAt?: string | null;
-
-      /**
-       * Primary programming language
-       */
-      language?: string | null;
-
-      /**
-       * Locations of last contributors to this repository
-       */
-      lastContributorLocations?: Array<string> | null;
-
-      /**
-       * Repository owner (when includeAttributes.owner = true)
-       */
-      owner?: Own.Owner;
-
-      /**
-       * Preview of repository README (first ~500 chars)
-       */
-      readmePreview?: string | null;
-
-      /**
-       * Relevance score from search (0-1, lower is more relevant for cosine distance)
-       */
-      score?: number;
-
-      /**
-       * Users who starred this repository (when includeAttributes.starrers is specified)
-       */
-      starrers?: Array<Own.Starrer>;
-
-      /**
-       * ISO 8601 timestamp when repository was last updated
-       */
-      updatedAt?: string | null;
+      pageInfo: Owns.PageInfo;
     }
 
-    export namespace Own {
-      export interface Contributor {
+    export namespace Owns {
+      export interface Edge {
         /**
          * BountyLab internal ID
          */
@@ -931,280 +1008,458 @@ export namespace RawUserByLoginResponse {
         githubId: string;
 
         /**
-         * GitHub username
+         * Repository name
          */
-        login: string;
+        name: string;
 
         /**
-         * User biography
+         * Repository owner username
          */
-        bio?: string | null;
+        ownerLogin: string;
 
         /**
-         * Company name
+         * Number of stars
          */
-        company?: string | null;
+        stargazerCount: number;
 
         /**
-         * ISO 8601 timestamp when user account was created
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
          */
         createdAt?: string | null;
 
         /**
-         * User display name
+         * Repository description
          */
-        displayName?: string | null;
+        description?: string | null;
 
         /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
+         * ISO 8601 timestamp when embedding was created
          */
         embeddedAt?: string | null;
 
         /**
-         * User location
+         * Primary programming language
          */
-        location?: string | null;
+        language?: string | null;
 
         /**
-         * Resolved city from location
+         * Locations of last contributors to this repository
          */
-        resolvedCity?: string | null;
+        lastContributorLocations?: Array<string> | null;
 
         /**
-         * Resolved country from location
+         * Repository owner (when includeAttributes.owner = true)
          */
-        resolvedCountry?: string | null;
+        owner?: Edge.Owner;
 
         /**
-         * Resolved state/region from location
+         * Preview of repository README (first ~500 chars)
          */
-        resolvedState?: string | null;
+        readmePreview?: string | null;
 
         /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
          */
         score?: number;
 
         /**
-         * Social media accounts
+         * Users who follow this user (when includeAttributes.followers is specified)
          */
-        socialAccounts?: Array<Contributor.SocialAccount> | null;
+        starrers?: Edge.Starrers;
 
         /**
-         * ISO 8601 timestamp when user was last updated
+         * ISO 8601 timestamp when repository was last updated
          */
         updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
       }
 
-      export namespace Contributor {
-        export interface SocialAccount {
-          provider: string;
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
 
-          url: string;
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
         }
       }
 
       /**
-       * Repository owner (when includeAttributes.owner = true)
+       * Pagination information
        */
-      export interface Owner {
+      export interface PageInfo {
         /**
-         * BountyLab internal ID
+         * Cursor to fetch next page (null if no more items)
          */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
+        endCursor: string | null;
 
         /**
-         * GitHub username
+         * Whether there are more items available
          */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Owner.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Owner {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
-      }
-
-      export interface Starrer {
-        /**
-         * BountyLab internal ID
-         */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
-
-        /**
-         * GitHub username
-         */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Starrer.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Starrer {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
+        hasNextPage: boolean;
       }
     }
 
@@ -1214,105 +1469,23 @@ export namespace RawUserByLoginResponse {
       url: string;
     }
 
-    export interface Star {
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Stars {
       /**
-       * BountyLab internal ID
+       * Array of repository objects
        */
-      id: string;
+      edges: Array<Stars.Edge>;
 
       /**
-       * GitHub node ID
+       * Pagination information
        */
-      githubId: string;
-
-      /**
-       * Repository name
-       */
-      name: string;
-
-      /**
-       * Repository owner username
-       */
-      ownerLogin: string;
-
-      /**
-       * Number of stars
-       */
-      stargazerCount: number;
-
-      /**
-       * Number of closed issues
-       */
-      totalIssuesClosed: number;
-
-      /**
-       * Total number of issues (open + closed)
-       */
-      totalIssuesCount: number;
-
-      /**
-       * Number of open issues
-       */
-      totalIssuesOpen: number;
-
-      /**
-       * Repository contributors (when includeAttributes.contributors is specified)
-       */
-      contributors?: Array<Star.Contributor>;
-
-      /**
-       * ISO 8601 timestamp when repository was created
-       */
-      createdAt?: string | null;
-
-      /**
-       * Repository description
-       */
-      description?: string | null;
-
-      /**
-       * ISO 8601 timestamp when embedding was created
-       */
-      embeddedAt?: string | null;
-
-      /**
-       * Primary programming language
-       */
-      language?: string | null;
-
-      /**
-       * Locations of last contributors to this repository
-       */
-      lastContributorLocations?: Array<string> | null;
-
-      /**
-       * Repository owner (when includeAttributes.owner = true)
-       */
-      owner?: Star.Owner;
-
-      /**
-       * Preview of repository README (first ~500 chars)
-       */
-      readmePreview?: string | null;
-
-      /**
-       * Relevance score from search (0-1, lower is more relevant for cosine distance)
-       */
-      score?: number;
-
-      /**
-       * Users who starred this repository (when includeAttributes.starrers is specified)
-       */
-      starrers?: Array<Star.Starrer>;
-
-      /**
-       * ISO 8601 timestamp when repository was last updated
-       */
-      updatedAt?: string | null;
+      pageInfo: Stars.PageInfo;
     }
 
-    export namespace Star {
-      export interface Contributor {
+    export namespace Stars {
+      export interface Edge {
         /**
          * BountyLab internal ID
          */
@@ -1324,280 +1497,458 @@ export namespace RawUserByLoginResponse {
         githubId: string;
 
         /**
-         * GitHub username
+         * Repository name
          */
-        login: string;
+        name: string;
 
         /**
-         * User biography
+         * Repository owner username
          */
-        bio?: string | null;
+        ownerLogin: string;
 
         /**
-         * Company name
+         * Number of stars
          */
-        company?: string | null;
+        stargazerCount: number;
 
         /**
-         * ISO 8601 timestamp when user account was created
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
          */
         createdAt?: string | null;
 
         /**
-         * User display name
+         * Repository description
          */
-        displayName?: string | null;
+        description?: string | null;
 
         /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
+         * ISO 8601 timestamp when embedding was created
          */
         embeddedAt?: string | null;
 
         /**
-         * User location
+         * Primary programming language
          */
-        location?: string | null;
+        language?: string | null;
 
         /**
-         * Resolved city from location
+         * Locations of last contributors to this repository
          */
-        resolvedCity?: string | null;
+        lastContributorLocations?: Array<string> | null;
 
         /**
-         * Resolved country from location
+         * Repository owner (when includeAttributes.owner = true)
          */
-        resolvedCountry?: string | null;
+        owner?: Edge.Owner;
 
         /**
-         * Resolved state/region from location
+         * Preview of repository README (first ~500 chars)
          */
-        resolvedState?: string | null;
+        readmePreview?: string | null;
 
         /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
          */
         score?: number;
 
         /**
-         * Social media accounts
+         * Users who follow this user (when includeAttributes.followers is specified)
          */
-        socialAccounts?: Array<Contributor.SocialAccount> | null;
+        starrers?: Edge.Starrers;
 
         /**
-         * ISO 8601 timestamp when user was last updated
+         * ISO 8601 timestamp when repository was last updated
          */
         updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
       }
 
-      export namespace Contributor {
-        export interface SocialAccount {
-          provider: string;
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
 
-          url: string;
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
         }
       }
 
       /**
-       * Repository owner (when includeAttributes.owner = true)
+       * Pagination information
        */
-      export interface Owner {
+      export interface PageInfo {
         /**
-         * BountyLab internal ID
+         * Cursor to fetch next page (null if no more items)
          */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
+        endCursor: string | null;
 
         /**
-         * GitHub username
+         * Whether there are more items available
          */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Owner.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Owner {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
-      }
-
-      export interface Starrer {
-        /**
-         * BountyLab internal ID
-         */
-        id: string;
-
-        /**
-         * GitHub node ID
-         */
-        githubId: string;
-
-        /**
-         * GitHub username
-         */
-        login: string;
-
-        /**
-         * User biography
-         */
-        bio?: string | null;
-
-        /**
-         * Company name
-         */
-        company?: string | null;
-
-        /**
-         * ISO 8601 timestamp when user account was created
-         */
-        createdAt?: string | null;
-
-        /**
-         * User display name
-         */
-        displayName?: string | null;
-
-        /**
-         * Email addresses
-         */
-        emails?: Array<string> | null;
-
-        /**
-         * ISO 8601 timestamp when metadata was extracted
-         */
-        embeddedAt?: string | null;
-
-        /**
-         * User location
-         */
-        location?: string | null;
-
-        /**
-         * Resolved city from location
-         */
-        resolvedCity?: string | null;
-
-        /**
-         * Resolved country from location
-         */
-        resolvedCountry?: string | null;
-
-        /**
-         * Resolved state/region from location
-         */
-        resolvedState?: string | null;
-
-        /**
-         * Relevance score from search (0-1, lower is more relevant for distance metrics)
-         */
-        score?: number;
-
-        /**
-         * Social media accounts
-         */
-        socialAccounts?: Array<Starrer.SocialAccount> | null;
-
-        /**
-         * ISO 8601 timestamp when user was last updated
-         */
-        updatedAt?: string | null;
-
-        /**
-         * User website URL
-         */
-        websiteUrl?: string | null;
-      }
-
-      export namespace Starrer {
-        export interface SocialAccount {
-          provider: string;
-
-          url: string;
-        }
+        hasNextPage: boolean;
       }
     }
   }
