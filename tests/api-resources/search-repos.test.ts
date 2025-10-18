@@ -28,7 +28,11 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.naturalLanguage({
       query:
         'Find React libraries with over 1000 stars that have good TypeScript support and are actively maintained',
-      includeAttributes: { contributors: { limit: 10 }, owner: true, starrers: { limit: 5 } },
+      includeAttributes: {
+        contributors: { first: 10, after: 'after' },
+        owner: true,
+        starrers: { first: 1, after: 'after' },
+      },
       maxResults: 50,
     });
   });
@@ -50,7 +54,11 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
       filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
-      includeAttributes: { contributors: { limit: 10 }, owner: true, starrers: { limit: 5 } },
+      includeAttributes: {
+        contributors: { first: 10, after: 'after' },
+        owner: true,
+        starrers: { first: 1, after: 'after' },
+      },
       maxResults: 50,
     });
   });
