@@ -19,6 +19,8 @@ import { APIPromise } from './core/api-promise';
 import {
   RawRepoByFullnameParams,
   RawRepoByFullnameResponse,
+  RawRepoGraphParams,
+  RawRepoGraphResponse,
   RawRepoRetrieveParams,
   RawRepoRetrieveResponse,
   RawRepos,
@@ -26,6 +28,8 @@ import {
 import {
   RawUserByLoginParams,
   RawUserByLoginResponse,
+  RawUserGraphParams,
+  RawUserGraphResponse,
   RawUserRetrieveParams,
   RawUserRetrieveResponse,
   RawUsers,
@@ -759,16 +763,20 @@ export declare namespace Bountylab {
     RawUsers as RawUsers,
     type RawUserRetrieveResponse as RawUserRetrieveResponse,
     type RawUserByLoginResponse as RawUserByLoginResponse,
+    type RawUserGraphResponse as RawUserGraphResponse,
     type RawUserRetrieveParams as RawUserRetrieveParams,
     type RawUserByLoginParams as RawUserByLoginParams,
+    type RawUserGraphParams as RawUserGraphParams,
   };
 
   export {
     RawRepos as RawRepos,
     type RawRepoRetrieveResponse as RawRepoRetrieveResponse,
     type RawRepoByFullnameResponse as RawRepoByFullnameResponse,
+    type RawRepoGraphResponse as RawRepoGraphResponse,
     type RawRepoRetrieveParams as RawRepoRetrieveParams,
     type RawRepoByFullnameParams as RawRepoByFullnameParams,
+    type RawRepoGraphParams as RawRepoGraphParams,
   };
 
   export {
