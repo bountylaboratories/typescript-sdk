@@ -27,9 +27,17 @@ describe('resource rawRepos', () => {
     const response = await client.rawRepos.retrieve({
       githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
       includeAttributes: {
-        contributors: { first: 10, after: 'after' },
+        contributors: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
         owner: true,
-        starrers: { first: 1, after: 'after' },
+        starrers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
       },
     });
   });
@@ -53,9 +61,17 @@ describe('resource rawRepos', () => {
     const response = await client.rawRepos.byFullname({
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
       includeAttributes: {
-        contributors: { first: 10, after: 'after' },
+        contributors: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
         owner: true,
-        starrers: { first: 1, after: 'after' },
+        starrers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
       },
     });
   });
@@ -79,14 +95,34 @@ describe('resource rawRepos', () => {
       after: 'eyJvZmZzZXQiOjEwMH0=',
       first: 100,
       includeAttributes: {
-        contributes: { first: 1, after: 'after' },
-        contributors: { first: 1, after: 'after' },
-        followers: { first: 1, after: 'after' },
-        following: { first: 1, after: 'after' },
+        contributes: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        contributors: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        followers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        following: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
         owner: true,
-        owns: { first: 1, after: 'after' },
-        starrers: { first: 1, after: 'after' },
-        stars: { first: 1, after: 'after' },
+        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        starrers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        stars: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
       },
     });
   });
