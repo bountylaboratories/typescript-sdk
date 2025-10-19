@@ -28,10 +28,19 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.naturalLanguage({
       query:
         'Find React libraries with over 1000 stars that have good TypeScript support and are actively maintained',
+      filterUserIncludeAttributes: true,
       includeAttributes: {
-        contributors: { first: 10, after: 'after' },
+        contributors: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
         owner: true,
-        starrers: { first: 1, after: 'after' },
+        starrers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
       },
       maxResults: 50,
     });
@@ -55,9 +64,17 @@ describe('resource searchRepos', () => {
       query: 'react component library with typescript',
       filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
       includeAttributes: {
-        contributors: { first: 10, after: 'after' },
+        contributors: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
         owner: true,
-        starrers: { first: 1, after: 'after' },
+        starrers: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
       },
       maxResults: 50,
     });
