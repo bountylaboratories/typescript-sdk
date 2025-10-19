@@ -9134,218 +9134,184 @@ export namespace RawUserByLoginParams {
   }
 }
 
-export type RawUserGraphParams = RawUserGraphParams.Variant0 | RawUserGraphParams.Variant1;
+export interface RawUserGraphParams {
+  /**
+   * Path param: GitHub node ID or BountyLab ID of the user
+   */
+  id: string;
 
-export declare namespace RawUserGraphParams {
-  export interface Variant0 {
+  /**
+   * Body param: Cursor for pagination (opaque base64-encoded string from previous
+   * response)
+   */
+  after?: string;
+
+  /**
+   * Body param: Number of items to return (default: 100, max: 100)
+   */
+  first?: number;
+
+  /**
+   * Body param: Optional graph relationships to include. Use user attributes
+   * (followers, following, owns, stars, contributes) for user-returning
+   * relationships, or repo attributes (owner, contributors, starrers) for
+   * repo-returning relationships.
+   */
+  includeAttributes?: RawUserGraphParams.IncludeAttributes;
+}
+
+export namespace RawUserGraphParams {
+  /**
+   * Optional graph relationships to include. Use user attributes (followers,
+   * following, owns, stars, contributes) for user-returning relationships, or repo
+   * attributes (owner, contributors, starrers) for repo-returning relationships.
+   */
+  export interface IncludeAttributes {
     /**
-     * Path param: GitHub node ID or BountyLab ID of the user
+     * Include contributed repositories with cursor pagination
      */
-    id: string;
+    contributes?: IncludeAttributes.Contributes;
 
     /**
-     * Body param: Cursor for pagination (opaque base64-encoded string from previous
-     * response)
+     * Include repository contributors with cursor pagination
      */
-    after?: string;
+    contributors?: IncludeAttributes.Contributors;
 
     /**
-     * Body param: Number of items to return (default: 100, max: 100)
+     * Include followers with cursor pagination
      */
-    first?: number;
+    followers?: IncludeAttributes.Followers;
 
     /**
-     * Body param: Optional graph relationships to include (followers, following,
-     * stars, owns, contributes)
+     * Include users this user follows with cursor pagination
      */
-    includeAttributes?: Variant0.IncludeAttributes;
+    following?: IncludeAttributes.Following;
+
+    /**
+     * Include repository owner information
+     */
+    owner?: boolean;
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include users who starred the repository with cursor pagination
+     */
+    starrers?: IncludeAttributes.Starrers;
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    stars?: IncludeAttributes.Stars;
   }
 
-  export namespace Variant0 {
+  export namespace IncludeAttributes {
     /**
-     * Optional graph relationships to include (followers, following, stars, owns,
-     * contributes)
+     * Include contributed repositories with cursor pagination
      */
-    export interface IncludeAttributes {
+    export interface Contributes {
       /**
-       * Include contributed repositories with cursor pagination
+       * Number of items to return (max: 100)
        */
-      contributes?: IncludeAttributes.Contributes;
+      first: number;
 
       /**
-       * Include followers with cursor pagination
+       * Cursor for pagination (opaque base64-encoded)
        */
-      followers?: IncludeAttributes.Followers;
-
-      /**
-       * Include users this user follows with cursor pagination
-       */
-      following?: IncludeAttributes.Following;
-
-      /**
-       * Include owned repositories with cursor pagination
-       */
-      owns?: IncludeAttributes.Owns;
-
-      /**
-       * Include starred repositories with cursor pagination
-       */
-      stars?: IncludeAttributes.Stars;
+      after?: string;
     }
 
-    export namespace IncludeAttributes {
-      /**
-       * Include contributed repositories with cursor pagination
-       */
-      export interface Contributes {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
-
-      /**
-       * Include followers with cursor pagination
-       */
-      export interface Followers {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
-
-      /**
-       * Include users this user follows with cursor pagination
-       */
-      export interface Following {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
-
-      /**
-       * Include owned repositories with cursor pagination
-       */
-      export interface Owns {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
-
-      /**
-       * Include starred repositories with cursor pagination
-       */
-      export interface Stars {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
-    }
-  }
-
-  export interface Variant1 {
     /**
-     * Path param: GitHub node ID or BountyLab ID of the user
+     * Include repository contributors with cursor pagination
      */
-    id: string;
-
-    /**
-     * Body param: Cursor for pagination (opaque base64-encoded string from previous
-     * response)
-     */
-    after?: string;
-
-    /**
-     * Body param: Number of items to return (default: 100, max: 100)
-     */
-    first?: number;
-
-    /**
-     * Body param: Optional graph relationships to include (owner, contributors,
-     * starrers)
-     */
-    includeAttributes?: Variant1.IncludeAttributes;
-  }
-
-  export namespace Variant1 {
-    /**
-     * Optional graph relationships to include (owner, contributors, starrers)
-     */
-    export interface IncludeAttributes {
+    export interface Contributors {
       /**
-       * Include repository contributors with cursor pagination
+       * Number of items to return (max: 100)
        */
-      contributors?: IncludeAttributes.Contributors;
+      first: number;
 
       /**
-       * Include repository owner information
+       * Cursor for pagination (opaque base64-encoded)
        */
-      owner?: boolean;
-
-      /**
-       * Include users who starred the repository with cursor pagination
-       */
-      starrers?: IncludeAttributes.Starrers;
+      after?: string;
     }
 
-    export namespace IncludeAttributes {
+    /**
+     * Include followers with cursor pagination
+     */
+    export interface Followers {
       /**
-       * Include repository contributors with cursor pagination
+       * Number of items to return (max: 100)
        */
-      export interface Contributors {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
-
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
+      first: number;
 
       /**
-       * Include users who starred the repository with cursor pagination
+       * Cursor for pagination (opaque base64-encoded)
        */
-      export interface Starrers {
-        /**
-         * Number of items to return (max: 100)
-         */
-        first: number;
+      after?: string;
+    }
 
-        /**
-         * Cursor for pagination (opaque base64-encoded)
-         */
-        after?: string;
-      }
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    export interface Following {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+    }
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    export interface Owns {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+    }
+
+    /**
+     * Include users who starred the repository with cursor pagination
+     */
+    export interface Starrers {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+    }
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    export interface Stars {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
     }
   }
 }

@@ -80,10 +80,13 @@ describe('resource rawRepos', () => {
       first: 100,
       includeAttributes: {
         contributes: { first: 1, after: 'after' },
-        followers: { first: 10, after: 'after' },
+        contributors: { first: 1, after: 'after' },
+        followers: { first: 1, after: 'after' },
         following: { first: 1, after: 'after' },
+        owner: true,
         owns: { first: 1, after: 'after' },
-        stars: { first: 10, after: 'after' },
+        starrers: { first: 1, after: 'after' },
+        stars: { first: 1, after: 'after' },
       },
     });
   });
