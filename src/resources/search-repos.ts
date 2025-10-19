@@ -1295,8 +1295,8 @@ export interface SearchRepoSearchParams {
 
   /**
    * Optional filters for narrowing search results. Supports filtering on: githubId,
-   * ownerLogin, name, stargazerCount, language, totalIssuesCount, totalIssuesOpen,
-   * totalIssuesClosed, lastContributorLocations.
+   * ownerLogin, ownerLocation, name, stargazerCount, language, totalIssuesCount,
+   * totalIssuesOpen, totalIssuesClosed, lastContributorLocations.
    *
    * Filter structure:
    *
