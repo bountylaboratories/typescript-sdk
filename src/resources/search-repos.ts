@@ -987,6 +987,13 @@ export interface SearchRepoNaturalLanguageParams {
   query: string;
 
   /**
+   * When true, the AI will generate a user location filter and apply it to ALL
+   * user-returning includeAttributes (contributors, starrers). This filter will
+   * override any manually-specified filters.
+   */
+  filterUserIncludeAttributes?: boolean;
+
+  /**
    * Optional graph relationships to include (owner, contributors, starrers)
    */
   includeAttributes?: SearchRepoNaturalLanguageParams.IncludeAttributes;
@@ -1032,6 +1039,120 @@ export namespace SearchRepoNaturalLanguageParams {
        * Cursor for pagination (opaque base64-encoded)
        */
       after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Contributors.UnionMember0 | Contributors.UnionMember1 | Contributors.UnionMember2;
+    }
+
+    export namespace Contributors {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
     }
 
     /**
@@ -1047,6 +1168,120 @@ export namespace SearchRepoNaturalLanguageParams {
        * Cursor for pagination (opaque base64-encoded)
        */
       after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2;
+    }
+
+    export namespace Starrers {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
     }
   }
 }
@@ -1171,6 +1406,120 @@ export namespace SearchRepoSearchParams {
        * Cursor for pagination (opaque base64-encoded)
        */
       after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Contributors.UnionMember0 | Contributors.UnionMember1 | Contributors.UnionMember2;
+    }
+
+    export namespace Contributors {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
     }
 
     /**
@@ -1186,6 +1535,120 @@ export namespace SearchRepoSearchParams {
        * Cursor for pagination (opaque base64-encoded)
        */
       after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2;
+    }
+
+    export namespace Starrers {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
     }
   }
 }
