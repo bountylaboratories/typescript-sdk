@@ -26,6 +26,30 @@ describe('resource searchUsers', () => {
   test.skip('naturalLanguage: required and optional params', async () => {
     const response = await client.searchUsers.naturalLanguage({
       query: 'Find machine learning engineers at Google who work on AI infrastructure',
+      includeAttributes: {
+        contributes: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        devrank: true,
+        followers: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        following: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        stars: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+      },
       maxResults: 50,
     });
   });
@@ -46,7 +70,31 @@ describe('resource searchUsers', () => {
   test.skip('search: required and optional params', async () => {
     const response = await client.searchUsers.search({
       query: 'machine learning engineer san francisco',
-      filters: { field: 'company', op: 'Eq', value: 'GitHub' },
+      filters: { field: 'field', op: 'op', value: 'string' },
+      includeAttributes: {
+        contributes: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        devrank: true,
+        followers: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        following: {
+          first: 1,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        stars: {
+          first: 10,
+          after: 'after',
+          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+        },
+      },
       maxResults: 50,
     });
   });

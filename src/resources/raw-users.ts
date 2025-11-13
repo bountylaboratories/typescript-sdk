@@ -110,6 +110,11 @@ export namespace RawUserRetrieveResponse {
     createdAt?: string | null;
 
     /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    devrank?: User.Devrank;
+
+    /**
      * User display name
      */
     displayName?: string | null;
@@ -667,6 +672,31 @@ export namespace RawUserRetrieveResponse {
          */
         hasNextPage: boolean;
       }
+    }
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    export interface Devrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
     }
 
     /**
@@ -1947,6 +1977,11 @@ export namespace RawUserByLoginResponse {
     createdAt?: string | null;
 
     /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    devrank?: User.Devrank;
+
+    /**
      * User display name
      */
     displayName?: string | null;
@@ -2504,6 +2539,31 @@ export namespace RawUserByLoginResponse {
          */
         hasNextPage: boolean;
       }
+    }
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    export interface Devrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
     }
 
     /**
@@ -3807,6 +3867,11 @@ export namespace RawUserGraphResponse {
       createdAt?: string | null;
 
       /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      devrank?: User.Devrank;
+
+      /**
        * User display name
        */
       displayName?: string | null;
@@ -4364,6 +4429,31 @@ export namespace RawUserGraphResponse {
            */
           hasNextPage: boolean;
         }
+      }
+
+      /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      export interface Devrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -5659,6 +5749,11 @@ export namespace RawUserGraphResponse {
       createdAt?: string | null;
 
       /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      devrank?: User.Devrank;
+
+      /**
        * User display name
        */
       displayName?: string | null;
@@ -6216,6 +6311,31 @@ export namespace RawUserGraphResponse {
            */
           hasNextPage: boolean;
         }
+      }
+
+      /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      export interface Devrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -8913,6 +9033,11 @@ export namespace RawUserRetrieveParams {
     contributes?: IncludeAttributes.Contributes;
 
     /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
+
+    /**
      * Include followers with cursor pagination
      */
     followers?: IncludeAttributes.Followers;
@@ -9604,6 +9729,11 @@ export namespace RawUserByLoginParams {
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
 
     /**
      * Include followers with cursor pagination
@@ -10316,6 +10446,11 @@ export namespace RawUserGraphParams {
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
 
     /**
      * Include followers with cursor pagination
