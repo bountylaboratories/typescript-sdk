@@ -26,6 +26,8 @@ Methods:
 - <code title="post /api/raw/repos/by-fullname">client.rawRepos.<a href="./src/resources/raw-repos.ts">byFullname</a>({ ...params }) -> RawRepoByFullnameResponse</code>
 - <code title="post /api/raw/repos/{id}/graph/{relationship}">client.rawRepos.<a href="./src/resources/raw-repos.ts">graph</a>(relationship, { ...params }) -> RawRepoGraphResponse</code>
 
+# UserEmails
+
 # SearchUsers
 
 Types:
