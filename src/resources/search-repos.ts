@@ -139,6 +139,12 @@ export namespace SearchRepoNaturalLanguageResponse {
     owner?: Repository.Owner;
 
     /**
+     * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+     * true)
+     */
+    ownerDevrank?: Repository.OwnerDevrank;
+
+    /**
      * Preview of repository README (first ~500 chars)
      */
     readmePreview?: string | null;
@@ -385,6 +391,32 @@ export namespace SearchRepoNaturalLanguageResponse {
 
         url: string;
       }
+    }
+
+    /**
+     * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+     * true)
+     */
+    export interface OwnerDevrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
     }
 
     /**
@@ -608,6 +640,12 @@ export namespace SearchRepoSearchResponse {
     owner?: Repository.Owner;
 
     /**
+     * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+     * true)
+     */
+    ownerDevrank?: Repository.OwnerDevrank;
+
+    /**
      * Preview of repository README (first ~500 chars)
      */
     readmePreview?: string | null;
@@ -857,6 +895,32 @@ export namespace SearchRepoSearchResponse {
     }
 
     /**
+     * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+     * true)
+     */
+    export interface OwnerDevrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
+    }
+
+    /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
     export interface Starrers {
@@ -1024,6 +1088,11 @@ export namespace SearchRepoNaturalLanguageParams {
      * Include repository owner information
      */
     owner?: boolean;
+
+    /**
+     * Include devrank data for the repository owner
+     */
+    ownerDevrank?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -1391,6 +1460,11 @@ export namespace SearchRepoSearchParams {
      * Include repository owner information
      */
     owner?: boolean;
+
+    /**
+     * Include devrank data for the repository owner
+     */
+    ownerDevrank?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

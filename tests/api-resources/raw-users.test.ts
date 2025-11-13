@@ -135,6 +135,7 @@ describe('resource rawUsers', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
         starrers: {
           first: 1,

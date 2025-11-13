@@ -36,6 +36,7 @@ describe('resource searchRepos', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -70,6 +71,7 @@ describe('resource searchRepos', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',

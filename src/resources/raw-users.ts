@@ -285,6 +285,12 @@ export namespace RawUserRetrieveResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -531,6 +537,32 @@ export namespace RawUserRetrieveResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -1052,6 +1084,12 @@ export namespace RawUserRetrieveResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -1298,6 +1336,32 @@ export namespace RawUserRetrieveResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -1544,6 +1608,12 @@ export namespace RawUserRetrieveResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -1790,6 +1860,32 @@ export namespace RawUserRetrieveResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -2164,6 +2260,12 @@ export namespace RawUserByLoginResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -2410,6 +2512,32 @@ export namespace RawUserByLoginResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -2931,6 +3059,12 @@ export namespace RawUserByLoginResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -3177,6 +3311,32 @@ export namespace RawUserByLoginResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -3423,6 +3583,12 @@ export namespace RawUserByLoginResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -3669,6 +3835,32 @@ export namespace RawUserByLoginResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -4066,6 +4258,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -4312,6 +4510,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -4833,6 +5057,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -5079,6 +5309,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -5325,6 +5581,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -5571,6 +5833,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -5960,6 +6248,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -6206,6 +6500,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -6727,6 +7047,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -6973,6 +7299,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -7219,6 +7571,12 @@ export namespace RawUserGraphResponse {
           owner?: Edge.Owner;
 
           /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -7465,6 +7823,32 @@ export namespace RawUserGraphResponse {
 
               url: string;
             }
+          }
+
+          /**
+           * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+           * true)
+           */
+          export interface OwnerDevrank {
+            community: number;
+
+            crackedScore: number;
+
+            createdAt: string;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            pc: number;
+
+            rawScore: number;
+
+            tier: string;
+
+            trust: number;
+
+            updatedAt: string;
           }
 
           /**
@@ -7719,6 +8103,12 @@ export namespace RawUserGraphResponse {
       owner?: Repository.Owner;
 
       /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      ownerDevrank?: Repository.OwnerDevrank;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -7965,6 +8355,32 @@ export namespace RawUserGraphResponse {
 
           url: string;
         }
+      }
+
+      /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      export interface OwnerDevrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -8202,6 +8618,12 @@ export namespace RawUserGraphResponse {
       owner?: Repository.Owner;
 
       /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      ownerDevrank?: Repository.OwnerDevrank;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -8448,6 +8870,32 @@ export namespace RawUserGraphResponse {
 
           url: string;
         }
+      }
+
+      /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      export interface OwnerDevrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -8686,6 +9134,12 @@ export namespace RawUserGraphResponse {
       owner?: Repository.Owner;
 
       /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      ownerDevrank?: Repository.OwnerDevrank;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -8932,6 +9386,32 @@ export namespace RawUserGraphResponse {
 
           url: string;
         }
+      }
+
+      /**
+       * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+       * true)
+       */
+      export interface OwnerDevrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -10523,6 +11003,11 @@ export namespace RawUserGraphParams {
      * Include repository owner information
      */
     owner?: boolean;
+
+    /**
+     * Include devrank data for the repository owner
+     */
+    ownerDevrank?: boolean;
 
     /**
      * Include owned repositories with cursor pagination

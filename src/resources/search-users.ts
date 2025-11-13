@@ -274,6 +274,12 @@ export namespace SearchUserNaturalLanguageResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -520,6 +526,32 @@ export namespace SearchUserNaturalLanguageResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -1041,6 +1073,12 @@ export namespace SearchUserNaturalLanguageResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -1287,6 +1325,32 @@ export namespace SearchUserNaturalLanguageResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -1533,6 +1597,12 @@ export namespace SearchUserNaturalLanguageResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -1779,6 +1849,32 @@ export namespace SearchUserNaturalLanguageResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -2153,6 +2249,12 @@ export namespace SearchUserSearchResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -2399,6 +2501,32 @@ export namespace SearchUserSearchResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -2920,6 +3048,12 @@ export namespace SearchUserSearchResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -3166,6 +3300,32 @@ export namespace SearchUserSearchResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
@@ -3412,6 +3572,12 @@ export namespace SearchUserSearchResponse {
         owner?: Edge.Owner;
 
         /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -3658,6 +3824,32 @@ export namespace SearchUserSearchResponse {
 
             url: string;
           }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
         }
 
         /**
