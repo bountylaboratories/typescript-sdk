@@ -46,6 +46,24 @@ export class UserEmails extends APIResource {
   ): APIPromise<UserEmailBestEmailByLoginResponse> {
     return this._client.post('/api/users/best-email/by-login', { body, ...options });
   }
+
+  /**
+   * Track when users reply to emails. This endpoint logs reply signals for analytics
+   * purposes. Does not consume credits. Requires RAW service.
+   *
+   * @example
+   * ```ts
+   * const response = await client.userEmails.replySignal({
+   *   githubIds: ['MDQ6VXNlcjU4MzIzMQ=='],
+   * });
+   * ```
+   */
+  replySignal(
+    body: UserEmailReplySignalParams,
+    options?: RequestOptions,
+  ): APIPromise<UserEmailReplySignalResponse> {
+    return this._client.post('/api/users/best-email/signal/reply', { body, ...options });
+  }
 }
 
 export interface UserEmailBestEmailResponse {
@@ -120,6 +138,18 @@ export namespace UserEmailBestEmailByLoginResponse {
   }
 }
 
+export interface UserEmailReplySignalResponse {
+  /**
+   * Number of reply signals logged
+   */
+  count: number;
+
+  /**
+   * Whether the signal was logged successfully
+   */
+  success: boolean;
+}
+
 export interface UserEmailBestEmailParams {
   /**
    * Array of GitHub node IDs (1-100)
@@ -188,11 +218,20 @@ export namespace UserEmailBestEmailByLoginParams {
   }
 }
 
+export interface UserEmailReplySignalParams {
+  /**
+   * Array of GitHub node IDs for users who replied (1-100)
+   */
+  githubIds: Array<string>;
+}
+
 export declare namespace UserEmails {
   export {
     type UserEmailBestEmailResponse as UserEmailBestEmailResponse,
     type UserEmailBestEmailByLoginResponse as UserEmailBestEmailByLoginResponse,
+    type UserEmailReplySignalResponse as UserEmailReplySignalResponse,
     type UserEmailBestEmailParams as UserEmailBestEmailParams,
     type UserEmailBestEmailByLoginParams as UserEmailBestEmailByLoginParams,
+    type UserEmailReplySignalParams as UserEmailReplySignalParams,
   };
 }
