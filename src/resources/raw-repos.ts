@@ -227,7 +227,8 @@ export namespace RawRepoRetrieveResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -341,7 +342,8 @@ export namespace RawRepoRetrieveResponse {
       displayName?: string | null;
 
       /**
-       * Email addresses
+       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+       * instead for intelligent email selection)
        */
       emails?: Array<string> | null;
 
@@ -452,7 +454,8 @@ export namespace RawRepoRetrieveResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -692,7 +695,8 @@ export namespace RawRepoByFullnameResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -806,7 +810,8 @@ export namespace RawRepoByFullnameResponse {
       displayName?: string | null;
 
       /**
-       * Email addresses
+       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+       * instead for intelligent email selection)
        */
       emails?: Array<string> | null;
 
@@ -917,7 +922,8 @@ export namespace RawRepoByFullnameResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -1074,7 +1080,8 @@ export namespace RawRepoGraphResponse {
       displayName?: string | null;
 
       /**
-       * Email addresses
+       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+       * instead for intelligent email selection)
        */
       emails?: Array<string> | null;
 
@@ -1312,7 +1319,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -1426,7 +1434,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -1537,7 +1546,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -1706,7 +1716,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -1833,7 +1844,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -2074,7 +2086,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -2188,7 +2201,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -2299,7 +2313,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -2563,7 +2578,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -2677,7 +2693,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -2788,7 +2805,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -2957,7 +2975,8 @@ export namespace RawRepoGraphResponse {
       displayName?: string | null;
 
       /**
-       * Email addresses
+       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+       * instead for intelligent email selection)
        */
       emails?: Array<string> | null;
 
@@ -3195,7 +3214,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -3309,7 +3329,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -3420,7 +3441,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -3589,7 +3611,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -3716,7 +3739,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -3957,7 +3981,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -4071,7 +4096,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -4182,7 +4208,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -4446,7 +4473,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -4560,7 +4588,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -4671,7 +4700,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -4840,7 +4870,8 @@ export namespace RawRepoGraphResponse {
       displayName?: string | null;
 
       /**
-       * Email addresses
+       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+       * instead for intelligent email selection)
        */
       emails?: Array<string> | null;
 
@@ -5078,7 +5109,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -5192,7 +5224,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -5303,7 +5336,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -5472,7 +5506,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -5599,7 +5634,8 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -5840,7 +5876,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -5954,7 +5991,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -6065,7 +6103,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -6329,7 +6368,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
@@ -6443,7 +6483,8 @@ export namespace RawRepoGraphResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -6554,7 +6595,8 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * Email addresses
+               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+               * instead for intelligent email selection)
                */
               emails?: Array<string> | null;
 
