@@ -48,6 +48,7 @@ import {
   SearchUserSearchResponse,
   SearchUsers,
 } from './resources/search-users';
+import { UserEmails } from './resources/user-emails';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -747,12 +748,14 @@ export class Bountylab {
 
   rawUsers: API.RawUsers = new API.RawUsers(this);
   rawRepos: API.RawRepos = new API.RawRepos(this);
+  userEmails: API.UserEmails = new API.UserEmails(this);
   searchUsers: API.SearchUsers = new API.SearchUsers(this);
   searchRepos: API.SearchRepos = new API.SearchRepos(this);
 }
 
 Bountylab.RawUsers = RawUsers;
 Bountylab.RawRepos = RawRepos;
+Bountylab.UserEmails = UserEmails;
 Bountylab.SearchUsers = SearchUsers;
 Bountylab.SearchRepos = SearchRepos;
 
@@ -778,6 +781,8 @@ export declare namespace Bountylab {
     type RawRepoByFullnameParams as RawRepoByFullnameParams,
     type RawRepoGraphParams as RawRepoGraphParams,
   };
+
+  export { UserEmails as UserEmails };
 
   export {
     SearchUsers as SearchUsers,
