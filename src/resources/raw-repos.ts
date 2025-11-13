@@ -1064,6 +1064,11 @@ export namespace RawRepoGraphResponse {
       createdAt?: string | null;
 
       /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      devrank?: User.Devrank;
+
+      /**
        * User display name
        */
       displayName?: string | null;
@@ -1621,6 +1626,31 @@ export namespace RawRepoGraphResponse {
            */
           hasNextPage: boolean;
         }
+      }
+
+      /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      export interface Devrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -2917,6 +2947,11 @@ export namespace RawRepoGraphResponse {
       createdAt?: string | null;
 
       /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      devrank?: User.Devrank;
+
+      /**
        * User display name
        */
       displayName?: string | null;
@@ -3474,6 +3509,31 @@ export namespace RawRepoGraphResponse {
            */
           hasNextPage: boolean;
         }
+      }
+
+      /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      export interface Devrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -4770,6 +4830,11 @@ export namespace RawRepoGraphResponse {
       createdAt?: string | null;
 
       /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      devrank?: User.Devrank;
+
+      /**
        * User display name
        */
       displayName?: string | null;
@@ -5327,6 +5392,31 @@ export namespace RawRepoGraphResponse {
            */
           hasNextPage: boolean;
         }
+      }
+
+      /**
+       * Developer ranking data (only present when fetched from devrank endpoints)
+       */
+      export interface Devrank {
+        community: number;
+
+        crackedScore: number;
+
+        createdAt: string;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        pc: number;
+
+        rawScore: number;
+
+        tier: string;
+
+        trust: number;
+
+        updatedAt: string;
       }
 
       /**
@@ -7188,6 +7278,11 @@ export namespace RawRepoGraphParams {
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
 
     /**
      * Include followers with cursor pagination

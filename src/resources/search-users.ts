@@ -8,7 +8,8 @@ export class SearchUsers extends APIResource {
   /**
    * Natural language search that uses AI to understand your query and automatically
    * generate search terms and filters. Requires SEARCH service. Credits: 1 per
-   * result returned + 1 for AI processing.
+   * result returned + 1 for AI processing + graph relationship credits if
+   * includeAttributes is specified.
    *
    * @example
    * ```ts
@@ -28,7 +29,8 @@ export class SearchUsers extends APIResource {
   /**
    * Full-text search across user login, name, bio, company, and location using BM25
    * ranking. Results include relevance scores. Requires SEARCH service. Credits: 1
-   * per result returned.
+   * per result returned + graph relationship credits if includeAttributes is
+   * specified.
    *
    * @example
    * ```ts
@@ -87,9 +89,19 @@ export namespace SearchUserNaturalLanguageResponse {
     company?: string | null;
 
     /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    contributes?: User.Contributes;
+
+    /**
      * ISO 8601 timestamp when user account was created
      */
     createdAt?: string | null;
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    devrank?: User.Devrank;
 
     /**
      * User display name
@@ -107,9 +119,24 @@ export namespace SearchUserNaturalLanguageResponse {
     embeddedAt?: string | null;
 
     /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    followers?: User.Followers;
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    following?: User.Following;
+
+    /**
      * User location
      */
     location?: string | null;
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    owns?: User.Owns;
 
     /**
      * Resolved city from location
@@ -137,6 +164,11 @@ export namespace SearchUserNaturalLanguageResponse {
     socialAccounts?: Array<User.SocialAccount> | null;
 
     /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    stars?: User.Stars;
+
+    /**
      * ISO 8601 timestamp when user was last updated
      */
     updatedAt?: string | null;
@@ -148,10 +180,1738 @@ export namespace SearchUserNaturalLanguageResponse {
   }
 
   export namespace User {
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Contributes {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Contributes.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Contributes.PageInfo;
+    }
+
+    export namespace Contributes {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    export interface Devrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Followers {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Followers.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Followers.PageInfo;
+    }
+
+    export namespace Followers {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Email addresses
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Following {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Following.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Following.PageInfo;
+    }
+
+    export namespace Following {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Email addresses
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Owns {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Owns.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Owns.PageInfo;
+    }
+
+    export namespace Owns {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
     export interface SocialAccount {
       provider: string;
 
       url: string;
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Stars {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Stars.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Stars.PageInfo;
+    }
+
+    export namespace Stars {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
     }
   }
 }
@@ -196,9 +1956,19 @@ export namespace SearchUserSearchResponse {
     company?: string | null;
 
     /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    contributes?: User.Contributes;
+
+    /**
      * ISO 8601 timestamp when user account was created
      */
     createdAt?: string | null;
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    devrank?: User.Devrank;
 
     /**
      * User display name
@@ -216,9 +1986,24 @@ export namespace SearchUserSearchResponse {
     embeddedAt?: string | null;
 
     /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    followers?: User.Followers;
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    following?: User.Following;
+
+    /**
      * User location
      */
     location?: string | null;
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    owns?: User.Owns;
 
     /**
      * Resolved city from location
@@ -246,6 +2031,11 @@ export namespace SearchUserSearchResponse {
     socialAccounts?: Array<User.SocialAccount> | null;
 
     /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    stars?: User.Stars;
+
+    /**
      * ISO 8601 timestamp when user was last updated
      */
     updatedAt?: string | null;
@@ -257,10 +2047,1738 @@ export namespace SearchUserSearchResponse {
   }
 
   export namespace User {
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Contributes {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Contributes.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Contributes.PageInfo;
+    }
+
+    export namespace Contributes {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Developer ranking data (only present when fetched from devrank endpoints)
+     */
+    export interface Devrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Followers {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Followers.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Followers.PageInfo;
+    }
+
+    export namespace Followers {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Email addresses
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Following {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Following.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Following.PageInfo;
+    }
+
+    export namespace Following {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Email addresses
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Owns {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Owns.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Owns.PageInfo;
+    }
+
+    export namespace Owns {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
     export interface SocialAccount {
       provider: string;
 
       url: string;
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Stars {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Stars.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Stars.PageInfo;
+    }
+
+    export namespace Stars {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Email addresses
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Email addresses
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
     }
   }
 }
@@ -272,9 +3790,700 @@ export interface SearchUserNaturalLanguageParams {
   query: string;
 
   /**
+   * Optional graph relationships to include (followers, following, stars, owns,
+   * contributes)
+   */
+  includeAttributes?: SearchUserNaturalLanguageParams.IncludeAttributes;
+
+  /**
    * Maximum number of results to return (default: 100, max: 1000)
    */
   maxResults?: number;
+}
+
+export namespace SearchUserNaturalLanguageParams {
+  /**
+   * Optional graph relationships to include (followers, following, stars, owns,
+   * contributes)
+   */
+  export interface IncludeAttributes {
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    contributes?: IncludeAttributes.Contributes;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
+
+    /**
+     * Include followers with cursor pagination
+     */
+    followers?: IncludeAttributes.Followers;
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    following?: IncludeAttributes.Following;
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    stars?: IncludeAttributes.Stars;
+  }
+
+  export namespace IncludeAttributes {
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    export interface Contributes {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Contributes.UnionMember0 | Contributes.UnionMember1 | Contributes.UnionMember2;
+    }
+
+    export namespace Contributes {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include followers with cursor pagination
+     */
+    export interface Followers {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Followers.UnionMember0 | Followers.UnionMember1 | Followers.UnionMember2;
+    }
+
+    export namespace Followers {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    export interface Following {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Following.UnionMember0 | Following.UnionMember1 | Following.UnionMember2;
+    }
+
+    export namespace Following {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    export interface Owns {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Owns.UnionMember0 | Owns.UnionMember1 | Owns.UnionMember2;
+    }
+
+    export namespace Owns {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    export interface Stars {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Stars.UnionMember0 | Stars.UnionMember1 | Stars.UnionMember2;
+    }
+
+    export namespace Stars {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+  }
 }
 
 export interface SearchUserSearchParams {
@@ -304,6 +4513,12 @@ export interface SearchUserSearchParams {
    * - Use And/Or to combine multiple filters
    */
   filters?: SearchUserSearchParams.GenericFieldFilter | SearchUserSearchParams.CompositeFilter | null;
+
+  /**
+   * Optional graph relationships to include (followers, following, stars, owns,
+   * contributes)
+   */
+  includeAttributes?: SearchUserSearchParams.IncludeAttributes;
 
   /**
    * Maximum number of results to return (default: 100, max: 1000)
@@ -357,6 +4572,689 @@ export namespace SearchUserSearchParams {
        * Filter value
        */
       value: string | number | Array<string> | Array<number>;
+    }
+  }
+
+  /**
+   * Optional graph relationships to include (followers, following, stars, owns,
+   * contributes)
+   */
+  export interface IncludeAttributes {
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    contributes?: IncludeAttributes.Contributes;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
+
+    /**
+     * Include followers with cursor pagination
+     */
+    followers?: IncludeAttributes.Followers;
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    following?: IncludeAttributes.Following;
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    stars?: IncludeAttributes.Stars;
+  }
+
+  export namespace IncludeAttributes {
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    export interface Contributes {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Contributes.UnionMember0 | Contributes.UnionMember1 | Contributes.UnionMember2;
+    }
+
+    export namespace Contributes {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include followers with cursor pagination
+     */
+    export interface Followers {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Followers.UnionMember0 | Followers.UnionMember1 | Followers.UnionMember2;
+    }
+
+    export namespace Followers {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    export interface Following {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Following.UnionMember0 | Following.UnionMember1 | Following.UnionMember2;
+    }
+
+    export namespace Following {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    export interface Owns {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Owns.UnionMember0 | Owns.UnionMember1 | Owns.UnionMember2;
+    }
+
+    export namespace Owns {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    export interface Stars {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for location-based filtering. Supports Eq (exact match), In
+       * (one of array), Like (partial match with % wildcards). Can combine filters with
+       * And/Or operators.
+       */
+      filters?: Stars.UnionMember0 | Stars.UnionMember1 | Stars.UnionMember2;
+    }
+
+    export namespace Stars {
+      export interface UnionMember0 {
+        /**
+         * Location field to filter on
+         */
+        field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+        /**
+         * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+         * wildcards)
+         */
+        op: 'Eq' | 'In' | 'Like';
+
+        /**
+         * Filter value - string for Eq/Like, array of strings for In
+         */
+        value: string | Array<string>;
+      }
+
+      export interface UnionMember1 {
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+      }
+
+      export interface UnionMember2 {
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+      }
     }
   }
 }

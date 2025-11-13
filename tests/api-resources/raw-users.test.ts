@@ -30,6 +30,7 @@ describe('resource rawUsers', () => {
           after: 'after',
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
+        devrank: true,
         followers: {
           first: 10,
           after: 'after',
@@ -72,6 +73,7 @@ describe('resource rawUsers', () => {
           after: 'after',
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
+        devrank: true,
         followers: {
           first: 10,
           after: 'after',
@@ -121,6 +123,7 @@ describe('resource rawUsers', () => {
           after: 'after',
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
+        devrank: true,
         followers: {
           first: 1,
           after: 'after',
