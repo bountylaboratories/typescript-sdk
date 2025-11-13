@@ -125,6 +125,33 @@ export interface UserEmailBestEmailParams {
    * Array of GitHub node IDs (1-100)
    */
   githubIds: Array<string>;
+
+  /**
+   * Optional signal data for tracking email context (body, subject, sender)
+   */
+  signals?: UserEmailBestEmailParams.Signals;
+}
+
+export namespace UserEmailBestEmailParams {
+  /**
+   * Optional signal data for tracking email context (body, subject, sender)
+   */
+  export interface Signals {
+    /**
+     * Email body content for tracking
+     */
+    emailBody?: string;
+
+    /**
+     * Email subject for tracking
+     */
+    emailSubject?: string;
+
+    /**
+     * Sender identifier for tracking
+     */
+    sender?: string;
+  }
 }
 
 export interface UserEmailBestEmailByLoginParams {
@@ -132,6 +159,33 @@ export interface UserEmailBestEmailByLoginParams {
    * Array of GitHub usernames (1-100)
    */
   logins: Array<string>;
+
+  /**
+   * Optional signal data for tracking email context (body, subject, sender)
+   */
+  signals?: UserEmailBestEmailByLoginParams.Signals;
+}
+
+export namespace UserEmailBestEmailByLoginParams {
+  /**
+   * Optional signal data for tracking email context (body, subject, sender)
+   */
+  export interface Signals {
+    /**
+     * Email body content for tracking
+     */
+    emailBody?: string;
+
+    /**
+     * Email subject for tracking
+     */
+    emailSubject?: string;
+
+    /**
+     * Sender identifier for tracking
+     */
+    sender?: string;
+  }
 }
 
 export declare namespace UserEmails {
