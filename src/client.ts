@@ -53,6 +53,8 @@ import {
   UserEmailBestEmailByLoginResponse,
   UserEmailBestEmailParams,
   UserEmailBestEmailResponse,
+  UserEmailReplySignalParams,
+  UserEmailReplySignalResponse,
   UserEmails,
 } from './resources/user-emails';
 import { type Fetch } from './internal/builtin-types';
@@ -792,8 +794,10 @@ export declare namespace Bountylab {
     UserEmails as UserEmails,
     type UserEmailBestEmailResponse as UserEmailBestEmailResponse,
     type UserEmailBestEmailByLoginResponse as UserEmailBestEmailByLoginResponse,
+    type UserEmailReplySignalResponse as UserEmailReplySignalResponse,
     type UserEmailBestEmailParams as UserEmailBestEmailParams,
     type UserEmailBestEmailByLoginParams as UserEmailBestEmailByLoginParams,
+    type UserEmailReplySignalParams as UserEmailReplySignalParams,
   };
 
   export {

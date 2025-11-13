@@ -49,4 +49,21 @@ describe('resource userEmails', () => {
       signals: { emailBody: 'emailBody', emailSubject: 'emailSubject', sender: 'sender' },
     });
   });
+
+  // Prism tests are disabled
+  test.skip('replySignal: only required params', async () => {
+    const responsePromise = client.userEmails.replySignal({ githubIds: ['MDQ6VXNlcjU4MzIzMQ=='] });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('replySignal: required and optional params', async () => {
+    const response = await client.userEmails.replySignal({ githubIds: ['MDQ6VXNlcjU4MzIzMQ=='] });
+  });
 });

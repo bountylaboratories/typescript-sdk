@@ -36,6 +36,8 @@ export {
   UserEmails,
   type UserEmailBestEmailResponse,
   type UserEmailBestEmailByLoginResponse,
+  type UserEmailReplySignalResponse,
   type UserEmailBestEmailParams,
   type UserEmailBestEmailByLoginParams,
+  type UserEmailReplySignalParams,
 } from './user-emails';
