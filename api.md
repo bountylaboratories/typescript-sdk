@@ -28,6 +28,16 @@ Methods:
 
 # UserEmails
 
+Types:
+
+- <code><a href="./src/resources/user-emails.ts">UserEmailBestEmailResponse</a></code>
+- <code><a href="./src/resources/user-emails.ts">UserEmailBestEmailByLoginResponse</a></code>
+
+Methods:
+
+- <code title="post /api/users/best-email">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmail</a>({ ...params }) -> UserEmailBestEmailResponse</code>
+- <code title="post /api/users/best-email/by-login">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmailByLogin</a>({ ...params }) -> UserEmailBestEmailByLoginResponse</code>
+
 # SearchUsers
 
 Types:

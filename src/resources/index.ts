@@ -32,4 +32,10 @@ export {
   type SearchUserNaturalLanguageParams,
   type SearchUserSearchParams,
 } from './search-users';
-export { UserEmails } from './user-emails';
+export {
+  UserEmails,
+  type UserEmailBestEmailResponse,
+  type UserEmailBestEmailByLoginResponse,
+  type UserEmailBestEmailParams,
+  type UserEmailBestEmailByLoginParams,
+} from './user-emails';
