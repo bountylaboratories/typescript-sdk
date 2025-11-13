@@ -26,6 +26,7 @@ describe('resource userEmails', () => {
   test.skip('bestEmail: required and optional params', async () => {
     const response = await client.userEmails.bestEmail({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
+      signals: { emailBody: 'emailBody', emailSubject: 'emailSubject', sender: 'sender' },
     });
   });
 
@@ -43,6 +44,9 @@ describe('resource userEmails', () => {
 
   // Prism tests are disabled
   test.skip('bestEmailByLogin: required and optional params', async () => {
-    const response = await client.userEmails.bestEmailByLogin({ logins: ['octocat', 'torvalds'] });
+    const response = await client.userEmails.bestEmailByLogin({
+      logins: ['octocat', 'torvalds'],
+      signals: { emailBody: 'emailBody', emailSubject: 'emailSubject', sender: 'sender' },
+    });
   });
 });
