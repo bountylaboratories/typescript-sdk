@@ -48,7 +48,13 @@ import {
   SearchUserSearchResponse,
   SearchUsers,
 } from './resources/search-users';
-import { UserEmails } from './resources/user-emails';
+import {
+  UserEmailBestEmailByLoginParams,
+  UserEmailBestEmailByLoginResponse,
+  UserEmailBestEmailParams,
+  UserEmailBestEmailResponse,
+  UserEmails,
+} from './resources/user-emails';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -782,7 +788,13 @@ export declare namespace Bountylab {
     type RawRepoGraphParams as RawRepoGraphParams,
   };
 
-  export { UserEmails as UserEmails };
+  export {
+    UserEmails as UserEmails,
+    type UserEmailBestEmailResponse as UserEmailBestEmailResponse,
+    type UserEmailBestEmailByLoginResponse as UserEmailBestEmailByLoginResponse,
+    type UserEmailBestEmailParams as UserEmailBestEmailParams,
+    type UserEmailBestEmailByLoginParams as UserEmailBestEmailByLoginParams,
+  };
 
   export {
     SearchUsers as SearchUsers,

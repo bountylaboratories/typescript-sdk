@@ -109,7 +109,8 @@ export namespace SearchUserNaturalLanguageResponse {
     displayName?: string | null;
 
     /**
-     * Email addresses
+     * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+     * instead for intelligent email selection)
      */
     emails?: Array<string> | null;
 
@@ -347,7 +348,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -461,7 +463,8 @@ export namespace SearchUserNaturalLanguageResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -572,7 +575,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -741,7 +745,8 @@ export namespace SearchUserNaturalLanguageResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -868,7 +873,8 @@ export namespace SearchUserNaturalLanguageResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -1109,7 +1115,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -1223,7 +1230,8 @@ export namespace SearchUserNaturalLanguageResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -1334,7 +1342,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -1598,7 +1607,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -1712,7 +1722,8 @@ export namespace SearchUserNaturalLanguageResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -1823,7 +1834,8 @@ export namespace SearchUserNaturalLanguageResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -1976,7 +1988,8 @@ export namespace SearchUserSearchResponse {
     displayName?: string | null;
 
     /**
-     * Email addresses
+     * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+     * instead for intelligent email selection)
      */
     emails?: Array<string> | null;
 
@@ -2214,7 +2227,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -2328,7 +2342,8 @@ export namespace SearchUserSearchResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -2439,7 +2454,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -2608,7 +2624,8 @@ export namespace SearchUserSearchResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -2735,7 +2752,8 @@ export namespace SearchUserSearchResponse {
         displayName?: string | null;
 
         /**
-         * Email addresses
+         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+         * instead for intelligent email selection)
          */
         emails?: Array<string> | null;
 
@@ -2976,7 +2994,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -3090,7 +3109,8 @@ export namespace SearchUserSearchResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -3201,7 +3221,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -3465,7 +3486,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
@@ -3579,7 +3601,8 @@ export namespace SearchUserSearchResponse {
           displayName?: string | null;
 
           /**
-           * Email addresses
+           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+           * instead for intelligent email selection)
            */
           emails?: Array<string> | null;
 
@@ -3690,7 +3713,8 @@ export namespace SearchUserSearchResponse {
             displayName?: string | null;
 
             /**
-             * Email addresses
+             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
+             * instead for intelligent email selection)
              */
             emails?: Array<string> | null;
 
