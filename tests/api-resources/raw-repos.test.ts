@@ -33,6 +33,7 @@ describe('resource rawRepos', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -67,6 +68,7 @@ describe('resource rawRepos', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -117,6 +119,7 @@ describe('resource rawRepos', () => {
           filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
         },
         owner: true,
+        ownerDevrank: true,
         owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
         starrers: {
           first: 1,
