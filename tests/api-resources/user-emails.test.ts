@@ -26,7 +26,13 @@ describe('resource userEmails', () => {
   test.skip('bestEmail: required and optional params', async () => {
     const response = await client.userEmails.bestEmail({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
-      signals: { emailBody: 'emailBody', emailSubject: 'emailSubject', sender: 'sender' },
+      signals: {
+        emailBody: 'emailBody',
+        emailSubject: 'emailSubject',
+        reasonForEmailNaturalLanguage: 'reasonForEmailNaturalLanguage',
+        repoReasonForEmail: 'repoReasonForEmail',
+        sender: 'sender',
+      },
     });
   });
 
@@ -46,7 +52,13 @@ describe('resource userEmails', () => {
   test.skip('bestEmailByLogin: required and optional params', async () => {
     const response = await client.userEmails.bestEmailByLogin({
       logins: ['octocat', 'torvalds'],
-      signals: { emailBody: 'emailBody', emailSubject: 'emailSubject', sender: 'sender' },
+      signals: {
+        emailBody: 'emailBody',
+        emailSubject: 'emailSubject',
+        reasonForEmailNaturalLanguage: 'reasonForEmailNaturalLanguage',
+        repoReasonForEmail: 'repoReasonForEmail',
+        sender: 'sender',
+      },
     });
   });
 
@@ -64,6 +76,9 @@ describe('resource userEmails', () => {
 
   // Prism tests are disabled
   test.skip('replySignal: required and optional params', async () => {
-    const response = await client.userEmails.replySignal({ githubIds: ['MDQ6VXNlcjU4MzIzMQ=='] });
+    const response = await client.userEmails.replySignal({
+      githubIds: ['MDQ6VXNlcjU4MzIzMQ=='],
+      emailReplyBody: 'emailReplyBody',
+    });
   });
 });
