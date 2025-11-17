@@ -1072,6 +1072,21 @@ export interface SearchRepoNaturalLanguageParams {
    * Maximum number of results to return (default: 100, max: 1000)
    */
   maxResults?: number;
+
+  /**
+   * Custom ranking formula (AST expression). If not provided, uses default
+   * log-normalized 70/20/10 formula (70% semantic similarity, 20% popularity, 10%
+   * activity). Pure ANN queries skip multi-query for better performance.
+   */
+  rankBy?:
+    | SearchRepoNaturalLanguageParams.UnionMember0
+    | SearchRepoNaturalLanguageParams.UnionMember1
+    | SearchRepoNaturalLanguageParams.UnionMember2
+    | SearchRepoNaturalLanguageParams.UnionMember3
+    | SearchRepoNaturalLanguageParams.UnionMember4
+    | SearchRepoNaturalLanguageParams.UnionMember5
+    | SearchRepoNaturalLanguageParams.UnionMember6
+    | SearchRepoNaturalLanguageParams.UnionMember7;
 }
 
 export namespace SearchRepoNaturalLanguageParams {
@@ -1120,7 +1135,11 @@ export namespace SearchRepoNaturalLanguageParams {
        * (one of array), Like (partial match with % wildcards). Can combine filters with
        * And/Or operators.
        */
-      filters?: Contributors.UnionMember0 | Contributors.UnionMember1 | Contributors.UnionMember2;
+      filters?:
+        | Contributors.UnionMember0
+        | Contributors.UnionMember1
+        | Contributors.UnionMember2
+        | Contributors.UnionMember3;
     }
 
     export namespace Contributors {
@@ -1228,6 +1247,122 @@ export namespace SearchRepoNaturalLanguageParams {
           }
         }
       }
+
+      export interface UnionMember3 {
+        filters: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+
+        export interface UnionMember2 {
+          filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember2 {
+          export interface UnionMember0 {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+
+          export interface UnionMember1 {
+            filters: Array<UnionMember1.Filter>;
+
+            /**
+             * Logical operator to combine filters
+             */
+            op: 'And' | 'Or';
+          }
+
+          export namespace UnionMember1 {
+            export interface Filter {
+              /**
+               * Location field to filter on
+               */
+              field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+              /**
+               * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+               * wildcards)
+               */
+              op: 'Eq' | 'In' | 'Like';
+
+              /**
+               * Filter value - string for Eq/Like, array of strings for In
+               */
+              value: string | Array<string>;
+            }
+          }
+        }
+      }
     }
 
     /**
@@ -1249,7 +1384,7 @@ export namespace SearchRepoNaturalLanguageParams {
        * (one of array), Like (partial match with % wildcards). Can combine filters with
        * And/Or operators.
        */
-      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2;
+      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2 | Starrers.UnionMember3;
     }
 
     export namespace Starrers {
@@ -1357,6 +1492,8082 @@ export namespace SearchRepoNaturalLanguageParams {
           }
         }
       }
+
+      export interface UnionMember3 {
+        filters: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+
+        export interface UnionMember2 {
+          filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember2 {
+          export interface UnionMember0 {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+
+          export interface UnionMember1 {
+            filters: Array<UnionMember1.Filter>;
+
+            /**
+             * Logical operator to combine filters
+             */
+            op: 'And' | 'Or';
+          }
+
+          export namespace UnionMember1 {
+            export interface Filter {
+              /**
+               * Location field to filter on
+               */
+              field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+              /**
+               * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+               * wildcards)
+               */
+              op: 'Eq' | 'In' | 'Like';
+
+              /**
+               * Filter value - string for Eq/Like, array of strings for In
+               */
+              value: string | Array<string>;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  export interface UnionMember0 {
+    name:
+      | 'ann'
+      | 'ann_vector'
+      | 'bm25'
+      | 'stars'
+      | 'issues'
+      | 'issues_open'
+      | 'issues_closed'
+      | 'age'
+      | 'recency';
+
+    op: 'Attr';
+  }
+
+  export interface UnionMember1 {
+    op: 'Const';
+
+    value: number;
+  }
+
+  export interface UnionMember2 {
+    exprs: Array<
+      | UnionMember2.UnionMember0
+      | UnionMember2.UnionMember1
+      | UnionMember2.UnionMember2
+      | UnionMember2.UnionMember3
+      | UnionMember2.UnionMember4
+      | UnionMember2.UnionMember5
+      | UnionMember2.UnionMember6
+      | UnionMember2.UnionMember7
+    >;
+
+    op: 'Sum';
+  }
+
+  export namespace UnionMember2 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember3 {
+    exprs: Array<
+      | UnionMember3.UnionMember0
+      | UnionMember3.UnionMember1
+      | UnionMember3.UnionMember2
+      | UnionMember3.UnionMember3
+      | UnionMember3.UnionMember4
+      | UnionMember3.UnionMember5
+      | UnionMember3.UnionMember6
+      | UnionMember3.UnionMember7
+    >;
+
+    op: 'Mult';
+  }
+
+  export namespace UnionMember3 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember4 {
+    exprs: Array<
+      | UnionMember4.UnionMember0
+      | UnionMember4.UnionMember1
+      | UnionMember4.UnionMember2
+      | UnionMember4.UnionMember3
+      | UnionMember4.UnionMember4
+      | UnionMember4.UnionMember5
+      | UnionMember4.UnionMember6
+      | UnionMember4.UnionMember7
+    >;
+
+    op: 'Div';
+  }
+
+  export namespace UnionMember4 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember5 {
+    exprs: Array<
+      | UnionMember5.UnionMember0
+      | UnionMember5.UnionMember1
+      | UnionMember5.UnionMember2
+      | UnionMember5.UnionMember3
+      | UnionMember5.UnionMember4
+      | UnionMember5.UnionMember5
+      | UnionMember5.UnionMember6
+      | UnionMember5.UnionMember7
+    >;
+
+    op: 'Max';
+  }
+
+  export namespace UnionMember5 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember6 {
+    exprs: Array<
+      | UnionMember6.UnionMember0
+      | UnionMember6.UnionMember1
+      | UnionMember6.UnionMember2
+      | UnionMember6.UnionMember3
+      | UnionMember6.UnionMember4
+      | UnionMember6.UnionMember5
+      | UnionMember6.UnionMember6
+      | UnionMember6.UnionMember7
+    >;
+
+    op: 'Min';
+  }
+
+  export namespace UnionMember6 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember7 {
+    base: number;
+
+    expr:
+      | UnionMember7.UnionMember0
+      | UnionMember7.UnionMember1
+      | UnionMember7.UnionMember2
+      | UnionMember7.UnionMember3
+      | UnionMember7.UnionMember4
+      | UnionMember7.UnionMember5
+      | UnionMember7.UnionMember6
+      | UnionMember7.UnionMember7;
+
+    op: 'Log';
+  }
+
+  export namespace UnionMember7 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
     }
   }
 }
@@ -1396,6 +9607,21 @@ export interface SearchRepoSearchParams {
    * Maximum number of results to return (default: 100, max: 1000)
    */
   maxResults?: number;
+
+  /**
+   * Custom ranking formula (AST expression). If not provided, uses default
+   * log-normalized 70/20/10 formula (70% semantic similarity, 20% popularity, 10%
+   * activity). Pure ANN queries skip multi-query for better performance.
+   */
+  rankBy?:
+    | SearchRepoSearchParams.UnionMember0
+    | SearchRepoSearchParams.UnionMember1
+    | SearchRepoSearchParams.UnionMember2
+    | SearchRepoSearchParams.UnionMember3
+    | SearchRepoSearchParams.UnionMember4
+    | SearchRepoSearchParams.UnionMember5
+    | SearchRepoSearchParams.UnionMember6
+    | SearchRepoSearchParams.UnionMember7;
 }
 
 export namespace SearchRepoSearchParams {
@@ -1492,7 +9718,11 @@ export namespace SearchRepoSearchParams {
        * (one of array), Like (partial match with % wildcards). Can combine filters with
        * And/Or operators.
        */
-      filters?: Contributors.UnionMember0 | Contributors.UnionMember1 | Contributors.UnionMember2;
+      filters?:
+        | Contributors.UnionMember0
+        | Contributors.UnionMember1
+        | Contributors.UnionMember2
+        | Contributors.UnionMember3;
     }
 
     export namespace Contributors {
@@ -1600,6 +9830,122 @@ export namespace SearchRepoSearchParams {
           }
         }
       }
+
+      export interface UnionMember3 {
+        filters: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+
+        export interface UnionMember2 {
+          filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember2 {
+          export interface UnionMember0 {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+
+          export interface UnionMember1 {
+            filters: Array<UnionMember1.Filter>;
+
+            /**
+             * Logical operator to combine filters
+             */
+            op: 'And' | 'Or';
+          }
+
+          export namespace UnionMember1 {
+            export interface Filter {
+              /**
+               * Location field to filter on
+               */
+              field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+              /**
+               * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+               * wildcards)
+               */
+              op: 'Eq' | 'In' | 'Like';
+
+              /**
+               * Filter value - string for Eq/Like, array of strings for In
+               */
+              value: string | Array<string>;
+            }
+          }
+        }
+      }
     }
 
     /**
@@ -1621,7 +9967,7 @@ export namespace SearchRepoSearchParams {
        * (one of array), Like (partial match with % wildcards). Can combine filters with
        * And/Or operators.
        */
-      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2;
+      filters?: Starrers.UnionMember0 | Starrers.UnionMember1 | Starrers.UnionMember2 | Starrers.UnionMember3;
     }
 
     export namespace Starrers {
@@ -1727,6 +10073,8082 @@ export namespace SearchRepoSearchParams {
              */
             value: string | Array<string>;
           }
+        }
+      }
+
+      export interface UnionMember3 {
+        filters: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        /**
+         * Logical operator to combine filters
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          /**
+           * Location field to filter on
+           */
+          field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+          /**
+           * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+           * wildcards)
+           */
+          op: 'Eq' | 'In' | 'Like';
+
+          /**
+           * Filter value - string for Eq/Like, array of strings for In
+           */
+          value: string | Array<string>;
+        }
+
+        export interface UnionMember1 {
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+        }
+
+        export interface UnionMember2 {
+          filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+          /**
+           * Logical operator to combine filters
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember2 {
+          export interface UnionMember0 {
+            /**
+             * Location field to filter on
+             */
+            field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+            /**
+             * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+             * wildcards)
+             */
+            op: 'Eq' | 'In' | 'Like';
+
+            /**
+             * Filter value - string for Eq/Like, array of strings for In
+             */
+            value: string | Array<string>;
+          }
+
+          export interface UnionMember1 {
+            filters: Array<UnionMember1.Filter>;
+
+            /**
+             * Logical operator to combine filters
+             */
+            op: 'And' | 'Or';
+          }
+
+          export namespace UnionMember1 {
+            export interface Filter {
+              /**
+               * Location field to filter on
+               */
+              field: 'resolvedCountry' | 'resolvedState' | 'resolvedCity';
+
+              /**
+               * Filter operator: Eq (exact match), In (one of array), Like (SQL LIKE with %
+               * wildcards)
+               */
+              op: 'Eq' | 'In' | 'Like';
+
+              /**
+               * Filter value - string for Eq/Like, array of strings for In
+               */
+              value: string | Array<string>;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  export interface UnionMember0 {
+    name:
+      | 'ann'
+      | 'ann_vector'
+      | 'bm25'
+      | 'stars'
+      | 'issues'
+      | 'issues_open'
+      | 'issues_closed'
+      | 'age'
+      | 'recency';
+
+    op: 'Attr';
+  }
+
+  export interface UnionMember1 {
+    op: 'Const';
+
+    value: number;
+  }
+
+  export interface UnionMember2 {
+    exprs: Array<
+      | UnionMember2.UnionMember0
+      | UnionMember2.UnionMember1
+      | UnionMember2.UnionMember2
+      | UnionMember2.UnionMember3
+      | UnionMember2.UnionMember4
+      | UnionMember2.UnionMember5
+      | UnionMember2.UnionMember6
+      | UnionMember2.UnionMember7
+    >;
+
+    op: 'Sum';
+  }
+
+  export namespace UnionMember2 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember3 {
+    exprs: Array<
+      | UnionMember3.UnionMember0
+      | UnionMember3.UnionMember1
+      | UnionMember3.UnionMember2
+      | UnionMember3.UnionMember3
+      | UnionMember3.UnionMember4
+      | UnionMember3.UnionMember5
+      | UnionMember3.UnionMember6
+      | UnionMember3.UnionMember7
+    >;
+
+    op: 'Mult';
+  }
+
+  export namespace UnionMember3 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember4 {
+    exprs: Array<
+      | UnionMember4.UnionMember0
+      | UnionMember4.UnionMember1
+      | UnionMember4.UnionMember2
+      | UnionMember4.UnionMember3
+      | UnionMember4.UnionMember4
+      | UnionMember4.UnionMember5
+      | UnionMember4.UnionMember6
+      | UnionMember4.UnionMember7
+    >;
+
+    op: 'Div';
+  }
+
+  export namespace UnionMember4 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember5 {
+    exprs: Array<
+      | UnionMember5.UnionMember0
+      | UnionMember5.UnionMember1
+      | UnionMember5.UnionMember2
+      | UnionMember5.UnionMember3
+      | UnionMember5.UnionMember4
+      | UnionMember5.UnionMember5
+      | UnionMember5.UnionMember6
+      | UnionMember5.UnionMember7
+    >;
+
+    op: 'Max';
+  }
+
+  export namespace UnionMember5 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember6 {
+    exprs: Array<
+      | UnionMember6.UnionMember0
+      | UnionMember6.UnionMember1
+      | UnionMember6.UnionMember2
+      | UnionMember6.UnionMember3
+      | UnionMember6.UnionMember4
+      | UnionMember6.UnionMember5
+      | UnionMember6.UnionMember6
+      | UnionMember6.UnionMember7
+    >;
+
+    op: 'Min';
+  }
+
+  export namespace UnionMember6 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+  }
+
+  export interface UnionMember7 {
+    base: number;
+
+    expr:
+      | UnionMember7.UnionMember0
+      | UnionMember7.UnionMember1
+      | UnionMember7.UnionMember2
+      | UnionMember7.UnionMember3
+      | UnionMember7.UnionMember4
+      | UnionMember7.UnionMember5
+      | UnionMember7.UnionMember6
+      | UnionMember7.UnionMember7;
+
+    op: 'Log';
+  }
+
+  export namespace UnionMember7 {
+    export interface UnionMember0 {
+      name:
+        | 'ann'
+        | 'ann_vector'
+        | 'bm25'
+        | 'stars'
+        | 'issues'
+        | 'issues_open'
+        | 'issues_closed'
+        | 'age'
+        | 'recency';
+
+      op: 'Attr';
+    }
+
+    export interface UnionMember1 {
+      op: 'Const';
+
+      value: number;
+    }
+
+    export interface UnionMember2 {
+      exprs: Array<
+        | UnionMember2.UnionMember0
+        | UnionMember2.UnionMember1
+        | UnionMember2.UnionMember2
+        | UnionMember2.UnionMember3
+        | UnionMember2.UnionMember4
+        | UnionMember2.UnionMember5
+        | UnionMember2.UnionMember6
+        | UnionMember2.UnionMember7
+      >;
+
+      op: 'Sum';
+    }
+
+    export namespace UnionMember2 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember3 {
+      exprs: Array<
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+      >;
+
+      op: 'Mult';
+    }
+
+    export namespace UnionMember3 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember4 {
+      exprs: Array<
+        | UnionMember4.UnionMember0
+        | UnionMember4.UnionMember1
+        | UnionMember4.UnionMember2
+        | UnionMember4.UnionMember3
+        | UnionMember4.UnionMember4
+        | UnionMember4.UnionMember5
+        | UnionMember4.UnionMember6
+        | UnionMember4.UnionMember7
+      >;
+
+      op: 'Div';
+    }
+
+    export namespace UnionMember4 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember5 {
+      exprs: Array<
+        | UnionMember5.UnionMember0
+        | UnionMember5.UnionMember1
+        | UnionMember5.UnionMember2
+        | UnionMember5.UnionMember3
+        | UnionMember5.UnionMember4
+        | UnionMember5.UnionMember5
+        | UnionMember5.UnionMember6
+        | UnionMember5.UnionMember7
+      >;
+
+      op: 'Max';
+    }
+
+    export namespace UnionMember5 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember6 {
+      exprs: Array<
+        | UnionMember6.UnionMember0
+        | UnionMember6.UnionMember1
+        | UnionMember6.UnionMember2
+        | UnionMember6.UnionMember3
+        | UnionMember6.UnionMember4
+        | UnionMember6.UnionMember5
+        | UnionMember6.UnionMember6
+        | UnionMember6.UnionMember7
+      >;
+
+      op: 'Min';
+    }
+
+    export namespace UnionMember6 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+    }
+
+    export interface UnionMember7 {
+      base: number;
+
+      expr:
+        | UnionMember7.UnionMember0
+        | UnionMember7.UnionMember1
+        | UnionMember7.UnionMember2
+        | UnionMember7.UnionMember3
+        | UnionMember7.UnionMember4
+        | UnionMember7.UnionMember5
+        | UnionMember7.UnionMember6
+        | UnionMember7.UnionMember7;
+
+      op: 'Log';
+    }
+
+    export namespace UnionMember7 {
+      export interface UnionMember0 {
+        name:
+          | 'ann'
+          | 'ann_vector'
+          | 'bm25'
+          | 'stars'
+          | 'issues'
+          | 'issues_open'
+          | 'issues_closed'
+          | 'age'
+          | 'recency';
+
+        op: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        op: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        op: 'Sum';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
+
+        op: 'Mult';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
+
+        op: 'Div';
+      }
+
+      export namespace UnionMember4 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+
+        op: 'Max';
+      }
+
+      export namespace UnionMember5 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+
+        op: 'Min';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
+        }
+      }
+
+      export interface UnionMember7 {
+        base: number;
+
+        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
+
+        op: 'Log';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name:
+            | 'ann'
+            | 'ann_vector'
+            | 'bm25'
+            | 'stars'
+            | 'issues'
+            | 'issues_open'
+            | 'issues_closed'
+            | 'age'
+            | 'recency';
+
+          op: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          op: 'Const';
+
+          value: number;
         }
       }
     }
