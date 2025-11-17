@@ -178,6 +178,16 @@ export namespace UserEmailBestEmailParams {
     emailSubject?: string;
 
     /**
+     * Provide the reason for emailing the user in natural language
+     */
+    reasonForEmailNaturalLanguage?: string;
+
+    /**
+     * Provide the repo ID for why you are emailing the user
+     */
+    repoReasonForEmail?: string;
+
+    /**
      * Sender identifier for tracking
      */
     sender?: string;
@@ -212,6 +222,16 @@ export namespace UserEmailBestEmailByLoginParams {
     emailSubject?: string;
 
     /**
+     * Provide the reason for emailing the user in natural language
+     */
+    reasonForEmailNaturalLanguage?: string;
+
+    /**
+     * Provide the repo ID for why you are emailing the user
+     */
+    repoReasonForEmail?: string;
+
+    /**
      * Sender identifier for tracking
      */
     sender?: string;
@@ -223,6 +243,11 @@ export interface UserEmailReplySignalParams {
    * Array of GitHub node IDs for users who replied (1-100)
    */
   githubIds: Array<string>;
+
+  /**
+   * The body content of the user's reply email
+   */
+  emailReplyBody?: string;
 }
 
 export declare namespace UserEmails {
