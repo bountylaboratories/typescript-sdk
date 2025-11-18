@@ -233,12 +233,6 @@ export namespace RawRepoRetrieveResponse {
         displayName?: string | null;
 
         /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
-
-        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -346,12 +340,6 @@ export namespace RawRepoRetrieveResponse {
        * User display name
        */
       displayName?: string | null;
-
-      /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -484,12 +472,6 @@ export namespace RawRepoRetrieveResponse {
          * User display name
          */
         displayName?: string | null;
-
-        /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -733,12 +715,6 @@ export namespace RawRepoByFullnameResponse {
         displayName?: string | null;
 
         /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
-
-        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -846,12 +822,6 @@ export namespace RawRepoByFullnameResponse {
        * User display name
        */
       displayName?: string | null;
-
-      /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -984,12 +954,6 @@ export namespace RawRepoByFullnameResponse {
          * User display name
          */
         displayName?: string | null;
-
-        /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -1142,12 +1106,6 @@ export namespace RawRepoGraphResponse {
        * User display name
        */
       displayName?: string | null;
-
-      /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -1389,12 +1347,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -1502,12 +1454,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -1640,12 +1586,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -1812,12 +1752,6 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
-
-          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -1938,12 +1872,6 @@ export namespace RawRepoGraphResponse {
            * User display name
            */
           displayName?: string | null;
-
-          /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -2188,12 +2116,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -2301,12 +2223,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -2439,12 +2355,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -2712,12 +2622,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -2825,12 +2729,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -2963,12 +2861,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -3135,12 +3027,6 @@ export namespace RawRepoGraphResponse {
       displayName?: string | null;
 
       /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
-
-      /**
        * ISO 8601 timestamp when metadata was extracted
        */
       embeddedAt?: string | null;
@@ -3380,12 +3266,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -3493,12 +3373,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -3631,12 +3505,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -3803,12 +3671,6 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
-
-          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -3929,12 +3791,6 @@ export namespace RawRepoGraphResponse {
            * User display name
            */
           displayName?: string | null;
-
-          /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -4179,12 +4035,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -4292,12 +4142,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -4430,12 +4274,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -4703,12 +4541,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -4816,12 +4648,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -4954,12 +4780,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -5126,12 +4946,6 @@ export namespace RawRepoGraphResponse {
       displayName?: string | null;
 
       /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
-
-      /**
        * ISO 8601 timestamp when metadata was extracted
        */
       embeddedAt?: string | null;
@@ -5371,12 +5185,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -5484,12 +5292,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -5622,12 +5424,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -5794,12 +5590,6 @@ export namespace RawRepoGraphResponse {
           displayName?: string | null;
 
           /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
-
-          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -5920,12 +5710,6 @@ export namespace RawRepoGraphResponse {
            * User display name
            */
           displayName?: string | null;
-
-          /**
-           * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-           * instead for intelligent email selection)
-           */
-          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -6170,12 +5954,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -6283,12 +6061,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -6421,12 +6193,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -6694,12 +6460,6 @@ export namespace RawRepoGraphResponse {
               displayName?: string | null;
 
               /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
-
-              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -6807,12 +6567,6 @@ export namespace RawRepoGraphResponse {
              * User display name
              */
             displayName?: string | null;
-
-            /**
-             * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-             * instead for intelligent email selection)
-             */
-            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -6945,12 +6699,6 @@ export namespace RawRepoGraphResponse {
                * User display name
                */
               displayName?: string | null;
-
-              /**
-               * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-               * instead for intelligent email selection)
-               */
-              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
