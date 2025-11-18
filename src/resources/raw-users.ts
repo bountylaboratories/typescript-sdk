@@ -120,6 +120,13 @@ export namespace RawUserRetrieveResponse {
     displayName?: string | null;
 
     /**
+     * Obfuscated email addresses showing only the last 2 characters of the local part
+     * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+     * for unobfuscated email access with intelligent selection.
+     */
+    emails?: Array<string> | null;
+
+    /**
      * ISO 8601 timestamp when metadata was extracted
      */
     embeddedAt?: string | null;
@@ -359,6 +366,13 @@ export namespace RawUserRetrieveResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -466,6 +480,13 @@ export namespace RawUserRetrieveResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -598,6 +619,13 @@ export namespace RawUserRetrieveResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -764,6 +792,13 @@ export namespace RawUserRetrieveResponse {
         displayName?: string | null;
 
         /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -884,6 +919,13 @@ export namespace RawUserRetrieveResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -1128,6 +1170,13 @@ export namespace RawUserRetrieveResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -1235,6 +1284,13 @@ export namespace RawUserRetrieveResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -1367,6 +1423,13 @@ export namespace RawUserRetrieveResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -1634,6 +1697,13 @@ export namespace RawUserRetrieveResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -1741,6 +1811,13 @@ export namespace RawUserRetrieveResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -1873,6 +1950,13 @@ export namespace RawUserRetrieveResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -2023,6 +2107,13 @@ export namespace RawUserByLoginResponse {
     displayName?: string | null;
 
     /**
+     * Obfuscated email addresses showing only the last 2 characters of the local part
+     * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+     * for unobfuscated email access with intelligent selection.
+     */
+    emails?: Array<string> | null;
+
+    /**
      * ISO 8601 timestamp when metadata was extracted
      */
     embeddedAt?: string | null;
@@ -2262,6 +2353,13 @@ export namespace RawUserByLoginResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -2369,6 +2467,13 @@ export namespace RawUserByLoginResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -2501,6 +2606,13 @@ export namespace RawUserByLoginResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -2667,6 +2779,13 @@ export namespace RawUserByLoginResponse {
         displayName?: string | null;
 
         /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -2787,6 +2906,13 @@ export namespace RawUserByLoginResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -3031,6 +3157,13 @@ export namespace RawUserByLoginResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -3138,6 +3271,13 @@ export namespace RawUserByLoginResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -3270,6 +3410,13 @@ export namespace RawUserByLoginResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -3537,6 +3684,13 @@ export namespace RawUserByLoginResponse {
             displayName?: string | null;
 
             /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
              * ISO 8601 timestamp when metadata was extracted
              */
             embeddedAt?: string | null;
@@ -3644,6 +3798,13 @@ export namespace RawUserByLoginResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -3776,6 +3937,13 @@ export namespace RawUserByLoginResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -3949,6 +4117,13 @@ export namespace RawUserGraphResponse {
       displayName?: string | null;
 
       /**
+       * Obfuscated email addresses showing only the last 2 characters of the local part
+       * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+       * for unobfuscated email access with intelligent selection.
+       */
+      emails?: Array<string> | null;
+
+      /**
        * ISO 8601 timestamp when metadata was extracted
        */
       embeddedAt?: string | null;
@@ -4188,6 +4363,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -4295,6 +4477,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -4427,6 +4616,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -4593,6 +4789,13 @@ export namespace RawUserGraphResponse {
           displayName?: string | null;
 
           /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -4713,6 +4916,13 @@ export namespace RawUserGraphResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -4957,6 +5167,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -5064,6 +5281,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -5196,6 +5420,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -5463,6 +5694,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -5570,6 +5808,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -5702,6 +5947,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -5867,6 +6119,13 @@ export namespace RawUserGraphResponse {
       displayName?: string | null;
 
       /**
+       * Obfuscated email addresses showing only the last 2 characters of the local part
+       * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+       * for unobfuscated email access with intelligent selection.
+       */
+      emails?: Array<string> | null;
+
+      /**
        * ISO 8601 timestamp when metadata was extracted
        */
       embeddedAt?: string | null;
@@ -6106,6 +6365,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -6213,6 +6479,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -6345,6 +6618,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -6511,6 +6791,13 @@ export namespace RawUserGraphResponse {
           displayName?: string | null;
 
           /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -6631,6 +6918,13 @@ export namespace RawUserGraphResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -6875,6 +7169,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -6982,6 +7283,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -7114,6 +7422,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -7381,6 +7696,13 @@ export namespace RawUserGraphResponse {
               displayName?: string | null;
 
               /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
+
+              /**
                * ISO 8601 timestamp when metadata was extracted
                */
               embeddedAt?: string | null;
@@ -7488,6 +7810,13 @@ export namespace RawUserGraphResponse {
              * User display name
              */
             displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
 
             /**
              * ISO 8601 timestamp when metadata was extracted
@@ -7620,6 +7949,13 @@ export namespace RawUserGraphResponse {
                * User display name
                */
               displayName?: string | null;
+
+              /**
+               * Obfuscated email addresses showing only the last 2 characters of the local part
+               * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+               * for unobfuscated email access with intelligent selection.
+               */
+              emails?: Array<string> | null;
 
               /**
                * ISO 8601 timestamp when metadata was extracted
@@ -7895,6 +8231,13 @@ export namespace RawUserGraphResponse {
           displayName?: string | null;
 
           /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -8002,6 +8345,13 @@ export namespace RawUserGraphResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -8134,6 +8484,13 @@ export namespace RawUserGraphResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -8392,6 +8749,13 @@ export namespace RawUserGraphResponse {
           displayName?: string | null;
 
           /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -8499,6 +8863,13 @@ export namespace RawUserGraphResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -8631,6 +9002,13 @@ export namespace RawUserGraphResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
@@ -8890,6 +9268,13 @@ export namespace RawUserGraphResponse {
           displayName?: string | null;
 
           /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
            * ISO 8601 timestamp when metadata was extracted
            */
           embeddedAt?: string | null;
@@ -8997,6 +9382,13 @@ export namespace RawUserGraphResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -9129,6 +9521,13 @@ export namespace RawUserGraphResponse {
            * User display name
            */
           displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
 
           /**
            * ISO 8601 timestamp when metadata was extracted
