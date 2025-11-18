@@ -219,12 +219,6 @@ export namespace SearchRepoNaturalLanguageResponse {
         displayName?: string | null;
 
         /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
-
-        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -332,12 +326,6 @@ export namespace SearchRepoNaturalLanguageResponse {
        * User display name
        */
       displayName?: string | null;
-
-      /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -470,12 +458,6 @@ export namespace SearchRepoNaturalLanguageResponse {
          * User display name
          */
         displayName?: string | null;
-
-        /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -720,12 +702,6 @@ export namespace SearchRepoSearchResponse {
         displayName?: string | null;
 
         /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
-
-        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -833,12 +809,6 @@ export namespace SearchRepoSearchResponse {
        * User display name
        */
       displayName?: string | null;
-
-      /**
-       * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-       * instead for intelligent email selection)
-       */
-      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -971,12 +941,6 @@ export namespace SearchRepoSearchResponse {
          * User display name
          */
         displayName?: string | null;
-
-        /**
-         * @deprecated Email addresses (DEPRECATED: Use /api/users/best-email endpoint
-         * instead for intelligent email selection)
-         */
-        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
