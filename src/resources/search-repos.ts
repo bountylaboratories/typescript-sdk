@@ -219,6 +219,13 @@ export namespace SearchRepoNaturalLanguageResponse {
         displayName?: string | null;
 
         /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -326,6 +333,13 @@ export namespace SearchRepoNaturalLanguageResponse {
        * User display name
        */
       displayName?: string | null;
+
+      /**
+       * Obfuscated email addresses showing only the last 2 characters of the local part
+       * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+       * for unobfuscated email access with intelligent selection.
+       */
+      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -458,6 +472,13 @@ export namespace SearchRepoNaturalLanguageResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
@@ -702,6 +723,13 @@ export namespace SearchRepoSearchResponse {
         displayName?: string | null;
 
         /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
          * ISO 8601 timestamp when metadata was extracted
          */
         embeddedAt?: string | null;
@@ -809,6 +837,13 @@ export namespace SearchRepoSearchResponse {
        * User display name
        */
       displayName?: string | null;
+
+      /**
+       * Obfuscated email addresses showing only the last 2 characters of the local part
+       * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+       * for unobfuscated email access with intelligent selection.
+       */
+      emails?: Array<string> | null;
 
       /**
        * ISO 8601 timestamp when metadata was extracted
@@ -941,6 +976,13 @@ export namespace SearchRepoSearchResponse {
          * User display name
          */
         displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
 
         /**
          * ISO 8601 timestamp when metadata was extracted
