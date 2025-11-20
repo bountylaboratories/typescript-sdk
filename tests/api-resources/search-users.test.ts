@@ -26,6 +26,9 @@ describe('resource searchUsers', () => {
   test.skip('naturalLanguage: required and optional params', async () => {
     const response = await client.searchUsers.naturalLanguage({
       query: 'Find machine learning engineers at Google who work on AI infrastructure',
+      after: 'Y3Vyc29yOjEyMzQ1',
+      enablePagination: true,
+      first: 50,
       includeAttributes: {
         contributes: {
           first: 1,
@@ -70,7 +73,10 @@ describe('resource searchUsers', () => {
   test.skip('search: required and optional params', async () => {
     const response = await client.searchUsers.search({
       query: 'machine learning engineer san francisco',
+      after: 'Y3Vyc29yOjEyMzQ1',
+      enablePagination: true,
       filters: { field: 'field', op: 'op', value: 'string' },
+      first: 50,
       includeAttributes: {
         contributes: {
           first: 1,

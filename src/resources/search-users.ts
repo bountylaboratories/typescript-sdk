@@ -59,6 +59,11 @@ export interface SearchUserNaturalLanguageResponse {
    * Array of user search results with relevance scores
    */
   users: Array<SearchUserNaturalLanguageResponse.User>;
+
+  /**
+   * Pagination information
+   */
+  pageInfo?: SearchUserNaturalLanguageResponse.PageInfo;
 }
 
 export namespace SearchUserNaturalLanguageResponse {
@@ -2034,6 +2039,21 @@ export namespace SearchUserNaturalLanguageResponse {
       }
     }
   }
+
+  /**
+   * Pagination information
+   */
+  export interface PageInfo {
+    /**
+     * Cursor to fetch next page (null if no more items)
+     */
+    endCursor: string | null;
+
+    /**
+     * Whether there are more items available
+     */
+    hasNextPage: boolean;
+  }
 }
 
 export interface SearchUserSearchResponse {
@@ -2046,6 +2066,11 @@ export interface SearchUserSearchResponse {
    * Array of user search results with relevance scores
    */
   users: Array<SearchUserSearchResponse.User>;
+
+  /**
+   * Pagination information
+   */
+  pageInfo?: SearchUserSearchResponse.PageInfo;
 }
 
 export namespace SearchUserSearchResponse {
@@ -4021,6 +4046,21 @@ export namespace SearchUserSearchResponse {
       }
     }
   }
+
+  /**
+   * Pagination information
+   */
+  export interface PageInfo {
+    /**
+     * Cursor to fetch next page (null if no more items)
+     */
+    endCursor: string | null;
+
+    /**
+     * Whether there are more items available
+     */
+    hasNextPage: boolean;
+  }
 }
 
 export interface SearchUserNaturalLanguageParams {
@@ -4028,6 +4068,21 @@ export interface SearchUserNaturalLanguageParams {
    * Natural language query describing the users you want to find
    */
   query: string;
+
+  /**
+   * Cursor for pagination (from previous response pageInfo.endCursor)
+   */
+  after?: string;
+
+  /**
+   * Enable cursor-based pagination to fetch results across multiple requests
+   */
+  enablePagination?: boolean;
+
+  /**
+   * Alias for maxResults (takes precedence if both provided)
+   */
+  first?: number;
 
   /**
    * Optional graph relationships to include (followers, following, stars, owns,
@@ -5327,6 +5382,16 @@ export interface SearchUserSearchParams {
   query: string;
 
   /**
+   * Cursor for pagination (from previous response pageInfo.endCursor)
+   */
+  after?: string;
+
+  /**
+   * Enable cursor-based pagination to fetch results across multiple requests
+   */
+  enablePagination?: boolean;
+
+  /**
    * Optional filters for narrowing search results. Supports filtering on: githubId,
    * login, displayName, bio, company, location, emails, resolvedCountry,
    * resolvedState, resolvedCity.
@@ -5345,6 +5410,11 @@ export interface SearchUserSearchParams {
    * - Use And/Or to combine multiple filters
    */
   filters?: SearchUserSearchParams.GenericFieldFilter | SearchUserSearchParams.CompositeFilter | null;
+
+  /**
+   * Alias for maxResults (takes precedence if both provided)
+   */
+  first?: number;
 
   /**
    * Optional graph relationships to include (followers, following, stars, owns,

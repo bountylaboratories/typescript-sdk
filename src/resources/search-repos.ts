@@ -59,6 +59,11 @@ export interface SearchRepoNaturalLanguageResponse {
    * The generated search query used for semantic search
    */
   searchQuery: string;
+
+  /**
+   * Pagination information
+   */
+  pageInfo?: SearchRepoNaturalLanguageResponse.PageInfo;
 }
 
 export namespace SearchRepoNaturalLanguageResponse {
@@ -550,6 +555,21 @@ export namespace SearchRepoNaturalLanguageResponse {
       }
     }
   }
+
+  /**
+   * Pagination information
+   */
+  export interface PageInfo {
+    /**
+     * Cursor to fetch next page (null if no more items)
+     */
+    endCursor: string | null;
+
+    /**
+     * Whether there are more items available
+     */
+    hasNextPage: boolean;
+  }
 }
 
 export interface SearchRepoSearchResponse {
@@ -563,6 +583,11 @@ export interface SearchRepoSearchResponse {
    * relationships
    */
   repositories: Array<SearchRepoSearchResponse.Repository>;
+
+  /**
+   * Pagination information
+   */
+  pageInfo?: SearchRepoSearchResponse.PageInfo;
 }
 
 export namespace SearchRepoSearchResponse {
@@ -1054,6 +1079,21 @@ export namespace SearchRepoSearchResponse {
       }
     }
   }
+
+  /**
+   * Pagination information
+   */
+  export interface PageInfo {
+    /**
+     * Cursor to fetch next page (null if no more items)
+     */
+    endCursor: string | null;
+
+    /**
+     * Whether there are more items available
+     */
+    hasNextPage: boolean;
+  }
 }
 
 export interface SearchRepoNaturalLanguageParams {
@@ -1063,11 +1103,26 @@ export interface SearchRepoNaturalLanguageParams {
   query: string;
 
   /**
+   * Cursor for pagination (from previous response pageInfo.endCursor)
+   */
+  after?: string;
+
+  /**
+   * Enable cursor-based pagination to fetch results across multiple requests
+   */
+  enablePagination?: boolean;
+
+  /**
    * When true, the AI will generate a user location filter and apply it to ALL
    * user-returning includeAttributes (contributors, starrers). This filter will
    * override any manually-specified filters.
    */
   filterUserIncludeAttributes?: boolean;
+
+  /**
+   * Alias for maxResults (takes precedence if both provided)
+   */
+  first?: number;
 
   /**
    * Optional graph relationships to include (owner, contributors, starrers)
@@ -9586,6 +9641,16 @@ export interface SearchRepoSearchParams {
   query: string;
 
   /**
+   * Cursor for pagination (from previous response pageInfo.endCursor)
+   */
+  after?: string;
+
+  /**
+   * Enable cursor-based pagination to fetch results across multiple requests
+   */
+  enablePagination?: boolean;
+
+  /**
    * Optional filters for narrowing search results. Supports filtering on: githubId,
    * ownerLogin, ownerLocation, name, stargazerCount, language, totalIssuesCount,
    * totalIssuesOpen, totalIssuesClosed, lastContributorLocations.
@@ -9603,6 +9668,11 @@ export interface SearchRepoSearchParams {
    * - Use And/Or to combine multiple filters
    */
   filters?: SearchRepoSearchParams.GenericFieldFilter | SearchRepoSearchParams.CompositeFilter | null;
+
+  /**
+   * Alias for maxResults (takes precedence if both provided)
+   */
+  first?: number;
 
   /**
    * Optional graph relationships to include (owner, contributors, starrers)
