@@ -28,7 +28,10 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.naturalLanguage({
       query:
         'Find React libraries with over 1000 stars that have good TypeScript support and are actively maintained',
+      after: 'Y3Vyc29yOjEyMzQ1',
+      enablePagination: true,
       filterUserIncludeAttributes: true,
+      first: 50,
       includeAttributes: {
         contributors: {
           first: 10,
@@ -64,7 +67,10 @@ describe('resource searchRepos', () => {
   test.skip('search: required and optional params', async () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
+      after: 'Y3Vyc29yOjEyMzQ1',
+      enablePagination: true,
       filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
+      first: 50,
       includeAttributes: {
         contributors: {
           first: 10,
