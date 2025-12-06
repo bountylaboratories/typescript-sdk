@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.29.1 (2025-12-06)
+
+Full Changelog: [v0.29.0...v0.29.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.29.0...v0.29.1)
+
+### Bug Fixes
+
+* **mcp:** return correct lines on typescript errors ([464f489](https://github.com/bountylaboratories/typescript-sdk/commit/464f4891988fd1c9ec745519fa94886c1a9e96ba))
+
+
+### Chores
+
+* **client:** fix logger property type ([bb4d02a](https://github.com/bountylaboratories/typescript-sdk/commit/bb4d02ac38ace3fda5e2d7f707eef6ca41b42939))
+* **internal:** codegen related update ([abb52ba](https://github.com/bountylaboratories/typescript-sdk/commit/abb52ba3952a093b136a90335fe750142d8de35f))
+* **internal:** upgrade eslint ([bf84e4b](https://github.com/bountylaboratories/typescript-sdk/commit/bf84e4b41e14039a89619ca3b04fd647aa4ecaff))
+
 ## 0.29.0 (2025-11-20)
 
 Full Changelog: [v0.28.0...v0.29.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.28.0...v0.29.0)
