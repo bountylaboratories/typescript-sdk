@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.29.2 (2025-12-06)
+
+Full Changelog: [v0.29.1...v0.29.2](https://github.com/bountylaboratories/typescript-sdk/compare/v0.29.1...v0.29.2)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([7040cc0](https://github.com/bountylaboratories/typescript-sdk/commit/7040cc0829018428fba577a4b67905a6b518c49d))
+
+
+### Chores
+
+* **internal:** codegen related update ([b4b16a4](https://github.com/bountylaboratories/typescript-sdk/commit/b4b16a420bf569512649e930d64961726aa445b1))
+
 ## 0.29.1 (2025-12-06)
 
 Full Changelog: [v0.29.0...v0.29.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.29.0...v0.29.1)
