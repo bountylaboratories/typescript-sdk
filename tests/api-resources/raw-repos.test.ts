@@ -30,14 +30,22 @@ describe('resource rawRepos', () => {
         contributors: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         owner: true,
         ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
     });
@@ -65,14 +73,22 @@ describe('resource rawRepos', () => {
         contributors: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         owner: true,
         ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
     });
@@ -100,33 +116,69 @@ describe('resource rawRepos', () => {
         contributes: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         contributors: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         devrank: true,
         followers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         following: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         owner: true,
         ownerDevrank: true,
-        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        owns: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
         starrers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
-        stars: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        stars: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
       },
     });
   });

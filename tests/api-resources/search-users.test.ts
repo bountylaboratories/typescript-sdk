@@ -33,24 +33,48 @@ describe('resource searchUsers', () => {
         contributes: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         devrank: true,
         followers: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         following: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
-        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        owns: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
         stars: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
       maxResults: 50,
@@ -75,30 +99,58 @@ describe('resource searchUsers', () => {
       query: 'machine learning engineer san francisco',
       after: 'Y3Vyc29yOjEyMzQ1',
       enablePagination: true,
-      filters: { field: 'field', op: 'op', value: 'string' },
+      filters: {
+        field: 'field',
+        op: 'op',
+        value: 'string',
+      },
       first: 50,
       includeAttributes: {
         contributes: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         devrank: true,
         followers: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         following: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
-        owns: { first: 1, after: 'after', filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' } },
+        owns: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
         stars: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
       maxResults: 50,
