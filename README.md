@@ -60,15 +60,17 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 }).catch(async (err) => {
-  if (err instanceof Bountylab.APIError) {
-    console.log(err.status); // 400
-    console.log(err.name); // BadRequestError
-    console.log(err.headers); // {server: 'nginx', ...}
-  } else {
-    throw err;
-  }
-});
+const response = await client.searchUsers
+  .search({ query: 'developer', maxResults: 5 })
+  .catch(async (err) => {
+    if (err instanceof Bountylab.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
@@ -140,7 +142,9 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new Bountylab();
 
-const response = await client.searchUsers.search({ query: 'developer', maxResults: 5 }).asResponse();
+const response = await client.searchUsers
+  .search({ query: 'developer', maxResults: 5 })
+  .asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
