@@ -36,14 +36,22 @@ describe('resource searchRepos', () => {
         contributors: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         owner: true,
         ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
       maxResults: 50,
@@ -69,20 +77,32 @@ describe('resource searchRepos', () => {
       query: 'react component library with typescript',
       after: 'Y3Vyc29yOjEyMzQ1',
       enablePagination: true,
-      filters: { field: 'language', op: 'Eq', value: 'TypeScript' },
+      filters: {
+        field: 'language',
+        op: 'Eq',
+        value: 'TypeScript',
+      },
       first: 50,
       includeAttributes: {
         contributors: {
           first: 10,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
         owner: true,
         ownerDevrank: true,
         starrers: {
           first: 1,
           after: 'after',
-          filters: { field: 'resolvedCountry', op: 'Eq', value: 'string' },
+          filters: {
+            field: 'resolvedCountry',
+            op: 'Eq',
+            value: 'string',
+          },
         },
       },
       maxResults: 50,
