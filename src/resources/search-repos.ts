@@ -1137,7 +1137,7 @@ export interface SearchRepoNaturalLanguageParams {
   /**
    * Custom ranking formula (AST expression). If not provided, uses default
    * log-normalized 70/20/10 formula (70% semantic similarity, 20% popularity, 10%
-   * activity). Pure ANN queries skip multi-query for better performance.
+   * activity).
    */
   rankBy?:
     | SearchRepoNaturalLanguageParams.UnionMember0
@@ -1673,16 +1673,7 @@ export namespace SearchRepoNaturalLanguageParams {
   }
 
   export interface UnionMember0 {
-    name:
-      | 'ann'
-      | 'ann_vector'
-      | 'bm25'
-      | 'stars'
-      | 'issues'
-      | 'issues_open'
-      | 'issues_closed'
-      | 'age'
-      | 'recency';
+    name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
     op: 'Attr';
   }
@@ -1710,16 +1701,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember2 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -1747,16 +1729,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -1775,16 +1748,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1804,16 +1768,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1833,16 +1788,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1862,16 +1808,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1891,16 +1828,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1922,16 +1850,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -1961,16 +1880,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -1989,16 +1899,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2018,16 +1919,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2047,16 +1939,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2076,16 +1959,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2105,16 +1979,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2136,16 +2001,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2175,16 +2031,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -2203,16 +2050,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2232,16 +2070,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2261,16 +2090,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2290,16 +2110,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2319,16 +2130,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2350,16 +2152,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2389,16 +2182,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -2417,16 +2201,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2446,16 +2221,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2475,16 +2241,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2504,16 +2261,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2533,16 +2281,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2564,16 +2303,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2603,16 +2333,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -2631,16 +2352,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2660,16 +2372,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2689,16 +2392,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2718,16 +2412,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2747,16 +2432,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2778,16 +2454,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2818,16 +2485,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -2846,16 +2504,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2875,16 +2524,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2904,16 +2544,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2933,16 +2564,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2962,16 +2584,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -2993,16 +2606,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3033,16 +2637,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember3 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -3070,16 +2665,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -3098,16 +2684,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3127,16 +2704,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3156,16 +2724,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3185,16 +2744,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3214,16 +2764,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3245,16 +2786,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3284,16 +2816,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -3312,16 +2835,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3341,16 +2855,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3370,16 +2875,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3399,16 +2895,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3428,16 +2915,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3459,16 +2937,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3498,16 +2967,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -3526,16 +2986,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3555,16 +3006,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3584,16 +3026,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3613,16 +3046,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3642,16 +3066,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3673,16 +3088,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3712,16 +3118,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -3740,16 +3137,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3769,16 +3157,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3798,16 +3177,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3827,16 +3197,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3856,16 +3217,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3887,16 +3239,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3926,16 +3269,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -3954,16 +3288,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -3983,16 +3308,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4012,16 +3328,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4041,16 +3348,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4070,16 +3368,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4101,16 +3390,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4141,16 +3421,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -4169,16 +3440,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4198,16 +3460,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4227,16 +3480,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4256,16 +3500,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4285,16 +3520,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4316,16 +3542,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4356,16 +3573,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember4 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -4393,16 +3601,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -4421,16 +3620,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4450,16 +3640,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4479,16 +3660,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4508,16 +3680,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4537,16 +3700,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4568,16 +3722,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4607,16 +3752,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -4635,16 +3771,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4664,16 +3791,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4693,16 +3811,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4722,16 +3831,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4751,16 +3851,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4782,16 +3873,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4821,16 +3903,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -4849,16 +3922,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4878,16 +3942,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4907,16 +3962,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4936,16 +3982,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4965,16 +4002,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -4996,16 +4024,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5035,16 +4054,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -5063,16 +4073,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5092,16 +4093,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5121,16 +4113,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5150,16 +4133,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5179,16 +4153,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5210,16 +4175,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5249,16 +4205,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -5277,16 +4224,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5306,16 +4244,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5335,16 +4264,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5364,16 +4284,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5393,16 +4304,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5424,16 +4326,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5464,16 +4357,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -5492,16 +4376,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5521,16 +4396,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5550,16 +4416,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5579,16 +4436,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5608,16 +4456,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5639,16 +4478,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5679,16 +4509,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember5 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -5716,16 +4537,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -5744,16 +4556,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5773,16 +4576,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5802,16 +4596,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5831,16 +4616,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5860,16 +4636,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5891,16 +4658,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5930,16 +4688,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -5958,16 +4707,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -5987,16 +4727,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6016,16 +4747,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6045,16 +4767,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6074,16 +4787,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6105,16 +4809,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6144,16 +4839,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -6172,16 +4858,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6201,16 +4878,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6230,16 +4898,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6259,16 +4918,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6288,16 +4938,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6319,16 +4960,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6358,16 +4990,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -6386,16 +5009,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6415,16 +5029,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6444,16 +5049,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6473,16 +5069,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6502,16 +5089,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6533,16 +5111,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6572,16 +5141,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -6600,16 +5160,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6629,16 +5180,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6658,16 +5200,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6687,16 +5220,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6716,16 +5240,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6747,16 +5262,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6787,16 +5293,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -6815,16 +5312,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6844,16 +5332,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6873,16 +5352,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6902,16 +5372,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6931,16 +5392,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -6962,16 +5414,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7002,16 +5445,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember6 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -7039,16 +5473,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -7067,16 +5492,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7096,16 +5512,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7125,16 +5532,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7154,16 +5552,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7183,16 +5572,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7214,16 +5594,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7253,16 +5624,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -7281,16 +5643,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7310,16 +5663,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7339,16 +5683,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7368,16 +5703,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7397,16 +5723,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7428,16 +5745,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7467,16 +5775,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -7495,16 +5794,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7524,16 +5814,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7553,16 +5834,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7582,16 +5854,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7611,16 +5874,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7642,16 +5896,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7681,16 +5926,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -7709,16 +5945,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7738,16 +5965,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7767,16 +5985,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7796,16 +6005,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7825,16 +6025,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7856,16 +6047,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7895,16 +6077,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -7923,16 +6096,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7952,16 +6116,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -7981,16 +6136,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8010,16 +6156,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8039,16 +6176,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8070,16 +6198,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8110,16 +6229,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -8138,16 +6248,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8167,16 +6268,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8196,16 +6288,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8225,16 +6308,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8254,16 +6328,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8285,16 +6350,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8326,16 +6382,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace UnionMember7 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -8363,16 +6410,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -8391,16 +6429,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8420,16 +6449,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8449,16 +6469,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8478,16 +6489,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8507,16 +6509,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8538,16 +6531,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8577,16 +6561,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -8605,16 +6580,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8634,16 +6600,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8663,16 +6620,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8692,16 +6640,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8721,16 +6660,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8752,16 +6682,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8791,16 +6712,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -8819,16 +6731,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8848,16 +6751,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8877,16 +6771,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8906,16 +6791,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8935,16 +6811,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -8966,16 +6833,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9005,16 +6863,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -9033,16 +6882,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9062,16 +6902,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9091,16 +6922,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9120,16 +6942,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9149,16 +6962,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9180,16 +6984,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9219,16 +7014,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -9247,16 +7033,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9276,16 +7053,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9305,16 +7073,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9334,16 +7093,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9363,16 +7113,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9394,16 +7135,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9434,16 +7166,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -9462,16 +7185,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9491,16 +7205,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9520,16 +7225,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9549,16 +7245,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9578,16 +7265,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9609,16 +7287,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -9635,10 +7304,11 @@ export namespace SearchRepoNaturalLanguageParams {
 
 export interface SearchRepoSearchParams {
   /**
-   * Natural language search query for semantic search across repository README and
-   * description using vector embeddings
+   * Search query for semantic search across repository README and description using
+   * vector embeddings. Supports: string (single query), string[] (RRF fusion), null
+   * (filter-only)
    */
-  query: string;
+  query: string | Array<string> | null;
 
   /**
    * Cursor for pagination (from previous response pageInfo.endCursor)
@@ -9687,7 +7357,7 @@ export interface SearchRepoSearchParams {
   /**
    * Custom ranking formula (AST expression). If not provided, uses default
    * log-normalized 70/20/10 formula (70% semantic similarity, 20% popularity, 10%
-   * activity). Pure ANN queries skip multi-query for better performance.
+   * activity).
    */
   rankBy?:
     | SearchRepoSearchParams.UnionMember0
@@ -10271,16 +7941,7 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface UnionMember0 {
-    name:
-      | 'ann'
-      | 'ann_vector'
-      | 'bm25'
-      | 'stars'
-      | 'issues'
-      | 'issues_open'
-      | 'issues_closed'
-      | 'age'
-      | 'recency';
+    name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
     op: 'Attr';
   }
@@ -10308,16 +7969,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember2 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -10345,16 +7997,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -10373,16 +8016,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10402,16 +8036,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10431,16 +8056,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10460,16 +8076,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10489,16 +8096,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10520,16 +8118,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10559,16 +8148,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -10587,16 +8167,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10616,16 +8187,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10645,16 +8207,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10674,16 +8227,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10703,16 +8247,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10734,16 +8269,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10773,16 +8299,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -10801,16 +8318,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10830,16 +8338,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10859,16 +8358,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10888,16 +8378,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10917,16 +8398,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10948,16 +8420,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -10987,16 +8450,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -11015,16 +8469,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11044,16 +8489,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11073,16 +8509,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11102,16 +8529,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11131,16 +8549,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11162,16 +8571,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11201,16 +8601,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -11229,16 +8620,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11258,16 +8640,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11287,16 +8660,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11316,16 +8680,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11345,16 +8700,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11376,16 +8722,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11416,16 +8753,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -11444,16 +8772,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11473,16 +8792,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11502,16 +8812,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11531,16 +8832,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11560,16 +8852,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11591,16 +8874,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11631,16 +8905,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember3 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -11668,16 +8933,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -11696,16 +8952,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11725,16 +8972,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11754,16 +8992,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11783,16 +9012,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11812,16 +9032,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11843,16 +9054,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11882,16 +9084,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -11910,16 +9103,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11939,16 +9123,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11968,16 +9143,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -11997,16 +9163,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12026,16 +9183,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12057,16 +9205,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12096,16 +9235,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -12124,16 +9254,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12153,16 +9274,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12182,16 +9294,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12211,16 +9314,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12240,16 +9334,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12271,16 +9356,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12310,16 +9386,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -12338,16 +9405,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12367,16 +9425,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12396,16 +9445,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12425,16 +9465,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12454,16 +9485,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12485,16 +9507,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12524,16 +9537,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -12552,16 +9556,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12581,16 +9576,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12610,16 +9596,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12639,16 +9616,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12668,16 +9636,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12699,16 +9658,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12739,16 +9689,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -12767,16 +9708,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12796,16 +9728,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12825,16 +9748,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12854,16 +9768,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12883,16 +9788,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12914,16 +9810,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -12954,16 +9841,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember4 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -12991,16 +9869,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -13019,16 +9888,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13048,16 +9908,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13077,16 +9928,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13106,16 +9948,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13135,16 +9968,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13166,16 +9990,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13205,16 +10020,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -13233,16 +10039,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13262,16 +10059,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13291,16 +10079,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13320,16 +10099,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13349,16 +10119,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13380,16 +10141,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13419,16 +10171,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -13447,16 +10190,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13476,16 +10210,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13505,16 +10230,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13534,16 +10250,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13563,16 +10270,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13594,16 +10292,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13633,16 +10322,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -13661,16 +10341,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13690,16 +10361,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13719,16 +10381,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13748,16 +10401,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13777,16 +10421,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13808,16 +10443,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13847,16 +10473,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -13875,16 +10492,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13904,16 +10512,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13933,16 +10532,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13962,16 +10552,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -13991,16 +10572,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14022,16 +10594,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14062,16 +10625,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -14090,16 +10644,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14119,16 +10664,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14148,16 +10684,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14177,16 +10704,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14206,16 +10724,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14237,16 +10746,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14277,16 +10777,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember5 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -14314,16 +10805,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -14342,16 +10824,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14371,16 +10844,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14400,16 +10864,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14429,16 +10884,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14458,16 +10904,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14489,16 +10926,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14528,16 +10956,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -14556,16 +10975,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14585,16 +10995,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14614,16 +11015,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14643,16 +11035,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14672,16 +11055,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14703,16 +11077,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14742,16 +11107,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -14770,16 +11126,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14799,16 +11146,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14828,16 +11166,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14857,16 +11186,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14886,16 +11206,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14917,16 +11228,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -14956,16 +11258,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -14984,16 +11277,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15013,16 +11297,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15042,16 +11317,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15071,16 +11337,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15100,16 +11357,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15131,16 +11379,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15170,16 +11409,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -15198,16 +11428,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15227,16 +11448,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15256,16 +11468,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15285,16 +11488,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15314,16 +11508,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15345,16 +11530,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15385,16 +11561,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -15413,16 +11580,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15442,16 +11600,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15471,16 +11620,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15500,16 +11640,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15529,16 +11660,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15560,16 +11682,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15600,16 +11713,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember6 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -15637,16 +11741,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -15665,16 +11760,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15694,16 +11780,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15723,16 +11800,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15752,16 +11820,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15781,16 +11840,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15812,16 +11862,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15851,16 +11892,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -15879,16 +11911,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15908,16 +11931,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15937,16 +11951,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15966,16 +11971,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -15995,16 +11991,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16026,16 +12013,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16065,16 +12043,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -16093,16 +12062,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16122,16 +12082,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16151,16 +12102,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16180,16 +12122,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16209,16 +12142,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16240,16 +12164,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16279,16 +12194,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -16307,16 +12213,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16336,16 +12233,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16365,16 +12253,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16394,16 +12273,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16423,16 +12293,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16454,16 +12315,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16493,16 +12345,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -16521,16 +12364,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16550,16 +12384,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16579,16 +12404,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16608,16 +12424,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16637,16 +12444,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16668,16 +12466,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16708,16 +12497,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -16736,16 +12516,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16765,16 +12536,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16794,16 +12556,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16823,16 +12576,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16852,16 +12596,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16883,16 +12618,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -16924,16 +12650,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace UnionMember7 {
     export interface UnionMember0 {
-      name:
-        | 'ann'
-        | 'ann_vector'
-        | 'bm25'
-        | 'stars'
-        | 'issues'
-        | 'issues_open'
-        | 'issues_closed'
-        | 'age'
-        | 'recency';
+      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
       op: 'Attr';
     }
@@ -16961,16 +12678,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -16989,16 +12697,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17018,16 +12717,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17047,16 +12737,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17076,16 +12757,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17105,16 +12777,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17136,16 +12799,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17175,16 +12829,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -17203,16 +12848,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17232,16 +12868,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17261,16 +12888,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17290,16 +12908,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17319,16 +12928,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17350,16 +12950,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17389,16 +12980,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -17417,16 +12999,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17446,16 +13019,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17475,16 +13039,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17504,16 +13059,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17533,16 +13079,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17564,16 +13101,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17603,16 +13131,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -17631,16 +13150,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17660,16 +13170,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17689,16 +13190,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17718,16 +13210,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17747,16 +13230,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17778,16 +13252,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17817,16 +13282,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -17845,16 +13301,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17874,16 +13321,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17903,16 +13341,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17932,16 +13361,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17961,16 +13381,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -17992,16 +13403,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18032,16 +13434,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name:
-          | 'ann'
-          | 'ann_vector'
-          | 'bm25'
-          | 'stars'
-          | 'issues'
-          | 'issues_open'
-          | 'issues_closed'
-          | 'age'
-          | 'recency';
+        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
         op: 'Attr';
       }
@@ -18060,16 +13453,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18089,16 +13473,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18118,16 +13493,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18147,16 +13513,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18176,16 +13533,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
@@ -18207,16 +13555,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name:
-            | 'ann'
-            | 'ann_vector'
-            | 'bm25'
-            | 'stars'
-            | 'issues'
-            | 'issues_open'
-            | 'issues_closed'
-            | 'age'
-            | 'recency';
+          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
           op: 'Attr';
         }
