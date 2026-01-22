@@ -5377,9 +5377,10 @@ export interface SearchUserSearchParams {
   /**
    * Full-text search query across user fields. Searches: login, displayName, bio,
    * company, location, emails, resolvedCountry, resolvedState, resolvedCity (with
-   * login weighted 2x)
+   * login weighted 2x). Supports: string (single query), string[] (RRF fusion), null
+   * (filter-only)
    */
-  query: string;
+  query: string | Array<string> | null;
 
   /**
    * Cursor for pagination (from previous response pageInfo.endCursor)
