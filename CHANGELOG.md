@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.30.0 (2026-01-22)
+
+Full Changelog: [v0.29.2...v0.30.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.29.2...v0.30.0)
+
+### Features
+
+* **api:** api update ([dd51c76](https://github.com/bountylaboratories/typescript-sdk/commit/dd51c76affefed50a5957f752954d89406108921))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([7925b55](https://github.com/bountylaboratories/typescript-sdk/commit/7925b558ea5d16e82f23235742255c2fb40df8b3))
+* **internal:** codegen related update ([3e92a4e](https://github.com/bountylaboratories/typescript-sdk/commit/3e92a4e3a54986c7389e0c841d54c602cda320d3))
+* **internal:** update `actions/checkout` version ([faedb96](https://github.com/bountylaboratories/typescript-sdk/commit/faedb962b620d2bd08b5daabaa7a70e901c963a3))
+* **internal:** upgrade babel, qs, js-yaml ([8bc3f44](https://github.com/bountylaboratories/typescript-sdk/commit/8bc3f44f04fd9062ce923a948ec3463a7e0ddfc1))
+
 ## 0.29.2 (2025-12-06)
 
 Full Changelog: [v0.29.1...v0.29.2](https://github.com/bountylaboratories/typescript-sdk/compare/v0.29.1...v0.29.2)
