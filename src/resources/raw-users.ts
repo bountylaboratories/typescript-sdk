@@ -19,7 +19,7 @@ export class RawUsers extends APIResource {
    * ```
    */
   retrieve(body: RawUserRetrieveParams, options?: RequestOptions): APIPromise<RawUserRetrieveResponse> {
-    return this._client.post('/api/raw/users', { body, ...options });
+    return this._client.post('/raw/users', { body, ...options });
   }
 
   /**
@@ -34,7 +34,7 @@ export class RawUsers extends APIResource {
    * ```
    */
   byLogin(body: RawUserByLoginParams, options?: RequestOptions): APIPromise<RawUserByLoginResponse> {
-    return this._client.post('/api/raw/users/by-login', { body, ...options });
+    return this._client.post('/raw/users/by-login', { body, ...options });
   }
 
   /**
@@ -53,7 +53,7 @@ export class RawUsers extends APIResource {
    * ```
    */
   count(body: RawUserCountParams, options?: RequestOptions): APIPromise<RawUserCountResponse> {
-    return this._client.post('/api/raw/users/count', { body, ...options });
+    return this._client.post('/raw/users/count', { body, ...options });
   }
 
   /**
@@ -75,7 +75,7 @@ export class RawUsers extends APIResource {
     options?: RequestOptions,
   ): APIPromise<RawUserGraphResponse> {
     const { id, ...body } = params;
-    return this._client.post(path`/api/raw/users/${id}/graph/${relationship}`, { body, ...options });
+    return this._client.post(path`/raw/users/${id}/graph/${relationship}`, { body, ...options });
   }
 }
 

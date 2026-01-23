@@ -23,7 +23,7 @@ export class SearchUsers extends APIResource {
     body: SearchUserNaturalLanguageParams,
     options?: RequestOptions,
   ): APIPromise<SearchUserNaturalLanguageResponse> {
-    return this._client.post('/api/search/users/natural-language', { body, ...options });
+    return this._client.post('/search/users/natural-language', { body, ...options });
   }
 
   /**
@@ -40,7 +40,7 @@ export class SearchUsers extends APIResource {
    * ```
    */
   search(body: SearchUserSearchParams, options?: RequestOptions): APIPromise<SearchUserSearchResponse> {
-    return this._client.post('/api/search/users', { body, ...options });
+    return this._client.post('/search/users', { body, ...options });
   }
 }
 

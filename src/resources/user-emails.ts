@@ -23,7 +23,7 @@ export class UserEmails extends APIResource {
     body: UserEmailBestEmailParams,
     options?: RequestOptions,
   ): APIPromise<UserEmailBestEmailResponse> {
-    return this._client.post('/api/users/best-email', { body, ...options });
+    return this._client.post('/users/best-email', { body, ...options });
   }
 
   /**
@@ -44,7 +44,7 @@ export class UserEmails extends APIResource {
     body: UserEmailBestEmailByLoginParams,
     options?: RequestOptions,
   ): APIPromise<UserEmailBestEmailByLoginResponse> {
-    return this._client.post('/api/users/best-email/by-login', { body, ...options });
+    return this._client.post('/users/best-email/by-login', { body, ...options });
   }
 
   /**
@@ -62,7 +62,7 @@ export class UserEmails extends APIResource {
     body: UserEmailReplySignalParams,
     options?: RequestOptions,
   ): APIPromise<UserEmailReplySignalResponse> {
-    return this._client.post('/api/users/best-email/signal/reply', { body, ...options });
+    return this._client.post('/users/best-email/signal/reply', { body, ...options });
   }
 }
 

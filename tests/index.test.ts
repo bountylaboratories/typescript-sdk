@@ -322,13 +322,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['BOUNTYLAB_BASE_URL'] = ''; // empty
       const client = new Bountylab({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.bountylab.io');
+      expect(client.baseURL).toEqual('https://api.bountylab.io/v2');
     });
 
     test('blank env variable', () => {
       process.env['BOUNTYLAB_BASE_URL'] = '  '; // blank
       const client = new Bountylab({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.bountylab.io');
+      expect(client.baseURL).toEqual('https://api.bountylab.io/v2');
     });
 
     test('in request options', () => {
