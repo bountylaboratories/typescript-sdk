@@ -2,7 +2,7 @@
   "name": "@bountylab/bountylab",
   "version": "0.30.0",
   "description": "The official TypeScript library for the Bountylab API",
-  "author": "Bountylab <alec@bountylab.io>",
+  "author": "Bountylab <dev-support@bountylab.io>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",

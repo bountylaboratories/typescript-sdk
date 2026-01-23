@@ -20,7 +20,7 @@ or products provided by Bountylab, please follow the respective company's securi
 
 ### Bountylab Terms and Policies
 
-Please contact alec@bountylab.io for any questions or concerns regarding the security of our services.
+Please contact dev-support@bountylab.io for any questions or concerns regarding the security of our services.
 
 ---
 
