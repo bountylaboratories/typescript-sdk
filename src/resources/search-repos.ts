@@ -1108,14 +1108,21 @@ export interface SearchRepoNaturalLanguageParams {
   after?: string;
 
   /**
+   * When true, applies the LLM-generated filter to all user-returning
+   * includeAttributes (contributors, starrers). Alias for
+   * filterUserIncludeAttributes.
+   */
+  applyFiltersToIncludeAttributes?: boolean;
+
+  /**
    * Enable cursor-based pagination to fetch results across multiple requests
    */
   enablePagination?: boolean;
 
   /**
-   * When true, the AI will generate a user location filter and apply it to ALL
-   * user-returning includeAttributes (contributors, starrers). This filter will
-   * override any manually-specified filters.
+   * [Deprecated: Use applyFiltersToIncludeAttributes] When true, applies the
+   * LLM-generated filter to all user-returning includeAttributes (contributors,
+   * starrers).
    */
   filterUserIncludeAttributes?: boolean;
 
@@ -7264,6 +7271,13 @@ export interface SearchRepoSearchParams {
    * Cursor for pagination (from previous response pageInfo.endCursor)
    */
   after?: string;
+
+  /**
+   * When true, applies the search filter to all user-returning includeAttributes
+   * (contributors, starrers). This filters the returned users to match the same
+   * criteria.
+   */
+  applyFiltersToIncludeAttributes?: boolean;
 
   /**
    * Enable cursor-based pagination to fetch results across multiple requests
