@@ -1140,14 +1140,14 @@ export interface SearchRepoNaturalLanguageParams {
    * activity).
    */
   rankBy?:
-    | SearchRepoNaturalLanguageParams.UnionMember0
-    | SearchRepoNaturalLanguageParams.UnionMember1
-    | SearchRepoNaturalLanguageParams.UnionMember2
-    | SearchRepoNaturalLanguageParams.UnionMember3
-    | SearchRepoNaturalLanguageParams.UnionMember4
-    | SearchRepoNaturalLanguageParams.UnionMember5
-    | SearchRepoNaturalLanguageParams.UnionMember6
-    | SearchRepoNaturalLanguageParams.UnionMember7;
+    | SearchRepoNaturalLanguageParams.Attr
+    | SearchRepoNaturalLanguageParams.Const
+    | SearchRepoNaturalLanguageParams.Sum
+    | SearchRepoNaturalLanguageParams.Mult
+    | SearchRepoNaturalLanguageParams.Div
+    | SearchRepoNaturalLanguageParams.Max
+    | SearchRepoNaturalLanguageParams.Min
+    | SearchRepoNaturalLanguageParams.Log;
 }
 
 export namespace SearchRepoNaturalLanguageParams {
@@ -1197,151 +1197,151 @@ export namespace SearchRepoNaturalLanguageParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributors.UnionMember0
-        | Contributors.UnionMember1
-        | Contributors.UnionMember2
-        | Contributors.UnionMember3
-        | Contributors.UnionMember4
-        | Contributors.UnionMember5
-        | Contributors.UnionMember6
-        | Contributors.UnionMember7
-        | Contributors.UnionMember8
-        | Contributors.UnionMember9
-        | Contributors.UnionMember10
-        | Contributors.UnionMember11
-        | Contributors.UnionMember12
-        | Contributors.UnionMember13
-        | Contributors.UnionMember14
-        | Contributors.UnionMember15
-        | Contributors.UnionMember16
-        | Contributors.UnionMember17
-        | Contributors.UnionMember18
-        | Contributors.UnionMember19
-        | Contributors.UnionMember20
-        | Contributors.UnionMember21
-        | Contributors.UnionMember22
-        | Contributors.UnionMember23
-        | Contributors.UnionMember24
-        | Contributors.UnionMember25
-        | Contributors.UnionMember26
-        | Contributors.UnionMember27
-        | Contributors.UnionMember28
-        | Contributors.UnionMember29
-        | Contributors.UnionMember30
-        | Contributors.UnionMember31
-        | Contributors.UnionMember32
-        | Contributors.UnionMember33
-        | Contributors.UnionMember34
-        | Contributors.UnionMember35
-        | Contributors.UnionMember36
-        | Contributors.UnionMember37
-        | Contributors.UnionMember38
-        | Contributors.UnionMember39
-        | Contributors.UnionMember40
-        | Contributors.UnionMember41
-        | Contributors.UnionMember42
-        | Contributors.UnionMember43
-        | Contributors.UnionMember44
-        | Contributors.UnionMember45
-        | Contributors.UnionMember46
-        | Contributors.UnionMember47
-        | Contributors.UnionMember48
-        | Contributors.UnionMember49
-        | Contributors.UnionMember50
-        | Contributors.UnionMember51
-        | Contributors.UnionMember52
-        | Contributors.UnionMember53
-        | Contributors.UnionMember54
-        | Contributors.UnionMember55
-        | Contributors.UnionMember56
-        | Contributors.UnionMember57
-        | Contributors.UnionMember58
-        | Contributors.UnionMember59
-        | Contributors.UnionMember60
-        | Contributors.UnionMember61
-        | Contributors.UnionMember62
-        | Contributors.UnionMember63
-        | Contributors.UnionMember64
-        | Contributors.UnionMember65
-        | Contributors.UnionMember66
-        | Contributors.UnionMember67
-        | Contributors.UnionMember68
-        | Contributors.UnionMember69
-        | Contributors.UnionMember70
-        | Contributors.UnionMember71
-        | Contributors.UnionMember72
-        | Contributors.UnionMember73
-        | Contributors.UnionMember74
-        | Contributors.UnionMember75
-        | Contributors.UnionMember76
-        | Contributors.UnionMember77
-        | Contributors.UnionMember78
-        | Contributors.UnionMember79
-        | Contributors.UnionMember80
-        | Contributors.UnionMember81
-        | Contributors.UnionMember82
-        | Contributors.UnionMember83
-        | Contributors.UnionMember84
-        | Contributors.UnionMember85
-        | Contributors.UnionMember86
-        | Contributors.UnionMember87
-        | Contributors.UnionMember88
-        | Contributors.UnionMember89
-        | Contributors.UnionMember90
-        | Contributors.UnionMember91
-        | Contributors.UnionMember92
-        | Contributors.UnionMember93
-        | Contributors.UnionMember94
-        | Contributors.UnionMember95
-        | Contributors.UnionMember96
-        | Contributors.UnionMember97
-        | Contributors.UnionMember98
-        | Contributors.UnionMember99
-        | Contributors.UnionMember100
-        | Contributors.UnionMember101
-        | Contributors.UnionMember102
-        | Contributors.UnionMember103
-        | Contributors.UnionMember104
-        | Contributors.UnionMember105
-        | Contributors.UnionMember106
-        | Contributors.UnionMember107
-        | Contributors.UnionMember108
-        | Contributors.UnionMember109
-        | Contributors.UnionMember110
-        | Contributors.UnionMember111
-        | Contributors.UnionMember112
-        | Contributors.UnionMember113
-        | Contributors.UnionMember114
-        | Contributors.UnionMember115
-        | Contributors.UnionMember116
-        | Contributors.UnionMember117
-        | Contributors.UnionMember118
-        | Contributors.UnionMember119
-        | Contributors.UnionMember120
-        | Contributors.UnionMember121
-        | Contributors.UnionMember122
-        | Contributors.UnionMember123
-        | Contributors.UnionMember124
-        | Contributors.UnionMember125
-        | Contributors.UnionMember126
-        | Contributors.UnionMember127
-        | Contributors.UnionMember128
-        | Contributors.UnionMember129
-        | Contributors.UnionMember130
-        | Contributors.UnionMember131
-        | Contributors.UnionMember132
-        | Contributors.UnionMember133
-        | Contributors.UnionMember134
-        | Contributors.UnionMember135
-        | Contributors.UnionMember136
-        | Contributors.UnionMember137
-        | Contributors.UnionMember138
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
         | Contributors.UnionMember139
         | Contributors.UnionMember140;
     }
 
     export namespace Contributors {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -1349,7 +1349,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -1357,7 +1357,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -1365,7 +1365,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -1373,7 +1373,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -1381,7 +1381,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -1389,7 +1389,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -1397,7 +1397,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -1405,7 +1405,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -1413,7 +1413,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -1421,7 +1421,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -1429,7 +1429,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -1437,7 +1437,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -1445,7 +1445,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -1453,7 +1453,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -1461,7 +1461,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -1469,7 +1469,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -1477,7 +1477,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -1485,7 +1485,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -1493,7 +1493,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -1501,7 +1501,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -1509,7 +1509,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -1517,7 +1517,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -1525,7 +1525,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -1533,7 +1533,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -1541,7 +1541,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -1549,7 +1549,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -1557,7 +1557,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -1565,7 +1565,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -1573,7 +1573,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -1581,7 +1581,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -1589,7 +1589,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -1597,7 +1597,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -1605,7 +1605,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -1613,7 +1613,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -1621,7 +1621,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -1629,7 +1629,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -1637,7 +1637,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -1645,7 +1645,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -1653,7 +1653,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -1661,7 +1661,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -1669,7 +1669,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -1677,7 +1677,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -1685,7 +1685,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -1693,7 +1693,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -1701,7 +1701,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -1709,7 +1709,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -1717,7 +1717,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -1725,7 +1725,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -1733,7 +1733,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -1741,7 +1741,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -1749,7 +1749,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -1757,7 +1757,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -1765,7 +1765,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -1773,7 +1773,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -1781,7 +1781,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -1789,7 +1789,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -1797,7 +1797,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -1805,7 +1805,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -1813,7 +1813,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -1821,7 +1821,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -1829,7 +1829,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -1837,7 +1837,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -1845,7 +1845,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -1853,7 +1853,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -1861,7 +1861,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -1869,7 +1869,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -1877,7 +1877,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -1885,7 +1885,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -1893,7 +1893,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -1901,7 +1901,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -1909,7 +1909,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -1917,7 +1917,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -1925,7 +1925,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -1933,7 +1933,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -1941,7 +1941,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -1949,7 +1949,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -1957,7 +1957,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -1965,7 +1965,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -1973,7 +1973,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -1981,7 +1981,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -1989,7 +1989,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -1997,7 +1997,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -2005,7 +2005,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -2013,7 +2013,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -2021,7 +2021,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -2029,7 +2029,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -2037,7 +2037,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -2045,7 +2045,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -2053,7 +2053,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -2061,7 +2061,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -2069,7 +2069,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -2077,7 +2077,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -2085,7 +2085,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -2093,7 +2093,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -2101,7 +2101,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -2109,7 +2109,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -2117,7 +2117,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -2125,7 +2125,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -2133,7 +2133,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -2141,7 +2141,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -2149,7 +2149,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -2157,7 +2157,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -2165,7 +2165,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -2173,7 +2173,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -2181,7 +2181,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -2189,7 +2189,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -2197,7 +2197,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -2205,7 +2205,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -2213,7 +2213,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -2221,7 +2221,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -2229,7 +2229,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -2237,7 +2237,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -2245,7 +2245,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -2253,7 +2253,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -2261,7 +2261,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -2269,7 +2269,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -2277,7 +2277,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -2285,7 +2285,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -2293,7 +2293,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -2301,7 +2301,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -2309,7 +2309,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -2317,7 +2317,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -2325,7 +2325,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -2333,7 +2333,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -2341,7 +2341,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -2349,7 +2349,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -2357,7 +2357,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -2365,7 +2365,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -2373,7 +2373,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -2381,7 +2381,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -2389,7 +2389,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -2397,7 +2397,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -2405,7 +2405,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -2413,7 +2413,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -2421,7 +2421,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -2429,7 +2429,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -2437,7 +2437,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -2445,7 +2445,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -6255,151 +6255,151 @@ export namespace SearchRepoNaturalLanguageParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Starrers.UnionMember0
-        | Starrers.UnionMember1
-        | Starrers.UnionMember2
-        | Starrers.UnionMember3
-        | Starrers.UnionMember4
-        | Starrers.UnionMember5
-        | Starrers.UnionMember6
-        | Starrers.UnionMember7
-        | Starrers.UnionMember8
-        | Starrers.UnionMember9
-        | Starrers.UnionMember10
-        | Starrers.UnionMember11
-        | Starrers.UnionMember12
-        | Starrers.UnionMember13
-        | Starrers.UnionMember14
-        | Starrers.UnionMember15
-        | Starrers.UnionMember16
-        | Starrers.UnionMember17
-        | Starrers.UnionMember18
-        | Starrers.UnionMember19
-        | Starrers.UnionMember20
-        | Starrers.UnionMember21
-        | Starrers.UnionMember22
-        | Starrers.UnionMember23
-        | Starrers.UnionMember24
-        | Starrers.UnionMember25
-        | Starrers.UnionMember26
-        | Starrers.UnionMember27
-        | Starrers.UnionMember28
-        | Starrers.UnionMember29
-        | Starrers.UnionMember30
-        | Starrers.UnionMember31
-        | Starrers.UnionMember32
-        | Starrers.UnionMember33
-        | Starrers.UnionMember34
-        | Starrers.UnionMember35
-        | Starrers.UnionMember36
-        | Starrers.UnionMember37
-        | Starrers.UnionMember38
-        | Starrers.UnionMember39
-        | Starrers.UnionMember40
-        | Starrers.UnionMember41
-        | Starrers.UnionMember42
-        | Starrers.UnionMember43
-        | Starrers.UnionMember44
-        | Starrers.UnionMember45
-        | Starrers.UnionMember46
-        | Starrers.UnionMember47
-        | Starrers.UnionMember48
-        | Starrers.UnionMember49
-        | Starrers.UnionMember50
-        | Starrers.UnionMember51
-        | Starrers.UnionMember52
-        | Starrers.UnionMember53
-        | Starrers.UnionMember54
-        | Starrers.UnionMember55
-        | Starrers.UnionMember56
-        | Starrers.UnionMember57
-        | Starrers.UnionMember58
-        | Starrers.UnionMember59
-        | Starrers.UnionMember60
-        | Starrers.UnionMember61
-        | Starrers.UnionMember62
-        | Starrers.UnionMember63
-        | Starrers.UnionMember64
-        | Starrers.UnionMember65
-        | Starrers.UnionMember66
-        | Starrers.UnionMember67
-        | Starrers.UnionMember68
-        | Starrers.UnionMember69
-        | Starrers.UnionMember70
-        | Starrers.UnionMember71
-        | Starrers.UnionMember72
-        | Starrers.UnionMember73
-        | Starrers.UnionMember74
-        | Starrers.UnionMember75
-        | Starrers.UnionMember76
-        | Starrers.UnionMember77
-        | Starrers.UnionMember78
-        | Starrers.UnionMember79
-        | Starrers.UnionMember80
-        | Starrers.UnionMember81
-        | Starrers.UnionMember82
-        | Starrers.UnionMember83
-        | Starrers.UnionMember84
-        | Starrers.UnionMember85
-        | Starrers.UnionMember86
-        | Starrers.UnionMember87
-        | Starrers.UnionMember88
-        | Starrers.UnionMember89
-        | Starrers.UnionMember90
-        | Starrers.UnionMember91
-        | Starrers.UnionMember92
-        | Starrers.UnionMember93
-        | Starrers.UnionMember94
-        | Starrers.UnionMember95
-        | Starrers.UnionMember96
-        | Starrers.UnionMember97
-        | Starrers.UnionMember98
-        | Starrers.UnionMember99
-        | Starrers.UnionMember100
-        | Starrers.UnionMember101
-        | Starrers.UnionMember102
-        | Starrers.UnionMember103
-        | Starrers.UnionMember104
-        | Starrers.UnionMember105
-        | Starrers.UnionMember106
-        | Starrers.UnionMember107
-        | Starrers.UnionMember108
-        | Starrers.UnionMember109
-        | Starrers.UnionMember110
-        | Starrers.UnionMember111
-        | Starrers.UnionMember112
-        | Starrers.UnionMember113
-        | Starrers.UnionMember114
-        | Starrers.UnionMember115
-        | Starrers.UnionMember116
-        | Starrers.UnionMember117
-        | Starrers.UnionMember118
-        | Starrers.UnionMember119
-        | Starrers.UnionMember120
-        | Starrers.UnionMember121
-        | Starrers.UnionMember122
-        | Starrers.UnionMember123
-        | Starrers.UnionMember124
-        | Starrers.UnionMember125
-        | Starrers.UnionMember126
-        | Starrers.UnionMember127
-        | Starrers.UnionMember128
-        | Starrers.UnionMember129
-        | Starrers.UnionMember130
-        | Starrers.UnionMember131
-        | Starrers.UnionMember132
-        | Starrers.UnionMember133
-        | Starrers.UnionMember134
-        | Starrers.UnionMember135
-        | Starrers.UnionMember136
-        | Starrers.UnionMember137
-        | Starrers.UnionMember138
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
         | Starrers.UnionMember139
         | Starrers.UnionMember140;
     }
 
     export namespace Starrers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -6407,7 +6407,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -6415,7 +6415,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -6423,7 +6423,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -6431,7 +6431,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -6439,7 +6439,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -6447,7 +6447,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -6455,7 +6455,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -6463,7 +6463,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -6471,7 +6471,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -6479,7 +6479,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -6487,7 +6487,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -6495,7 +6495,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -6503,7 +6503,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -6511,7 +6511,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -6519,7 +6519,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -6527,7 +6527,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -6535,7 +6535,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -6543,7 +6543,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -6551,7 +6551,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -6559,7 +6559,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -6567,7 +6567,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -6575,7 +6575,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -6583,7 +6583,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -6591,7 +6591,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -6599,7 +6599,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -6607,7 +6607,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -6615,7 +6615,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -6623,7 +6623,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -6631,7 +6631,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -6639,7 +6639,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -6647,7 +6647,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -6655,7 +6655,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -6663,7 +6663,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -6671,7 +6671,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -6679,7 +6679,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -6687,7 +6687,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -6695,7 +6695,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -6703,7 +6703,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -6711,7 +6711,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -6719,7 +6719,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -6727,7 +6727,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -6735,7 +6735,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -6743,7 +6743,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -6751,7 +6751,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -6759,7 +6759,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -6767,7 +6767,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -6775,7 +6775,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -6783,7 +6783,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -6791,7 +6791,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -6799,7 +6799,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -6807,7 +6807,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -6815,7 +6815,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -6823,7 +6823,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -6831,7 +6831,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -6839,7 +6839,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -6847,7 +6847,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -6855,7 +6855,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -6863,7 +6863,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -6871,7 +6871,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -6879,7 +6879,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -6887,7 +6887,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -6895,7 +6895,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -6903,7 +6903,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -6911,7 +6911,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -6919,7 +6919,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -6927,7 +6927,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -6935,7 +6935,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -6943,7 +6943,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -6951,7 +6951,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -6959,7 +6959,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -6967,7 +6967,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -6975,7 +6975,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -6983,7 +6983,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -6991,7 +6991,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -6999,7 +6999,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -7007,7 +7007,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -7015,7 +7015,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -7023,7 +7023,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -7031,7 +7031,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -7039,7 +7039,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -7047,7 +7047,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -7055,7 +7055,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -7063,7 +7063,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -7071,7 +7071,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -7079,7 +7079,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -7087,7 +7087,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -7095,7 +7095,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -7103,7 +7103,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -7111,7 +7111,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -7119,7 +7119,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -7127,7 +7127,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -7135,7 +7135,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -7143,7 +7143,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -7151,7 +7151,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -7159,7 +7159,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -7167,7 +7167,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -7175,7 +7175,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -7183,7 +7183,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -7191,7 +7191,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -7199,7 +7199,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -7207,7 +7207,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -7215,7 +7215,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -7223,7 +7223,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -7231,7 +7231,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -7239,7 +7239,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -7247,7 +7247,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -7255,7 +7255,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -7263,7 +7263,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -7271,7 +7271,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -7279,7 +7279,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -7287,7 +7287,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -7295,7 +7295,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -7303,7 +7303,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -7311,7 +7311,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -7319,7 +7319,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -7327,7 +7327,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -7335,7 +7335,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -7343,7 +7343,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -7351,7 +7351,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -7359,7 +7359,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -7367,7 +7367,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -7375,7 +7375,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -7383,7 +7383,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -7391,7 +7391,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -7399,7 +7399,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -7407,7 +7407,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -7415,7 +7415,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -7423,7 +7423,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -7431,7 +7431,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -7439,7 +7439,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -7447,7 +7447,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -7455,7 +7455,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -7463,7 +7463,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -7471,7 +7471,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -7479,7 +7479,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -7487,7 +7487,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -7495,7 +7495,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -7503,7 +7503,7 @@ export namespace SearchRepoNaturalLanguageParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -11294,42 +11294,42 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember0 {
+  export interface Attr {
     name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-    op: 'Attr';
+    type: 'Attr';
   }
 
-  export interface UnionMember1 {
-    op: 'Const';
+  export interface Const {
+    type: 'Const';
 
     value: number;
   }
 
-  export interface UnionMember2 {
+  export interface Sum {
     exprs: Array<
-      | UnionMember2.UnionMember0
-      | UnionMember2.UnionMember1
-      | UnionMember2.UnionMember2
-      | UnionMember2.UnionMember3
-      | UnionMember2.UnionMember4
-      | UnionMember2.UnionMember5
-      | UnionMember2.UnionMember6
-      | UnionMember2.UnionMember7
+      | Sum.UnionMember0
+      | Sum.UnionMember1
+      | Sum.UnionMember2
+      | Sum.UnionMember3
+      | Sum.UnionMember4
+      | Sum.UnionMember5
+      | Sum.UnionMember6
+      | Sum.UnionMember7
     >;
 
-    op: 'Sum';
+    type: 'Sum';
   }
 
-  export namespace UnionMember2 {
+  export namespace Sum {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -11346,18 +11346,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -11365,18 +11365,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11385,18 +11385,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11405,18 +11405,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11425,18 +11425,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11445,18 +11445,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11467,18 +11467,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11497,18 +11497,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -11516,18 +11516,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11536,18 +11536,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11556,18 +11556,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11576,18 +11576,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11596,18 +11596,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11618,18 +11618,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11648,18 +11648,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -11667,18 +11667,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11687,18 +11687,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11707,18 +11707,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11727,18 +11727,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11747,18 +11747,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11769,18 +11769,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11799,18 +11799,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -11818,18 +11818,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11838,18 +11838,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11858,18 +11858,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11878,18 +11878,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11898,18 +11898,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11920,18 +11920,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11950,18 +11950,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -11969,18 +11969,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -11989,18 +11989,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12009,18 +12009,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12029,18 +12029,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12049,18 +12049,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12071,18 +12071,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12102,18 +12102,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12121,18 +12121,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12141,18 +12141,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12161,18 +12161,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12181,18 +12181,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12201,18 +12201,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12223,18 +12223,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12242,30 +12242,30 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember3 {
+  export interface Mult {
     exprs: Array<
-      | UnionMember3.UnionMember0
-      | UnionMember3.UnionMember1
-      | UnionMember3.UnionMember2
-      | UnionMember3.UnionMember3
-      | UnionMember3.UnionMember4
-      | UnionMember3.UnionMember5
-      | UnionMember3.UnionMember6
-      | UnionMember3.UnionMember7
+      | Mult.UnionMember0
+      | Mult.UnionMember1
+      | Mult.UnionMember2
+      | Mult.UnionMember3
+      | Mult.UnionMember4
+      | Mult.UnionMember5
+      | Mult.UnionMember6
+      | Mult.UnionMember7
     >;
 
-    op: 'Mult';
+    type: 'Mult';
   }
 
-  export namespace UnionMember3 {
+  export namespace Mult {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -12282,18 +12282,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12301,18 +12301,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12321,18 +12321,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12341,18 +12341,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12361,18 +12361,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12381,18 +12381,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12403,18 +12403,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12433,18 +12433,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12452,18 +12452,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12472,18 +12472,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12492,18 +12492,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12512,18 +12512,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12532,18 +12532,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12554,18 +12554,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12584,18 +12584,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12603,18 +12603,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12623,18 +12623,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12643,18 +12643,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12663,18 +12663,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12683,18 +12683,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12705,18 +12705,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12735,18 +12735,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12754,18 +12754,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12774,18 +12774,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12794,18 +12794,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12814,18 +12814,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12834,18 +12834,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12856,18 +12856,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12886,18 +12886,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -12905,18 +12905,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12925,18 +12925,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12945,18 +12945,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12965,18 +12965,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -12985,18 +12985,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13007,18 +13007,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13038,18 +13038,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13057,18 +13057,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13077,18 +13077,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13097,18 +13097,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13117,18 +13117,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13137,18 +13137,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13159,18 +13159,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13178,30 +13178,30 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember4 {
+  export interface Div {
     exprs: Array<
-      | UnionMember4.UnionMember0
-      | UnionMember4.UnionMember1
-      | UnionMember4.UnionMember2
-      | UnionMember4.UnionMember3
-      | UnionMember4.UnionMember4
-      | UnionMember4.UnionMember5
-      | UnionMember4.UnionMember6
-      | UnionMember4.UnionMember7
+      | Div.UnionMember0
+      | Div.UnionMember1
+      | Div.UnionMember2
+      | Div.UnionMember3
+      | Div.UnionMember4
+      | Div.UnionMember5
+      | Div.UnionMember6
+      | Div.UnionMember7
     >;
 
-    op: 'Div';
+    type: 'Div';
   }
 
-  export namespace UnionMember4 {
+  export namespace Div {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -13218,18 +13218,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13237,18 +13237,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13257,18 +13257,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13277,18 +13277,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13297,18 +13297,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13317,18 +13317,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13339,18 +13339,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13369,18 +13369,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13388,18 +13388,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13408,18 +13408,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13428,18 +13428,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13448,18 +13448,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13468,18 +13468,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13490,18 +13490,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13520,18 +13520,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13539,18 +13539,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13559,18 +13559,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13579,18 +13579,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13599,18 +13599,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13619,18 +13619,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13641,18 +13641,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13671,18 +13671,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13690,18 +13690,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13710,18 +13710,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13730,18 +13730,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13750,18 +13750,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13770,18 +13770,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13792,18 +13792,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13822,18 +13822,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13841,18 +13841,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13861,18 +13861,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13881,18 +13881,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13901,18 +13901,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13921,18 +13921,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13943,18 +13943,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -13974,18 +13974,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -13993,18 +13993,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14013,18 +14013,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14033,18 +14033,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14053,18 +14053,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14073,18 +14073,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14095,18 +14095,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14114,30 +14114,30 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember5 {
+  export interface Max {
     exprs: Array<
-      | UnionMember5.UnionMember0
-      | UnionMember5.UnionMember1
-      | UnionMember5.UnionMember2
-      | UnionMember5.UnionMember3
-      | UnionMember5.UnionMember4
-      | UnionMember5.UnionMember5
-      | UnionMember5.UnionMember6
-      | UnionMember5.UnionMember7
+      | Max.UnionMember0
+      | Max.UnionMember1
+      | Max.UnionMember2
+      | Max.UnionMember3
+      | Max.UnionMember4
+      | Max.UnionMember5
+      | Max.UnionMember6
+      | Max.UnionMember7
     >;
 
-    op: 'Max';
+    type: 'Max';
   }
 
-  export namespace UnionMember5 {
+  export namespace Max {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -14154,18 +14154,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14173,18 +14173,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14193,18 +14193,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14213,18 +14213,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14233,18 +14233,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14253,18 +14253,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14275,18 +14275,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14305,18 +14305,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14324,18 +14324,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14344,18 +14344,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14364,18 +14364,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14384,18 +14384,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14404,18 +14404,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14426,18 +14426,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14456,18 +14456,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14475,18 +14475,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14495,18 +14495,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14515,18 +14515,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14535,18 +14535,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14555,18 +14555,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14577,18 +14577,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14607,18 +14607,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14626,18 +14626,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14646,18 +14646,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14666,18 +14666,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14686,18 +14686,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14706,18 +14706,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14728,18 +14728,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14758,18 +14758,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14777,18 +14777,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14797,18 +14797,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14817,18 +14817,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14837,18 +14837,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14857,18 +14857,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14879,18 +14879,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14910,18 +14910,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -14929,18 +14929,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14949,18 +14949,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14969,18 +14969,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -14989,18 +14989,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15009,18 +15009,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15031,18 +15031,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15050,30 +15050,30 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember6 {
+  export interface Min {
     exprs: Array<
-      | UnionMember6.UnionMember0
-      | UnionMember6.UnionMember1
-      | UnionMember6.UnionMember2
-      | UnionMember6.UnionMember3
-      | UnionMember6.UnionMember4
-      | UnionMember6.UnionMember5
-      | UnionMember6.UnionMember6
-      | UnionMember6.UnionMember7
+      | Min.UnionMember0
+      | Min.UnionMember1
+      | Min.UnionMember2
+      | Min.UnionMember3
+      | Min.UnionMember4
+      | Min.UnionMember5
+      | Min.UnionMember6
+      | Min.UnionMember7
     >;
 
-    op: 'Min';
+    type: 'Min';
   }
 
-  export namespace UnionMember6 {
+  export namespace Min {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -15090,18 +15090,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15109,18 +15109,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15129,18 +15129,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15149,18 +15149,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15169,18 +15169,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15189,18 +15189,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15211,18 +15211,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15241,18 +15241,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15260,18 +15260,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15280,18 +15280,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15300,18 +15300,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15320,18 +15320,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15340,18 +15340,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15362,18 +15362,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15392,18 +15392,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15411,18 +15411,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15431,18 +15431,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15451,18 +15451,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15471,18 +15471,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15491,18 +15491,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15513,18 +15513,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15543,18 +15543,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15562,18 +15562,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15582,18 +15582,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15602,18 +15602,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15622,18 +15622,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15642,18 +15642,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15664,18 +15664,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15694,18 +15694,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15713,18 +15713,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15733,18 +15733,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15753,18 +15753,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15773,18 +15773,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15793,18 +15793,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15815,18 +15815,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15846,18 +15846,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -15865,18 +15865,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15885,18 +15885,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15905,18 +15905,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15925,18 +15925,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15945,18 +15945,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15967,18 +15967,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -15986,31 +15986,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
   }
 
-  export interface UnionMember7 {
+  export interface Log {
     base: number;
 
     expr:
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember2
-      | UnionMember7.UnionMember3
-      | UnionMember7.UnionMember4
-      | UnionMember7.UnionMember5
-      | UnionMember7.UnionMember6
-      | UnionMember7.UnionMember7;
+      | Log.UnionMember0
+      | Log.UnionMember1
+      | Log.UnionMember2
+      | Log.UnionMember3
+      | Log.UnionMember4
+      | Log.UnionMember5
+      | Log.UnionMember6
+      | Log.UnionMember7;
 
-    op: 'Log';
+    type: 'Log';
   }
 
-  export namespace UnionMember7 {
+  export namespace Log {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -16027,18 +16027,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16046,18 +16046,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16066,18 +16066,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16086,18 +16086,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16106,18 +16106,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16126,18 +16126,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16148,18 +16148,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16178,18 +16178,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16197,18 +16197,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16217,18 +16217,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16237,18 +16237,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16257,18 +16257,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16277,18 +16277,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16299,18 +16299,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16329,18 +16329,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16348,18 +16348,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16368,18 +16368,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16388,18 +16388,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16408,18 +16408,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16428,18 +16428,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16450,18 +16450,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16480,18 +16480,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16499,18 +16499,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16519,18 +16519,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16539,18 +16539,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16559,18 +16559,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16579,18 +16579,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16601,18 +16601,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16631,18 +16631,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16650,18 +16650,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16670,18 +16670,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16690,18 +16690,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16710,18 +16710,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16730,18 +16730,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16752,18 +16752,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16783,18 +16783,18 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -16802,18 +16802,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16822,18 +16822,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16842,18 +16842,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16862,18 +16862,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16882,18 +16882,18 @@ export namespace SearchRepoNaturalLanguageParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16904,18 +16904,18 @@ export namespace SearchRepoNaturalLanguageParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -16946,113 +16946,113 @@ export interface SearchRepoSearchParams {
    * Filters to apply (required)
    */
   filters?:
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember2
-    | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember4
-    | SearchRepoSearchParams.UnionMember5
-    | SearchRepoSearchParams.UnionMember6
-    | SearchRepoSearchParams.UnionMember7
-    | SearchRepoSearchParams.UnionMember8
-    | SearchRepoSearchParams.UnionMember9
-    | SearchRepoSearchParams.UnionMember10
-    | SearchRepoSearchParams.UnionMember11
-    | SearchRepoSearchParams.UnionMember12
-    | SearchRepoSearchParams.UnionMember13
-    | SearchRepoSearchParams.UnionMember14
-    | SearchRepoSearchParams.UnionMember15
-    | SearchRepoSearchParams.UnionMember16
-    | SearchRepoSearchParams.UnionMember17
-    | SearchRepoSearchParams.UnionMember18
-    | SearchRepoSearchParams.UnionMember19
-    | SearchRepoSearchParams.UnionMember20
-    | SearchRepoSearchParams.UnionMember21
-    | SearchRepoSearchParams.UnionMember22
-    | SearchRepoSearchParams.UnionMember23
-    | SearchRepoSearchParams.UnionMember24
-    | SearchRepoSearchParams.UnionMember25
-    | SearchRepoSearchParams.UnionMember26
-    | SearchRepoSearchParams.UnionMember27
-    | SearchRepoSearchParams.UnionMember28
-    | SearchRepoSearchParams.UnionMember29
-    | SearchRepoSearchParams.UnionMember30
-    | SearchRepoSearchParams.UnionMember31
-    | SearchRepoSearchParams.UnionMember32
-    | SearchRepoSearchParams.UnionMember33
-    | SearchRepoSearchParams.UnionMember34
-    | SearchRepoSearchParams.UnionMember35
-    | SearchRepoSearchParams.UnionMember36
-    | SearchRepoSearchParams.UnionMember37
-    | SearchRepoSearchParams.UnionMember38
-    | SearchRepoSearchParams.UnionMember39
-    | SearchRepoSearchParams.UnionMember40
-    | SearchRepoSearchParams.UnionMember41
-    | SearchRepoSearchParams.UnionMember42
-    | SearchRepoSearchParams.UnionMember43
-    | SearchRepoSearchParams.UnionMember44
-    | SearchRepoSearchParams.UnionMember45
-    | SearchRepoSearchParams.UnionMember46
-    | SearchRepoSearchParams.UnionMember47
-    | SearchRepoSearchParams.UnionMember48
-    | SearchRepoSearchParams.UnionMember49
-    | SearchRepoSearchParams.UnionMember50
-    | SearchRepoSearchParams.UnionMember51
-    | SearchRepoSearchParams.UnionMember52
-    | SearchRepoSearchParams.UnionMember53
-    | SearchRepoSearchParams.UnionMember54
-    | SearchRepoSearchParams.UnionMember55
-    | SearchRepoSearchParams.UnionMember56
-    | SearchRepoSearchParams.UnionMember57
-    | SearchRepoSearchParams.UnionMember58
-    | SearchRepoSearchParams.UnionMember59
-    | SearchRepoSearchParams.UnionMember60
-    | SearchRepoSearchParams.UnionMember61
-    | SearchRepoSearchParams.UnionMember62
-    | SearchRepoSearchParams.UnionMember63
-    | SearchRepoSearchParams.UnionMember64
-    | SearchRepoSearchParams.UnionMember65
-    | SearchRepoSearchParams.UnionMember66
-    | SearchRepoSearchParams.UnionMember67
-    | SearchRepoSearchParams.UnionMember68
-    | SearchRepoSearchParams.UnionMember69
-    | SearchRepoSearchParams.UnionMember70
-    | SearchRepoSearchParams.UnionMember71
-    | SearchRepoSearchParams.UnionMember72
-    | SearchRepoSearchParams.UnionMember73
-    | SearchRepoSearchParams.UnionMember74
-    | SearchRepoSearchParams.UnionMember75
-    | SearchRepoSearchParams.UnionMember76
-    | SearchRepoSearchParams.UnionMember77
-    | SearchRepoSearchParams.UnionMember78
-    | SearchRepoSearchParams.UnionMember79
-    | SearchRepoSearchParams.UnionMember80
-    | SearchRepoSearchParams.UnionMember81
-    | SearchRepoSearchParams.UnionMember82
-    | SearchRepoSearchParams.UnionMember83
-    | SearchRepoSearchParams.UnionMember84
-    | SearchRepoSearchParams.UnionMember85
-    | SearchRepoSearchParams.UnionMember86
-    | SearchRepoSearchParams.UnionMember87
-    | SearchRepoSearchParams.UnionMember88
-    | SearchRepoSearchParams.UnionMember89
-    | SearchRepoSearchParams.UnionMember90
-    | SearchRepoSearchParams.UnionMember91
-    | SearchRepoSearchParams.UnionMember92
-    | SearchRepoSearchParams.UnionMember93
-    | SearchRepoSearchParams.UnionMember94
-    | SearchRepoSearchParams.UnionMember95
-    | SearchRepoSearchParams.UnionMember96
-    | SearchRepoSearchParams.UnionMember97
-    | SearchRepoSearchParams.UnionMember98
-    | SearchRepoSearchParams.UnionMember99
-    | SearchRepoSearchParams.UnionMember100
-    | SearchRepoSearchParams.UnionMember101
-    | SearchRepoSearchParams.UnionMember102
-    | SearchRepoSearchParams.UnionMember103
-    | SearchRepoSearchParams.UnionMember104
-    | SearchRepoSearchParams.UnionMember105
-    | SearchRepoSearchParams.UnionMember106
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Glob
+    | SearchRepoSearchParams.NotGlob
+    | SearchRepoSearchParams.IGlob
+    | SearchRepoSearchParams.NotIGlob
+    | SearchRepoSearchParams.Regex
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Glob
+    | SearchRepoSearchParams.NotGlob
+    | SearchRepoSearchParams.IGlob
+    | SearchRepoSearchParams.NotIGlob
+    | SearchRepoSearchParams.Regex
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Glob
+    | SearchRepoSearchParams.NotGlob
+    | SearchRepoSearchParams.IGlob
+    | SearchRepoSearchParams.NotIGlob
+    | SearchRepoSearchParams.Regex
+    | SearchRepoSearchParams.ContainsAllTokens
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Glob
+    | SearchRepoSearchParams.NotGlob
+    | SearchRepoSearchParams.IGlob
+    | SearchRepoSearchParams.NotIGlob
+    | SearchRepoSearchParams.Regex
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Glob
+    | SearchRepoSearchParams.NotGlob
+    | SearchRepoSearchParams.IGlob
+    | SearchRepoSearchParams.NotIGlob
+    | SearchRepoSearchParams.Regex
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Eq
+    | SearchRepoSearchParams.NotEq
+    | SearchRepoSearchParams.In
+    | SearchRepoSearchParams.NotIn
+    | SearchRepoSearchParams.Lt
+    | SearchRepoSearchParams.Lte
+    | SearchRepoSearchParams.Gt
+    | SearchRepoSearchParams.Gte
+    | SearchRepoSearchParams.Contains
+    | SearchRepoSearchParams.NotContains
+    | SearchRepoSearchParams.ContainsAny
+    | SearchRepoSearchParams.NotContainsAny
+    | SearchRepoSearchParams.AnyLt
+    | SearchRepoSearchParams.AnyLte
+    | SearchRepoSearchParams.AnyGt
+    | SearchRepoSearchParams.AnyGte
+    | SearchRepoSearchParams.ContainsAllTokens
     | SearchRepoSearchParams.UnionMember107
     | SearchRepoSearchParams.UnionMember108;
 
@@ -17077,18 +17077,18 @@ export interface SearchRepoSearchParams {
    * activity).
    */
   rankBy?:
-    | SearchRepoSearchParams.UnionMember0
-    | SearchRepoSearchParams.UnionMember1
-    | SearchRepoSearchParams.UnionMember2
-    | SearchRepoSearchParams.UnionMember3
-    | SearchRepoSearchParams.UnionMember4
-    | SearchRepoSearchParams.UnionMember5
-    | SearchRepoSearchParams.UnionMember6
-    | SearchRepoSearchParams.UnionMember7;
+    | SearchRepoSearchParams.Attr
+    | SearchRepoSearchParams.Const
+    | SearchRepoSearchParams.Sum
+    | SearchRepoSearchParams.Mult
+    | SearchRepoSearchParams.Div
+    | SearchRepoSearchParams.Max
+    | SearchRepoSearchParams.Min
+    | SearchRepoSearchParams.Log;
 }
 
 export namespace SearchRepoSearchParams {
-  export interface UnionMember0 {
+  export interface Eq {
     field: 'githubId';
 
     op: 'Eq';
@@ -17096,7 +17096,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember1 {
+  export interface NotEq {
     field: 'githubId';
 
     op: 'NotEq';
@@ -17104,7 +17104,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember2 {
+  export interface In {
     field: 'githubId';
 
     op: 'In';
@@ -17112,7 +17112,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember3 {
+  export interface NotIn {
     field: 'githubId';
 
     op: 'NotIn';
@@ -17120,7 +17120,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember4 {
+  export interface Lt {
     field: 'githubId';
 
     op: 'Lt';
@@ -17128,7 +17128,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember5 {
+  export interface Lte {
     field: 'githubId';
 
     op: 'Lte';
@@ -17136,7 +17136,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember6 {
+  export interface Gt {
     field: 'githubId';
 
     op: 'Gt';
@@ -17144,7 +17144,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember7 {
+  export interface Gte {
     field: 'githubId';
 
     op: 'Gte';
@@ -17152,7 +17152,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember8 {
+  export interface Glob {
     field: 'githubId';
 
     op: 'Glob';
@@ -17160,7 +17160,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember9 {
+  export interface NotGlob {
     field: 'githubId';
 
     op: 'NotGlob';
@@ -17168,7 +17168,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember10 {
+  export interface IGlob {
     field: 'githubId';
 
     op: 'IGlob';
@@ -17176,7 +17176,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember11 {
+  export interface NotIGlob {
     field: 'githubId';
 
     op: 'NotIGlob';
@@ -17184,7 +17184,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember12 {
+  export interface Regex {
     field: 'githubId';
 
     op: 'Regex';
@@ -17192,7 +17192,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember13 {
+  export interface Eq {
     field: 'ownerLogin';
 
     op: 'Eq';
@@ -17200,7 +17200,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember14 {
+  export interface NotEq {
     field: 'ownerLogin';
 
     op: 'NotEq';
@@ -17208,7 +17208,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember15 {
+  export interface In {
     field: 'ownerLogin';
 
     op: 'In';
@@ -17216,7 +17216,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember16 {
+  export interface NotIn {
     field: 'ownerLogin';
 
     op: 'NotIn';
@@ -17224,7 +17224,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember17 {
+  export interface Lt {
     field: 'ownerLogin';
 
     op: 'Lt';
@@ -17232,7 +17232,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember18 {
+  export interface Lte {
     field: 'ownerLogin';
 
     op: 'Lte';
@@ -17240,7 +17240,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember19 {
+  export interface Gt {
     field: 'ownerLogin';
 
     op: 'Gt';
@@ -17248,7 +17248,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember20 {
+  export interface Gte {
     field: 'ownerLogin';
 
     op: 'Gte';
@@ -17256,7 +17256,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember21 {
+  export interface Glob {
     field: 'ownerLogin';
 
     op: 'Glob';
@@ -17264,7 +17264,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember22 {
+  export interface NotGlob {
     field: 'ownerLogin';
 
     op: 'NotGlob';
@@ -17272,7 +17272,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember23 {
+  export interface IGlob {
     field: 'ownerLogin';
 
     op: 'IGlob';
@@ -17280,7 +17280,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember24 {
+  export interface NotIGlob {
     field: 'ownerLogin';
 
     op: 'NotIGlob';
@@ -17288,7 +17288,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember25 {
+  export interface Regex {
     field: 'ownerLogin';
 
     op: 'Regex';
@@ -17296,7 +17296,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember26 {
+  export interface Eq {
     field: 'ownerLocation';
 
     op: 'Eq';
@@ -17304,7 +17304,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember27 {
+  export interface NotEq {
     field: 'ownerLocation';
 
     op: 'NotEq';
@@ -17312,7 +17312,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember28 {
+  export interface In {
     field: 'ownerLocation';
 
     op: 'In';
@@ -17320,7 +17320,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember29 {
+  export interface NotIn {
     field: 'ownerLocation';
 
     op: 'NotIn';
@@ -17328,7 +17328,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember30 {
+  export interface Lt {
     field: 'ownerLocation';
 
     op: 'Lt';
@@ -17336,7 +17336,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember31 {
+  export interface Lte {
     field: 'ownerLocation';
 
     op: 'Lte';
@@ -17344,7 +17344,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember32 {
+  export interface Gt {
     field: 'ownerLocation';
 
     op: 'Gt';
@@ -17352,7 +17352,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember33 {
+  export interface Gte {
     field: 'ownerLocation';
 
     op: 'Gte';
@@ -17360,7 +17360,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember34 {
+  export interface Glob {
     field: 'ownerLocation';
 
     op: 'Glob';
@@ -17368,7 +17368,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember35 {
+  export interface NotGlob {
     field: 'ownerLocation';
 
     op: 'NotGlob';
@@ -17376,7 +17376,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember36 {
+  export interface IGlob {
     field: 'ownerLocation';
 
     op: 'IGlob';
@@ -17384,7 +17384,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember37 {
+  export interface NotIGlob {
     field: 'ownerLocation';
 
     op: 'NotIGlob';
@@ -17392,7 +17392,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember38 {
+  export interface Regex {
     field: 'ownerLocation';
 
     op: 'Regex';
@@ -17400,7 +17400,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember39 {
+  export interface ContainsAllTokens {
     field: 'ownerLocation';
 
     op: 'ContainsAllTokens';
@@ -17408,7 +17408,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember40 {
+  export interface Eq {
     field: 'name';
 
     op: 'Eq';
@@ -17416,7 +17416,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember41 {
+  export interface NotEq {
     field: 'name';
 
     op: 'NotEq';
@@ -17424,7 +17424,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember42 {
+  export interface In {
     field: 'name';
 
     op: 'In';
@@ -17432,7 +17432,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember43 {
+  export interface NotIn {
     field: 'name';
 
     op: 'NotIn';
@@ -17440,7 +17440,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember44 {
+  export interface Lt {
     field: 'name';
 
     op: 'Lt';
@@ -17448,7 +17448,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember45 {
+  export interface Lte {
     field: 'name';
 
     op: 'Lte';
@@ -17456,7 +17456,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember46 {
+  export interface Gt {
     field: 'name';
 
     op: 'Gt';
@@ -17464,7 +17464,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember47 {
+  export interface Gte {
     field: 'name';
 
     op: 'Gte';
@@ -17472,7 +17472,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember48 {
+  export interface Glob {
     field: 'name';
 
     op: 'Glob';
@@ -17480,7 +17480,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember49 {
+  export interface NotGlob {
     field: 'name';
 
     op: 'NotGlob';
@@ -17488,7 +17488,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember50 {
+  export interface IGlob {
     field: 'name';
 
     op: 'IGlob';
@@ -17496,7 +17496,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember51 {
+  export interface NotIGlob {
     field: 'name';
 
     op: 'NotIGlob';
@@ -17504,7 +17504,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember52 {
+  export interface Regex {
     field: 'name';
 
     op: 'Regex';
@@ -17512,7 +17512,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember53 {
+  export interface Eq {
     field: 'stargazerCount';
 
     op: 'Eq';
@@ -17520,7 +17520,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember54 {
+  export interface NotEq {
     field: 'stargazerCount';
 
     op: 'NotEq';
@@ -17528,7 +17528,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember55 {
+  export interface In {
     field: 'stargazerCount';
 
     op: 'In';
@@ -17536,7 +17536,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember56 {
+  export interface NotIn {
     field: 'stargazerCount';
 
     op: 'NotIn';
@@ -17544,7 +17544,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember57 {
+  export interface Lt {
     field: 'stargazerCount';
 
     op: 'Lt';
@@ -17552,7 +17552,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember58 {
+  export interface Lte {
     field: 'stargazerCount';
 
     op: 'Lte';
@@ -17560,7 +17560,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember59 {
+  export interface Gt {
     field: 'stargazerCount';
 
     op: 'Gt';
@@ -17568,7 +17568,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember60 {
+  export interface Gte {
     field: 'stargazerCount';
 
     op: 'Gte';
@@ -17576,7 +17576,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember61 {
+  export interface Eq {
     field: 'language';
 
     op: 'Eq';
@@ -17584,7 +17584,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember62 {
+  export interface NotEq {
     field: 'language';
 
     op: 'NotEq';
@@ -17592,7 +17592,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember63 {
+  export interface In {
     field: 'language';
 
     op: 'In';
@@ -17600,7 +17600,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember64 {
+  export interface NotIn {
     field: 'language';
 
     op: 'NotIn';
@@ -17608,7 +17608,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember65 {
+  export interface Lt {
     field: 'language';
 
     op: 'Lt';
@@ -17616,7 +17616,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember66 {
+  export interface Lte {
     field: 'language';
 
     op: 'Lte';
@@ -17624,7 +17624,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember67 {
+  export interface Gt {
     field: 'language';
 
     op: 'Gt';
@@ -17632,7 +17632,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember68 {
+  export interface Gte {
     field: 'language';
 
     op: 'Gte';
@@ -17640,7 +17640,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember69 {
+  export interface Glob {
     field: 'language';
 
     op: 'Glob';
@@ -17648,7 +17648,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember70 {
+  export interface NotGlob {
     field: 'language';
 
     op: 'NotGlob';
@@ -17656,7 +17656,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember71 {
+  export interface IGlob {
     field: 'language';
 
     op: 'IGlob';
@@ -17664,7 +17664,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember72 {
+  export interface NotIGlob {
     field: 'language';
 
     op: 'NotIGlob';
@@ -17672,7 +17672,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember73 {
+  export interface Regex {
     field: 'language';
 
     op: 'Regex';
@@ -17680,7 +17680,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember74 {
+  export interface Eq {
     field: 'totalIssuesCount';
 
     op: 'Eq';
@@ -17688,7 +17688,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember75 {
+  export interface NotEq {
     field: 'totalIssuesCount';
 
     op: 'NotEq';
@@ -17696,7 +17696,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember76 {
+  export interface In {
     field: 'totalIssuesCount';
 
     op: 'In';
@@ -17704,7 +17704,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember77 {
+  export interface NotIn {
     field: 'totalIssuesCount';
 
     op: 'NotIn';
@@ -17712,7 +17712,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember78 {
+  export interface Lt {
     field: 'totalIssuesCount';
 
     op: 'Lt';
@@ -17720,7 +17720,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember79 {
+  export interface Lte {
     field: 'totalIssuesCount';
 
     op: 'Lte';
@@ -17728,7 +17728,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember80 {
+  export interface Gt {
     field: 'totalIssuesCount';
 
     op: 'Gt';
@@ -17736,7 +17736,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember81 {
+  export interface Gte {
     field: 'totalIssuesCount';
 
     op: 'Gte';
@@ -17744,7 +17744,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember82 {
+  export interface Eq {
     field: 'totalIssuesOpen';
 
     op: 'Eq';
@@ -17752,7 +17752,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember83 {
+  export interface NotEq {
     field: 'totalIssuesOpen';
 
     op: 'NotEq';
@@ -17760,7 +17760,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember84 {
+  export interface In {
     field: 'totalIssuesOpen';
 
     op: 'In';
@@ -17768,7 +17768,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember85 {
+  export interface NotIn {
     field: 'totalIssuesOpen';
 
     op: 'NotIn';
@@ -17776,7 +17776,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember86 {
+  export interface Lt {
     field: 'totalIssuesOpen';
 
     op: 'Lt';
@@ -17784,7 +17784,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember87 {
+  export interface Lte {
     field: 'totalIssuesOpen';
 
     op: 'Lte';
@@ -17792,7 +17792,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember88 {
+  export interface Gt {
     field: 'totalIssuesOpen';
 
     op: 'Gt';
@@ -17800,7 +17800,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember89 {
+  export interface Gte {
     field: 'totalIssuesOpen';
 
     op: 'Gte';
@@ -17808,7 +17808,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember90 {
+  export interface Eq {
     field: 'totalIssuesClosed';
 
     op: 'Eq';
@@ -17816,7 +17816,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember91 {
+  export interface NotEq {
     field: 'totalIssuesClosed';
 
     op: 'NotEq';
@@ -17824,7 +17824,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember92 {
+  export interface In {
     field: 'totalIssuesClosed';
 
     op: 'In';
@@ -17832,7 +17832,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember93 {
+  export interface NotIn {
     field: 'totalIssuesClosed';
 
     op: 'NotIn';
@@ -17840,7 +17840,7 @@ export namespace SearchRepoSearchParams {
     value: Array<number>;
   }
 
-  export interface UnionMember94 {
+  export interface Lt {
     field: 'totalIssuesClosed';
 
     op: 'Lt';
@@ -17848,7 +17848,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember95 {
+  export interface Lte {
     field: 'totalIssuesClosed';
 
     op: 'Lte';
@@ -17856,7 +17856,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember96 {
+  export interface Gt {
     field: 'totalIssuesClosed';
 
     op: 'Gt';
@@ -17864,7 +17864,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember97 {
+  export interface Gte {
     field: 'totalIssuesClosed';
 
     op: 'Gte';
@@ -17872,7 +17872,7 @@ export namespace SearchRepoSearchParams {
     value: number;
   }
 
-  export interface UnionMember98 {
+  export interface Contains {
     field: 'lastContributorLocations';
 
     op: 'Contains';
@@ -17880,7 +17880,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember99 {
+  export interface NotContains {
     field: 'lastContributorLocations';
 
     op: 'NotContains';
@@ -17888,7 +17888,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember100 {
+  export interface ContainsAny {
     field: 'lastContributorLocations';
 
     op: 'ContainsAny';
@@ -17896,7 +17896,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember101 {
+  export interface NotContainsAny {
     field: 'lastContributorLocations';
 
     op: 'NotContainsAny';
@@ -17904,7 +17904,7 @@ export namespace SearchRepoSearchParams {
     value: Array<string>;
   }
 
-  export interface UnionMember102 {
+  export interface AnyLt {
     field: 'lastContributorLocations';
 
     op: 'AnyLt';
@@ -17912,7 +17912,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember103 {
+  export interface AnyLte {
     field: 'lastContributorLocations';
 
     op: 'AnyLte';
@@ -17920,7 +17920,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember104 {
+  export interface AnyGt {
     field: 'lastContributorLocations';
 
     op: 'AnyGt';
@@ -17928,7 +17928,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember105 {
+  export interface AnyGte {
     field: 'lastContributorLocations';
 
     op: 'AnyGte';
@@ -17936,7 +17936,7 @@ export namespace SearchRepoSearchParams {
     value: string;
   }
 
-  export interface UnionMember106 {
+  export interface ContainsAllTokens {
     field: 'lastContributorLocations';
 
     op: 'ContainsAllTokens';
@@ -20907,151 +20907,151 @@ export namespace SearchRepoSearchParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributors.UnionMember0
-        | Contributors.UnionMember1
-        | Contributors.UnionMember2
-        | Contributors.UnionMember3
-        | Contributors.UnionMember4
-        | Contributors.UnionMember5
-        | Contributors.UnionMember6
-        | Contributors.UnionMember7
-        | Contributors.UnionMember8
-        | Contributors.UnionMember9
-        | Contributors.UnionMember10
-        | Contributors.UnionMember11
-        | Contributors.UnionMember12
-        | Contributors.UnionMember13
-        | Contributors.UnionMember14
-        | Contributors.UnionMember15
-        | Contributors.UnionMember16
-        | Contributors.UnionMember17
-        | Contributors.UnionMember18
-        | Contributors.UnionMember19
-        | Contributors.UnionMember20
-        | Contributors.UnionMember21
-        | Contributors.UnionMember22
-        | Contributors.UnionMember23
-        | Contributors.UnionMember24
-        | Contributors.UnionMember25
-        | Contributors.UnionMember26
-        | Contributors.UnionMember27
-        | Contributors.UnionMember28
-        | Contributors.UnionMember29
-        | Contributors.UnionMember30
-        | Contributors.UnionMember31
-        | Contributors.UnionMember32
-        | Contributors.UnionMember33
-        | Contributors.UnionMember34
-        | Contributors.UnionMember35
-        | Contributors.UnionMember36
-        | Contributors.UnionMember37
-        | Contributors.UnionMember38
-        | Contributors.UnionMember39
-        | Contributors.UnionMember40
-        | Contributors.UnionMember41
-        | Contributors.UnionMember42
-        | Contributors.UnionMember43
-        | Contributors.UnionMember44
-        | Contributors.UnionMember45
-        | Contributors.UnionMember46
-        | Contributors.UnionMember47
-        | Contributors.UnionMember48
-        | Contributors.UnionMember49
-        | Contributors.UnionMember50
-        | Contributors.UnionMember51
-        | Contributors.UnionMember52
-        | Contributors.UnionMember53
-        | Contributors.UnionMember54
-        | Contributors.UnionMember55
-        | Contributors.UnionMember56
-        | Contributors.UnionMember57
-        | Contributors.UnionMember58
-        | Contributors.UnionMember59
-        | Contributors.UnionMember60
-        | Contributors.UnionMember61
-        | Contributors.UnionMember62
-        | Contributors.UnionMember63
-        | Contributors.UnionMember64
-        | Contributors.UnionMember65
-        | Contributors.UnionMember66
-        | Contributors.UnionMember67
-        | Contributors.UnionMember68
-        | Contributors.UnionMember69
-        | Contributors.UnionMember70
-        | Contributors.UnionMember71
-        | Contributors.UnionMember72
-        | Contributors.UnionMember73
-        | Contributors.UnionMember74
-        | Contributors.UnionMember75
-        | Contributors.UnionMember76
-        | Contributors.UnionMember77
-        | Contributors.UnionMember78
-        | Contributors.UnionMember79
-        | Contributors.UnionMember80
-        | Contributors.UnionMember81
-        | Contributors.UnionMember82
-        | Contributors.UnionMember83
-        | Contributors.UnionMember84
-        | Contributors.UnionMember85
-        | Contributors.UnionMember86
-        | Contributors.UnionMember87
-        | Contributors.UnionMember88
-        | Contributors.UnionMember89
-        | Contributors.UnionMember90
-        | Contributors.UnionMember91
-        | Contributors.UnionMember92
-        | Contributors.UnionMember93
-        | Contributors.UnionMember94
-        | Contributors.UnionMember95
-        | Contributors.UnionMember96
-        | Contributors.UnionMember97
-        | Contributors.UnionMember98
-        | Contributors.UnionMember99
-        | Contributors.UnionMember100
-        | Contributors.UnionMember101
-        | Contributors.UnionMember102
-        | Contributors.UnionMember103
-        | Contributors.UnionMember104
-        | Contributors.UnionMember105
-        | Contributors.UnionMember106
-        | Contributors.UnionMember107
-        | Contributors.UnionMember108
-        | Contributors.UnionMember109
-        | Contributors.UnionMember110
-        | Contributors.UnionMember111
-        | Contributors.UnionMember112
-        | Contributors.UnionMember113
-        | Contributors.UnionMember114
-        | Contributors.UnionMember115
-        | Contributors.UnionMember116
-        | Contributors.UnionMember117
-        | Contributors.UnionMember118
-        | Contributors.UnionMember119
-        | Contributors.UnionMember120
-        | Contributors.UnionMember121
-        | Contributors.UnionMember122
-        | Contributors.UnionMember123
-        | Contributors.UnionMember124
-        | Contributors.UnionMember125
-        | Contributors.UnionMember126
-        | Contributors.UnionMember127
-        | Contributors.UnionMember128
-        | Contributors.UnionMember129
-        | Contributors.UnionMember130
-        | Contributors.UnionMember131
-        | Contributors.UnionMember132
-        | Contributors.UnionMember133
-        | Contributors.UnionMember134
-        | Contributors.UnionMember135
-        | Contributors.UnionMember136
-        | Contributors.UnionMember137
-        | Contributors.UnionMember138
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
         | Contributors.UnionMember139
         | Contributors.UnionMember140;
     }
 
     export namespace Contributors {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -21059,7 +21059,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -21067,7 +21067,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -21075,7 +21075,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -21083,7 +21083,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -21091,7 +21091,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -21099,7 +21099,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -21107,7 +21107,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -21115,7 +21115,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -21123,7 +21123,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -21131,7 +21131,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -21139,7 +21139,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -21147,7 +21147,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -21155,7 +21155,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -21163,7 +21163,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -21171,7 +21171,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -21179,7 +21179,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -21187,7 +21187,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -21195,7 +21195,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -21203,7 +21203,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -21211,7 +21211,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -21219,7 +21219,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -21227,7 +21227,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -21235,7 +21235,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -21243,7 +21243,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -21251,7 +21251,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -21259,7 +21259,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -21267,7 +21267,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -21275,7 +21275,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -21283,7 +21283,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -21291,7 +21291,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -21299,7 +21299,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -21307,7 +21307,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -21315,7 +21315,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -21323,7 +21323,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -21331,7 +21331,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -21339,7 +21339,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -21347,7 +21347,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -21355,7 +21355,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -21363,7 +21363,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -21371,7 +21371,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -21379,7 +21379,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -21387,7 +21387,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -21395,7 +21395,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -21403,7 +21403,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -21411,7 +21411,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -21419,7 +21419,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -21427,7 +21427,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -21435,7 +21435,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -21443,7 +21443,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -21451,7 +21451,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -21459,7 +21459,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -21467,7 +21467,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -21475,7 +21475,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -21483,7 +21483,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -21491,7 +21491,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -21499,7 +21499,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -21507,7 +21507,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -21515,7 +21515,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -21523,7 +21523,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -21531,7 +21531,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -21539,7 +21539,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -21547,7 +21547,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -21555,7 +21555,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -21563,7 +21563,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -21571,7 +21571,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -21579,7 +21579,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -21587,7 +21587,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -21595,7 +21595,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -21603,7 +21603,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -21611,7 +21611,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -21619,7 +21619,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -21627,7 +21627,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -21635,7 +21635,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -21643,7 +21643,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -21651,7 +21651,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -21659,7 +21659,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -21667,7 +21667,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -21675,7 +21675,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -21683,7 +21683,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -21691,7 +21691,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -21699,7 +21699,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -21707,7 +21707,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -21715,7 +21715,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -21723,7 +21723,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -21731,7 +21731,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -21739,7 +21739,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -21747,7 +21747,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -21755,7 +21755,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -21763,7 +21763,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -21771,7 +21771,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -21779,7 +21779,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -21787,7 +21787,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -21795,7 +21795,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -21803,7 +21803,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -21811,7 +21811,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -21819,7 +21819,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -21827,7 +21827,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -21835,7 +21835,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -21843,7 +21843,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -21851,7 +21851,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -21859,7 +21859,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -21867,7 +21867,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -21875,7 +21875,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -21883,7 +21883,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -21891,7 +21891,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -21899,7 +21899,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -21907,7 +21907,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -21915,7 +21915,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -21923,7 +21923,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -21931,7 +21931,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -21939,7 +21939,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -21947,7 +21947,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -21955,7 +21955,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -21963,7 +21963,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -21971,7 +21971,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -21979,7 +21979,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -21987,7 +21987,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -21995,7 +21995,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -22003,7 +22003,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -22011,7 +22011,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -22019,7 +22019,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -22027,7 +22027,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -22035,7 +22035,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -22043,7 +22043,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -22051,7 +22051,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -22059,7 +22059,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -22067,7 +22067,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -22075,7 +22075,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -22083,7 +22083,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -22091,7 +22091,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -22099,7 +22099,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -22107,7 +22107,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -22115,7 +22115,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -22123,7 +22123,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -22131,7 +22131,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -22139,7 +22139,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -22147,7 +22147,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -22155,7 +22155,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -25965,151 +25965,151 @@ export namespace SearchRepoSearchParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Starrers.UnionMember0
-        | Starrers.UnionMember1
-        | Starrers.UnionMember2
-        | Starrers.UnionMember3
-        | Starrers.UnionMember4
-        | Starrers.UnionMember5
-        | Starrers.UnionMember6
-        | Starrers.UnionMember7
-        | Starrers.UnionMember8
-        | Starrers.UnionMember9
-        | Starrers.UnionMember10
-        | Starrers.UnionMember11
-        | Starrers.UnionMember12
-        | Starrers.UnionMember13
-        | Starrers.UnionMember14
-        | Starrers.UnionMember15
-        | Starrers.UnionMember16
-        | Starrers.UnionMember17
-        | Starrers.UnionMember18
-        | Starrers.UnionMember19
-        | Starrers.UnionMember20
-        | Starrers.UnionMember21
-        | Starrers.UnionMember22
-        | Starrers.UnionMember23
-        | Starrers.UnionMember24
-        | Starrers.UnionMember25
-        | Starrers.UnionMember26
-        | Starrers.UnionMember27
-        | Starrers.UnionMember28
-        | Starrers.UnionMember29
-        | Starrers.UnionMember30
-        | Starrers.UnionMember31
-        | Starrers.UnionMember32
-        | Starrers.UnionMember33
-        | Starrers.UnionMember34
-        | Starrers.UnionMember35
-        | Starrers.UnionMember36
-        | Starrers.UnionMember37
-        | Starrers.UnionMember38
-        | Starrers.UnionMember39
-        | Starrers.UnionMember40
-        | Starrers.UnionMember41
-        | Starrers.UnionMember42
-        | Starrers.UnionMember43
-        | Starrers.UnionMember44
-        | Starrers.UnionMember45
-        | Starrers.UnionMember46
-        | Starrers.UnionMember47
-        | Starrers.UnionMember48
-        | Starrers.UnionMember49
-        | Starrers.UnionMember50
-        | Starrers.UnionMember51
-        | Starrers.UnionMember52
-        | Starrers.UnionMember53
-        | Starrers.UnionMember54
-        | Starrers.UnionMember55
-        | Starrers.UnionMember56
-        | Starrers.UnionMember57
-        | Starrers.UnionMember58
-        | Starrers.UnionMember59
-        | Starrers.UnionMember60
-        | Starrers.UnionMember61
-        | Starrers.UnionMember62
-        | Starrers.UnionMember63
-        | Starrers.UnionMember64
-        | Starrers.UnionMember65
-        | Starrers.UnionMember66
-        | Starrers.UnionMember67
-        | Starrers.UnionMember68
-        | Starrers.UnionMember69
-        | Starrers.UnionMember70
-        | Starrers.UnionMember71
-        | Starrers.UnionMember72
-        | Starrers.UnionMember73
-        | Starrers.UnionMember74
-        | Starrers.UnionMember75
-        | Starrers.UnionMember76
-        | Starrers.UnionMember77
-        | Starrers.UnionMember78
-        | Starrers.UnionMember79
-        | Starrers.UnionMember80
-        | Starrers.UnionMember81
-        | Starrers.UnionMember82
-        | Starrers.UnionMember83
-        | Starrers.UnionMember84
-        | Starrers.UnionMember85
-        | Starrers.UnionMember86
-        | Starrers.UnionMember87
-        | Starrers.UnionMember88
-        | Starrers.UnionMember89
-        | Starrers.UnionMember90
-        | Starrers.UnionMember91
-        | Starrers.UnionMember92
-        | Starrers.UnionMember93
-        | Starrers.UnionMember94
-        | Starrers.UnionMember95
-        | Starrers.UnionMember96
-        | Starrers.UnionMember97
-        | Starrers.UnionMember98
-        | Starrers.UnionMember99
-        | Starrers.UnionMember100
-        | Starrers.UnionMember101
-        | Starrers.UnionMember102
-        | Starrers.UnionMember103
-        | Starrers.UnionMember104
-        | Starrers.UnionMember105
-        | Starrers.UnionMember106
-        | Starrers.UnionMember107
-        | Starrers.UnionMember108
-        | Starrers.UnionMember109
-        | Starrers.UnionMember110
-        | Starrers.UnionMember111
-        | Starrers.UnionMember112
-        | Starrers.UnionMember113
-        | Starrers.UnionMember114
-        | Starrers.UnionMember115
-        | Starrers.UnionMember116
-        | Starrers.UnionMember117
-        | Starrers.UnionMember118
-        | Starrers.UnionMember119
-        | Starrers.UnionMember120
-        | Starrers.UnionMember121
-        | Starrers.UnionMember122
-        | Starrers.UnionMember123
-        | Starrers.UnionMember124
-        | Starrers.UnionMember125
-        | Starrers.UnionMember126
-        | Starrers.UnionMember127
-        | Starrers.UnionMember128
-        | Starrers.UnionMember129
-        | Starrers.UnionMember130
-        | Starrers.UnionMember131
-        | Starrers.UnionMember132
-        | Starrers.UnionMember133
-        | Starrers.UnionMember134
-        | Starrers.UnionMember135
-        | Starrers.UnionMember136
-        | Starrers.UnionMember137
-        | Starrers.UnionMember138
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
         | Starrers.UnionMember139
         | Starrers.UnionMember140;
     }
 
     export namespace Starrers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -26117,7 +26117,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -26125,7 +26125,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -26133,7 +26133,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -26141,7 +26141,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -26149,7 +26149,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -26157,7 +26157,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -26165,7 +26165,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -26173,7 +26173,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -26181,7 +26181,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -26189,7 +26189,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -26197,7 +26197,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -26205,7 +26205,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -26213,7 +26213,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -26221,7 +26221,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -26229,7 +26229,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -26237,7 +26237,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -26245,7 +26245,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -26253,7 +26253,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -26261,7 +26261,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -26269,7 +26269,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -26277,7 +26277,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -26285,7 +26285,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -26293,7 +26293,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -26301,7 +26301,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -26309,7 +26309,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -26317,7 +26317,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -26325,7 +26325,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -26333,7 +26333,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -26341,7 +26341,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -26349,7 +26349,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -26357,7 +26357,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -26365,7 +26365,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -26373,7 +26373,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -26381,7 +26381,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -26389,7 +26389,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -26397,7 +26397,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -26405,7 +26405,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -26413,7 +26413,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -26421,7 +26421,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -26429,7 +26429,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -26437,7 +26437,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -26445,7 +26445,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -26453,7 +26453,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -26461,7 +26461,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -26469,7 +26469,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -26477,7 +26477,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -26485,7 +26485,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -26493,7 +26493,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -26501,7 +26501,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -26509,7 +26509,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -26517,7 +26517,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -26525,7 +26525,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -26533,7 +26533,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -26541,7 +26541,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -26549,7 +26549,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -26557,7 +26557,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -26565,7 +26565,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -26573,7 +26573,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -26581,7 +26581,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -26589,7 +26589,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -26597,7 +26597,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -26605,7 +26605,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -26613,7 +26613,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -26621,7 +26621,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -26629,7 +26629,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -26637,7 +26637,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -26645,7 +26645,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -26653,7 +26653,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -26661,7 +26661,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -26669,7 +26669,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -26677,7 +26677,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -26685,7 +26685,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -26693,7 +26693,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -26701,7 +26701,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -26709,7 +26709,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -26717,7 +26717,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -26725,7 +26725,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -26733,7 +26733,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -26741,7 +26741,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -26749,7 +26749,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -26757,7 +26757,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -26765,7 +26765,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -26773,7 +26773,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -26781,7 +26781,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -26789,7 +26789,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -26797,7 +26797,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -26805,7 +26805,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -26813,7 +26813,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -26821,7 +26821,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -26829,7 +26829,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -26837,7 +26837,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -26845,7 +26845,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -26853,7 +26853,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -26861,7 +26861,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -26869,7 +26869,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -26877,7 +26877,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -26885,7 +26885,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -26893,7 +26893,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -26901,7 +26901,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -26909,7 +26909,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -26917,7 +26917,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -26925,7 +26925,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -26933,7 +26933,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -26941,7 +26941,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -26949,7 +26949,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -26957,7 +26957,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -26965,7 +26965,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -26973,7 +26973,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -26981,7 +26981,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -26989,7 +26989,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -26997,7 +26997,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -27005,7 +27005,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -27013,7 +27013,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -27021,7 +27021,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -27029,7 +27029,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -27037,7 +27037,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -27045,7 +27045,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -27053,7 +27053,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -27061,7 +27061,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -27069,7 +27069,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -27077,7 +27077,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -27085,7 +27085,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -27093,7 +27093,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -27101,7 +27101,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -27109,7 +27109,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -27117,7 +27117,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -27125,7 +27125,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -27133,7 +27133,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -27141,7 +27141,7 @@ export namespace SearchRepoSearchParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -27149,7 +27149,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -27157,7 +27157,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -27165,7 +27165,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -27173,7 +27173,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -27181,7 +27181,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -27189,7 +27189,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -27197,7 +27197,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -27205,7 +27205,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -27213,7 +27213,7 @@ export namespace SearchRepoSearchParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -31004,42 +31004,42 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember0 {
+  export interface Attr {
     name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-    op: 'Attr';
+    type: 'Attr';
   }
 
-  export interface UnionMember1 {
-    op: 'Const';
+  export interface Const {
+    type: 'Const';
 
     value: number;
   }
 
-  export interface UnionMember2 {
+  export interface Sum {
     exprs: Array<
-      | UnionMember2.UnionMember0
-      | UnionMember2.UnionMember1
-      | UnionMember2.UnionMember2
-      | UnionMember2.UnionMember3
-      | UnionMember2.UnionMember4
-      | UnionMember2.UnionMember5
-      | UnionMember2.UnionMember6
-      | UnionMember2.UnionMember7
+      | Sum.UnionMember0
+      | Sum.UnionMember1
+      | Sum.UnionMember2
+      | Sum.UnionMember3
+      | Sum.UnionMember4
+      | Sum.UnionMember5
+      | Sum.UnionMember6
+      | Sum.UnionMember7
     >;
 
-    op: 'Sum';
+    type: 'Sum';
   }
 
-  export namespace UnionMember2 {
+  export namespace Sum {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -31056,18 +31056,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31075,18 +31075,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31095,18 +31095,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31115,18 +31115,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31135,18 +31135,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31155,18 +31155,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31177,18 +31177,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31207,18 +31207,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31226,18 +31226,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31246,18 +31246,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31266,18 +31266,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31286,18 +31286,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31306,18 +31306,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31328,18 +31328,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31358,18 +31358,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31377,18 +31377,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31397,18 +31397,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31417,18 +31417,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31437,18 +31437,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31457,18 +31457,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31479,18 +31479,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31509,18 +31509,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31528,18 +31528,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31548,18 +31548,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31568,18 +31568,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31588,18 +31588,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31608,18 +31608,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31630,18 +31630,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31660,18 +31660,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31679,18 +31679,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31699,18 +31699,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31719,18 +31719,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31739,18 +31739,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31759,18 +31759,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31781,18 +31781,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31812,18 +31812,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -31831,18 +31831,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31851,18 +31851,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31871,18 +31871,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31891,18 +31891,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31911,18 +31911,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31933,18 +31933,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -31952,30 +31952,30 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember3 {
+  export interface Mult {
     exprs: Array<
-      | UnionMember3.UnionMember0
-      | UnionMember3.UnionMember1
-      | UnionMember3.UnionMember2
-      | UnionMember3.UnionMember3
-      | UnionMember3.UnionMember4
-      | UnionMember3.UnionMember5
-      | UnionMember3.UnionMember6
-      | UnionMember3.UnionMember7
+      | Mult.UnionMember0
+      | Mult.UnionMember1
+      | Mult.UnionMember2
+      | Mult.UnionMember3
+      | Mult.UnionMember4
+      | Mult.UnionMember5
+      | Mult.UnionMember6
+      | Mult.UnionMember7
     >;
 
-    op: 'Mult';
+    type: 'Mult';
   }
 
-  export namespace UnionMember3 {
+  export namespace Mult {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -31992,18 +31992,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32011,18 +32011,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32031,18 +32031,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32051,18 +32051,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32071,18 +32071,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32091,18 +32091,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32113,18 +32113,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32143,18 +32143,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32162,18 +32162,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32182,18 +32182,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32202,18 +32202,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32222,18 +32222,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32242,18 +32242,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32264,18 +32264,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32294,18 +32294,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32313,18 +32313,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32333,18 +32333,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32353,18 +32353,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32373,18 +32373,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32393,18 +32393,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32415,18 +32415,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32445,18 +32445,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32464,18 +32464,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32484,18 +32484,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32504,18 +32504,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32524,18 +32524,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32544,18 +32544,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32566,18 +32566,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32596,18 +32596,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32615,18 +32615,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32635,18 +32635,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32655,18 +32655,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32675,18 +32675,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32695,18 +32695,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32717,18 +32717,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32748,18 +32748,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32767,18 +32767,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32787,18 +32787,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32807,18 +32807,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32827,18 +32827,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32847,18 +32847,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32869,18 +32869,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32888,30 +32888,30 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember4 {
+  export interface Div {
     exprs: Array<
-      | UnionMember4.UnionMember0
-      | UnionMember4.UnionMember1
-      | UnionMember4.UnionMember2
-      | UnionMember4.UnionMember3
-      | UnionMember4.UnionMember4
-      | UnionMember4.UnionMember5
-      | UnionMember4.UnionMember6
-      | UnionMember4.UnionMember7
+      | Div.UnionMember0
+      | Div.UnionMember1
+      | Div.UnionMember2
+      | Div.UnionMember3
+      | Div.UnionMember4
+      | Div.UnionMember5
+      | Div.UnionMember6
+      | Div.UnionMember7
     >;
 
-    op: 'Div';
+    type: 'Div';
   }
 
-  export namespace UnionMember4 {
+  export namespace Div {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -32928,18 +32928,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -32947,18 +32947,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32967,18 +32967,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -32987,18 +32987,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33007,18 +33007,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33027,18 +33027,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33049,18 +33049,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33079,18 +33079,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33098,18 +33098,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33118,18 +33118,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33138,18 +33138,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33158,18 +33158,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33178,18 +33178,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33200,18 +33200,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33230,18 +33230,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33249,18 +33249,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33269,18 +33269,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33289,18 +33289,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33309,18 +33309,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33329,18 +33329,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33351,18 +33351,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33381,18 +33381,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33400,18 +33400,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33420,18 +33420,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33440,18 +33440,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33460,18 +33460,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33480,18 +33480,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33502,18 +33502,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33532,18 +33532,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33551,18 +33551,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33571,18 +33571,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33591,18 +33591,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33611,18 +33611,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33631,18 +33631,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33653,18 +33653,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33684,18 +33684,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33703,18 +33703,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33723,18 +33723,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33743,18 +33743,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33763,18 +33763,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33783,18 +33783,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33805,18 +33805,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33824,30 +33824,30 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember5 {
+  export interface Max {
     exprs: Array<
-      | UnionMember5.UnionMember0
-      | UnionMember5.UnionMember1
-      | UnionMember5.UnionMember2
-      | UnionMember5.UnionMember3
-      | UnionMember5.UnionMember4
-      | UnionMember5.UnionMember5
-      | UnionMember5.UnionMember6
-      | UnionMember5.UnionMember7
+      | Max.UnionMember0
+      | Max.UnionMember1
+      | Max.UnionMember2
+      | Max.UnionMember3
+      | Max.UnionMember4
+      | Max.UnionMember5
+      | Max.UnionMember6
+      | Max.UnionMember7
     >;
 
-    op: 'Max';
+    type: 'Max';
   }
 
-  export namespace UnionMember5 {
+  export namespace Max {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -33864,18 +33864,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -33883,18 +33883,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33903,18 +33903,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33923,18 +33923,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33943,18 +33943,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33963,18 +33963,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -33985,18 +33985,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34015,18 +34015,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34034,18 +34034,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34054,18 +34054,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34074,18 +34074,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34094,18 +34094,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34114,18 +34114,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34136,18 +34136,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34166,18 +34166,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34185,18 +34185,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34205,18 +34205,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34225,18 +34225,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34245,18 +34245,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34265,18 +34265,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34287,18 +34287,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34317,18 +34317,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34336,18 +34336,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34356,18 +34356,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34376,18 +34376,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34396,18 +34396,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34416,18 +34416,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34438,18 +34438,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34468,18 +34468,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34487,18 +34487,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34507,18 +34507,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34527,18 +34527,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34547,18 +34547,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34567,18 +34567,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34589,18 +34589,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34620,18 +34620,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34639,18 +34639,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34659,18 +34659,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34679,18 +34679,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34699,18 +34699,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34719,18 +34719,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34741,18 +34741,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34760,30 +34760,30 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember6 {
+  export interface Min {
     exprs: Array<
-      | UnionMember6.UnionMember0
-      | UnionMember6.UnionMember1
-      | UnionMember6.UnionMember2
-      | UnionMember6.UnionMember3
-      | UnionMember6.UnionMember4
-      | UnionMember6.UnionMember5
-      | UnionMember6.UnionMember6
-      | UnionMember6.UnionMember7
+      | Min.UnionMember0
+      | Min.UnionMember1
+      | Min.UnionMember2
+      | Min.UnionMember3
+      | Min.UnionMember4
+      | Min.UnionMember5
+      | Min.UnionMember6
+      | Min.UnionMember7
     >;
 
-    op: 'Min';
+    type: 'Min';
   }
 
-  export namespace UnionMember6 {
+  export namespace Min {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -34800,18 +34800,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34819,18 +34819,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34839,18 +34839,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34859,18 +34859,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34879,18 +34879,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34899,18 +34899,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34921,18 +34921,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34951,18 +34951,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -34970,18 +34970,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -34990,18 +34990,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35010,18 +35010,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35030,18 +35030,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35050,18 +35050,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35072,18 +35072,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35102,18 +35102,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35121,18 +35121,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35141,18 +35141,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35161,18 +35161,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35181,18 +35181,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35201,18 +35201,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35223,18 +35223,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35253,18 +35253,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35272,18 +35272,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35292,18 +35292,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35312,18 +35312,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35332,18 +35332,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35352,18 +35352,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35374,18 +35374,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35404,18 +35404,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35423,18 +35423,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35443,18 +35443,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35463,18 +35463,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35483,18 +35483,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35503,18 +35503,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35525,18 +35525,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35556,18 +35556,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35575,18 +35575,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35595,18 +35595,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35615,18 +35615,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35635,18 +35635,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35655,18 +35655,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35677,18 +35677,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35696,31 +35696,31 @@ export namespace SearchRepoSearchParams {
     }
   }
 
-  export interface UnionMember7 {
+  export interface Log {
     base: number;
 
     expr:
-      | UnionMember7.UnionMember0
-      | UnionMember7.UnionMember1
-      | UnionMember7.UnionMember2
-      | UnionMember7.UnionMember3
-      | UnionMember7.UnionMember4
-      | UnionMember7.UnionMember5
-      | UnionMember7.UnionMember6
-      | UnionMember7.UnionMember7;
+      | Log.UnionMember0
+      | Log.UnionMember1
+      | Log.UnionMember2
+      | Log.UnionMember3
+      | Log.UnionMember4
+      | Log.UnionMember5
+      | Log.UnionMember6
+      | Log.UnionMember7;
 
-    op: 'Log';
+    type: 'Log';
   }
 
-  export namespace UnionMember7 {
+  export namespace Log {
     export interface UnionMember0 {
       name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-      op: 'Attr';
+      type: 'Attr';
     }
 
     export interface UnionMember1 {
-      op: 'Const';
+      type: 'Const';
 
       value: number;
     }
@@ -35737,18 +35737,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember2.UnionMember7
       >;
 
-      op: 'Sum';
+      type: 'Sum';
     }
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35756,18 +35756,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35776,18 +35776,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35796,18 +35796,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35816,18 +35816,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35836,18 +35836,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35858,18 +35858,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35888,18 +35888,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember3.UnionMember7
       >;
 
-      op: 'Mult';
+      type: 'Mult';
     }
 
     export namespace UnionMember3 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -35907,18 +35907,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35927,18 +35927,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35947,18 +35947,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35967,18 +35967,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -35987,18 +35987,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36009,18 +36009,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36039,18 +36039,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember4.UnionMember7
       >;
 
-      op: 'Div';
+      type: 'Div';
     }
 
     export namespace UnionMember4 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -36058,18 +36058,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36078,18 +36078,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36098,18 +36098,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36118,18 +36118,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36138,18 +36138,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36160,18 +36160,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36190,18 +36190,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember5.UnionMember7
       >;
 
-      op: 'Max';
+      type: 'Max';
     }
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -36209,18 +36209,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36229,18 +36229,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36249,18 +36249,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36269,18 +36269,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36289,18 +36289,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36311,18 +36311,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36341,18 +36341,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember7
       >;
 
-      op: 'Min';
+      type: 'Min';
     }
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -36360,18 +36360,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36380,18 +36380,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36400,18 +36400,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36420,18 +36420,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36440,18 +36440,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36462,18 +36462,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36493,18 +36493,18 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7;
 
-      op: 'Log';
+      type: 'Log';
     }
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
         name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-        op: 'Attr';
+        type: 'Attr';
       }
 
       export interface UnionMember1 {
-        op: 'Const';
+        type: 'Const';
 
         value: number;
       }
@@ -36512,18 +36512,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember2 {
         exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
 
-        op: 'Sum';
+        type: 'Sum';
       }
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36532,18 +36532,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember3 {
         exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1>;
 
-        op: 'Mult';
+        type: 'Mult';
       }
 
       export namespace UnionMember3 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36552,18 +36552,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember4 {
         exprs: Array<UnionMember4.UnionMember0 | UnionMember4.UnionMember1>;
 
-        op: 'Div';
+        type: 'Div';
       }
 
       export namespace UnionMember4 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36572,18 +36572,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember5 {
         exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
 
-        op: 'Max';
+        type: 'Max';
       }
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36592,18 +36592,18 @@ export namespace SearchRepoSearchParams {
       export interface UnionMember6 {
         exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
 
-        op: 'Min';
+        type: 'Min';
       }
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
@@ -36614,18 +36614,18 @@ export namespace SearchRepoSearchParams {
 
         expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
 
-        op: 'Log';
+        type: 'Log';
       }
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
           name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
 
-          op: 'Attr';
+          type: 'Attr';
         }
 
         export interface UnionMember1 {
-          op: 'Const';
+          type: 'Const';
 
           value: number;
         }
