@@ -171,7 +171,7 @@ export class Bountylab {
    * API Client for interfacing with the Bountylab API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['BOUNTYLAB_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['BOUNTYLAB_BASE_URL'] ?? https://api.bountylab.io] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['BOUNTYLAB_BASE_URL'] ?? https://api.bountylab.io/v2] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {MergedRequestInit} [opts.fetchOptions] - Additional `RequestInit` options to be passed to `fetch` calls.
    * @param {Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -193,7 +193,7 @@ export class Bountylab {
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.bountylab.io`,
+      baseURL: baseURL || `https://api.bountylab.io/v2`,
     };
 
     this.baseURL = options.baseURL!;
@@ -239,7 +239,7 @@ export class Bountylab {
    * Check whether the base URL is set to its default.
    */
   #baseURLOverridden(): boolean {
-    return this.baseURL !== 'https://api.bountylab.io';
+    return this.baseURL !== 'https://api.bountylab.io/v2';
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {

@@ -9,10 +9,10 @@ Types:
 
 Methods:
 
-- <code title="post /api/raw/users">client.rawUsers.<a href="./src/resources/raw-users.ts">retrieve</a>({ ...params }) -> RawUserRetrieveResponse</code>
-- <code title="post /api/raw/users/by-login">client.rawUsers.<a href="./src/resources/raw-users.ts">byLogin</a>({ ...params }) -> RawUserByLoginResponse</code>
-- <code title="post /api/raw/users/count">client.rawUsers.<a href="./src/resources/raw-users.ts">count</a>({ ...params }) -> RawUserCountResponse</code>
-- <code title="post /api/raw/users/{id}/graph/{relationship}">client.rawUsers.<a href="./src/resources/raw-users.ts">graph</a>(relationship, { ...params }) -> RawUserGraphResponse</code>
+- <code title="post /raw/users">client.rawUsers.<a href="./src/resources/raw-users.ts">retrieve</a>({ ...params }) -> RawUserRetrieveResponse</code>
+- <code title="post /raw/users/by-login">client.rawUsers.<a href="./src/resources/raw-users.ts">byLogin</a>({ ...params }) -> RawUserByLoginResponse</code>
+- <code title="post /raw/users/count">client.rawUsers.<a href="./src/resources/raw-users.ts">count</a>({ ...params }) -> RawUserCountResponse</code>
+- <code title="post /raw/users/{id}/graph/{relationship}">client.rawUsers.<a href="./src/resources/raw-users.ts">graph</a>(relationship, { ...params }) -> RawUserGraphResponse</code>
 
 # RawRepos
 
@@ -25,10 +25,10 @@ Types:
 
 Methods:
 
-- <code title="post /api/raw/repos">client.rawRepos.<a href="./src/resources/raw-repos.ts">retrieve</a>({ ...params }) -> RawRepoRetrieveResponse</code>
-- <code title="post /api/raw/repos/by-fullname">client.rawRepos.<a href="./src/resources/raw-repos.ts">byFullname</a>({ ...params }) -> RawRepoByFullnameResponse</code>
-- <code title="post /api/raw/repos/count">client.rawRepos.<a href="./src/resources/raw-repos.ts">count</a>({ ...params }) -> RawRepoCountResponse</code>
-- <code title="post /api/raw/repos/{id}/graph/{relationship}">client.rawRepos.<a href="./src/resources/raw-repos.ts">graph</a>(relationship, { ...params }) -> RawRepoGraphResponse</code>
+- <code title="post /raw/repos">client.rawRepos.<a href="./src/resources/raw-repos.ts">retrieve</a>({ ...params }) -> RawRepoRetrieveResponse</code>
+- <code title="post /raw/repos/by-fullname">client.rawRepos.<a href="./src/resources/raw-repos.ts">byFullname</a>({ ...params }) -> RawRepoByFullnameResponse</code>
+- <code title="post /raw/repos/count">client.rawRepos.<a href="./src/resources/raw-repos.ts">count</a>({ ...params }) -> RawRepoCountResponse</code>
+- <code title="post /raw/repos/{id}/graph/{relationship}">client.rawRepos.<a href="./src/resources/raw-repos.ts">graph</a>(relationship, { ...params }) -> RawRepoGraphResponse</code>
 
 # UserEmails
 
@@ -40,9 +40,9 @@ Types:
 
 Methods:
 
-- <code title="post /api/users/best-email">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmail</a>({ ...params }) -> UserEmailBestEmailResponse</code>
-- <code title="post /api/users/best-email/by-login">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmailByLogin</a>({ ...params }) -> UserEmailBestEmailByLoginResponse</code>
-- <code title="post /api/users/best-email/signal/reply">client.userEmails.<a href="./src/resources/user-emails.ts">replySignal</a>({ ...params }) -> UserEmailReplySignalResponse</code>
+- <code title="post /users/best-email">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmail</a>({ ...params }) -> UserEmailBestEmailResponse</code>
+- <code title="post /users/best-email/by-login">client.userEmails.<a href="./src/resources/user-emails.ts">bestEmailByLogin</a>({ ...params }) -> UserEmailBestEmailByLoginResponse</code>
+- <code title="post /users/best-email/signal/reply">client.userEmails.<a href="./src/resources/user-emails.ts">replySignal</a>({ ...params }) -> UserEmailReplySignalResponse</code>
 
 # SearchUsers
 
@@ -53,8 +53,8 @@ Types:
 
 Methods:
 
-- <code title="post /api/search/users/natural-language">client.searchUsers.<a href="./src/resources/search-users.ts">naturalLanguage</a>({ ...params }) -> SearchUserNaturalLanguageResponse</code>
-- <code title="post /api/search/users">client.searchUsers.<a href="./src/resources/search-users.ts">search</a>({ ...params }) -> SearchUserSearchResponse</code>
+- <code title="post /search/users/natural-language">client.searchUsers.<a href="./src/resources/search-users.ts">naturalLanguage</a>({ ...params }) -> SearchUserNaturalLanguageResponse</code>
+- <code title="post /search/users">client.searchUsers.<a href="./src/resources/search-users.ts">search</a>({ ...params }) -> SearchUserSearchResponse</code>
 
 # SearchRepos
 
@@ -65,5 +65,5 @@ Types:
 
 Methods:
 
-- <code title="post /api/search/repos/natural-language">client.searchRepos.<a href="./src/resources/search-repos.ts">naturalLanguage</a>({ ...params }) -> SearchRepoNaturalLanguageResponse</code>
-- <code title="post /api/search/repos">client.searchRepos.<a href="./src/resources/search-repos.ts">search</a>({ ...params }) -> SearchRepoSearchResponse</code>
+- <code title="post /search/repos/natural-language">client.searchRepos.<a href="./src/resources/search-repos.ts">naturalLanguage</a>({ ...params }) -> SearchRepoNaturalLanguageResponse</code>
+- <code title="post /search/repos">client.searchRepos.<a href="./src/resources/search-repos.ts">search</a>({ ...params }) -> SearchRepoSearchResponse</code>

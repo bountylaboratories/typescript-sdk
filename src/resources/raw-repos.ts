@@ -22,7 +22,7 @@ export class RawRepos extends APIResource {
    * ```
    */
   retrieve(body: RawRepoRetrieveParams, options?: RequestOptions): APIPromise<RawRepoRetrieveResponse> {
-    return this._client.post('/api/raw/repos', { body, ...options });
+    return this._client.post('/raw/repos', { body, ...options });
   }
 
   /**
@@ -38,7 +38,7 @@ export class RawRepos extends APIResource {
    * ```
    */
   byFullname(body: RawRepoByFullnameParams, options?: RequestOptions): APIPromise<RawRepoByFullnameResponse> {
-    return this._client.post('/api/raw/repos/by-fullname', { body, ...options });
+    return this._client.post('/raw/repos/by-fullname', { body, ...options });
   }
 
   /**
@@ -57,7 +57,7 @@ export class RawRepos extends APIResource {
    * ```
    */
   count(body: RawRepoCountParams, options?: RequestOptions): APIPromise<RawRepoCountResponse> {
-    return this._client.post('/api/raw/repos/count', { body, ...options });
+    return this._client.post('/raw/repos/count', { body, ...options });
   }
 
   /**
@@ -78,7 +78,7 @@ export class RawRepos extends APIResource {
     options?: RequestOptions,
   ): APIPromise<RawRepoGraphResponse> {
     const { id, ...body } = params;
-    return this._client.post(path`/api/raw/repos/${id}/graph/${relationship}`, { body, ...options });
+    return this._client.post(path`/raw/repos/${id}/graph/${relationship}`, { body, ...options });
   }
 }
 
