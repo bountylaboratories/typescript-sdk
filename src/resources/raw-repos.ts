@@ -7174,151 +7174,151 @@ export namespace RawRepoRetrieveParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributors.UnionMember0
-        | Contributors.UnionMember1
-        | Contributors.UnionMember2
-        | Contributors.UnionMember3
-        | Contributors.UnionMember4
-        | Contributors.UnionMember5
-        | Contributors.UnionMember6
-        | Contributors.UnionMember7
-        | Contributors.UnionMember8
-        | Contributors.UnionMember9
-        | Contributors.UnionMember10
-        | Contributors.UnionMember11
-        | Contributors.UnionMember12
-        | Contributors.UnionMember13
-        | Contributors.UnionMember14
-        | Contributors.UnionMember15
-        | Contributors.UnionMember16
-        | Contributors.UnionMember17
-        | Contributors.UnionMember18
-        | Contributors.UnionMember19
-        | Contributors.UnionMember20
-        | Contributors.UnionMember21
-        | Contributors.UnionMember22
-        | Contributors.UnionMember23
-        | Contributors.UnionMember24
-        | Contributors.UnionMember25
-        | Contributors.UnionMember26
-        | Contributors.UnionMember27
-        | Contributors.UnionMember28
-        | Contributors.UnionMember29
-        | Contributors.UnionMember30
-        | Contributors.UnionMember31
-        | Contributors.UnionMember32
-        | Contributors.UnionMember33
-        | Contributors.UnionMember34
-        | Contributors.UnionMember35
-        | Contributors.UnionMember36
-        | Contributors.UnionMember37
-        | Contributors.UnionMember38
-        | Contributors.UnionMember39
-        | Contributors.UnionMember40
-        | Contributors.UnionMember41
-        | Contributors.UnionMember42
-        | Contributors.UnionMember43
-        | Contributors.UnionMember44
-        | Contributors.UnionMember45
-        | Contributors.UnionMember46
-        | Contributors.UnionMember47
-        | Contributors.UnionMember48
-        | Contributors.UnionMember49
-        | Contributors.UnionMember50
-        | Contributors.UnionMember51
-        | Contributors.UnionMember52
-        | Contributors.UnionMember53
-        | Contributors.UnionMember54
-        | Contributors.UnionMember55
-        | Contributors.UnionMember56
-        | Contributors.UnionMember57
-        | Contributors.UnionMember58
-        | Contributors.UnionMember59
-        | Contributors.UnionMember60
-        | Contributors.UnionMember61
-        | Contributors.UnionMember62
-        | Contributors.UnionMember63
-        | Contributors.UnionMember64
-        | Contributors.UnionMember65
-        | Contributors.UnionMember66
-        | Contributors.UnionMember67
-        | Contributors.UnionMember68
-        | Contributors.UnionMember69
-        | Contributors.UnionMember70
-        | Contributors.UnionMember71
-        | Contributors.UnionMember72
-        | Contributors.UnionMember73
-        | Contributors.UnionMember74
-        | Contributors.UnionMember75
-        | Contributors.UnionMember76
-        | Contributors.UnionMember77
-        | Contributors.UnionMember78
-        | Contributors.UnionMember79
-        | Contributors.UnionMember80
-        | Contributors.UnionMember81
-        | Contributors.UnionMember82
-        | Contributors.UnionMember83
-        | Contributors.UnionMember84
-        | Contributors.UnionMember85
-        | Contributors.UnionMember86
-        | Contributors.UnionMember87
-        | Contributors.UnionMember88
-        | Contributors.UnionMember89
-        | Contributors.UnionMember90
-        | Contributors.UnionMember91
-        | Contributors.UnionMember92
-        | Contributors.UnionMember93
-        | Contributors.UnionMember94
-        | Contributors.UnionMember95
-        | Contributors.UnionMember96
-        | Contributors.UnionMember97
-        | Contributors.UnionMember98
-        | Contributors.UnionMember99
-        | Contributors.UnionMember100
-        | Contributors.UnionMember101
-        | Contributors.UnionMember102
-        | Contributors.UnionMember103
-        | Contributors.UnionMember104
-        | Contributors.UnionMember105
-        | Contributors.UnionMember106
-        | Contributors.UnionMember107
-        | Contributors.UnionMember108
-        | Contributors.UnionMember109
-        | Contributors.UnionMember110
-        | Contributors.UnionMember111
-        | Contributors.UnionMember112
-        | Contributors.UnionMember113
-        | Contributors.UnionMember114
-        | Contributors.UnionMember115
-        | Contributors.UnionMember116
-        | Contributors.UnionMember117
-        | Contributors.UnionMember118
-        | Contributors.UnionMember119
-        | Contributors.UnionMember120
-        | Contributors.UnionMember121
-        | Contributors.UnionMember122
-        | Contributors.UnionMember123
-        | Contributors.UnionMember124
-        | Contributors.UnionMember125
-        | Contributors.UnionMember126
-        | Contributors.UnionMember127
-        | Contributors.UnionMember128
-        | Contributors.UnionMember129
-        | Contributors.UnionMember130
-        | Contributors.UnionMember131
-        | Contributors.UnionMember132
-        | Contributors.UnionMember133
-        | Contributors.UnionMember134
-        | Contributors.UnionMember135
-        | Contributors.UnionMember136
-        | Contributors.UnionMember137
-        | Contributors.UnionMember138
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
         | Contributors.UnionMember139
         | Contributors.UnionMember140;
     }
 
     export namespace Contributors {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -7326,7 +7326,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -7334,7 +7334,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -7342,7 +7342,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -7350,7 +7350,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -7358,7 +7358,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -7366,7 +7366,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -7374,7 +7374,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -7382,7 +7382,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -7390,7 +7390,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -7398,7 +7398,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -7406,7 +7406,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -7414,7 +7414,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -7422,7 +7422,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -7430,7 +7430,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -7438,7 +7438,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -7446,7 +7446,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -7454,7 +7454,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -7462,7 +7462,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -7470,7 +7470,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -7478,7 +7478,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -7486,7 +7486,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -7494,7 +7494,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -7502,7 +7502,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -7510,7 +7510,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -7518,7 +7518,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -7526,7 +7526,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -7534,7 +7534,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -7542,7 +7542,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -7550,7 +7550,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -7558,7 +7558,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -7566,7 +7566,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -7574,7 +7574,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -7582,7 +7582,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -7590,7 +7590,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -7598,7 +7598,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -7606,7 +7606,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -7614,7 +7614,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -7622,7 +7622,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -7630,7 +7630,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -7638,7 +7638,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -7646,7 +7646,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -7654,7 +7654,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -7662,7 +7662,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -7670,7 +7670,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -7678,7 +7678,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -7686,7 +7686,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -7694,7 +7694,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -7702,7 +7702,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -7710,7 +7710,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -7718,7 +7718,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -7726,7 +7726,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -7734,7 +7734,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -7742,7 +7742,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -7750,7 +7750,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -7758,7 +7758,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -7766,7 +7766,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -7774,7 +7774,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -7782,7 +7782,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -7790,7 +7790,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -7798,7 +7798,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -7806,7 +7806,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -7814,7 +7814,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -7822,7 +7822,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -7830,7 +7830,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -7838,7 +7838,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -7846,7 +7846,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -7854,7 +7854,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -7862,7 +7862,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -7870,7 +7870,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -7878,7 +7878,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -7886,7 +7886,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -7894,7 +7894,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -7902,7 +7902,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -7910,7 +7910,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -7918,7 +7918,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -7926,7 +7926,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -7934,7 +7934,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -7942,7 +7942,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -7950,7 +7950,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -7958,7 +7958,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -7966,7 +7966,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -7974,7 +7974,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -7982,7 +7982,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -7990,7 +7990,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -7998,7 +7998,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -8006,7 +8006,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -8014,7 +8014,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -8022,7 +8022,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -8030,7 +8030,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -8038,7 +8038,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -8046,7 +8046,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -8054,7 +8054,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -8062,7 +8062,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -8070,7 +8070,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -8078,7 +8078,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -8086,7 +8086,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -8094,7 +8094,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -8102,7 +8102,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -8110,7 +8110,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -8118,7 +8118,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -8126,7 +8126,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -8134,7 +8134,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -8142,7 +8142,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -8150,7 +8150,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -8158,7 +8158,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -8166,7 +8166,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -8174,7 +8174,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -8182,7 +8182,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -8190,7 +8190,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -8198,7 +8198,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -8206,7 +8206,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -8214,7 +8214,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -8222,7 +8222,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -8230,7 +8230,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -8238,7 +8238,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -8246,7 +8246,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -8254,7 +8254,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -8262,7 +8262,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -8270,7 +8270,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -8278,7 +8278,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -8286,7 +8286,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -8294,7 +8294,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -8302,7 +8302,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -8310,7 +8310,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -8318,7 +8318,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -8326,7 +8326,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -8334,7 +8334,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -8342,7 +8342,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -8350,7 +8350,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -8358,7 +8358,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -8366,7 +8366,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -8374,7 +8374,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -8382,7 +8382,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -8390,7 +8390,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -8398,7 +8398,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -8406,7 +8406,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -8414,7 +8414,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -8422,7 +8422,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -12232,151 +12232,151 @@ export namespace RawRepoRetrieveParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Starrers.UnionMember0
-        | Starrers.UnionMember1
-        | Starrers.UnionMember2
-        | Starrers.UnionMember3
-        | Starrers.UnionMember4
-        | Starrers.UnionMember5
-        | Starrers.UnionMember6
-        | Starrers.UnionMember7
-        | Starrers.UnionMember8
-        | Starrers.UnionMember9
-        | Starrers.UnionMember10
-        | Starrers.UnionMember11
-        | Starrers.UnionMember12
-        | Starrers.UnionMember13
-        | Starrers.UnionMember14
-        | Starrers.UnionMember15
-        | Starrers.UnionMember16
-        | Starrers.UnionMember17
-        | Starrers.UnionMember18
-        | Starrers.UnionMember19
-        | Starrers.UnionMember20
-        | Starrers.UnionMember21
-        | Starrers.UnionMember22
-        | Starrers.UnionMember23
-        | Starrers.UnionMember24
-        | Starrers.UnionMember25
-        | Starrers.UnionMember26
-        | Starrers.UnionMember27
-        | Starrers.UnionMember28
-        | Starrers.UnionMember29
-        | Starrers.UnionMember30
-        | Starrers.UnionMember31
-        | Starrers.UnionMember32
-        | Starrers.UnionMember33
-        | Starrers.UnionMember34
-        | Starrers.UnionMember35
-        | Starrers.UnionMember36
-        | Starrers.UnionMember37
-        | Starrers.UnionMember38
-        | Starrers.UnionMember39
-        | Starrers.UnionMember40
-        | Starrers.UnionMember41
-        | Starrers.UnionMember42
-        | Starrers.UnionMember43
-        | Starrers.UnionMember44
-        | Starrers.UnionMember45
-        | Starrers.UnionMember46
-        | Starrers.UnionMember47
-        | Starrers.UnionMember48
-        | Starrers.UnionMember49
-        | Starrers.UnionMember50
-        | Starrers.UnionMember51
-        | Starrers.UnionMember52
-        | Starrers.UnionMember53
-        | Starrers.UnionMember54
-        | Starrers.UnionMember55
-        | Starrers.UnionMember56
-        | Starrers.UnionMember57
-        | Starrers.UnionMember58
-        | Starrers.UnionMember59
-        | Starrers.UnionMember60
-        | Starrers.UnionMember61
-        | Starrers.UnionMember62
-        | Starrers.UnionMember63
-        | Starrers.UnionMember64
-        | Starrers.UnionMember65
-        | Starrers.UnionMember66
-        | Starrers.UnionMember67
-        | Starrers.UnionMember68
-        | Starrers.UnionMember69
-        | Starrers.UnionMember70
-        | Starrers.UnionMember71
-        | Starrers.UnionMember72
-        | Starrers.UnionMember73
-        | Starrers.UnionMember74
-        | Starrers.UnionMember75
-        | Starrers.UnionMember76
-        | Starrers.UnionMember77
-        | Starrers.UnionMember78
-        | Starrers.UnionMember79
-        | Starrers.UnionMember80
-        | Starrers.UnionMember81
-        | Starrers.UnionMember82
-        | Starrers.UnionMember83
-        | Starrers.UnionMember84
-        | Starrers.UnionMember85
-        | Starrers.UnionMember86
-        | Starrers.UnionMember87
-        | Starrers.UnionMember88
-        | Starrers.UnionMember89
-        | Starrers.UnionMember90
-        | Starrers.UnionMember91
-        | Starrers.UnionMember92
-        | Starrers.UnionMember93
-        | Starrers.UnionMember94
-        | Starrers.UnionMember95
-        | Starrers.UnionMember96
-        | Starrers.UnionMember97
-        | Starrers.UnionMember98
-        | Starrers.UnionMember99
-        | Starrers.UnionMember100
-        | Starrers.UnionMember101
-        | Starrers.UnionMember102
-        | Starrers.UnionMember103
-        | Starrers.UnionMember104
-        | Starrers.UnionMember105
-        | Starrers.UnionMember106
-        | Starrers.UnionMember107
-        | Starrers.UnionMember108
-        | Starrers.UnionMember109
-        | Starrers.UnionMember110
-        | Starrers.UnionMember111
-        | Starrers.UnionMember112
-        | Starrers.UnionMember113
-        | Starrers.UnionMember114
-        | Starrers.UnionMember115
-        | Starrers.UnionMember116
-        | Starrers.UnionMember117
-        | Starrers.UnionMember118
-        | Starrers.UnionMember119
-        | Starrers.UnionMember120
-        | Starrers.UnionMember121
-        | Starrers.UnionMember122
-        | Starrers.UnionMember123
-        | Starrers.UnionMember124
-        | Starrers.UnionMember125
-        | Starrers.UnionMember126
-        | Starrers.UnionMember127
-        | Starrers.UnionMember128
-        | Starrers.UnionMember129
-        | Starrers.UnionMember130
-        | Starrers.UnionMember131
-        | Starrers.UnionMember132
-        | Starrers.UnionMember133
-        | Starrers.UnionMember134
-        | Starrers.UnionMember135
-        | Starrers.UnionMember136
-        | Starrers.UnionMember137
-        | Starrers.UnionMember138
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
         | Starrers.UnionMember139
         | Starrers.UnionMember140;
     }
 
     export namespace Starrers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -12384,7 +12384,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -12392,7 +12392,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -12400,7 +12400,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -12408,7 +12408,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -12416,7 +12416,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -12424,7 +12424,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -12432,7 +12432,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -12440,7 +12440,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -12448,7 +12448,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -12456,7 +12456,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -12464,7 +12464,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -12472,7 +12472,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -12480,7 +12480,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -12488,7 +12488,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -12496,7 +12496,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -12504,7 +12504,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -12512,7 +12512,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -12520,7 +12520,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -12528,7 +12528,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -12536,7 +12536,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -12544,7 +12544,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -12552,7 +12552,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -12560,7 +12560,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -12568,7 +12568,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -12576,7 +12576,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -12584,7 +12584,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -12592,7 +12592,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -12600,7 +12600,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -12608,7 +12608,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -12616,7 +12616,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -12624,7 +12624,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -12632,7 +12632,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -12640,7 +12640,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -12648,7 +12648,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -12656,7 +12656,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -12664,7 +12664,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -12672,7 +12672,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -12680,7 +12680,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -12688,7 +12688,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -12696,7 +12696,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -12704,7 +12704,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -12712,7 +12712,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -12720,7 +12720,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -12728,7 +12728,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -12736,7 +12736,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -12744,7 +12744,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -12752,7 +12752,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -12760,7 +12760,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -12768,7 +12768,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -12776,7 +12776,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -12784,7 +12784,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -12792,7 +12792,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -12800,7 +12800,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -12808,7 +12808,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -12816,7 +12816,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -12824,7 +12824,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -12832,7 +12832,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -12840,7 +12840,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -12848,7 +12848,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -12856,7 +12856,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -12864,7 +12864,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -12872,7 +12872,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -12880,7 +12880,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -12888,7 +12888,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -12896,7 +12896,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -12904,7 +12904,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -12912,7 +12912,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -12920,7 +12920,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -12928,7 +12928,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -12936,7 +12936,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -12944,7 +12944,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -12952,7 +12952,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -12960,7 +12960,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -12968,7 +12968,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -12976,7 +12976,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -12984,7 +12984,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -12992,7 +12992,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -13000,7 +13000,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -13008,7 +13008,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -13016,7 +13016,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -13024,7 +13024,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -13032,7 +13032,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -13040,7 +13040,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -13048,7 +13048,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -13056,7 +13056,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -13064,7 +13064,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -13072,7 +13072,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -13080,7 +13080,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -13088,7 +13088,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -13096,7 +13096,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -13104,7 +13104,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -13112,7 +13112,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -13120,7 +13120,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -13128,7 +13128,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -13136,7 +13136,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -13144,7 +13144,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -13152,7 +13152,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -13160,7 +13160,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -13168,7 +13168,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -13176,7 +13176,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -13184,7 +13184,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -13192,7 +13192,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -13200,7 +13200,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -13208,7 +13208,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -13216,7 +13216,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -13224,7 +13224,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -13232,7 +13232,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -13240,7 +13240,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -13248,7 +13248,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -13256,7 +13256,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -13264,7 +13264,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -13272,7 +13272,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -13280,7 +13280,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -13288,7 +13288,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -13296,7 +13296,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -13304,7 +13304,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -13312,7 +13312,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -13320,7 +13320,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -13328,7 +13328,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -13336,7 +13336,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -13344,7 +13344,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -13352,7 +13352,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -13360,7 +13360,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -13368,7 +13368,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -13376,7 +13376,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -13384,7 +13384,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -13392,7 +13392,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -13400,7 +13400,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -13408,7 +13408,7 @@ export namespace RawRepoRetrieveParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -13416,7 +13416,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -13424,7 +13424,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -13432,7 +13432,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -13440,7 +13440,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -13448,7 +13448,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -13456,7 +13456,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -13464,7 +13464,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -13472,7 +13472,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -13480,7 +13480,7 @@ export namespace RawRepoRetrieveParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -17331,151 +17331,151 @@ export namespace RawRepoByFullnameParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributors.UnionMember0
-        | Contributors.UnionMember1
-        | Contributors.UnionMember2
-        | Contributors.UnionMember3
-        | Contributors.UnionMember4
-        | Contributors.UnionMember5
-        | Contributors.UnionMember6
-        | Contributors.UnionMember7
-        | Contributors.UnionMember8
-        | Contributors.UnionMember9
-        | Contributors.UnionMember10
-        | Contributors.UnionMember11
-        | Contributors.UnionMember12
-        | Contributors.UnionMember13
-        | Contributors.UnionMember14
-        | Contributors.UnionMember15
-        | Contributors.UnionMember16
-        | Contributors.UnionMember17
-        | Contributors.UnionMember18
-        | Contributors.UnionMember19
-        | Contributors.UnionMember20
-        | Contributors.UnionMember21
-        | Contributors.UnionMember22
-        | Contributors.UnionMember23
-        | Contributors.UnionMember24
-        | Contributors.UnionMember25
-        | Contributors.UnionMember26
-        | Contributors.UnionMember27
-        | Contributors.UnionMember28
-        | Contributors.UnionMember29
-        | Contributors.UnionMember30
-        | Contributors.UnionMember31
-        | Contributors.UnionMember32
-        | Contributors.UnionMember33
-        | Contributors.UnionMember34
-        | Contributors.UnionMember35
-        | Contributors.UnionMember36
-        | Contributors.UnionMember37
-        | Contributors.UnionMember38
-        | Contributors.UnionMember39
-        | Contributors.UnionMember40
-        | Contributors.UnionMember41
-        | Contributors.UnionMember42
-        | Contributors.UnionMember43
-        | Contributors.UnionMember44
-        | Contributors.UnionMember45
-        | Contributors.UnionMember46
-        | Contributors.UnionMember47
-        | Contributors.UnionMember48
-        | Contributors.UnionMember49
-        | Contributors.UnionMember50
-        | Contributors.UnionMember51
-        | Contributors.UnionMember52
-        | Contributors.UnionMember53
-        | Contributors.UnionMember54
-        | Contributors.UnionMember55
-        | Contributors.UnionMember56
-        | Contributors.UnionMember57
-        | Contributors.UnionMember58
-        | Contributors.UnionMember59
-        | Contributors.UnionMember60
-        | Contributors.UnionMember61
-        | Contributors.UnionMember62
-        | Contributors.UnionMember63
-        | Contributors.UnionMember64
-        | Contributors.UnionMember65
-        | Contributors.UnionMember66
-        | Contributors.UnionMember67
-        | Contributors.UnionMember68
-        | Contributors.UnionMember69
-        | Contributors.UnionMember70
-        | Contributors.UnionMember71
-        | Contributors.UnionMember72
-        | Contributors.UnionMember73
-        | Contributors.UnionMember74
-        | Contributors.UnionMember75
-        | Contributors.UnionMember76
-        | Contributors.UnionMember77
-        | Contributors.UnionMember78
-        | Contributors.UnionMember79
-        | Contributors.UnionMember80
-        | Contributors.UnionMember81
-        | Contributors.UnionMember82
-        | Contributors.UnionMember83
-        | Contributors.UnionMember84
-        | Contributors.UnionMember85
-        | Contributors.UnionMember86
-        | Contributors.UnionMember87
-        | Contributors.UnionMember88
-        | Contributors.UnionMember89
-        | Contributors.UnionMember90
-        | Contributors.UnionMember91
-        | Contributors.UnionMember92
-        | Contributors.UnionMember93
-        | Contributors.UnionMember94
-        | Contributors.UnionMember95
-        | Contributors.UnionMember96
-        | Contributors.UnionMember97
-        | Contributors.UnionMember98
-        | Contributors.UnionMember99
-        | Contributors.UnionMember100
-        | Contributors.UnionMember101
-        | Contributors.UnionMember102
-        | Contributors.UnionMember103
-        | Contributors.UnionMember104
-        | Contributors.UnionMember105
-        | Contributors.UnionMember106
-        | Contributors.UnionMember107
-        | Contributors.UnionMember108
-        | Contributors.UnionMember109
-        | Contributors.UnionMember110
-        | Contributors.UnionMember111
-        | Contributors.UnionMember112
-        | Contributors.UnionMember113
-        | Contributors.UnionMember114
-        | Contributors.UnionMember115
-        | Contributors.UnionMember116
-        | Contributors.UnionMember117
-        | Contributors.UnionMember118
-        | Contributors.UnionMember119
-        | Contributors.UnionMember120
-        | Contributors.UnionMember121
-        | Contributors.UnionMember122
-        | Contributors.UnionMember123
-        | Contributors.UnionMember124
-        | Contributors.UnionMember125
-        | Contributors.UnionMember126
-        | Contributors.UnionMember127
-        | Contributors.UnionMember128
-        | Contributors.UnionMember129
-        | Contributors.UnionMember130
-        | Contributors.UnionMember131
-        | Contributors.UnionMember132
-        | Contributors.UnionMember133
-        | Contributors.UnionMember134
-        | Contributors.UnionMember135
-        | Contributors.UnionMember136
-        | Contributors.UnionMember137
-        | Contributors.UnionMember138
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
         | Contributors.UnionMember139
         | Contributors.UnionMember140;
     }
 
     export namespace Contributors {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -17483,7 +17483,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -17491,7 +17491,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -17499,7 +17499,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -17507,7 +17507,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -17515,7 +17515,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -17523,7 +17523,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -17531,7 +17531,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -17539,7 +17539,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -17547,7 +17547,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -17555,7 +17555,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -17563,7 +17563,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -17571,7 +17571,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -17579,7 +17579,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -17587,7 +17587,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -17595,7 +17595,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -17603,7 +17603,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -17611,7 +17611,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -17619,7 +17619,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -17627,7 +17627,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -17635,7 +17635,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -17643,7 +17643,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -17651,7 +17651,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -17659,7 +17659,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -17667,7 +17667,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -17675,7 +17675,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -17683,7 +17683,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -17691,7 +17691,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -17699,7 +17699,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -17707,7 +17707,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -17715,7 +17715,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -17723,7 +17723,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -17731,7 +17731,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -17739,7 +17739,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -17747,7 +17747,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -17755,7 +17755,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -17763,7 +17763,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -17771,7 +17771,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -17779,7 +17779,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -17787,7 +17787,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -17795,7 +17795,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -17803,7 +17803,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -17811,7 +17811,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -17819,7 +17819,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -17827,7 +17827,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -17835,7 +17835,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -17843,7 +17843,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -17851,7 +17851,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -17859,7 +17859,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -17867,7 +17867,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -17875,7 +17875,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -17883,7 +17883,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -17891,7 +17891,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -17899,7 +17899,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -17907,7 +17907,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -17915,7 +17915,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -17923,7 +17923,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -17931,7 +17931,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -17939,7 +17939,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -17947,7 +17947,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -17955,7 +17955,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -17963,7 +17963,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -17971,7 +17971,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -17979,7 +17979,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -17987,7 +17987,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -17995,7 +17995,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -18003,7 +18003,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -18011,7 +18011,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -18019,7 +18019,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -18027,7 +18027,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -18035,7 +18035,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -18043,7 +18043,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -18051,7 +18051,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -18059,7 +18059,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -18067,7 +18067,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -18075,7 +18075,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -18083,7 +18083,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -18091,7 +18091,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -18099,7 +18099,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -18107,7 +18107,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -18115,7 +18115,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -18123,7 +18123,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -18131,7 +18131,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -18139,7 +18139,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -18147,7 +18147,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -18155,7 +18155,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -18163,7 +18163,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -18171,7 +18171,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -18179,7 +18179,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -18187,7 +18187,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -18195,7 +18195,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -18203,7 +18203,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -18211,7 +18211,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -18219,7 +18219,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -18227,7 +18227,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -18235,7 +18235,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -18243,7 +18243,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -18251,7 +18251,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -18259,7 +18259,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -18267,7 +18267,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -18275,7 +18275,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -18283,7 +18283,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -18291,7 +18291,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -18299,7 +18299,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -18307,7 +18307,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -18315,7 +18315,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -18323,7 +18323,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -18331,7 +18331,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -18339,7 +18339,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -18347,7 +18347,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -18355,7 +18355,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -18363,7 +18363,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -18371,7 +18371,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -18379,7 +18379,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -18387,7 +18387,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -18395,7 +18395,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -18403,7 +18403,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -18411,7 +18411,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -18419,7 +18419,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -18427,7 +18427,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -18435,7 +18435,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -18443,7 +18443,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -18451,7 +18451,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -18459,7 +18459,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -18467,7 +18467,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -18475,7 +18475,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -18483,7 +18483,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -18491,7 +18491,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -18499,7 +18499,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -18507,7 +18507,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -18515,7 +18515,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -18523,7 +18523,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -18531,7 +18531,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -18539,7 +18539,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -18547,7 +18547,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -18555,7 +18555,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -18563,7 +18563,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -18571,7 +18571,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -18579,7 +18579,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -22389,151 +22389,151 @@ export namespace RawRepoByFullnameParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Starrers.UnionMember0
-        | Starrers.UnionMember1
-        | Starrers.UnionMember2
-        | Starrers.UnionMember3
-        | Starrers.UnionMember4
-        | Starrers.UnionMember5
-        | Starrers.UnionMember6
-        | Starrers.UnionMember7
-        | Starrers.UnionMember8
-        | Starrers.UnionMember9
-        | Starrers.UnionMember10
-        | Starrers.UnionMember11
-        | Starrers.UnionMember12
-        | Starrers.UnionMember13
-        | Starrers.UnionMember14
-        | Starrers.UnionMember15
-        | Starrers.UnionMember16
-        | Starrers.UnionMember17
-        | Starrers.UnionMember18
-        | Starrers.UnionMember19
-        | Starrers.UnionMember20
-        | Starrers.UnionMember21
-        | Starrers.UnionMember22
-        | Starrers.UnionMember23
-        | Starrers.UnionMember24
-        | Starrers.UnionMember25
-        | Starrers.UnionMember26
-        | Starrers.UnionMember27
-        | Starrers.UnionMember28
-        | Starrers.UnionMember29
-        | Starrers.UnionMember30
-        | Starrers.UnionMember31
-        | Starrers.UnionMember32
-        | Starrers.UnionMember33
-        | Starrers.UnionMember34
-        | Starrers.UnionMember35
-        | Starrers.UnionMember36
-        | Starrers.UnionMember37
-        | Starrers.UnionMember38
-        | Starrers.UnionMember39
-        | Starrers.UnionMember40
-        | Starrers.UnionMember41
-        | Starrers.UnionMember42
-        | Starrers.UnionMember43
-        | Starrers.UnionMember44
-        | Starrers.UnionMember45
-        | Starrers.UnionMember46
-        | Starrers.UnionMember47
-        | Starrers.UnionMember48
-        | Starrers.UnionMember49
-        | Starrers.UnionMember50
-        | Starrers.UnionMember51
-        | Starrers.UnionMember52
-        | Starrers.UnionMember53
-        | Starrers.UnionMember54
-        | Starrers.UnionMember55
-        | Starrers.UnionMember56
-        | Starrers.UnionMember57
-        | Starrers.UnionMember58
-        | Starrers.UnionMember59
-        | Starrers.UnionMember60
-        | Starrers.UnionMember61
-        | Starrers.UnionMember62
-        | Starrers.UnionMember63
-        | Starrers.UnionMember64
-        | Starrers.UnionMember65
-        | Starrers.UnionMember66
-        | Starrers.UnionMember67
-        | Starrers.UnionMember68
-        | Starrers.UnionMember69
-        | Starrers.UnionMember70
-        | Starrers.UnionMember71
-        | Starrers.UnionMember72
-        | Starrers.UnionMember73
-        | Starrers.UnionMember74
-        | Starrers.UnionMember75
-        | Starrers.UnionMember76
-        | Starrers.UnionMember77
-        | Starrers.UnionMember78
-        | Starrers.UnionMember79
-        | Starrers.UnionMember80
-        | Starrers.UnionMember81
-        | Starrers.UnionMember82
-        | Starrers.UnionMember83
-        | Starrers.UnionMember84
-        | Starrers.UnionMember85
-        | Starrers.UnionMember86
-        | Starrers.UnionMember87
-        | Starrers.UnionMember88
-        | Starrers.UnionMember89
-        | Starrers.UnionMember90
-        | Starrers.UnionMember91
-        | Starrers.UnionMember92
-        | Starrers.UnionMember93
-        | Starrers.UnionMember94
-        | Starrers.UnionMember95
-        | Starrers.UnionMember96
-        | Starrers.UnionMember97
-        | Starrers.UnionMember98
-        | Starrers.UnionMember99
-        | Starrers.UnionMember100
-        | Starrers.UnionMember101
-        | Starrers.UnionMember102
-        | Starrers.UnionMember103
-        | Starrers.UnionMember104
-        | Starrers.UnionMember105
-        | Starrers.UnionMember106
-        | Starrers.UnionMember107
-        | Starrers.UnionMember108
-        | Starrers.UnionMember109
-        | Starrers.UnionMember110
-        | Starrers.UnionMember111
-        | Starrers.UnionMember112
-        | Starrers.UnionMember113
-        | Starrers.UnionMember114
-        | Starrers.UnionMember115
-        | Starrers.UnionMember116
-        | Starrers.UnionMember117
-        | Starrers.UnionMember118
-        | Starrers.UnionMember119
-        | Starrers.UnionMember120
-        | Starrers.UnionMember121
-        | Starrers.UnionMember122
-        | Starrers.UnionMember123
-        | Starrers.UnionMember124
-        | Starrers.UnionMember125
-        | Starrers.UnionMember126
-        | Starrers.UnionMember127
-        | Starrers.UnionMember128
-        | Starrers.UnionMember129
-        | Starrers.UnionMember130
-        | Starrers.UnionMember131
-        | Starrers.UnionMember132
-        | Starrers.UnionMember133
-        | Starrers.UnionMember134
-        | Starrers.UnionMember135
-        | Starrers.UnionMember136
-        | Starrers.UnionMember137
-        | Starrers.UnionMember138
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
         | Starrers.UnionMember139
         | Starrers.UnionMember140;
     }
 
     export namespace Starrers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -22541,7 +22541,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -22549,7 +22549,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -22557,7 +22557,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -22565,7 +22565,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -22573,7 +22573,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -22581,7 +22581,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -22589,7 +22589,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -22597,7 +22597,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -22605,7 +22605,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -22613,7 +22613,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -22621,7 +22621,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -22629,7 +22629,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -22637,7 +22637,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -22645,7 +22645,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -22653,7 +22653,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -22661,7 +22661,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -22669,7 +22669,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -22677,7 +22677,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -22685,7 +22685,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -22693,7 +22693,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -22701,7 +22701,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -22709,7 +22709,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -22717,7 +22717,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -22725,7 +22725,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -22733,7 +22733,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -22741,7 +22741,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -22749,7 +22749,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -22757,7 +22757,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -22765,7 +22765,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -22773,7 +22773,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -22781,7 +22781,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -22789,7 +22789,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -22797,7 +22797,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -22805,7 +22805,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -22813,7 +22813,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -22821,7 +22821,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -22829,7 +22829,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -22837,7 +22837,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -22845,7 +22845,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -22853,7 +22853,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -22861,7 +22861,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -22869,7 +22869,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -22877,7 +22877,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -22885,7 +22885,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -22893,7 +22893,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -22901,7 +22901,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -22909,7 +22909,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -22917,7 +22917,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -22925,7 +22925,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -22933,7 +22933,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -22941,7 +22941,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -22949,7 +22949,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -22957,7 +22957,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -22965,7 +22965,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -22973,7 +22973,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -22981,7 +22981,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -22989,7 +22989,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -22997,7 +22997,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -23005,7 +23005,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -23013,7 +23013,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -23021,7 +23021,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -23029,7 +23029,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -23037,7 +23037,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -23045,7 +23045,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -23053,7 +23053,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -23061,7 +23061,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -23069,7 +23069,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -23077,7 +23077,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -23085,7 +23085,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -23093,7 +23093,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -23101,7 +23101,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -23109,7 +23109,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -23117,7 +23117,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -23125,7 +23125,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -23133,7 +23133,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -23141,7 +23141,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -23149,7 +23149,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -23157,7 +23157,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -23165,7 +23165,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -23173,7 +23173,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -23181,7 +23181,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -23189,7 +23189,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -23197,7 +23197,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -23205,7 +23205,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -23213,7 +23213,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -23221,7 +23221,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -23229,7 +23229,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -23237,7 +23237,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -23245,7 +23245,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -23253,7 +23253,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -23261,7 +23261,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -23269,7 +23269,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -23277,7 +23277,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -23285,7 +23285,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -23293,7 +23293,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -23301,7 +23301,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -23309,7 +23309,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -23317,7 +23317,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -23325,7 +23325,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -23333,7 +23333,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -23341,7 +23341,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -23349,7 +23349,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -23357,7 +23357,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -23365,7 +23365,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -23373,7 +23373,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -23381,7 +23381,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -23389,7 +23389,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -23397,7 +23397,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -23405,7 +23405,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -23413,7 +23413,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -23421,7 +23421,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -23429,7 +23429,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -23437,7 +23437,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -23445,7 +23445,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -23453,7 +23453,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -23461,7 +23461,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -23469,7 +23469,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -23477,7 +23477,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -23485,7 +23485,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -23493,7 +23493,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -23501,7 +23501,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -23509,7 +23509,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -23517,7 +23517,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -23525,7 +23525,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -23533,7 +23533,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -23541,7 +23541,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -23549,7 +23549,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -23557,7 +23557,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -23565,7 +23565,7 @@ export namespace RawRepoByFullnameParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -23573,7 +23573,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -23581,7 +23581,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -23589,7 +23589,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -23597,7 +23597,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -23605,7 +23605,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -23613,7 +23613,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -23621,7 +23621,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -23629,7 +23629,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -23637,7 +23637,7 @@ export namespace RawRepoByFullnameParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -27434,119 +27434,119 @@ export interface RawRepoCountParams {
    * Filters to apply (required)
    */
   filters:
-    | RawRepoCountParams.UnionMember0
-    | RawRepoCountParams.UnionMember1
-    | RawRepoCountParams.UnionMember2
-    | RawRepoCountParams.UnionMember3
-    | RawRepoCountParams.UnionMember4
-    | RawRepoCountParams.UnionMember5
-    | RawRepoCountParams.UnionMember6
-    | RawRepoCountParams.UnionMember7
-    | RawRepoCountParams.UnionMember8
-    | RawRepoCountParams.UnionMember9
-    | RawRepoCountParams.UnionMember10
-    | RawRepoCountParams.UnionMember11
-    | RawRepoCountParams.UnionMember12
-    | RawRepoCountParams.UnionMember13
-    | RawRepoCountParams.UnionMember14
-    | RawRepoCountParams.UnionMember15
-    | RawRepoCountParams.UnionMember16
-    | RawRepoCountParams.UnionMember17
-    | RawRepoCountParams.UnionMember18
-    | RawRepoCountParams.UnionMember19
-    | RawRepoCountParams.UnionMember20
-    | RawRepoCountParams.UnionMember21
-    | RawRepoCountParams.UnionMember22
-    | RawRepoCountParams.UnionMember23
-    | RawRepoCountParams.UnionMember24
-    | RawRepoCountParams.UnionMember25
-    | RawRepoCountParams.UnionMember26
-    | RawRepoCountParams.UnionMember27
-    | RawRepoCountParams.UnionMember28
-    | RawRepoCountParams.UnionMember29
-    | RawRepoCountParams.UnionMember30
-    | RawRepoCountParams.UnionMember31
-    | RawRepoCountParams.UnionMember32
-    | RawRepoCountParams.UnionMember33
-    | RawRepoCountParams.UnionMember34
-    | RawRepoCountParams.UnionMember35
-    | RawRepoCountParams.UnionMember36
-    | RawRepoCountParams.UnionMember37
-    | RawRepoCountParams.UnionMember38
-    | RawRepoCountParams.UnionMember39
-    | RawRepoCountParams.UnionMember40
-    | RawRepoCountParams.UnionMember41
-    | RawRepoCountParams.UnionMember42
-    | RawRepoCountParams.UnionMember43
-    | RawRepoCountParams.UnionMember44
-    | RawRepoCountParams.UnionMember45
-    | RawRepoCountParams.UnionMember46
-    | RawRepoCountParams.UnionMember47
-    | RawRepoCountParams.UnionMember48
-    | RawRepoCountParams.UnionMember49
-    | RawRepoCountParams.UnionMember50
-    | RawRepoCountParams.UnionMember51
-    | RawRepoCountParams.UnionMember52
-    | RawRepoCountParams.UnionMember53
-    | RawRepoCountParams.UnionMember54
-    | RawRepoCountParams.UnionMember55
-    | RawRepoCountParams.UnionMember56
-    | RawRepoCountParams.UnionMember57
-    | RawRepoCountParams.UnionMember58
-    | RawRepoCountParams.UnionMember59
-    | RawRepoCountParams.UnionMember60
-    | RawRepoCountParams.UnionMember61
-    | RawRepoCountParams.UnionMember62
-    | RawRepoCountParams.UnionMember63
-    | RawRepoCountParams.UnionMember64
-    | RawRepoCountParams.UnionMember65
-    | RawRepoCountParams.UnionMember66
-    | RawRepoCountParams.UnionMember67
-    | RawRepoCountParams.UnionMember68
-    | RawRepoCountParams.UnionMember69
-    | RawRepoCountParams.UnionMember70
-    | RawRepoCountParams.UnionMember71
-    | RawRepoCountParams.UnionMember72
-    | RawRepoCountParams.UnionMember73
-    | RawRepoCountParams.UnionMember74
-    | RawRepoCountParams.UnionMember75
-    | RawRepoCountParams.UnionMember76
-    | RawRepoCountParams.UnionMember77
-    | RawRepoCountParams.UnionMember78
-    | RawRepoCountParams.UnionMember79
-    | RawRepoCountParams.UnionMember80
-    | RawRepoCountParams.UnionMember81
-    | RawRepoCountParams.UnionMember82
-    | RawRepoCountParams.UnionMember83
-    | RawRepoCountParams.UnionMember84
-    | RawRepoCountParams.UnionMember85
-    | RawRepoCountParams.UnionMember86
-    | RawRepoCountParams.UnionMember87
-    | RawRepoCountParams.UnionMember88
-    | RawRepoCountParams.UnionMember89
-    | RawRepoCountParams.UnionMember90
-    | RawRepoCountParams.UnionMember91
-    | RawRepoCountParams.UnionMember92
-    | RawRepoCountParams.UnionMember93
-    | RawRepoCountParams.UnionMember94
-    | RawRepoCountParams.UnionMember95
-    | RawRepoCountParams.UnionMember96
-    | RawRepoCountParams.UnionMember97
-    | RawRepoCountParams.UnionMember98
-    | RawRepoCountParams.UnionMember99
-    | RawRepoCountParams.UnionMember100
-    | RawRepoCountParams.UnionMember101
-    | RawRepoCountParams.UnionMember102
-    | RawRepoCountParams.UnionMember103
-    | RawRepoCountParams.UnionMember104
-    | RawRepoCountParams.UnionMember105
-    | RawRepoCountParams.UnionMember106
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Glob
+    | RawRepoCountParams.NotGlob
+    | RawRepoCountParams.IGlob
+    | RawRepoCountParams.NotIGlob
+    | RawRepoCountParams.Regex
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Glob
+    | RawRepoCountParams.NotGlob
+    | RawRepoCountParams.IGlob
+    | RawRepoCountParams.NotIGlob
+    | RawRepoCountParams.Regex
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Glob
+    | RawRepoCountParams.NotGlob
+    | RawRepoCountParams.IGlob
+    | RawRepoCountParams.NotIGlob
+    | RawRepoCountParams.Regex
+    | RawRepoCountParams.ContainsAllTokens
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Glob
+    | RawRepoCountParams.NotGlob
+    | RawRepoCountParams.IGlob
+    | RawRepoCountParams.NotIGlob
+    | RawRepoCountParams.Regex
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Glob
+    | RawRepoCountParams.NotGlob
+    | RawRepoCountParams.IGlob
+    | RawRepoCountParams.NotIGlob
+    | RawRepoCountParams.Regex
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Eq
+    | RawRepoCountParams.NotEq
+    | RawRepoCountParams.In
+    | RawRepoCountParams.NotIn
+    | RawRepoCountParams.Lt
+    | RawRepoCountParams.Lte
+    | RawRepoCountParams.Gt
+    | RawRepoCountParams.Gte
+    | RawRepoCountParams.Contains
+    | RawRepoCountParams.NotContains
+    | RawRepoCountParams.ContainsAny
+    | RawRepoCountParams.NotContainsAny
+    | RawRepoCountParams.AnyLt
+    | RawRepoCountParams.AnyLte
+    | RawRepoCountParams.AnyGt
+    | RawRepoCountParams.AnyGte
+    | RawRepoCountParams.ContainsAllTokens
     | RawRepoCountParams.UnionMember107
     | RawRepoCountParams.UnionMember108;
 }
 
 export namespace RawRepoCountParams {
-  export interface UnionMember0 {
+  export interface Eq {
     field: 'githubId';
 
     op: 'Eq';
@@ -27554,7 +27554,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember1 {
+  export interface NotEq {
     field: 'githubId';
 
     op: 'NotEq';
@@ -27562,7 +27562,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember2 {
+  export interface In {
     field: 'githubId';
 
     op: 'In';
@@ -27570,7 +27570,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember3 {
+  export interface NotIn {
     field: 'githubId';
 
     op: 'NotIn';
@@ -27578,7 +27578,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember4 {
+  export interface Lt {
     field: 'githubId';
 
     op: 'Lt';
@@ -27586,7 +27586,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember5 {
+  export interface Lte {
     field: 'githubId';
 
     op: 'Lte';
@@ -27594,7 +27594,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember6 {
+  export interface Gt {
     field: 'githubId';
 
     op: 'Gt';
@@ -27602,7 +27602,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember7 {
+  export interface Gte {
     field: 'githubId';
 
     op: 'Gte';
@@ -27610,7 +27610,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember8 {
+  export interface Glob {
     field: 'githubId';
 
     op: 'Glob';
@@ -27618,7 +27618,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember9 {
+  export interface NotGlob {
     field: 'githubId';
 
     op: 'NotGlob';
@@ -27626,7 +27626,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember10 {
+  export interface IGlob {
     field: 'githubId';
 
     op: 'IGlob';
@@ -27634,7 +27634,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember11 {
+  export interface NotIGlob {
     field: 'githubId';
 
     op: 'NotIGlob';
@@ -27642,7 +27642,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember12 {
+  export interface Regex {
     field: 'githubId';
 
     op: 'Regex';
@@ -27650,7 +27650,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember13 {
+  export interface Eq {
     field: 'ownerLogin';
 
     op: 'Eq';
@@ -27658,7 +27658,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember14 {
+  export interface NotEq {
     field: 'ownerLogin';
 
     op: 'NotEq';
@@ -27666,7 +27666,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember15 {
+  export interface In {
     field: 'ownerLogin';
 
     op: 'In';
@@ -27674,7 +27674,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember16 {
+  export interface NotIn {
     field: 'ownerLogin';
 
     op: 'NotIn';
@@ -27682,7 +27682,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember17 {
+  export interface Lt {
     field: 'ownerLogin';
 
     op: 'Lt';
@@ -27690,7 +27690,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember18 {
+  export interface Lte {
     field: 'ownerLogin';
 
     op: 'Lte';
@@ -27698,7 +27698,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember19 {
+  export interface Gt {
     field: 'ownerLogin';
 
     op: 'Gt';
@@ -27706,7 +27706,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember20 {
+  export interface Gte {
     field: 'ownerLogin';
 
     op: 'Gte';
@@ -27714,7 +27714,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember21 {
+  export interface Glob {
     field: 'ownerLogin';
 
     op: 'Glob';
@@ -27722,7 +27722,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember22 {
+  export interface NotGlob {
     field: 'ownerLogin';
 
     op: 'NotGlob';
@@ -27730,7 +27730,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember23 {
+  export interface IGlob {
     field: 'ownerLogin';
 
     op: 'IGlob';
@@ -27738,7 +27738,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember24 {
+  export interface NotIGlob {
     field: 'ownerLogin';
 
     op: 'NotIGlob';
@@ -27746,7 +27746,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember25 {
+  export interface Regex {
     field: 'ownerLogin';
 
     op: 'Regex';
@@ -27754,7 +27754,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember26 {
+  export interface Eq {
     field: 'ownerLocation';
 
     op: 'Eq';
@@ -27762,7 +27762,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember27 {
+  export interface NotEq {
     field: 'ownerLocation';
 
     op: 'NotEq';
@@ -27770,7 +27770,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember28 {
+  export interface In {
     field: 'ownerLocation';
 
     op: 'In';
@@ -27778,7 +27778,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember29 {
+  export interface NotIn {
     field: 'ownerLocation';
 
     op: 'NotIn';
@@ -27786,7 +27786,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember30 {
+  export interface Lt {
     field: 'ownerLocation';
 
     op: 'Lt';
@@ -27794,7 +27794,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember31 {
+  export interface Lte {
     field: 'ownerLocation';
 
     op: 'Lte';
@@ -27802,7 +27802,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember32 {
+  export interface Gt {
     field: 'ownerLocation';
 
     op: 'Gt';
@@ -27810,7 +27810,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember33 {
+  export interface Gte {
     field: 'ownerLocation';
 
     op: 'Gte';
@@ -27818,7 +27818,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember34 {
+  export interface Glob {
     field: 'ownerLocation';
 
     op: 'Glob';
@@ -27826,7 +27826,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember35 {
+  export interface NotGlob {
     field: 'ownerLocation';
 
     op: 'NotGlob';
@@ -27834,7 +27834,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember36 {
+  export interface IGlob {
     field: 'ownerLocation';
 
     op: 'IGlob';
@@ -27842,7 +27842,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember37 {
+  export interface NotIGlob {
     field: 'ownerLocation';
 
     op: 'NotIGlob';
@@ -27850,7 +27850,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember38 {
+  export interface Regex {
     field: 'ownerLocation';
 
     op: 'Regex';
@@ -27858,7 +27858,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember39 {
+  export interface ContainsAllTokens {
     field: 'ownerLocation';
 
     op: 'ContainsAllTokens';
@@ -27866,7 +27866,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember40 {
+  export interface Eq {
     field: 'name';
 
     op: 'Eq';
@@ -27874,7 +27874,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember41 {
+  export interface NotEq {
     field: 'name';
 
     op: 'NotEq';
@@ -27882,7 +27882,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember42 {
+  export interface In {
     field: 'name';
 
     op: 'In';
@@ -27890,7 +27890,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember43 {
+  export interface NotIn {
     field: 'name';
 
     op: 'NotIn';
@@ -27898,7 +27898,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember44 {
+  export interface Lt {
     field: 'name';
 
     op: 'Lt';
@@ -27906,7 +27906,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember45 {
+  export interface Lte {
     field: 'name';
 
     op: 'Lte';
@@ -27914,7 +27914,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember46 {
+  export interface Gt {
     field: 'name';
 
     op: 'Gt';
@@ -27922,7 +27922,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember47 {
+  export interface Gte {
     field: 'name';
 
     op: 'Gte';
@@ -27930,7 +27930,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember48 {
+  export interface Glob {
     field: 'name';
 
     op: 'Glob';
@@ -27938,7 +27938,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember49 {
+  export interface NotGlob {
     field: 'name';
 
     op: 'NotGlob';
@@ -27946,7 +27946,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember50 {
+  export interface IGlob {
     field: 'name';
 
     op: 'IGlob';
@@ -27954,7 +27954,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember51 {
+  export interface NotIGlob {
     field: 'name';
 
     op: 'NotIGlob';
@@ -27962,7 +27962,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember52 {
+  export interface Regex {
     field: 'name';
 
     op: 'Regex';
@@ -27970,7 +27970,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember53 {
+  export interface Eq {
     field: 'stargazerCount';
 
     op: 'Eq';
@@ -27978,7 +27978,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember54 {
+  export interface NotEq {
     field: 'stargazerCount';
 
     op: 'NotEq';
@@ -27986,7 +27986,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember55 {
+  export interface In {
     field: 'stargazerCount';
 
     op: 'In';
@@ -27994,7 +27994,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember56 {
+  export interface NotIn {
     field: 'stargazerCount';
 
     op: 'NotIn';
@@ -28002,7 +28002,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember57 {
+  export interface Lt {
     field: 'stargazerCount';
 
     op: 'Lt';
@@ -28010,7 +28010,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember58 {
+  export interface Lte {
     field: 'stargazerCount';
 
     op: 'Lte';
@@ -28018,7 +28018,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember59 {
+  export interface Gt {
     field: 'stargazerCount';
 
     op: 'Gt';
@@ -28026,7 +28026,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember60 {
+  export interface Gte {
     field: 'stargazerCount';
 
     op: 'Gte';
@@ -28034,7 +28034,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember61 {
+  export interface Eq {
     field: 'language';
 
     op: 'Eq';
@@ -28042,7 +28042,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember62 {
+  export interface NotEq {
     field: 'language';
 
     op: 'NotEq';
@@ -28050,7 +28050,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember63 {
+  export interface In {
     field: 'language';
 
     op: 'In';
@@ -28058,7 +28058,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember64 {
+  export interface NotIn {
     field: 'language';
 
     op: 'NotIn';
@@ -28066,7 +28066,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember65 {
+  export interface Lt {
     field: 'language';
 
     op: 'Lt';
@@ -28074,7 +28074,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember66 {
+  export interface Lte {
     field: 'language';
 
     op: 'Lte';
@@ -28082,7 +28082,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember67 {
+  export interface Gt {
     field: 'language';
 
     op: 'Gt';
@@ -28090,7 +28090,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember68 {
+  export interface Gte {
     field: 'language';
 
     op: 'Gte';
@@ -28098,7 +28098,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember69 {
+  export interface Glob {
     field: 'language';
 
     op: 'Glob';
@@ -28106,7 +28106,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember70 {
+  export interface NotGlob {
     field: 'language';
 
     op: 'NotGlob';
@@ -28114,7 +28114,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember71 {
+  export interface IGlob {
     field: 'language';
 
     op: 'IGlob';
@@ -28122,7 +28122,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember72 {
+  export interface NotIGlob {
     field: 'language';
 
     op: 'NotIGlob';
@@ -28130,7 +28130,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember73 {
+  export interface Regex {
     field: 'language';
 
     op: 'Regex';
@@ -28138,7 +28138,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember74 {
+  export interface Eq {
     field: 'totalIssuesCount';
 
     op: 'Eq';
@@ -28146,7 +28146,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember75 {
+  export interface NotEq {
     field: 'totalIssuesCount';
 
     op: 'NotEq';
@@ -28154,7 +28154,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember76 {
+  export interface In {
     field: 'totalIssuesCount';
 
     op: 'In';
@@ -28162,7 +28162,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember77 {
+  export interface NotIn {
     field: 'totalIssuesCount';
 
     op: 'NotIn';
@@ -28170,7 +28170,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember78 {
+  export interface Lt {
     field: 'totalIssuesCount';
 
     op: 'Lt';
@@ -28178,7 +28178,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember79 {
+  export interface Lte {
     field: 'totalIssuesCount';
 
     op: 'Lte';
@@ -28186,7 +28186,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember80 {
+  export interface Gt {
     field: 'totalIssuesCount';
 
     op: 'Gt';
@@ -28194,7 +28194,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember81 {
+  export interface Gte {
     field: 'totalIssuesCount';
 
     op: 'Gte';
@@ -28202,7 +28202,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember82 {
+  export interface Eq {
     field: 'totalIssuesOpen';
 
     op: 'Eq';
@@ -28210,7 +28210,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember83 {
+  export interface NotEq {
     field: 'totalIssuesOpen';
 
     op: 'NotEq';
@@ -28218,7 +28218,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember84 {
+  export interface In {
     field: 'totalIssuesOpen';
 
     op: 'In';
@@ -28226,7 +28226,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember85 {
+  export interface NotIn {
     field: 'totalIssuesOpen';
 
     op: 'NotIn';
@@ -28234,7 +28234,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember86 {
+  export interface Lt {
     field: 'totalIssuesOpen';
 
     op: 'Lt';
@@ -28242,7 +28242,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember87 {
+  export interface Lte {
     field: 'totalIssuesOpen';
 
     op: 'Lte';
@@ -28250,7 +28250,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember88 {
+  export interface Gt {
     field: 'totalIssuesOpen';
 
     op: 'Gt';
@@ -28258,7 +28258,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember89 {
+  export interface Gte {
     field: 'totalIssuesOpen';
 
     op: 'Gte';
@@ -28266,7 +28266,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember90 {
+  export interface Eq {
     field: 'totalIssuesClosed';
 
     op: 'Eq';
@@ -28274,7 +28274,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember91 {
+  export interface NotEq {
     field: 'totalIssuesClosed';
 
     op: 'NotEq';
@@ -28282,7 +28282,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember92 {
+  export interface In {
     field: 'totalIssuesClosed';
 
     op: 'In';
@@ -28290,7 +28290,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember93 {
+  export interface NotIn {
     field: 'totalIssuesClosed';
 
     op: 'NotIn';
@@ -28298,7 +28298,7 @@ export namespace RawRepoCountParams {
     value: Array<number>;
   }
 
-  export interface UnionMember94 {
+  export interface Lt {
     field: 'totalIssuesClosed';
 
     op: 'Lt';
@@ -28306,7 +28306,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember95 {
+  export interface Lte {
     field: 'totalIssuesClosed';
 
     op: 'Lte';
@@ -28314,7 +28314,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember96 {
+  export interface Gt {
     field: 'totalIssuesClosed';
 
     op: 'Gt';
@@ -28322,7 +28322,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember97 {
+  export interface Gte {
     field: 'totalIssuesClosed';
 
     op: 'Gte';
@@ -28330,7 +28330,7 @@ export namespace RawRepoCountParams {
     value: number;
   }
 
-  export interface UnionMember98 {
+  export interface Contains {
     field: 'lastContributorLocations';
 
     op: 'Contains';
@@ -28338,7 +28338,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember99 {
+  export interface NotContains {
     field: 'lastContributorLocations';
 
     op: 'NotContains';
@@ -28346,7 +28346,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember100 {
+  export interface ContainsAny {
     field: 'lastContributorLocations';
 
     op: 'ContainsAny';
@@ -28354,7 +28354,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember101 {
+  export interface NotContainsAny {
     field: 'lastContributorLocations';
 
     op: 'NotContainsAny';
@@ -28362,7 +28362,7 @@ export namespace RawRepoCountParams {
     value: Array<string>;
   }
 
-  export interface UnionMember102 {
+  export interface AnyLt {
     field: 'lastContributorLocations';
 
     op: 'AnyLt';
@@ -28370,7 +28370,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember103 {
+  export interface AnyLte {
     field: 'lastContributorLocations';
 
     op: 'AnyLte';
@@ -28378,7 +28378,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember104 {
+  export interface AnyGt {
     field: 'lastContributorLocations';
 
     op: 'AnyGt';
@@ -28386,7 +28386,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember105 {
+  export interface AnyGte {
     field: 'lastContributorLocations';
 
     op: 'AnyGte';
@@ -28394,7 +28394,7 @@ export namespace RawRepoCountParams {
     value: string;
   }
 
-  export interface UnionMember106 {
+  export interface ContainsAllTokens {
     field: 'lastContributorLocations';
 
     op: 'ContainsAllTokens';
@@ -31425,151 +31425,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributes.UnionMember0
-        | Contributes.UnionMember1
-        | Contributes.UnionMember2
-        | Contributes.UnionMember3
-        | Contributes.UnionMember4
-        | Contributes.UnionMember5
-        | Contributes.UnionMember6
-        | Contributes.UnionMember7
-        | Contributes.UnionMember8
-        | Contributes.UnionMember9
-        | Contributes.UnionMember10
-        | Contributes.UnionMember11
-        | Contributes.UnionMember12
-        | Contributes.UnionMember13
-        | Contributes.UnionMember14
-        | Contributes.UnionMember15
-        | Contributes.UnionMember16
-        | Contributes.UnionMember17
-        | Contributes.UnionMember18
-        | Contributes.UnionMember19
-        | Contributes.UnionMember20
-        | Contributes.UnionMember21
-        | Contributes.UnionMember22
-        | Contributes.UnionMember23
-        | Contributes.UnionMember24
-        | Contributes.UnionMember25
-        | Contributes.UnionMember26
-        | Contributes.UnionMember27
-        | Contributes.UnionMember28
-        | Contributes.UnionMember29
-        | Contributes.UnionMember30
-        | Contributes.UnionMember31
-        | Contributes.UnionMember32
-        | Contributes.UnionMember33
-        | Contributes.UnionMember34
-        | Contributes.UnionMember35
-        | Contributes.UnionMember36
-        | Contributes.UnionMember37
-        | Contributes.UnionMember38
-        | Contributes.UnionMember39
-        | Contributes.UnionMember40
-        | Contributes.UnionMember41
-        | Contributes.UnionMember42
-        | Contributes.UnionMember43
-        | Contributes.UnionMember44
-        | Contributes.UnionMember45
-        | Contributes.UnionMember46
-        | Contributes.UnionMember47
-        | Contributes.UnionMember48
-        | Contributes.UnionMember49
-        | Contributes.UnionMember50
-        | Contributes.UnionMember51
-        | Contributes.UnionMember52
-        | Contributes.UnionMember53
-        | Contributes.UnionMember54
-        | Contributes.UnionMember55
-        | Contributes.UnionMember56
-        | Contributes.UnionMember57
-        | Contributes.UnionMember58
-        | Contributes.UnionMember59
-        | Contributes.UnionMember60
-        | Contributes.UnionMember61
-        | Contributes.UnionMember62
-        | Contributes.UnionMember63
-        | Contributes.UnionMember64
-        | Contributes.UnionMember65
-        | Contributes.UnionMember66
-        | Contributes.UnionMember67
-        | Contributes.UnionMember68
-        | Contributes.UnionMember69
-        | Contributes.UnionMember70
-        | Contributes.UnionMember71
-        | Contributes.UnionMember72
-        | Contributes.UnionMember73
-        | Contributes.UnionMember74
-        | Contributes.UnionMember75
-        | Contributes.UnionMember76
-        | Contributes.UnionMember77
-        | Contributes.UnionMember78
-        | Contributes.UnionMember79
-        | Contributes.UnionMember80
-        | Contributes.UnionMember81
-        | Contributes.UnionMember82
-        | Contributes.UnionMember83
-        | Contributes.UnionMember84
-        | Contributes.UnionMember85
-        | Contributes.UnionMember86
-        | Contributes.UnionMember87
-        | Contributes.UnionMember88
-        | Contributes.UnionMember89
-        | Contributes.UnionMember90
-        | Contributes.UnionMember91
-        | Contributes.UnionMember92
-        | Contributes.UnionMember93
-        | Contributes.UnionMember94
-        | Contributes.UnionMember95
-        | Contributes.UnionMember96
-        | Contributes.UnionMember97
-        | Contributes.UnionMember98
-        | Contributes.UnionMember99
-        | Contributes.UnionMember100
-        | Contributes.UnionMember101
-        | Contributes.UnionMember102
-        | Contributes.UnionMember103
-        | Contributes.UnionMember104
-        | Contributes.UnionMember105
-        | Contributes.UnionMember106
-        | Contributes.UnionMember107
-        | Contributes.UnionMember108
-        | Contributes.UnionMember109
-        | Contributes.UnionMember110
-        | Contributes.UnionMember111
-        | Contributes.UnionMember112
-        | Contributes.UnionMember113
-        | Contributes.UnionMember114
-        | Contributes.UnionMember115
-        | Contributes.UnionMember116
-        | Contributes.UnionMember117
-        | Contributes.UnionMember118
-        | Contributes.UnionMember119
-        | Contributes.UnionMember120
-        | Contributes.UnionMember121
-        | Contributes.UnionMember122
-        | Contributes.UnionMember123
-        | Contributes.UnionMember124
-        | Contributes.UnionMember125
-        | Contributes.UnionMember126
-        | Contributes.UnionMember127
-        | Contributes.UnionMember128
-        | Contributes.UnionMember129
-        | Contributes.UnionMember130
-        | Contributes.UnionMember131
-        | Contributes.UnionMember132
-        | Contributes.UnionMember133
-        | Contributes.UnionMember134
-        | Contributes.UnionMember135
-        | Contributes.UnionMember136
-        | Contributes.UnionMember137
-        | Contributes.UnionMember138
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
+        | Contributes.Eq
+        | Contributes.NotEq
+        | Contributes.In
+        | Contributes.NotIn
+        | Contributes.Lt
+        | Contributes.Lte
+        | Contributes.Gt
+        | Contributes.Gte
+        | Contributes.Glob
+        | Contributes.NotGlob
+        | Contributes.IGlob
+        | Contributes.NotIGlob
+        | Contributes.Regex
+        | Contributes.ContainsAllTokens
         | Contributes.UnionMember139
         | Contributes.UnionMember140;
     }
 
     export namespace Contributes {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -31577,7 +31577,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -31585,7 +31585,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -31593,7 +31593,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -31601,7 +31601,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -31609,7 +31609,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -31617,7 +31617,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -31625,7 +31625,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -31633,7 +31633,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -31641,7 +31641,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -31649,7 +31649,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -31657,7 +31657,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -31665,7 +31665,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -31673,7 +31673,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -31681,7 +31681,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -31689,7 +31689,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -31697,7 +31697,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -31705,7 +31705,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -31713,7 +31713,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -31721,7 +31721,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -31729,7 +31729,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -31737,7 +31737,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -31745,7 +31745,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -31753,7 +31753,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -31761,7 +31761,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -31769,7 +31769,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -31777,7 +31777,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -31785,7 +31785,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -31793,7 +31793,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -31801,7 +31801,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -31809,7 +31809,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -31817,7 +31817,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -31825,7 +31825,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -31833,7 +31833,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -31841,7 +31841,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -31849,7 +31849,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -31857,7 +31857,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -31865,7 +31865,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -31873,7 +31873,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -31881,7 +31881,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -31889,7 +31889,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -31897,7 +31897,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -31905,7 +31905,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -31913,7 +31913,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -31921,7 +31921,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -31929,7 +31929,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -31937,7 +31937,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -31945,7 +31945,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -31953,7 +31953,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -31961,7 +31961,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -31969,7 +31969,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -31977,7 +31977,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -31985,7 +31985,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -31993,7 +31993,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -32001,7 +32001,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -32009,7 +32009,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -32017,7 +32017,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -32025,7 +32025,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -32033,7 +32033,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -32041,7 +32041,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -32049,7 +32049,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -32057,7 +32057,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -32065,7 +32065,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -32073,7 +32073,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -32081,7 +32081,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -32089,7 +32089,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -32097,7 +32097,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -32105,7 +32105,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -32113,7 +32113,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -32121,7 +32121,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -32129,7 +32129,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -32137,7 +32137,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -32145,7 +32145,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -32153,7 +32153,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -32161,7 +32161,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -32169,7 +32169,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -32177,7 +32177,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -32185,7 +32185,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -32193,7 +32193,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -32201,7 +32201,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -32209,7 +32209,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -32217,7 +32217,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -32225,7 +32225,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -32233,7 +32233,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -32241,7 +32241,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -32249,7 +32249,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -32257,7 +32257,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -32265,7 +32265,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -32273,7 +32273,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -32281,7 +32281,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -32289,7 +32289,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -32297,7 +32297,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -32305,7 +32305,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -32313,7 +32313,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -32321,7 +32321,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -32329,7 +32329,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -32337,7 +32337,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -32345,7 +32345,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -32353,7 +32353,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -32361,7 +32361,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -32369,7 +32369,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -32377,7 +32377,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -32385,7 +32385,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -32393,7 +32393,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -32401,7 +32401,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -32409,7 +32409,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -32417,7 +32417,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -32425,7 +32425,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -32433,7 +32433,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -32441,7 +32441,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -32449,7 +32449,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -32457,7 +32457,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -32465,7 +32465,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -32473,7 +32473,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -32481,7 +32481,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -32489,7 +32489,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -32497,7 +32497,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -32505,7 +32505,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -32513,7 +32513,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -32521,7 +32521,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -32529,7 +32529,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -32537,7 +32537,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -32545,7 +32545,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -32553,7 +32553,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -32561,7 +32561,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -32569,7 +32569,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -32577,7 +32577,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -32585,7 +32585,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -32593,7 +32593,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -32601,7 +32601,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -32609,7 +32609,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -32617,7 +32617,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -32625,7 +32625,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -32633,7 +32633,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -32641,7 +32641,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -32649,7 +32649,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -32657,7 +32657,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -32665,7 +32665,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -32673,7 +32673,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -36483,151 +36483,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Contributors.UnionMember0
-        | Contributors.UnionMember1
-        | Contributors.UnionMember2
-        | Contributors.UnionMember3
-        | Contributors.UnionMember4
-        | Contributors.UnionMember5
-        | Contributors.UnionMember6
-        | Contributors.UnionMember7
-        | Contributors.UnionMember8
-        | Contributors.UnionMember9
-        | Contributors.UnionMember10
-        | Contributors.UnionMember11
-        | Contributors.UnionMember12
-        | Contributors.UnionMember13
-        | Contributors.UnionMember14
-        | Contributors.UnionMember15
-        | Contributors.UnionMember16
-        | Contributors.UnionMember17
-        | Contributors.UnionMember18
-        | Contributors.UnionMember19
-        | Contributors.UnionMember20
-        | Contributors.UnionMember21
-        | Contributors.UnionMember22
-        | Contributors.UnionMember23
-        | Contributors.UnionMember24
-        | Contributors.UnionMember25
-        | Contributors.UnionMember26
-        | Contributors.UnionMember27
-        | Contributors.UnionMember28
-        | Contributors.UnionMember29
-        | Contributors.UnionMember30
-        | Contributors.UnionMember31
-        | Contributors.UnionMember32
-        | Contributors.UnionMember33
-        | Contributors.UnionMember34
-        | Contributors.UnionMember35
-        | Contributors.UnionMember36
-        | Contributors.UnionMember37
-        | Contributors.UnionMember38
-        | Contributors.UnionMember39
-        | Contributors.UnionMember40
-        | Contributors.UnionMember41
-        | Contributors.UnionMember42
-        | Contributors.UnionMember43
-        | Contributors.UnionMember44
-        | Contributors.UnionMember45
-        | Contributors.UnionMember46
-        | Contributors.UnionMember47
-        | Contributors.UnionMember48
-        | Contributors.UnionMember49
-        | Contributors.UnionMember50
-        | Contributors.UnionMember51
-        | Contributors.UnionMember52
-        | Contributors.UnionMember53
-        | Contributors.UnionMember54
-        | Contributors.UnionMember55
-        | Contributors.UnionMember56
-        | Contributors.UnionMember57
-        | Contributors.UnionMember58
-        | Contributors.UnionMember59
-        | Contributors.UnionMember60
-        | Contributors.UnionMember61
-        | Contributors.UnionMember62
-        | Contributors.UnionMember63
-        | Contributors.UnionMember64
-        | Contributors.UnionMember65
-        | Contributors.UnionMember66
-        | Contributors.UnionMember67
-        | Contributors.UnionMember68
-        | Contributors.UnionMember69
-        | Contributors.UnionMember70
-        | Contributors.UnionMember71
-        | Contributors.UnionMember72
-        | Contributors.UnionMember73
-        | Contributors.UnionMember74
-        | Contributors.UnionMember75
-        | Contributors.UnionMember76
-        | Contributors.UnionMember77
-        | Contributors.UnionMember78
-        | Contributors.UnionMember79
-        | Contributors.UnionMember80
-        | Contributors.UnionMember81
-        | Contributors.UnionMember82
-        | Contributors.UnionMember83
-        | Contributors.UnionMember84
-        | Contributors.UnionMember85
-        | Contributors.UnionMember86
-        | Contributors.UnionMember87
-        | Contributors.UnionMember88
-        | Contributors.UnionMember89
-        | Contributors.UnionMember90
-        | Contributors.UnionMember91
-        | Contributors.UnionMember92
-        | Contributors.UnionMember93
-        | Contributors.UnionMember94
-        | Contributors.UnionMember95
-        | Contributors.UnionMember96
-        | Contributors.UnionMember97
-        | Contributors.UnionMember98
-        | Contributors.UnionMember99
-        | Contributors.UnionMember100
-        | Contributors.UnionMember101
-        | Contributors.UnionMember102
-        | Contributors.UnionMember103
-        | Contributors.UnionMember104
-        | Contributors.UnionMember105
-        | Contributors.UnionMember106
-        | Contributors.UnionMember107
-        | Contributors.UnionMember108
-        | Contributors.UnionMember109
-        | Contributors.UnionMember110
-        | Contributors.UnionMember111
-        | Contributors.UnionMember112
-        | Contributors.UnionMember113
-        | Contributors.UnionMember114
-        | Contributors.UnionMember115
-        | Contributors.UnionMember116
-        | Contributors.UnionMember117
-        | Contributors.UnionMember118
-        | Contributors.UnionMember119
-        | Contributors.UnionMember120
-        | Contributors.UnionMember121
-        | Contributors.UnionMember122
-        | Contributors.UnionMember123
-        | Contributors.UnionMember124
-        | Contributors.UnionMember125
-        | Contributors.UnionMember126
-        | Contributors.UnionMember127
-        | Contributors.UnionMember128
-        | Contributors.UnionMember129
-        | Contributors.UnionMember130
-        | Contributors.UnionMember131
-        | Contributors.UnionMember132
-        | Contributors.UnionMember133
-        | Contributors.UnionMember134
-        | Contributors.UnionMember135
-        | Contributors.UnionMember136
-        | Contributors.UnionMember137
-        | Contributors.UnionMember138
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
+        | Contributors.Eq
+        | Contributors.NotEq
+        | Contributors.In
+        | Contributors.NotIn
+        | Contributors.Lt
+        | Contributors.Lte
+        | Contributors.Gt
+        | Contributors.Gte
+        | Contributors.Glob
+        | Contributors.NotGlob
+        | Contributors.IGlob
+        | Contributors.NotIGlob
+        | Contributors.Regex
+        | Contributors.ContainsAllTokens
         | Contributors.UnionMember139
         | Contributors.UnionMember140;
     }
 
     export namespace Contributors {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -36635,7 +36635,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -36643,7 +36643,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -36651,7 +36651,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -36659,7 +36659,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -36667,7 +36667,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -36675,7 +36675,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -36683,7 +36683,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -36691,7 +36691,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -36699,7 +36699,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -36707,7 +36707,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -36715,7 +36715,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -36723,7 +36723,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -36731,7 +36731,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -36739,7 +36739,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -36747,7 +36747,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -36755,7 +36755,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -36763,7 +36763,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -36771,7 +36771,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -36779,7 +36779,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -36787,7 +36787,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -36795,7 +36795,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -36803,7 +36803,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -36811,7 +36811,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -36819,7 +36819,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -36827,7 +36827,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -36835,7 +36835,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -36843,7 +36843,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -36851,7 +36851,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -36859,7 +36859,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -36867,7 +36867,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -36875,7 +36875,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -36883,7 +36883,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -36891,7 +36891,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -36899,7 +36899,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -36907,7 +36907,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -36915,7 +36915,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -36923,7 +36923,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -36931,7 +36931,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -36939,7 +36939,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -36947,7 +36947,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -36955,7 +36955,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -36963,7 +36963,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -36971,7 +36971,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -36979,7 +36979,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -36987,7 +36987,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -36995,7 +36995,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -37003,7 +37003,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -37011,7 +37011,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -37019,7 +37019,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -37027,7 +37027,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -37035,7 +37035,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -37043,7 +37043,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -37051,7 +37051,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -37059,7 +37059,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -37067,7 +37067,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -37075,7 +37075,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -37083,7 +37083,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -37091,7 +37091,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -37099,7 +37099,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -37107,7 +37107,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -37115,7 +37115,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -37123,7 +37123,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -37131,7 +37131,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -37139,7 +37139,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -37147,7 +37147,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -37155,7 +37155,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -37163,7 +37163,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -37171,7 +37171,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -37179,7 +37179,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -37187,7 +37187,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -37195,7 +37195,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -37203,7 +37203,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -37211,7 +37211,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -37219,7 +37219,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -37227,7 +37227,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -37235,7 +37235,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -37243,7 +37243,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -37251,7 +37251,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -37259,7 +37259,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -37267,7 +37267,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -37275,7 +37275,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -37283,7 +37283,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -37291,7 +37291,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -37299,7 +37299,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -37307,7 +37307,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -37315,7 +37315,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -37323,7 +37323,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -37331,7 +37331,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -37339,7 +37339,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -37347,7 +37347,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -37355,7 +37355,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -37363,7 +37363,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -37371,7 +37371,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -37379,7 +37379,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -37387,7 +37387,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -37395,7 +37395,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -37403,7 +37403,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -37411,7 +37411,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -37419,7 +37419,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -37427,7 +37427,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -37435,7 +37435,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -37443,7 +37443,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -37451,7 +37451,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -37459,7 +37459,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -37467,7 +37467,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -37475,7 +37475,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -37483,7 +37483,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -37491,7 +37491,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -37499,7 +37499,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -37507,7 +37507,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -37515,7 +37515,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -37523,7 +37523,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -37531,7 +37531,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -37539,7 +37539,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -37547,7 +37547,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -37555,7 +37555,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -37563,7 +37563,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -37571,7 +37571,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -37579,7 +37579,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -37587,7 +37587,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -37595,7 +37595,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -37603,7 +37603,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -37611,7 +37611,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -37619,7 +37619,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -37627,7 +37627,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -37635,7 +37635,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -37643,7 +37643,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -37651,7 +37651,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -37659,7 +37659,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -37667,7 +37667,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -37675,7 +37675,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -37683,7 +37683,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -37691,7 +37691,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -37699,7 +37699,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -37707,7 +37707,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -37715,7 +37715,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -37723,7 +37723,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -37731,7 +37731,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -41541,151 +41541,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Followers.UnionMember0
-        | Followers.UnionMember1
-        | Followers.UnionMember2
-        | Followers.UnionMember3
-        | Followers.UnionMember4
-        | Followers.UnionMember5
-        | Followers.UnionMember6
-        | Followers.UnionMember7
-        | Followers.UnionMember8
-        | Followers.UnionMember9
-        | Followers.UnionMember10
-        | Followers.UnionMember11
-        | Followers.UnionMember12
-        | Followers.UnionMember13
-        | Followers.UnionMember14
-        | Followers.UnionMember15
-        | Followers.UnionMember16
-        | Followers.UnionMember17
-        | Followers.UnionMember18
-        | Followers.UnionMember19
-        | Followers.UnionMember20
-        | Followers.UnionMember21
-        | Followers.UnionMember22
-        | Followers.UnionMember23
-        | Followers.UnionMember24
-        | Followers.UnionMember25
-        | Followers.UnionMember26
-        | Followers.UnionMember27
-        | Followers.UnionMember28
-        | Followers.UnionMember29
-        | Followers.UnionMember30
-        | Followers.UnionMember31
-        | Followers.UnionMember32
-        | Followers.UnionMember33
-        | Followers.UnionMember34
-        | Followers.UnionMember35
-        | Followers.UnionMember36
-        | Followers.UnionMember37
-        | Followers.UnionMember38
-        | Followers.UnionMember39
-        | Followers.UnionMember40
-        | Followers.UnionMember41
-        | Followers.UnionMember42
-        | Followers.UnionMember43
-        | Followers.UnionMember44
-        | Followers.UnionMember45
-        | Followers.UnionMember46
-        | Followers.UnionMember47
-        | Followers.UnionMember48
-        | Followers.UnionMember49
-        | Followers.UnionMember50
-        | Followers.UnionMember51
-        | Followers.UnionMember52
-        | Followers.UnionMember53
-        | Followers.UnionMember54
-        | Followers.UnionMember55
-        | Followers.UnionMember56
-        | Followers.UnionMember57
-        | Followers.UnionMember58
-        | Followers.UnionMember59
-        | Followers.UnionMember60
-        | Followers.UnionMember61
-        | Followers.UnionMember62
-        | Followers.UnionMember63
-        | Followers.UnionMember64
-        | Followers.UnionMember65
-        | Followers.UnionMember66
-        | Followers.UnionMember67
-        | Followers.UnionMember68
-        | Followers.UnionMember69
-        | Followers.UnionMember70
-        | Followers.UnionMember71
-        | Followers.UnionMember72
-        | Followers.UnionMember73
-        | Followers.UnionMember74
-        | Followers.UnionMember75
-        | Followers.UnionMember76
-        | Followers.UnionMember77
-        | Followers.UnionMember78
-        | Followers.UnionMember79
-        | Followers.UnionMember80
-        | Followers.UnionMember81
-        | Followers.UnionMember82
-        | Followers.UnionMember83
-        | Followers.UnionMember84
-        | Followers.UnionMember85
-        | Followers.UnionMember86
-        | Followers.UnionMember87
-        | Followers.UnionMember88
-        | Followers.UnionMember89
-        | Followers.UnionMember90
-        | Followers.UnionMember91
-        | Followers.UnionMember92
-        | Followers.UnionMember93
-        | Followers.UnionMember94
-        | Followers.UnionMember95
-        | Followers.UnionMember96
-        | Followers.UnionMember97
-        | Followers.UnionMember98
-        | Followers.UnionMember99
-        | Followers.UnionMember100
-        | Followers.UnionMember101
-        | Followers.UnionMember102
-        | Followers.UnionMember103
-        | Followers.UnionMember104
-        | Followers.UnionMember105
-        | Followers.UnionMember106
-        | Followers.UnionMember107
-        | Followers.UnionMember108
-        | Followers.UnionMember109
-        | Followers.UnionMember110
-        | Followers.UnionMember111
-        | Followers.UnionMember112
-        | Followers.UnionMember113
-        | Followers.UnionMember114
-        | Followers.UnionMember115
-        | Followers.UnionMember116
-        | Followers.UnionMember117
-        | Followers.UnionMember118
-        | Followers.UnionMember119
-        | Followers.UnionMember120
-        | Followers.UnionMember121
-        | Followers.UnionMember122
-        | Followers.UnionMember123
-        | Followers.UnionMember124
-        | Followers.UnionMember125
-        | Followers.UnionMember126
-        | Followers.UnionMember127
-        | Followers.UnionMember128
-        | Followers.UnionMember129
-        | Followers.UnionMember130
-        | Followers.UnionMember131
-        | Followers.UnionMember132
-        | Followers.UnionMember133
-        | Followers.UnionMember134
-        | Followers.UnionMember135
-        | Followers.UnionMember136
-        | Followers.UnionMember137
-        | Followers.UnionMember138
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
+        | Followers.Eq
+        | Followers.NotEq
+        | Followers.In
+        | Followers.NotIn
+        | Followers.Lt
+        | Followers.Lte
+        | Followers.Gt
+        | Followers.Gte
+        | Followers.Glob
+        | Followers.NotGlob
+        | Followers.IGlob
+        | Followers.NotIGlob
+        | Followers.Regex
+        | Followers.ContainsAllTokens
         | Followers.UnionMember139
         | Followers.UnionMember140;
     }
 
     export namespace Followers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -41693,7 +41693,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -41701,7 +41701,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -41709,7 +41709,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -41717,7 +41717,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -41725,7 +41725,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -41733,7 +41733,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -41741,7 +41741,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -41749,7 +41749,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -41757,7 +41757,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -41765,7 +41765,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -41773,7 +41773,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -41781,7 +41781,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -41789,7 +41789,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -41797,7 +41797,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -41805,7 +41805,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -41813,7 +41813,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -41821,7 +41821,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -41829,7 +41829,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -41837,7 +41837,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -41845,7 +41845,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -41853,7 +41853,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -41861,7 +41861,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -41869,7 +41869,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -41877,7 +41877,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -41885,7 +41885,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -41893,7 +41893,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -41901,7 +41901,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -41909,7 +41909,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -41917,7 +41917,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -41925,7 +41925,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -41933,7 +41933,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -41941,7 +41941,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -41949,7 +41949,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -41957,7 +41957,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -41965,7 +41965,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -41973,7 +41973,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -41981,7 +41981,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -41989,7 +41989,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -41997,7 +41997,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -42005,7 +42005,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -42013,7 +42013,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -42021,7 +42021,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -42029,7 +42029,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -42037,7 +42037,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -42045,7 +42045,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -42053,7 +42053,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -42061,7 +42061,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -42069,7 +42069,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -42077,7 +42077,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -42085,7 +42085,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -42093,7 +42093,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -42101,7 +42101,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -42109,7 +42109,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -42117,7 +42117,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -42125,7 +42125,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -42133,7 +42133,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -42141,7 +42141,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -42149,7 +42149,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -42157,7 +42157,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -42165,7 +42165,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -42173,7 +42173,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -42181,7 +42181,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -42189,7 +42189,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -42197,7 +42197,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -42205,7 +42205,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -42213,7 +42213,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -42221,7 +42221,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -42229,7 +42229,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -42237,7 +42237,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -42245,7 +42245,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -42253,7 +42253,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -42261,7 +42261,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -42269,7 +42269,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -42277,7 +42277,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -42285,7 +42285,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -42293,7 +42293,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -42301,7 +42301,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -42309,7 +42309,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -42317,7 +42317,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -42325,7 +42325,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -42333,7 +42333,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -42341,7 +42341,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -42349,7 +42349,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -42357,7 +42357,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -42365,7 +42365,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -42373,7 +42373,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -42381,7 +42381,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -42389,7 +42389,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -42397,7 +42397,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -42405,7 +42405,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -42413,7 +42413,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -42421,7 +42421,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -42429,7 +42429,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -42437,7 +42437,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -42445,7 +42445,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -42453,7 +42453,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -42461,7 +42461,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -42469,7 +42469,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -42477,7 +42477,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -42485,7 +42485,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -42493,7 +42493,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -42501,7 +42501,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -42509,7 +42509,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -42517,7 +42517,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -42525,7 +42525,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -42533,7 +42533,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -42541,7 +42541,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -42549,7 +42549,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -42557,7 +42557,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -42565,7 +42565,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -42573,7 +42573,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -42581,7 +42581,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -42589,7 +42589,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -42597,7 +42597,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -42605,7 +42605,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -42613,7 +42613,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -42621,7 +42621,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -42629,7 +42629,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -42637,7 +42637,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -42645,7 +42645,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -42653,7 +42653,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -42661,7 +42661,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -42669,7 +42669,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -42677,7 +42677,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -42685,7 +42685,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -42693,7 +42693,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -42701,7 +42701,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -42709,7 +42709,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -42717,7 +42717,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -42725,7 +42725,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -42733,7 +42733,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -42741,7 +42741,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -42749,7 +42749,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -42757,7 +42757,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -42765,7 +42765,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -42773,7 +42773,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -42781,7 +42781,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -42789,7 +42789,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -46599,151 +46599,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Following.UnionMember0
-        | Following.UnionMember1
-        | Following.UnionMember2
-        | Following.UnionMember3
-        | Following.UnionMember4
-        | Following.UnionMember5
-        | Following.UnionMember6
-        | Following.UnionMember7
-        | Following.UnionMember8
-        | Following.UnionMember9
-        | Following.UnionMember10
-        | Following.UnionMember11
-        | Following.UnionMember12
-        | Following.UnionMember13
-        | Following.UnionMember14
-        | Following.UnionMember15
-        | Following.UnionMember16
-        | Following.UnionMember17
-        | Following.UnionMember18
-        | Following.UnionMember19
-        | Following.UnionMember20
-        | Following.UnionMember21
-        | Following.UnionMember22
-        | Following.UnionMember23
-        | Following.UnionMember24
-        | Following.UnionMember25
-        | Following.UnionMember26
-        | Following.UnionMember27
-        | Following.UnionMember28
-        | Following.UnionMember29
-        | Following.UnionMember30
-        | Following.UnionMember31
-        | Following.UnionMember32
-        | Following.UnionMember33
-        | Following.UnionMember34
-        | Following.UnionMember35
-        | Following.UnionMember36
-        | Following.UnionMember37
-        | Following.UnionMember38
-        | Following.UnionMember39
-        | Following.UnionMember40
-        | Following.UnionMember41
-        | Following.UnionMember42
-        | Following.UnionMember43
-        | Following.UnionMember44
-        | Following.UnionMember45
-        | Following.UnionMember46
-        | Following.UnionMember47
-        | Following.UnionMember48
-        | Following.UnionMember49
-        | Following.UnionMember50
-        | Following.UnionMember51
-        | Following.UnionMember52
-        | Following.UnionMember53
-        | Following.UnionMember54
-        | Following.UnionMember55
-        | Following.UnionMember56
-        | Following.UnionMember57
-        | Following.UnionMember58
-        | Following.UnionMember59
-        | Following.UnionMember60
-        | Following.UnionMember61
-        | Following.UnionMember62
-        | Following.UnionMember63
-        | Following.UnionMember64
-        | Following.UnionMember65
-        | Following.UnionMember66
-        | Following.UnionMember67
-        | Following.UnionMember68
-        | Following.UnionMember69
-        | Following.UnionMember70
-        | Following.UnionMember71
-        | Following.UnionMember72
-        | Following.UnionMember73
-        | Following.UnionMember74
-        | Following.UnionMember75
-        | Following.UnionMember76
-        | Following.UnionMember77
-        | Following.UnionMember78
-        | Following.UnionMember79
-        | Following.UnionMember80
-        | Following.UnionMember81
-        | Following.UnionMember82
-        | Following.UnionMember83
-        | Following.UnionMember84
-        | Following.UnionMember85
-        | Following.UnionMember86
-        | Following.UnionMember87
-        | Following.UnionMember88
-        | Following.UnionMember89
-        | Following.UnionMember90
-        | Following.UnionMember91
-        | Following.UnionMember92
-        | Following.UnionMember93
-        | Following.UnionMember94
-        | Following.UnionMember95
-        | Following.UnionMember96
-        | Following.UnionMember97
-        | Following.UnionMember98
-        | Following.UnionMember99
-        | Following.UnionMember100
-        | Following.UnionMember101
-        | Following.UnionMember102
-        | Following.UnionMember103
-        | Following.UnionMember104
-        | Following.UnionMember105
-        | Following.UnionMember106
-        | Following.UnionMember107
-        | Following.UnionMember108
-        | Following.UnionMember109
-        | Following.UnionMember110
-        | Following.UnionMember111
-        | Following.UnionMember112
-        | Following.UnionMember113
-        | Following.UnionMember114
-        | Following.UnionMember115
-        | Following.UnionMember116
-        | Following.UnionMember117
-        | Following.UnionMember118
-        | Following.UnionMember119
-        | Following.UnionMember120
-        | Following.UnionMember121
-        | Following.UnionMember122
-        | Following.UnionMember123
-        | Following.UnionMember124
-        | Following.UnionMember125
-        | Following.UnionMember126
-        | Following.UnionMember127
-        | Following.UnionMember128
-        | Following.UnionMember129
-        | Following.UnionMember130
-        | Following.UnionMember131
-        | Following.UnionMember132
-        | Following.UnionMember133
-        | Following.UnionMember134
-        | Following.UnionMember135
-        | Following.UnionMember136
-        | Following.UnionMember137
-        | Following.UnionMember138
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
+        | Following.Eq
+        | Following.NotEq
+        | Following.In
+        | Following.NotIn
+        | Following.Lt
+        | Following.Lte
+        | Following.Gt
+        | Following.Gte
+        | Following.Glob
+        | Following.NotGlob
+        | Following.IGlob
+        | Following.NotIGlob
+        | Following.Regex
+        | Following.ContainsAllTokens
         | Following.UnionMember139
         | Following.UnionMember140;
     }
 
     export namespace Following {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -46751,7 +46751,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -46759,7 +46759,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -46767,7 +46767,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -46775,7 +46775,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -46783,7 +46783,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -46791,7 +46791,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -46799,7 +46799,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -46807,7 +46807,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -46815,7 +46815,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -46823,7 +46823,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -46831,7 +46831,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -46839,7 +46839,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -46847,7 +46847,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -46855,7 +46855,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -46863,7 +46863,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -46871,7 +46871,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -46879,7 +46879,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -46887,7 +46887,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -46895,7 +46895,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -46903,7 +46903,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -46911,7 +46911,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -46919,7 +46919,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -46927,7 +46927,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -46935,7 +46935,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -46943,7 +46943,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -46951,7 +46951,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -46959,7 +46959,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -46967,7 +46967,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -46975,7 +46975,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -46983,7 +46983,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -46991,7 +46991,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -46999,7 +46999,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -47007,7 +47007,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -47015,7 +47015,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -47023,7 +47023,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -47031,7 +47031,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -47039,7 +47039,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -47047,7 +47047,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -47055,7 +47055,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -47063,7 +47063,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -47071,7 +47071,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -47079,7 +47079,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -47087,7 +47087,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -47095,7 +47095,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -47103,7 +47103,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -47111,7 +47111,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -47119,7 +47119,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -47127,7 +47127,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -47135,7 +47135,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -47143,7 +47143,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -47151,7 +47151,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -47159,7 +47159,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -47167,7 +47167,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -47175,7 +47175,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -47183,7 +47183,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -47191,7 +47191,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -47199,7 +47199,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -47207,7 +47207,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -47215,7 +47215,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -47223,7 +47223,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -47231,7 +47231,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -47239,7 +47239,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -47247,7 +47247,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -47255,7 +47255,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -47263,7 +47263,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -47271,7 +47271,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -47279,7 +47279,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -47287,7 +47287,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -47295,7 +47295,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -47303,7 +47303,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -47311,7 +47311,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -47319,7 +47319,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -47327,7 +47327,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -47335,7 +47335,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -47343,7 +47343,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -47351,7 +47351,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -47359,7 +47359,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -47367,7 +47367,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -47375,7 +47375,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -47383,7 +47383,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -47391,7 +47391,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -47399,7 +47399,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -47407,7 +47407,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -47415,7 +47415,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -47423,7 +47423,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -47431,7 +47431,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -47439,7 +47439,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -47447,7 +47447,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -47455,7 +47455,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -47463,7 +47463,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -47471,7 +47471,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -47479,7 +47479,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -47487,7 +47487,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -47495,7 +47495,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -47503,7 +47503,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -47511,7 +47511,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -47519,7 +47519,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -47527,7 +47527,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -47535,7 +47535,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -47543,7 +47543,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -47551,7 +47551,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -47559,7 +47559,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -47567,7 +47567,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -47575,7 +47575,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -47583,7 +47583,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -47591,7 +47591,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -47599,7 +47599,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -47607,7 +47607,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -47615,7 +47615,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -47623,7 +47623,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -47631,7 +47631,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -47639,7 +47639,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -47647,7 +47647,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -47655,7 +47655,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -47663,7 +47663,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -47671,7 +47671,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -47679,7 +47679,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -47687,7 +47687,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -47695,7 +47695,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -47703,7 +47703,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -47711,7 +47711,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -47719,7 +47719,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -47727,7 +47727,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -47735,7 +47735,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -47743,7 +47743,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -47751,7 +47751,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -47759,7 +47759,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -47767,7 +47767,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -47775,7 +47775,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -47783,7 +47783,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -47791,7 +47791,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -47799,7 +47799,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -47807,7 +47807,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -47815,7 +47815,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -47823,7 +47823,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -47831,7 +47831,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -47839,7 +47839,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -47847,7 +47847,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -51657,151 +51657,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Owns.UnionMember0
-        | Owns.UnionMember1
-        | Owns.UnionMember2
-        | Owns.UnionMember3
-        | Owns.UnionMember4
-        | Owns.UnionMember5
-        | Owns.UnionMember6
-        | Owns.UnionMember7
-        | Owns.UnionMember8
-        | Owns.UnionMember9
-        | Owns.UnionMember10
-        | Owns.UnionMember11
-        | Owns.UnionMember12
-        | Owns.UnionMember13
-        | Owns.UnionMember14
-        | Owns.UnionMember15
-        | Owns.UnionMember16
-        | Owns.UnionMember17
-        | Owns.UnionMember18
-        | Owns.UnionMember19
-        | Owns.UnionMember20
-        | Owns.UnionMember21
-        | Owns.UnionMember22
-        | Owns.UnionMember23
-        | Owns.UnionMember24
-        | Owns.UnionMember25
-        | Owns.UnionMember26
-        | Owns.UnionMember27
-        | Owns.UnionMember28
-        | Owns.UnionMember29
-        | Owns.UnionMember30
-        | Owns.UnionMember31
-        | Owns.UnionMember32
-        | Owns.UnionMember33
-        | Owns.UnionMember34
-        | Owns.UnionMember35
-        | Owns.UnionMember36
-        | Owns.UnionMember37
-        | Owns.UnionMember38
-        | Owns.UnionMember39
-        | Owns.UnionMember40
-        | Owns.UnionMember41
-        | Owns.UnionMember42
-        | Owns.UnionMember43
-        | Owns.UnionMember44
-        | Owns.UnionMember45
-        | Owns.UnionMember46
-        | Owns.UnionMember47
-        | Owns.UnionMember48
-        | Owns.UnionMember49
-        | Owns.UnionMember50
-        | Owns.UnionMember51
-        | Owns.UnionMember52
-        | Owns.UnionMember53
-        | Owns.UnionMember54
-        | Owns.UnionMember55
-        | Owns.UnionMember56
-        | Owns.UnionMember57
-        | Owns.UnionMember58
-        | Owns.UnionMember59
-        | Owns.UnionMember60
-        | Owns.UnionMember61
-        | Owns.UnionMember62
-        | Owns.UnionMember63
-        | Owns.UnionMember64
-        | Owns.UnionMember65
-        | Owns.UnionMember66
-        | Owns.UnionMember67
-        | Owns.UnionMember68
-        | Owns.UnionMember69
-        | Owns.UnionMember70
-        | Owns.UnionMember71
-        | Owns.UnionMember72
-        | Owns.UnionMember73
-        | Owns.UnionMember74
-        | Owns.UnionMember75
-        | Owns.UnionMember76
-        | Owns.UnionMember77
-        | Owns.UnionMember78
-        | Owns.UnionMember79
-        | Owns.UnionMember80
-        | Owns.UnionMember81
-        | Owns.UnionMember82
-        | Owns.UnionMember83
-        | Owns.UnionMember84
-        | Owns.UnionMember85
-        | Owns.UnionMember86
-        | Owns.UnionMember87
-        | Owns.UnionMember88
-        | Owns.UnionMember89
-        | Owns.UnionMember90
-        | Owns.UnionMember91
-        | Owns.UnionMember92
-        | Owns.UnionMember93
-        | Owns.UnionMember94
-        | Owns.UnionMember95
-        | Owns.UnionMember96
-        | Owns.UnionMember97
-        | Owns.UnionMember98
-        | Owns.UnionMember99
-        | Owns.UnionMember100
-        | Owns.UnionMember101
-        | Owns.UnionMember102
-        | Owns.UnionMember103
-        | Owns.UnionMember104
-        | Owns.UnionMember105
-        | Owns.UnionMember106
-        | Owns.UnionMember107
-        | Owns.UnionMember108
-        | Owns.UnionMember109
-        | Owns.UnionMember110
-        | Owns.UnionMember111
-        | Owns.UnionMember112
-        | Owns.UnionMember113
-        | Owns.UnionMember114
-        | Owns.UnionMember115
-        | Owns.UnionMember116
-        | Owns.UnionMember117
-        | Owns.UnionMember118
-        | Owns.UnionMember119
-        | Owns.UnionMember120
-        | Owns.UnionMember121
-        | Owns.UnionMember122
-        | Owns.UnionMember123
-        | Owns.UnionMember124
-        | Owns.UnionMember125
-        | Owns.UnionMember126
-        | Owns.UnionMember127
-        | Owns.UnionMember128
-        | Owns.UnionMember129
-        | Owns.UnionMember130
-        | Owns.UnionMember131
-        | Owns.UnionMember132
-        | Owns.UnionMember133
-        | Owns.UnionMember134
-        | Owns.UnionMember135
-        | Owns.UnionMember136
-        | Owns.UnionMember137
-        | Owns.UnionMember138
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
+        | Owns.Eq
+        | Owns.NotEq
+        | Owns.In
+        | Owns.NotIn
+        | Owns.Lt
+        | Owns.Lte
+        | Owns.Gt
+        | Owns.Gte
+        | Owns.Glob
+        | Owns.NotGlob
+        | Owns.IGlob
+        | Owns.NotIGlob
+        | Owns.Regex
+        | Owns.ContainsAllTokens
         | Owns.UnionMember139
         | Owns.UnionMember140;
     }
 
     export namespace Owns {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -51809,7 +51809,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -51817,7 +51817,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -51825,7 +51825,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -51833,7 +51833,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -51841,7 +51841,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -51849,7 +51849,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -51857,7 +51857,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -51865,7 +51865,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -51873,7 +51873,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -51881,7 +51881,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -51889,7 +51889,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -51897,7 +51897,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -51905,7 +51905,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -51913,7 +51913,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -51921,7 +51921,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -51929,7 +51929,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -51937,7 +51937,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -51945,7 +51945,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -51953,7 +51953,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -51961,7 +51961,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -51969,7 +51969,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -51977,7 +51977,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -51985,7 +51985,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -51993,7 +51993,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -52001,7 +52001,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -52009,7 +52009,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -52017,7 +52017,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -52025,7 +52025,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -52033,7 +52033,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -52041,7 +52041,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -52049,7 +52049,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -52057,7 +52057,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -52065,7 +52065,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -52073,7 +52073,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -52081,7 +52081,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -52089,7 +52089,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -52097,7 +52097,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -52105,7 +52105,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -52113,7 +52113,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -52121,7 +52121,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -52129,7 +52129,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -52137,7 +52137,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -52145,7 +52145,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -52153,7 +52153,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -52161,7 +52161,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -52169,7 +52169,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -52177,7 +52177,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -52185,7 +52185,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -52193,7 +52193,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -52201,7 +52201,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -52209,7 +52209,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -52217,7 +52217,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -52225,7 +52225,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -52233,7 +52233,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -52241,7 +52241,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -52249,7 +52249,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -52257,7 +52257,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -52265,7 +52265,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -52273,7 +52273,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -52281,7 +52281,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -52289,7 +52289,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -52297,7 +52297,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -52305,7 +52305,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -52313,7 +52313,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -52321,7 +52321,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -52329,7 +52329,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -52337,7 +52337,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -52345,7 +52345,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -52353,7 +52353,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -52361,7 +52361,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -52369,7 +52369,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -52377,7 +52377,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -52385,7 +52385,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -52393,7 +52393,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -52401,7 +52401,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -52409,7 +52409,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -52417,7 +52417,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -52425,7 +52425,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -52433,7 +52433,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -52441,7 +52441,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -52449,7 +52449,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -52457,7 +52457,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -52465,7 +52465,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -52473,7 +52473,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -52481,7 +52481,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -52489,7 +52489,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -52497,7 +52497,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -52505,7 +52505,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -52513,7 +52513,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -52521,7 +52521,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -52529,7 +52529,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -52537,7 +52537,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -52545,7 +52545,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -52553,7 +52553,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -52561,7 +52561,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -52569,7 +52569,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -52577,7 +52577,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -52585,7 +52585,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -52593,7 +52593,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -52601,7 +52601,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -52609,7 +52609,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -52617,7 +52617,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -52625,7 +52625,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -52633,7 +52633,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -52641,7 +52641,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -52649,7 +52649,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -52657,7 +52657,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -52665,7 +52665,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -52673,7 +52673,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -52681,7 +52681,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -52689,7 +52689,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -52697,7 +52697,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -52705,7 +52705,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -52713,7 +52713,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -52721,7 +52721,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -52729,7 +52729,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -52737,7 +52737,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -52745,7 +52745,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -52753,7 +52753,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -52761,7 +52761,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -52769,7 +52769,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -52777,7 +52777,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -52785,7 +52785,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -52793,7 +52793,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -52801,7 +52801,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -52809,7 +52809,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -52817,7 +52817,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -52825,7 +52825,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -52833,7 +52833,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -52841,7 +52841,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -52849,7 +52849,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -52857,7 +52857,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -52865,7 +52865,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -52873,7 +52873,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -52881,7 +52881,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -52889,7 +52889,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -52897,7 +52897,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -52905,7 +52905,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -56715,151 +56715,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Starrers.UnionMember0
-        | Starrers.UnionMember1
-        | Starrers.UnionMember2
-        | Starrers.UnionMember3
-        | Starrers.UnionMember4
-        | Starrers.UnionMember5
-        | Starrers.UnionMember6
-        | Starrers.UnionMember7
-        | Starrers.UnionMember8
-        | Starrers.UnionMember9
-        | Starrers.UnionMember10
-        | Starrers.UnionMember11
-        | Starrers.UnionMember12
-        | Starrers.UnionMember13
-        | Starrers.UnionMember14
-        | Starrers.UnionMember15
-        | Starrers.UnionMember16
-        | Starrers.UnionMember17
-        | Starrers.UnionMember18
-        | Starrers.UnionMember19
-        | Starrers.UnionMember20
-        | Starrers.UnionMember21
-        | Starrers.UnionMember22
-        | Starrers.UnionMember23
-        | Starrers.UnionMember24
-        | Starrers.UnionMember25
-        | Starrers.UnionMember26
-        | Starrers.UnionMember27
-        | Starrers.UnionMember28
-        | Starrers.UnionMember29
-        | Starrers.UnionMember30
-        | Starrers.UnionMember31
-        | Starrers.UnionMember32
-        | Starrers.UnionMember33
-        | Starrers.UnionMember34
-        | Starrers.UnionMember35
-        | Starrers.UnionMember36
-        | Starrers.UnionMember37
-        | Starrers.UnionMember38
-        | Starrers.UnionMember39
-        | Starrers.UnionMember40
-        | Starrers.UnionMember41
-        | Starrers.UnionMember42
-        | Starrers.UnionMember43
-        | Starrers.UnionMember44
-        | Starrers.UnionMember45
-        | Starrers.UnionMember46
-        | Starrers.UnionMember47
-        | Starrers.UnionMember48
-        | Starrers.UnionMember49
-        | Starrers.UnionMember50
-        | Starrers.UnionMember51
-        | Starrers.UnionMember52
-        | Starrers.UnionMember53
-        | Starrers.UnionMember54
-        | Starrers.UnionMember55
-        | Starrers.UnionMember56
-        | Starrers.UnionMember57
-        | Starrers.UnionMember58
-        | Starrers.UnionMember59
-        | Starrers.UnionMember60
-        | Starrers.UnionMember61
-        | Starrers.UnionMember62
-        | Starrers.UnionMember63
-        | Starrers.UnionMember64
-        | Starrers.UnionMember65
-        | Starrers.UnionMember66
-        | Starrers.UnionMember67
-        | Starrers.UnionMember68
-        | Starrers.UnionMember69
-        | Starrers.UnionMember70
-        | Starrers.UnionMember71
-        | Starrers.UnionMember72
-        | Starrers.UnionMember73
-        | Starrers.UnionMember74
-        | Starrers.UnionMember75
-        | Starrers.UnionMember76
-        | Starrers.UnionMember77
-        | Starrers.UnionMember78
-        | Starrers.UnionMember79
-        | Starrers.UnionMember80
-        | Starrers.UnionMember81
-        | Starrers.UnionMember82
-        | Starrers.UnionMember83
-        | Starrers.UnionMember84
-        | Starrers.UnionMember85
-        | Starrers.UnionMember86
-        | Starrers.UnionMember87
-        | Starrers.UnionMember88
-        | Starrers.UnionMember89
-        | Starrers.UnionMember90
-        | Starrers.UnionMember91
-        | Starrers.UnionMember92
-        | Starrers.UnionMember93
-        | Starrers.UnionMember94
-        | Starrers.UnionMember95
-        | Starrers.UnionMember96
-        | Starrers.UnionMember97
-        | Starrers.UnionMember98
-        | Starrers.UnionMember99
-        | Starrers.UnionMember100
-        | Starrers.UnionMember101
-        | Starrers.UnionMember102
-        | Starrers.UnionMember103
-        | Starrers.UnionMember104
-        | Starrers.UnionMember105
-        | Starrers.UnionMember106
-        | Starrers.UnionMember107
-        | Starrers.UnionMember108
-        | Starrers.UnionMember109
-        | Starrers.UnionMember110
-        | Starrers.UnionMember111
-        | Starrers.UnionMember112
-        | Starrers.UnionMember113
-        | Starrers.UnionMember114
-        | Starrers.UnionMember115
-        | Starrers.UnionMember116
-        | Starrers.UnionMember117
-        | Starrers.UnionMember118
-        | Starrers.UnionMember119
-        | Starrers.UnionMember120
-        | Starrers.UnionMember121
-        | Starrers.UnionMember122
-        | Starrers.UnionMember123
-        | Starrers.UnionMember124
-        | Starrers.UnionMember125
-        | Starrers.UnionMember126
-        | Starrers.UnionMember127
-        | Starrers.UnionMember128
-        | Starrers.UnionMember129
-        | Starrers.UnionMember130
-        | Starrers.UnionMember131
-        | Starrers.UnionMember132
-        | Starrers.UnionMember133
-        | Starrers.UnionMember134
-        | Starrers.UnionMember135
-        | Starrers.UnionMember136
-        | Starrers.UnionMember137
-        | Starrers.UnionMember138
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
+        | Starrers.Eq
+        | Starrers.NotEq
+        | Starrers.In
+        | Starrers.NotIn
+        | Starrers.Lt
+        | Starrers.Lte
+        | Starrers.Gt
+        | Starrers.Gte
+        | Starrers.Glob
+        | Starrers.NotGlob
+        | Starrers.IGlob
+        | Starrers.NotIGlob
+        | Starrers.Regex
+        | Starrers.ContainsAllTokens
         | Starrers.UnionMember139
         | Starrers.UnionMember140;
     }
 
     export namespace Starrers {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -56867,7 +56867,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -56875,7 +56875,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -56883,7 +56883,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -56891,7 +56891,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -56899,7 +56899,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -56907,7 +56907,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -56915,7 +56915,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -56923,7 +56923,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -56931,7 +56931,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -56939,7 +56939,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -56947,7 +56947,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -56955,7 +56955,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -56963,7 +56963,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -56971,7 +56971,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -56979,7 +56979,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -56987,7 +56987,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -56995,7 +56995,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -57003,7 +57003,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -57011,7 +57011,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -57019,7 +57019,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -57027,7 +57027,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -57035,7 +57035,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -57043,7 +57043,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -57051,7 +57051,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -57059,7 +57059,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -57067,7 +57067,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -57075,7 +57075,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -57083,7 +57083,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -57091,7 +57091,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -57099,7 +57099,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -57107,7 +57107,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -57115,7 +57115,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -57123,7 +57123,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -57131,7 +57131,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -57139,7 +57139,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -57147,7 +57147,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -57155,7 +57155,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -57163,7 +57163,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -57171,7 +57171,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -57179,7 +57179,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -57187,7 +57187,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -57195,7 +57195,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -57203,7 +57203,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -57211,7 +57211,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -57219,7 +57219,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -57227,7 +57227,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -57235,7 +57235,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -57243,7 +57243,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -57251,7 +57251,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -57259,7 +57259,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -57267,7 +57267,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -57275,7 +57275,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -57283,7 +57283,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -57291,7 +57291,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -57299,7 +57299,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -57307,7 +57307,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -57315,7 +57315,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -57323,7 +57323,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -57331,7 +57331,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -57339,7 +57339,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -57347,7 +57347,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -57355,7 +57355,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -57363,7 +57363,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -57371,7 +57371,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -57379,7 +57379,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -57387,7 +57387,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -57395,7 +57395,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -57403,7 +57403,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -57411,7 +57411,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -57419,7 +57419,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -57427,7 +57427,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -57435,7 +57435,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -57443,7 +57443,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -57451,7 +57451,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -57459,7 +57459,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -57467,7 +57467,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -57475,7 +57475,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -57483,7 +57483,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -57491,7 +57491,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -57499,7 +57499,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -57507,7 +57507,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -57515,7 +57515,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -57523,7 +57523,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -57531,7 +57531,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -57539,7 +57539,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -57547,7 +57547,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -57555,7 +57555,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -57563,7 +57563,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -57571,7 +57571,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -57579,7 +57579,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -57587,7 +57587,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -57595,7 +57595,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -57603,7 +57603,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -57611,7 +57611,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -57619,7 +57619,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -57627,7 +57627,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -57635,7 +57635,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -57643,7 +57643,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -57651,7 +57651,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -57659,7 +57659,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -57667,7 +57667,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -57675,7 +57675,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -57683,7 +57683,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -57691,7 +57691,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -57699,7 +57699,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -57707,7 +57707,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -57715,7 +57715,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -57723,7 +57723,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -57731,7 +57731,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -57739,7 +57739,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -57747,7 +57747,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -57755,7 +57755,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -57763,7 +57763,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -57771,7 +57771,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -57779,7 +57779,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -57787,7 +57787,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -57795,7 +57795,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -57803,7 +57803,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -57811,7 +57811,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -57819,7 +57819,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -57827,7 +57827,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -57835,7 +57835,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -57843,7 +57843,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -57851,7 +57851,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -57859,7 +57859,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -57867,7 +57867,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -57875,7 +57875,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -57883,7 +57883,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -57891,7 +57891,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -57899,7 +57899,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -57907,7 +57907,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -57915,7 +57915,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -57923,7 +57923,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -57931,7 +57931,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -57939,7 +57939,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -57947,7 +57947,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -57955,7 +57955,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -57963,7 +57963,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
@@ -61773,151 +61773,151 @@ export namespace RawRepoGraphParams {
        * Lt, Lte, Gt, Gte.
        */
       filters?:
-        | Stars.UnionMember0
-        | Stars.UnionMember1
-        | Stars.UnionMember2
-        | Stars.UnionMember3
-        | Stars.UnionMember4
-        | Stars.UnionMember5
-        | Stars.UnionMember6
-        | Stars.UnionMember7
-        | Stars.UnionMember8
-        | Stars.UnionMember9
-        | Stars.UnionMember10
-        | Stars.UnionMember11
-        | Stars.UnionMember12
-        | Stars.UnionMember13
-        | Stars.UnionMember14
-        | Stars.UnionMember15
-        | Stars.UnionMember16
-        | Stars.UnionMember17
-        | Stars.UnionMember18
-        | Stars.UnionMember19
-        | Stars.UnionMember20
-        | Stars.UnionMember21
-        | Stars.UnionMember22
-        | Stars.UnionMember23
-        | Stars.UnionMember24
-        | Stars.UnionMember25
-        | Stars.UnionMember26
-        | Stars.UnionMember27
-        | Stars.UnionMember28
-        | Stars.UnionMember29
-        | Stars.UnionMember30
-        | Stars.UnionMember31
-        | Stars.UnionMember32
-        | Stars.UnionMember33
-        | Stars.UnionMember34
-        | Stars.UnionMember35
-        | Stars.UnionMember36
-        | Stars.UnionMember37
-        | Stars.UnionMember38
-        | Stars.UnionMember39
-        | Stars.UnionMember40
-        | Stars.UnionMember41
-        | Stars.UnionMember42
-        | Stars.UnionMember43
-        | Stars.UnionMember44
-        | Stars.UnionMember45
-        | Stars.UnionMember46
-        | Stars.UnionMember47
-        | Stars.UnionMember48
-        | Stars.UnionMember49
-        | Stars.UnionMember50
-        | Stars.UnionMember51
-        | Stars.UnionMember52
-        | Stars.UnionMember53
-        | Stars.UnionMember54
-        | Stars.UnionMember55
-        | Stars.UnionMember56
-        | Stars.UnionMember57
-        | Stars.UnionMember58
-        | Stars.UnionMember59
-        | Stars.UnionMember60
-        | Stars.UnionMember61
-        | Stars.UnionMember62
-        | Stars.UnionMember63
-        | Stars.UnionMember64
-        | Stars.UnionMember65
-        | Stars.UnionMember66
-        | Stars.UnionMember67
-        | Stars.UnionMember68
-        | Stars.UnionMember69
-        | Stars.UnionMember70
-        | Stars.UnionMember71
-        | Stars.UnionMember72
-        | Stars.UnionMember73
-        | Stars.UnionMember74
-        | Stars.UnionMember75
-        | Stars.UnionMember76
-        | Stars.UnionMember77
-        | Stars.UnionMember78
-        | Stars.UnionMember79
-        | Stars.UnionMember80
-        | Stars.UnionMember81
-        | Stars.UnionMember82
-        | Stars.UnionMember83
-        | Stars.UnionMember84
-        | Stars.UnionMember85
-        | Stars.UnionMember86
-        | Stars.UnionMember87
-        | Stars.UnionMember88
-        | Stars.UnionMember89
-        | Stars.UnionMember90
-        | Stars.UnionMember91
-        | Stars.UnionMember92
-        | Stars.UnionMember93
-        | Stars.UnionMember94
-        | Stars.UnionMember95
-        | Stars.UnionMember96
-        | Stars.UnionMember97
-        | Stars.UnionMember98
-        | Stars.UnionMember99
-        | Stars.UnionMember100
-        | Stars.UnionMember101
-        | Stars.UnionMember102
-        | Stars.UnionMember103
-        | Stars.UnionMember104
-        | Stars.UnionMember105
-        | Stars.UnionMember106
-        | Stars.UnionMember107
-        | Stars.UnionMember108
-        | Stars.UnionMember109
-        | Stars.UnionMember110
-        | Stars.UnionMember111
-        | Stars.UnionMember112
-        | Stars.UnionMember113
-        | Stars.UnionMember114
-        | Stars.UnionMember115
-        | Stars.UnionMember116
-        | Stars.UnionMember117
-        | Stars.UnionMember118
-        | Stars.UnionMember119
-        | Stars.UnionMember120
-        | Stars.UnionMember121
-        | Stars.UnionMember122
-        | Stars.UnionMember123
-        | Stars.UnionMember124
-        | Stars.UnionMember125
-        | Stars.UnionMember126
-        | Stars.UnionMember127
-        | Stars.UnionMember128
-        | Stars.UnionMember129
-        | Stars.UnionMember130
-        | Stars.UnionMember131
-        | Stars.UnionMember132
-        | Stars.UnionMember133
-        | Stars.UnionMember134
-        | Stars.UnionMember135
-        | Stars.UnionMember136
-        | Stars.UnionMember137
-        | Stars.UnionMember138
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
+        | Stars.Eq
+        | Stars.NotEq
+        | Stars.In
+        | Stars.NotIn
+        | Stars.Lt
+        | Stars.Lte
+        | Stars.Gt
+        | Stars.Gte
+        | Stars.Glob
+        | Stars.NotGlob
+        | Stars.IGlob
+        | Stars.NotIGlob
+        | Stars.Regex
+        | Stars.ContainsAllTokens
         | Stars.UnionMember139
         | Stars.UnionMember140;
     }
 
     export namespace Stars {
-      export interface UnionMember0 {
+      export interface Eq {
         field: 'githubId';
 
         op: 'Eq';
@@ -61925,7 +61925,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember1 {
+      export interface NotEq {
         field: 'githubId';
 
         op: 'NotEq';
@@ -61933,7 +61933,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember2 {
+      export interface In {
         field: 'githubId';
 
         op: 'In';
@@ -61941,7 +61941,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember3 {
+      export interface NotIn {
         field: 'githubId';
 
         op: 'NotIn';
@@ -61949,7 +61949,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember4 {
+      export interface Lt {
         field: 'githubId';
 
         op: 'Lt';
@@ -61957,7 +61957,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember5 {
+      export interface Lte {
         field: 'githubId';
 
         op: 'Lte';
@@ -61965,7 +61965,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember6 {
+      export interface Gt {
         field: 'githubId';
 
         op: 'Gt';
@@ -61973,7 +61973,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember7 {
+      export interface Gte {
         field: 'githubId';
 
         op: 'Gte';
@@ -61981,7 +61981,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember8 {
+      export interface Glob {
         field: 'githubId';
 
         op: 'Glob';
@@ -61989,7 +61989,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember9 {
+      export interface NotGlob {
         field: 'githubId';
 
         op: 'NotGlob';
@@ -61997,7 +61997,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember10 {
+      export interface IGlob {
         field: 'githubId';
 
         op: 'IGlob';
@@ -62005,7 +62005,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember11 {
+      export interface NotIGlob {
         field: 'githubId';
 
         op: 'NotIGlob';
@@ -62013,7 +62013,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember12 {
+      export interface Regex {
         field: 'githubId';
 
         op: 'Regex';
@@ -62021,7 +62021,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember13 {
+      export interface Eq {
         field: 'login';
 
         op: 'Eq';
@@ -62029,7 +62029,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember14 {
+      export interface NotEq {
         field: 'login';
 
         op: 'NotEq';
@@ -62037,7 +62037,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember15 {
+      export interface In {
         field: 'login';
 
         op: 'In';
@@ -62045,7 +62045,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember16 {
+      export interface NotIn {
         field: 'login';
 
         op: 'NotIn';
@@ -62053,7 +62053,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember17 {
+      export interface Lt {
         field: 'login';
 
         op: 'Lt';
@@ -62061,7 +62061,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember18 {
+      export interface Lte {
         field: 'login';
 
         op: 'Lte';
@@ -62069,7 +62069,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember19 {
+      export interface Gt {
         field: 'login';
 
         op: 'Gt';
@@ -62077,7 +62077,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember20 {
+      export interface Gte {
         field: 'login';
 
         op: 'Gte';
@@ -62085,7 +62085,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember21 {
+      export interface Glob {
         field: 'login';
 
         op: 'Glob';
@@ -62093,7 +62093,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember22 {
+      export interface NotGlob {
         field: 'login';
 
         op: 'NotGlob';
@@ -62101,7 +62101,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember23 {
+      export interface IGlob {
         field: 'login';
 
         op: 'IGlob';
@@ -62109,7 +62109,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember24 {
+      export interface NotIGlob {
         field: 'login';
 
         op: 'NotIGlob';
@@ -62117,7 +62117,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember25 {
+      export interface Regex {
         field: 'login';
 
         op: 'Regex';
@@ -62125,7 +62125,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember26 {
+      export interface ContainsAllTokens {
         field: 'login';
 
         op: 'ContainsAllTokens';
@@ -62133,7 +62133,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember27 {
+      export interface Eq {
         field: 'displayName';
 
         op: 'Eq';
@@ -62141,7 +62141,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember28 {
+      export interface NotEq {
         field: 'displayName';
 
         op: 'NotEq';
@@ -62149,7 +62149,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember29 {
+      export interface In {
         field: 'displayName';
 
         op: 'In';
@@ -62157,7 +62157,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember30 {
+      export interface NotIn {
         field: 'displayName';
 
         op: 'NotIn';
@@ -62165,7 +62165,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember31 {
+      export interface Lt {
         field: 'displayName';
 
         op: 'Lt';
@@ -62173,7 +62173,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember32 {
+      export interface Lte {
         field: 'displayName';
 
         op: 'Lte';
@@ -62181,7 +62181,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember33 {
+      export interface Gt {
         field: 'displayName';
 
         op: 'Gt';
@@ -62189,7 +62189,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember34 {
+      export interface Gte {
         field: 'displayName';
 
         op: 'Gte';
@@ -62197,7 +62197,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember35 {
+      export interface Glob {
         field: 'displayName';
 
         op: 'Glob';
@@ -62205,7 +62205,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember36 {
+      export interface NotGlob {
         field: 'displayName';
 
         op: 'NotGlob';
@@ -62213,7 +62213,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember37 {
+      export interface IGlob {
         field: 'displayName';
 
         op: 'IGlob';
@@ -62221,7 +62221,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember38 {
+      export interface NotIGlob {
         field: 'displayName';
 
         op: 'NotIGlob';
@@ -62229,7 +62229,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember39 {
+      export interface Regex {
         field: 'displayName';
 
         op: 'Regex';
@@ -62237,7 +62237,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember40 {
+      export interface ContainsAllTokens {
         field: 'displayName';
 
         op: 'ContainsAllTokens';
@@ -62245,7 +62245,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember41 {
+      export interface Eq {
         field: 'bio';
 
         op: 'Eq';
@@ -62253,7 +62253,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember42 {
+      export interface NotEq {
         field: 'bio';
 
         op: 'NotEq';
@@ -62261,7 +62261,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember43 {
+      export interface In {
         field: 'bio';
 
         op: 'In';
@@ -62269,7 +62269,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember44 {
+      export interface NotIn {
         field: 'bio';
 
         op: 'NotIn';
@@ -62277,7 +62277,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember45 {
+      export interface Lt {
         field: 'bio';
 
         op: 'Lt';
@@ -62285,7 +62285,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember46 {
+      export interface Lte {
         field: 'bio';
 
         op: 'Lte';
@@ -62293,7 +62293,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember47 {
+      export interface Gt {
         field: 'bio';
 
         op: 'Gt';
@@ -62301,7 +62301,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember48 {
+      export interface Gte {
         field: 'bio';
 
         op: 'Gte';
@@ -62309,7 +62309,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember49 {
+      export interface Glob {
         field: 'bio';
 
         op: 'Glob';
@@ -62317,7 +62317,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember50 {
+      export interface NotGlob {
         field: 'bio';
 
         op: 'NotGlob';
@@ -62325,7 +62325,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember51 {
+      export interface IGlob {
         field: 'bio';
 
         op: 'IGlob';
@@ -62333,7 +62333,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember52 {
+      export interface NotIGlob {
         field: 'bio';
 
         op: 'NotIGlob';
@@ -62341,7 +62341,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember53 {
+      export interface Regex {
         field: 'bio';
 
         op: 'Regex';
@@ -62349,7 +62349,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember54 {
+      export interface ContainsAllTokens {
         field: 'bio';
 
         op: 'ContainsAllTokens';
@@ -62357,7 +62357,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember55 {
+      export interface Eq {
         field: 'company';
 
         op: 'Eq';
@@ -62365,7 +62365,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember56 {
+      export interface NotEq {
         field: 'company';
 
         op: 'NotEq';
@@ -62373,7 +62373,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember57 {
+      export interface In {
         field: 'company';
 
         op: 'In';
@@ -62381,7 +62381,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember58 {
+      export interface NotIn {
         field: 'company';
 
         op: 'NotIn';
@@ -62389,7 +62389,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember59 {
+      export interface Lt {
         field: 'company';
 
         op: 'Lt';
@@ -62397,7 +62397,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember60 {
+      export interface Lte {
         field: 'company';
 
         op: 'Lte';
@@ -62405,7 +62405,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember61 {
+      export interface Gt {
         field: 'company';
 
         op: 'Gt';
@@ -62413,7 +62413,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember62 {
+      export interface Gte {
         field: 'company';
 
         op: 'Gte';
@@ -62421,7 +62421,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember63 {
+      export interface Glob {
         field: 'company';
 
         op: 'Glob';
@@ -62429,7 +62429,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember64 {
+      export interface NotGlob {
         field: 'company';
 
         op: 'NotGlob';
@@ -62437,7 +62437,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember65 {
+      export interface IGlob {
         field: 'company';
 
         op: 'IGlob';
@@ -62445,7 +62445,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember66 {
+      export interface NotIGlob {
         field: 'company';
 
         op: 'NotIGlob';
@@ -62453,7 +62453,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember67 {
+      export interface Regex {
         field: 'company';
 
         op: 'Regex';
@@ -62461,7 +62461,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember68 {
+      export interface ContainsAllTokens {
         field: 'company';
 
         op: 'ContainsAllTokens';
@@ -62469,7 +62469,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember69 {
+      export interface Eq {
         field: 'location';
 
         op: 'Eq';
@@ -62477,7 +62477,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember70 {
+      export interface NotEq {
         field: 'location';
 
         op: 'NotEq';
@@ -62485,7 +62485,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember71 {
+      export interface In {
         field: 'location';
 
         op: 'In';
@@ -62493,7 +62493,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember72 {
+      export interface NotIn {
         field: 'location';
 
         op: 'NotIn';
@@ -62501,7 +62501,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember73 {
+      export interface Lt {
         field: 'location';
 
         op: 'Lt';
@@ -62509,7 +62509,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember74 {
+      export interface Lte {
         field: 'location';
 
         op: 'Lte';
@@ -62517,7 +62517,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember75 {
+      export interface Gt {
         field: 'location';
 
         op: 'Gt';
@@ -62525,7 +62525,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember76 {
+      export interface Gte {
         field: 'location';
 
         op: 'Gte';
@@ -62533,7 +62533,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember77 {
+      export interface Glob {
         field: 'location';
 
         op: 'Glob';
@@ -62541,7 +62541,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember78 {
+      export interface NotGlob {
         field: 'location';
 
         op: 'NotGlob';
@@ -62549,7 +62549,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember79 {
+      export interface IGlob {
         field: 'location';
 
         op: 'IGlob';
@@ -62557,7 +62557,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember80 {
+      export interface NotIGlob {
         field: 'location';
 
         op: 'NotIGlob';
@@ -62565,7 +62565,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember81 {
+      export interface Regex {
         field: 'location';
 
         op: 'Regex';
@@ -62573,7 +62573,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember82 {
+      export interface ContainsAllTokens {
         field: 'location';
 
         op: 'ContainsAllTokens';
@@ -62581,7 +62581,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember83 {
+      export interface Eq {
         field: 'emails';
 
         op: 'Eq';
@@ -62589,7 +62589,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember84 {
+      export interface NotEq {
         field: 'emails';
 
         op: 'NotEq';
@@ -62597,7 +62597,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember85 {
+      export interface In {
         field: 'emails';
 
         op: 'In';
@@ -62605,7 +62605,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember86 {
+      export interface NotIn {
         field: 'emails';
 
         op: 'NotIn';
@@ -62613,7 +62613,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember87 {
+      export interface Lt {
         field: 'emails';
 
         op: 'Lt';
@@ -62621,7 +62621,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember88 {
+      export interface Lte {
         field: 'emails';
 
         op: 'Lte';
@@ -62629,7 +62629,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember89 {
+      export interface Gt {
         field: 'emails';
 
         op: 'Gt';
@@ -62637,7 +62637,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember90 {
+      export interface Gte {
         field: 'emails';
 
         op: 'Gte';
@@ -62645,7 +62645,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember91 {
+      export interface Glob {
         field: 'emails';
 
         op: 'Glob';
@@ -62653,7 +62653,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember92 {
+      export interface NotGlob {
         field: 'emails';
 
         op: 'NotGlob';
@@ -62661,7 +62661,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember93 {
+      export interface IGlob {
         field: 'emails';
 
         op: 'IGlob';
@@ -62669,7 +62669,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember94 {
+      export interface NotIGlob {
         field: 'emails';
 
         op: 'NotIGlob';
@@ -62677,7 +62677,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember95 {
+      export interface Regex {
         field: 'emails';
 
         op: 'Regex';
@@ -62685,7 +62685,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember96 {
+      export interface ContainsAllTokens {
         field: 'emails';
 
         op: 'ContainsAllTokens';
@@ -62693,7 +62693,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember97 {
+      export interface Eq {
         field: 'resolvedCountry';
 
         op: 'Eq';
@@ -62701,7 +62701,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember98 {
+      export interface NotEq {
         field: 'resolvedCountry';
 
         op: 'NotEq';
@@ -62709,7 +62709,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember99 {
+      export interface In {
         field: 'resolvedCountry';
 
         op: 'In';
@@ -62717,7 +62717,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember100 {
+      export interface NotIn {
         field: 'resolvedCountry';
 
         op: 'NotIn';
@@ -62725,7 +62725,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember101 {
+      export interface Lt {
         field: 'resolvedCountry';
 
         op: 'Lt';
@@ -62733,7 +62733,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember102 {
+      export interface Lte {
         field: 'resolvedCountry';
 
         op: 'Lte';
@@ -62741,7 +62741,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember103 {
+      export interface Gt {
         field: 'resolvedCountry';
 
         op: 'Gt';
@@ -62749,7 +62749,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember104 {
+      export interface Gte {
         field: 'resolvedCountry';
 
         op: 'Gte';
@@ -62757,7 +62757,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember105 {
+      export interface Glob {
         field: 'resolvedCountry';
 
         op: 'Glob';
@@ -62765,7 +62765,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember106 {
+      export interface NotGlob {
         field: 'resolvedCountry';
 
         op: 'NotGlob';
@@ -62773,7 +62773,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember107 {
+      export interface IGlob {
         field: 'resolvedCountry';
 
         op: 'IGlob';
@@ -62781,7 +62781,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember108 {
+      export interface NotIGlob {
         field: 'resolvedCountry';
 
         op: 'NotIGlob';
@@ -62789,7 +62789,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember109 {
+      export interface Regex {
         field: 'resolvedCountry';
 
         op: 'Regex';
@@ -62797,7 +62797,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember110 {
+      export interface ContainsAllTokens {
         field: 'resolvedCountry';
 
         op: 'ContainsAllTokens';
@@ -62805,7 +62805,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember111 {
+      export interface Eq {
         field: 'resolvedState';
 
         op: 'Eq';
@@ -62813,7 +62813,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember112 {
+      export interface NotEq {
         field: 'resolvedState';
 
         op: 'NotEq';
@@ -62821,7 +62821,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember113 {
+      export interface In {
         field: 'resolvedState';
 
         op: 'In';
@@ -62829,7 +62829,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember114 {
+      export interface NotIn {
         field: 'resolvedState';
 
         op: 'NotIn';
@@ -62837,7 +62837,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember115 {
+      export interface Lt {
         field: 'resolvedState';
 
         op: 'Lt';
@@ -62845,7 +62845,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember116 {
+      export interface Lte {
         field: 'resolvedState';
 
         op: 'Lte';
@@ -62853,7 +62853,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember117 {
+      export interface Gt {
         field: 'resolvedState';
 
         op: 'Gt';
@@ -62861,7 +62861,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember118 {
+      export interface Gte {
         field: 'resolvedState';
 
         op: 'Gte';
@@ -62869,7 +62869,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember119 {
+      export interface Glob {
         field: 'resolvedState';
 
         op: 'Glob';
@@ -62877,7 +62877,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember120 {
+      export interface NotGlob {
         field: 'resolvedState';
 
         op: 'NotGlob';
@@ -62885,7 +62885,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember121 {
+      export interface IGlob {
         field: 'resolvedState';
 
         op: 'IGlob';
@@ -62893,7 +62893,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember122 {
+      export interface NotIGlob {
         field: 'resolvedState';
 
         op: 'NotIGlob';
@@ -62901,7 +62901,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember123 {
+      export interface Regex {
         field: 'resolvedState';
 
         op: 'Regex';
@@ -62909,7 +62909,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember124 {
+      export interface ContainsAllTokens {
         field: 'resolvedState';
 
         op: 'ContainsAllTokens';
@@ -62917,7 +62917,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember125 {
+      export interface Eq {
         field: 'resolvedCity';
 
         op: 'Eq';
@@ -62925,7 +62925,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember126 {
+      export interface NotEq {
         field: 'resolvedCity';
 
         op: 'NotEq';
@@ -62933,7 +62933,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember127 {
+      export interface In {
         field: 'resolvedCity';
 
         op: 'In';
@@ -62941,7 +62941,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember128 {
+      export interface NotIn {
         field: 'resolvedCity';
 
         op: 'NotIn';
@@ -62949,7 +62949,7 @@ export namespace RawRepoGraphParams {
         value: Array<string>;
       }
 
-      export interface UnionMember129 {
+      export interface Lt {
         field: 'resolvedCity';
 
         op: 'Lt';
@@ -62957,7 +62957,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember130 {
+      export interface Lte {
         field: 'resolvedCity';
 
         op: 'Lte';
@@ -62965,7 +62965,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember131 {
+      export interface Gt {
         field: 'resolvedCity';
 
         op: 'Gt';
@@ -62973,7 +62973,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember132 {
+      export interface Gte {
         field: 'resolvedCity';
 
         op: 'Gte';
@@ -62981,7 +62981,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember133 {
+      export interface Glob {
         field: 'resolvedCity';
 
         op: 'Glob';
@@ -62989,7 +62989,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember134 {
+      export interface NotGlob {
         field: 'resolvedCity';
 
         op: 'NotGlob';
@@ -62997,7 +62997,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember135 {
+      export interface IGlob {
         field: 'resolvedCity';
 
         op: 'IGlob';
@@ -63005,7 +63005,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember136 {
+      export interface NotIGlob {
         field: 'resolvedCity';
 
         op: 'NotIGlob';
@@ -63013,7 +63013,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember137 {
+      export interface Regex {
         field: 'resolvedCity';
 
         op: 'Regex';
@@ -63021,7 +63021,7 @@ export namespace RawRepoGraphParams {
         value: string;
       }
 
-      export interface UnionMember138 {
+      export interface ContainsAllTokens {
         field: 'resolvedCity';
 
         op: 'ContainsAllTokens';
