@@ -29,6 +29,7 @@ describe('resource searchRepos', () => {
       query:
         'Find React libraries with over 1000 stars that have good TypeScript support and are actively maintained',
       after: 'Y3Vyc29yOjEyMzQ1',
+      applyFiltersToIncludeAttributes: true,
       enablePagination: true,
       filterUserIncludeAttributes: true,
       first: 50,
@@ -76,6 +77,7 @@ describe('resource searchRepos', () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
       after: 'Y3Vyc29yOjEyMzQ1',
+      applyFiltersToIncludeAttributes: true,
       enablePagination: true,
       filters: {
         field: 'field',
