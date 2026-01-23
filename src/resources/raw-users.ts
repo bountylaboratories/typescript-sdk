@@ -38,6 +38,25 @@ export class RawUsers extends APIResource {
   }
 
   /**
+   * Count users in the database matching filters. Counts are capped at minimum (10k)
+   * and maximum (1M). Requires RAW service. Credits: 1 per request.
+   *
+   * @example
+   * ```ts
+   * const response = await client.rawUsers.count({
+   *   filters: {
+   *     field: 'githubId',
+   *     op: 'Eq',
+   *     value: 'value',
+   *   },
+   * });
+   * ```
+   */
+  count(body: RawUserCountParams, options?: RequestOptions): APIPromise<RawUserCountResponse> {
+    return this._client.post('/api/raw/users/count', { body, ...options });
+  }
+
+  /**
    * Get graph relationships for a user (followers, following, owns, stars,
    * contributes). Supports pagination and includeAttributes. Requires RAW service.
    * Credits: 1 per result + graph relationship credits if includeAttributes is
@@ -4032,6 +4051,18 @@ export namespace RawUserByLoginResponse {
       }
     }
   }
+}
+
+export interface RawUserCountResponse {
+  /**
+   * Number of matching records (may be capped or floored)
+   */
+  count: number;
+
+  /**
+   * True if count was capped at maximum or floored at minimum
+   */
+  truncated?: boolean;
 }
 
 export type RawUserGraphResponse =
@@ -60288,6 +60319,5049 @@ export namespace RawUserByLoginParams {
   }
 }
 
+export interface RawUserCountParams {
+  /**
+   * Filters to apply (required)
+   */
+  filters:
+    | RawUserCountParams.UnionMember0
+    | RawUserCountParams.UnionMember1
+    | RawUserCountParams.UnionMember2
+    | RawUserCountParams.UnionMember3
+    | RawUserCountParams.UnionMember4
+    | RawUserCountParams.UnionMember5
+    | RawUserCountParams.UnionMember6
+    | RawUserCountParams.UnionMember7
+    | RawUserCountParams.UnionMember8
+    | RawUserCountParams.UnionMember9
+    | RawUserCountParams.UnionMember10
+    | RawUserCountParams.UnionMember11
+    | RawUserCountParams.UnionMember12
+    | RawUserCountParams.UnionMember13
+    | RawUserCountParams.UnionMember14
+    | RawUserCountParams.UnionMember15
+    | RawUserCountParams.UnionMember16
+    | RawUserCountParams.UnionMember17
+    | RawUserCountParams.UnionMember18
+    | RawUserCountParams.UnionMember19
+    | RawUserCountParams.UnionMember20
+    | RawUserCountParams.UnionMember21
+    | RawUserCountParams.UnionMember22
+    | RawUserCountParams.UnionMember23
+    | RawUserCountParams.UnionMember24
+    | RawUserCountParams.UnionMember25
+    | RawUserCountParams.UnionMember26
+    | RawUserCountParams.UnionMember27
+    | RawUserCountParams.UnionMember28
+    | RawUserCountParams.UnionMember29
+    | RawUserCountParams.UnionMember30
+    | RawUserCountParams.UnionMember31
+    | RawUserCountParams.UnionMember32
+    | RawUserCountParams.UnionMember33
+    | RawUserCountParams.UnionMember34
+    | RawUserCountParams.UnionMember35
+    | RawUserCountParams.UnionMember36
+    | RawUserCountParams.UnionMember37
+    | RawUserCountParams.UnionMember38
+    | RawUserCountParams.UnionMember39
+    | RawUserCountParams.UnionMember40
+    | RawUserCountParams.UnionMember41
+    | RawUserCountParams.UnionMember42
+    | RawUserCountParams.UnionMember43
+    | RawUserCountParams.UnionMember44
+    | RawUserCountParams.UnionMember45
+    | RawUserCountParams.UnionMember46
+    | RawUserCountParams.UnionMember47
+    | RawUserCountParams.UnionMember48
+    | RawUserCountParams.UnionMember49
+    | RawUserCountParams.UnionMember50
+    | RawUserCountParams.UnionMember51
+    | RawUserCountParams.UnionMember52
+    | RawUserCountParams.UnionMember53
+    | RawUserCountParams.UnionMember54
+    | RawUserCountParams.UnionMember55
+    | RawUserCountParams.UnionMember56
+    | RawUserCountParams.UnionMember57
+    | RawUserCountParams.UnionMember58
+    | RawUserCountParams.UnionMember59
+    | RawUserCountParams.UnionMember60
+    | RawUserCountParams.UnionMember61
+    | RawUserCountParams.UnionMember62
+    | RawUserCountParams.UnionMember63
+    | RawUserCountParams.UnionMember64
+    | RawUserCountParams.UnionMember65
+    | RawUserCountParams.UnionMember66
+    | RawUserCountParams.UnionMember67
+    | RawUserCountParams.UnionMember68
+    | RawUserCountParams.UnionMember69
+    | RawUserCountParams.UnionMember70
+    | RawUserCountParams.UnionMember71
+    | RawUserCountParams.UnionMember72
+    | RawUserCountParams.UnionMember73
+    | RawUserCountParams.UnionMember74
+    | RawUserCountParams.UnionMember75
+    | RawUserCountParams.UnionMember76
+    | RawUserCountParams.UnionMember77
+    | RawUserCountParams.UnionMember78
+    | RawUserCountParams.UnionMember79
+    | RawUserCountParams.UnionMember80
+    | RawUserCountParams.UnionMember81
+    | RawUserCountParams.UnionMember82
+    | RawUserCountParams.UnionMember83
+    | RawUserCountParams.UnionMember84
+    | RawUserCountParams.UnionMember85
+    | RawUserCountParams.UnionMember86
+    | RawUserCountParams.UnionMember87
+    | RawUserCountParams.UnionMember88
+    | RawUserCountParams.UnionMember89
+    | RawUserCountParams.UnionMember90
+    | RawUserCountParams.UnionMember91
+    | RawUserCountParams.UnionMember92
+    | RawUserCountParams.UnionMember93
+    | RawUserCountParams.UnionMember94
+    | RawUserCountParams.UnionMember95
+    | RawUserCountParams.UnionMember96
+    | RawUserCountParams.UnionMember97
+    | RawUserCountParams.UnionMember98
+    | RawUserCountParams.UnionMember99
+    | RawUserCountParams.UnionMember100
+    | RawUserCountParams.UnionMember101
+    | RawUserCountParams.UnionMember102
+    | RawUserCountParams.UnionMember103
+    | RawUserCountParams.UnionMember104
+    | RawUserCountParams.UnionMember105
+    | RawUserCountParams.UnionMember106
+    | RawUserCountParams.UnionMember107
+    | RawUserCountParams.UnionMember108
+    | RawUserCountParams.UnionMember109
+    | RawUserCountParams.UnionMember110
+    | RawUserCountParams.UnionMember111
+    | RawUserCountParams.UnionMember112
+    | RawUserCountParams.UnionMember113
+    | RawUserCountParams.UnionMember114
+    | RawUserCountParams.UnionMember115
+    | RawUserCountParams.UnionMember116
+    | RawUserCountParams.UnionMember117
+    | RawUserCountParams.UnionMember118
+    | RawUserCountParams.UnionMember119
+    | RawUserCountParams.UnionMember120
+    | RawUserCountParams.UnionMember121
+    | RawUserCountParams.UnionMember122
+    | RawUserCountParams.UnionMember123
+    | RawUserCountParams.UnionMember124
+    | RawUserCountParams.UnionMember125
+    | RawUserCountParams.UnionMember126
+    | RawUserCountParams.UnionMember127
+    | RawUserCountParams.UnionMember128
+    | RawUserCountParams.UnionMember129
+    | RawUserCountParams.UnionMember130
+    | RawUserCountParams.UnionMember131
+    | RawUserCountParams.UnionMember132
+    | RawUserCountParams.UnionMember133
+    | RawUserCountParams.UnionMember134
+    | RawUserCountParams.UnionMember135
+    | RawUserCountParams.UnionMember136
+    | RawUserCountParams.UnionMember137
+    | RawUserCountParams.UnionMember138
+    | RawUserCountParams.UnionMember139
+    | RawUserCountParams.UnionMember140;
+}
+
+export namespace RawUserCountParams {
+  export interface UnionMember0 {
+    field: 'githubId';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember1 {
+    field: 'githubId';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember2 {
+    field: 'githubId';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember3 {
+    field: 'githubId';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember4 {
+    field: 'githubId';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember5 {
+    field: 'githubId';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember6 {
+    field: 'githubId';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember7 {
+    field: 'githubId';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember8 {
+    field: 'githubId';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember9 {
+    field: 'githubId';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember10 {
+    field: 'githubId';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember11 {
+    field: 'githubId';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember12 {
+    field: 'githubId';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember13 {
+    field: 'login';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember14 {
+    field: 'login';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember15 {
+    field: 'login';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember16 {
+    field: 'login';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember17 {
+    field: 'login';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember18 {
+    field: 'login';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember19 {
+    field: 'login';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember20 {
+    field: 'login';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember21 {
+    field: 'login';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember22 {
+    field: 'login';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember23 {
+    field: 'login';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember24 {
+    field: 'login';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember25 {
+    field: 'login';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember26 {
+    field: 'login';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember27 {
+    field: 'displayName';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember28 {
+    field: 'displayName';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember29 {
+    field: 'displayName';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember30 {
+    field: 'displayName';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember31 {
+    field: 'displayName';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember32 {
+    field: 'displayName';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember33 {
+    field: 'displayName';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember34 {
+    field: 'displayName';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember35 {
+    field: 'displayName';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember36 {
+    field: 'displayName';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember37 {
+    field: 'displayName';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember38 {
+    field: 'displayName';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember39 {
+    field: 'displayName';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember40 {
+    field: 'displayName';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember41 {
+    field: 'bio';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember42 {
+    field: 'bio';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember43 {
+    field: 'bio';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember44 {
+    field: 'bio';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember45 {
+    field: 'bio';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember46 {
+    field: 'bio';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember47 {
+    field: 'bio';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember48 {
+    field: 'bio';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember49 {
+    field: 'bio';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember50 {
+    field: 'bio';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember51 {
+    field: 'bio';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember52 {
+    field: 'bio';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember53 {
+    field: 'bio';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember54 {
+    field: 'bio';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember55 {
+    field: 'company';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember56 {
+    field: 'company';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember57 {
+    field: 'company';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember58 {
+    field: 'company';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember59 {
+    field: 'company';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember60 {
+    field: 'company';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember61 {
+    field: 'company';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember62 {
+    field: 'company';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember63 {
+    field: 'company';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember64 {
+    field: 'company';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember65 {
+    field: 'company';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember66 {
+    field: 'company';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember67 {
+    field: 'company';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember68 {
+    field: 'company';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember69 {
+    field: 'location';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember70 {
+    field: 'location';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember71 {
+    field: 'location';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember72 {
+    field: 'location';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember73 {
+    field: 'location';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember74 {
+    field: 'location';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember75 {
+    field: 'location';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember76 {
+    field: 'location';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember77 {
+    field: 'location';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember78 {
+    field: 'location';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember79 {
+    field: 'location';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember80 {
+    field: 'location';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember81 {
+    field: 'location';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember82 {
+    field: 'location';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember83 {
+    field: 'emails';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember84 {
+    field: 'emails';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember85 {
+    field: 'emails';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember86 {
+    field: 'emails';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember87 {
+    field: 'emails';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember88 {
+    field: 'emails';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember89 {
+    field: 'emails';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember90 {
+    field: 'emails';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember91 {
+    field: 'emails';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember92 {
+    field: 'emails';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember93 {
+    field: 'emails';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember94 {
+    field: 'emails';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember95 {
+    field: 'emails';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember96 {
+    field: 'emails';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember97 {
+    field: 'resolvedCountry';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember98 {
+    field: 'resolvedCountry';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember99 {
+    field: 'resolvedCountry';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember100 {
+    field: 'resolvedCountry';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember101 {
+    field: 'resolvedCountry';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember102 {
+    field: 'resolvedCountry';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember103 {
+    field: 'resolvedCountry';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember104 {
+    field: 'resolvedCountry';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember105 {
+    field: 'resolvedCountry';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember106 {
+    field: 'resolvedCountry';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember107 {
+    field: 'resolvedCountry';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember108 {
+    field: 'resolvedCountry';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember109 {
+    field: 'resolvedCountry';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember110 {
+    field: 'resolvedCountry';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember111 {
+    field: 'resolvedState';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember112 {
+    field: 'resolvedState';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember113 {
+    field: 'resolvedState';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember114 {
+    field: 'resolvedState';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember115 {
+    field: 'resolvedState';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember116 {
+    field: 'resolvedState';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember117 {
+    field: 'resolvedState';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember118 {
+    field: 'resolvedState';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember119 {
+    field: 'resolvedState';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember120 {
+    field: 'resolvedState';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember121 {
+    field: 'resolvedState';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember122 {
+    field: 'resolvedState';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember123 {
+    field: 'resolvedState';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember124 {
+    field: 'resolvedState';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember125 {
+    field: 'resolvedCity';
+
+    op: 'Eq';
+
+    value: string;
+  }
+
+  export interface UnionMember126 {
+    field: 'resolvedCity';
+
+    op: 'NotEq';
+
+    value: string;
+  }
+
+  export interface UnionMember127 {
+    field: 'resolvedCity';
+
+    op: 'In';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember128 {
+    field: 'resolvedCity';
+
+    op: 'NotIn';
+
+    value: Array<string>;
+  }
+
+  export interface UnionMember129 {
+    field: 'resolvedCity';
+
+    op: 'Lt';
+
+    value: string;
+  }
+
+  export interface UnionMember130 {
+    field: 'resolvedCity';
+
+    op: 'Lte';
+
+    value: string;
+  }
+
+  export interface UnionMember131 {
+    field: 'resolvedCity';
+
+    op: 'Gt';
+
+    value: string;
+  }
+
+  export interface UnionMember132 {
+    field: 'resolvedCity';
+
+    op: 'Gte';
+
+    value: string;
+  }
+
+  export interface UnionMember133 {
+    field: 'resolvedCity';
+
+    op: 'Glob';
+
+    value: string;
+  }
+
+  export interface UnionMember134 {
+    field: 'resolvedCity';
+
+    op: 'NotGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember135 {
+    field: 'resolvedCity';
+
+    op: 'IGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember136 {
+    field: 'resolvedCity';
+
+    op: 'NotIGlob';
+
+    value: string;
+  }
+
+  export interface UnionMember137 {
+    field: 'resolvedCity';
+
+    op: 'Regex';
+
+    value: string;
+  }
+
+  export interface UnionMember138 {
+    field: 'resolvedCity';
+
+    op: 'ContainsAllTokens';
+
+    value: string;
+  }
+
+  export interface UnionMember139 {
+    filters: Array<
+      | UnionMember139.UnionMember0
+      | UnionMember139.UnionMember1
+      | UnionMember139.UnionMember2
+      | UnionMember139.UnionMember3
+      | UnionMember139.UnionMember4
+      | UnionMember139.UnionMember5
+      | UnionMember139.UnionMember6
+      | UnionMember139.UnionMember7
+      | UnionMember139.UnionMember8
+      | UnionMember139.UnionMember9
+      | UnionMember139.UnionMember10
+      | UnionMember139.UnionMember11
+      | UnionMember139.UnionMember12
+      | UnionMember139.UnionMember13
+      | UnionMember139.UnionMember14
+      | UnionMember139.UnionMember15
+      | UnionMember139.UnionMember16
+      | UnionMember139.UnionMember17
+      | UnionMember139.UnionMember18
+      | UnionMember139.UnionMember19
+      | UnionMember139.UnionMember20
+      | UnionMember139.UnionMember21
+      | UnionMember139.UnionMember22
+      | UnionMember139.UnionMember23
+      | UnionMember139.UnionMember24
+      | UnionMember139.UnionMember25
+      | UnionMember139.UnionMember26
+      | UnionMember139.UnionMember27
+      | UnionMember139.UnionMember28
+      | UnionMember139.UnionMember29
+      | UnionMember139.UnionMember30
+      | UnionMember139.UnionMember31
+      | UnionMember139.UnionMember32
+      | UnionMember139.UnionMember33
+      | UnionMember139.UnionMember34
+      | UnionMember139.UnionMember35
+      | UnionMember139.UnionMember36
+      | UnionMember139.UnionMember37
+      | UnionMember139.UnionMember38
+      | UnionMember139.UnionMember39
+      | UnionMember139.UnionMember40
+      | UnionMember139.UnionMember41
+      | UnionMember139.UnionMember42
+      | UnionMember139.UnionMember43
+      | UnionMember139.UnionMember44
+      | UnionMember139.UnionMember45
+      | UnionMember139.UnionMember46
+      | UnionMember139.UnionMember47
+      | UnionMember139.UnionMember48
+      | UnionMember139.UnionMember49
+      | UnionMember139.UnionMember50
+      | UnionMember139.UnionMember51
+      | UnionMember139.UnionMember52
+      | UnionMember139.UnionMember53
+      | UnionMember139.UnionMember54
+      | UnionMember139.UnionMember55
+      | UnionMember139.UnionMember56
+      | UnionMember139.UnionMember57
+      | UnionMember139.UnionMember58
+      | UnionMember139.UnionMember59
+      | UnionMember139.UnionMember60
+      | UnionMember139.UnionMember61
+      | UnionMember139.UnionMember62
+      | UnionMember139.UnionMember63
+      | UnionMember139.UnionMember64
+      | UnionMember139.UnionMember65
+      | UnionMember139.UnionMember66
+      | UnionMember139.UnionMember67
+      | UnionMember139.UnionMember68
+      | UnionMember139.UnionMember69
+      | UnionMember139.UnionMember70
+      | UnionMember139.UnionMember71
+      | UnionMember139.UnionMember72
+      | UnionMember139.UnionMember73
+      | UnionMember139.UnionMember74
+      | UnionMember139.UnionMember75
+      | UnionMember139.UnionMember76
+      | UnionMember139.UnionMember77
+      | UnionMember139.UnionMember78
+      | UnionMember139.UnionMember79
+      | UnionMember139.UnionMember80
+      | UnionMember139.UnionMember81
+      | UnionMember139.UnionMember82
+      | UnionMember139.UnionMember83
+      | UnionMember139.UnionMember84
+      | UnionMember139.UnionMember85
+      | UnionMember139.UnionMember86
+      | UnionMember139.UnionMember87
+      | UnionMember139.UnionMember88
+      | UnionMember139.UnionMember89
+      | UnionMember139.UnionMember90
+      | UnionMember139.UnionMember91
+      | UnionMember139.UnionMember92
+      | UnionMember139.UnionMember93
+      | UnionMember139.UnionMember94
+      | UnionMember139.UnionMember95
+      | UnionMember139.UnionMember96
+      | UnionMember139.UnionMember97
+      | UnionMember139.UnionMember98
+      | UnionMember139.UnionMember99
+      | UnionMember139.UnionMember100
+      | UnionMember139.UnionMember101
+      | UnionMember139.UnionMember102
+      | UnionMember139.UnionMember103
+      | UnionMember139.UnionMember104
+      | UnionMember139.UnionMember105
+      | UnionMember139.UnionMember106
+      | UnionMember139.UnionMember107
+      | UnionMember139.UnionMember108
+      | UnionMember139.UnionMember109
+      | UnionMember139.UnionMember110
+      | UnionMember139.UnionMember111
+      | UnionMember139.UnionMember112
+      | UnionMember139.UnionMember113
+      | UnionMember139.UnionMember114
+      | UnionMember139.UnionMember115
+      | UnionMember139.UnionMember116
+      | UnionMember139.UnionMember117
+      | UnionMember139.UnionMember118
+      | UnionMember139.UnionMember119
+      | UnionMember139.UnionMember120
+      | UnionMember139.UnionMember121
+      | UnionMember139.UnionMember122
+      | UnionMember139.UnionMember123
+      | UnionMember139.UnionMember124
+      | UnionMember139.UnionMember125
+      | UnionMember139.UnionMember126
+      | UnionMember139.UnionMember127
+      | UnionMember139.UnionMember128
+      | UnionMember139.UnionMember129
+      | UnionMember139.UnionMember130
+      | UnionMember139.UnionMember131
+      | UnionMember139.UnionMember132
+      | UnionMember139.UnionMember133
+      | UnionMember139.UnionMember134
+      | UnionMember139.UnionMember135
+      | UnionMember139.UnionMember136
+      | UnionMember139.UnionMember137
+      | UnionMember139.UnionMember138
+    >;
+
+    op: 'And' | 'Or';
+  }
+
+  export namespace UnionMember139 {
+    export interface UnionMember0 {
+      field: 'githubId';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember1 {
+      field: 'githubId';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember2 {
+      field: 'githubId';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember3 {
+      field: 'githubId';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember4 {
+      field: 'githubId';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember5 {
+      field: 'githubId';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember6 {
+      field: 'githubId';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember7 {
+      field: 'githubId';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember8 {
+      field: 'githubId';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember9 {
+      field: 'githubId';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember10 {
+      field: 'githubId';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember11 {
+      field: 'githubId';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember12 {
+      field: 'githubId';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember13 {
+      field: 'login';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember14 {
+      field: 'login';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember15 {
+      field: 'login';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember16 {
+      field: 'login';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember17 {
+      field: 'login';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember18 {
+      field: 'login';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember19 {
+      field: 'login';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember20 {
+      field: 'login';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember21 {
+      field: 'login';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember22 {
+      field: 'login';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember23 {
+      field: 'login';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember24 {
+      field: 'login';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember25 {
+      field: 'login';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember26 {
+      field: 'login';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember27 {
+      field: 'displayName';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember28 {
+      field: 'displayName';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember29 {
+      field: 'displayName';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember30 {
+      field: 'displayName';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember31 {
+      field: 'displayName';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember32 {
+      field: 'displayName';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember33 {
+      field: 'displayName';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember34 {
+      field: 'displayName';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember35 {
+      field: 'displayName';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember36 {
+      field: 'displayName';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember37 {
+      field: 'displayName';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember38 {
+      field: 'displayName';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember39 {
+      field: 'displayName';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember40 {
+      field: 'displayName';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember41 {
+      field: 'bio';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember42 {
+      field: 'bio';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember43 {
+      field: 'bio';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember44 {
+      field: 'bio';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember45 {
+      field: 'bio';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember46 {
+      field: 'bio';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember47 {
+      field: 'bio';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember48 {
+      field: 'bio';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember49 {
+      field: 'bio';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember50 {
+      field: 'bio';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember51 {
+      field: 'bio';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember52 {
+      field: 'bio';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember53 {
+      field: 'bio';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember54 {
+      field: 'bio';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember55 {
+      field: 'company';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember56 {
+      field: 'company';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember57 {
+      field: 'company';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember58 {
+      field: 'company';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember59 {
+      field: 'company';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember60 {
+      field: 'company';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember61 {
+      field: 'company';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember62 {
+      field: 'company';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember63 {
+      field: 'company';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember64 {
+      field: 'company';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember65 {
+      field: 'company';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember66 {
+      field: 'company';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember67 {
+      field: 'company';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember68 {
+      field: 'company';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember69 {
+      field: 'location';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember70 {
+      field: 'location';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember71 {
+      field: 'location';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember72 {
+      field: 'location';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember73 {
+      field: 'location';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember74 {
+      field: 'location';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember75 {
+      field: 'location';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember76 {
+      field: 'location';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember77 {
+      field: 'location';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember78 {
+      field: 'location';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember79 {
+      field: 'location';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember80 {
+      field: 'location';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember81 {
+      field: 'location';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember82 {
+      field: 'location';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember83 {
+      field: 'emails';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember84 {
+      field: 'emails';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember85 {
+      field: 'emails';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember86 {
+      field: 'emails';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember87 {
+      field: 'emails';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember88 {
+      field: 'emails';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember89 {
+      field: 'emails';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember90 {
+      field: 'emails';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember91 {
+      field: 'emails';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember92 {
+      field: 'emails';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember93 {
+      field: 'emails';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember94 {
+      field: 'emails';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember95 {
+      field: 'emails';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember96 {
+      field: 'emails';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember97 {
+      field: 'resolvedCountry';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember98 {
+      field: 'resolvedCountry';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember99 {
+      field: 'resolvedCountry';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember100 {
+      field: 'resolvedCountry';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember101 {
+      field: 'resolvedCountry';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember102 {
+      field: 'resolvedCountry';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember103 {
+      field: 'resolvedCountry';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember104 {
+      field: 'resolvedCountry';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember105 {
+      field: 'resolvedCountry';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember106 {
+      field: 'resolvedCountry';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember107 {
+      field: 'resolvedCountry';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember108 {
+      field: 'resolvedCountry';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember109 {
+      field: 'resolvedCountry';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember110 {
+      field: 'resolvedCountry';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember111 {
+      field: 'resolvedState';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember112 {
+      field: 'resolvedState';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember113 {
+      field: 'resolvedState';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember114 {
+      field: 'resolvedState';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember115 {
+      field: 'resolvedState';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember116 {
+      field: 'resolvedState';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember117 {
+      field: 'resolvedState';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember118 {
+      field: 'resolvedState';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember119 {
+      field: 'resolvedState';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember120 {
+      field: 'resolvedState';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember121 {
+      field: 'resolvedState';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember122 {
+      field: 'resolvedState';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember123 {
+      field: 'resolvedState';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember124 {
+      field: 'resolvedState';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember125 {
+      field: 'resolvedCity';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember126 {
+      field: 'resolvedCity';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember127 {
+      field: 'resolvedCity';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember128 {
+      field: 'resolvedCity';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember129 {
+      field: 'resolvedCity';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember130 {
+      field: 'resolvedCity';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember131 {
+      field: 'resolvedCity';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember132 {
+      field: 'resolvedCity';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember133 {
+      field: 'resolvedCity';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember134 {
+      field: 'resolvedCity';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember135 {
+      field: 'resolvedCity';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember136 {
+      field: 'resolvedCity';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember137 {
+      field: 'resolvedCity';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember138 {
+      field: 'resolvedCity';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+  }
+
+  export interface UnionMember140 {
+    filters: Array<
+      | UnionMember140.UnionMember0
+      | UnionMember140.UnionMember1
+      | UnionMember140.UnionMember2
+      | UnionMember140.UnionMember3
+      | UnionMember140.UnionMember4
+      | UnionMember140.UnionMember5
+      | UnionMember140.UnionMember6
+      | UnionMember140.UnionMember7
+      | UnionMember140.UnionMember8
+      | UnionMember140.UnionMember9
+      | UnionMember140.UnionMember10
+      | UnionMember140.UnionMember11
+      | UnionMember140.UnionMember12
+      | UnionMember140.UnionMember13
+      | UnionMember140.UnionMember14
+      | UnionMember140.UnionMember15
+      | UnionMember140.UnionMember16
+      | UnionMember140.UnionMember17
+      | UnionMember140.UnionMember18
+      | UnionMember140.UnionMember19
+      | UnionMember140.UnionMember20
+      | UnionMember140.UnionMember21
+      | UnionMember140.UnionMember22
+      | UnionMember140.UnionMember23
+      | UnionMember140.UnionMember24
+      | UnionMember140.UnionMember25
+      | UnionMember140.UnionMember26
+      | UnionMember140.UnionMember27
+      | UnionMember140.UnionMember28
+      | UnionMember140.UnionMember29
+      | UnionMember140.UnionMember30
+      | UnionMember140.UnionMember31
+      | UnionMember140.UnionMember32
+      | UnionMember140.UnionMember33
+      | UnionMember140.UnionMember34
+      | UnionMember140.UnionMember35
+      | UnionMember140.UnionMember36
+      | UnionMember140.UnionMember37
+      | UnionMember140.UnionMember38
+      | UnionMember140.UnionMember39
+      | UnionMember140.UnionMember40
+      | UnionMember140.UnionMember41
+      | UnionMember140.UnionMember42
+      | UnionMember140.UnionMember43
+      | UnionMember140.UnionMember44
+      | UnionMember140.UnionMember45
+      | UnionMember140.UnionMember46
+      | UnionMember140.UnionMember47
+      | UnionMember140.UnionMember48
+      | UnionMember140.UnionMember49
+      | UnionMember140.UnionMember50
+      | UnionMember140.UnionMember51
+      | UnionMember140.UnionMember52
+      | UnionMember140.UnionMember53
+      | UnionMember140.UnionMember54
+      | UnionMember140.UnionMember55
+      | UnionMember140.UnionMember56
+      | UnionMember140.UnionMember57
+      | UnionMember140.UnionMember58
+      | UnionMember140.UnionMember59
+      | UnionMember140.UnionMember60
+      | UnionMember140.UnionMember61
+      | UnionMember140.UnionMember62
+      | UnionMember140.UnionMember63
+      | UnionMember140.UnionMember64
+      | UnionMember140.UnionMember65
+      | UnionMember140.UnionMember66
+      | UnionMember140.UnionMember67
+      | UnionMember140.UnionMember68
+      | UnionMember140.UnionMember69
+      | UnionMember140.UnionMember70
+      | UnionMember140.UnionMember71
+      | UnionMember140.UnionMember72
+      | UnionMember140.UnionMember73
+      | UnionMember140.UnionMember74
+      | UnionMember140.UnionMember75
+      | UnionMember140.UnionMember76
+      | UnionMember140.UnionMember77
+      | UnionMember140.UnionMember78
+      | UnionMember140.UnionMember79
+      | UnionMember140.UnionMember80
+      | UnionMember140.UnionMember81
+      | UnionMember140.UnionMember82
+      | UnionMember140.UnionMember83
+      | UnionMember140.UnionMember84
+      | UnionMember140.UnionMember85
+      | UnionMember140.UnionMember86
+      | UnionMember140.UnionMember87
+      | UnionMember140.UnionMember88
+      | UnionMember140.UnionMember89
+      | UnionMember140.UnionMember90
+      | UnionMember140.UnionMember91
+      | UnionMember140.UnionMember92
+      | UnionMember140.UnionMember93
+      | UnionMember140.UnionMember94
+      | UnionMember140.UnionMember95
+      | UnionMember140.UnionMember96
+      | UnionMember140.UnionMember97
+      | UnionMember140.UnionMember98
+      | UnionMember140.UnionMember99
+      | UnionMember140.UnionMember100
+      | UnionMember140.UnionMember101
+      | UnionMember140.UnionMember102
+      | UnionMember140.UnionMember103
+      | UnionMember140.UnionMember104
+      | UnionMember140.UnionMember105
+      | UnionMember140.UnionMember106
+      | UnionMember140.UnionMember107
+      | UnionMember140.UnionMember108
+      | UnionMember140.UnionMember109
+      | UnionMember140.UnionMember110
+      | UnionMember140.UnionMember111
+      | UnionMember140.UnionMember112
+      | UnionMember140.UnionMember113
+      | UnionMember140.UnionMember114
+      | UnionMember140.UnionMember115
+      | UnionMember140.UnionMember116
+      | UnionMember140.UnionMember117
+      | UnionMember140.UnionMember118
+      | UnionMember140.UnionMember119
+      | UnionMember140.UnionMember120
+      | UnionMember140.UnionMember121
+      | UnionMember140.UnionMember122
+      | UnionMember140.UnionMember123
+      | UnionMember140.UnionMember124
+      | UnionMember140.UnionMember125
+      | UnionMember140.UnionMember126
+      | UnionMember140.UnionMember127
+      | UnionMember140.UnionMember128
+      | UnionMember140.UnionMember129
+      | UnionMember140.UnionMember130
+      | UnionMember140.UnionMember131
+      | UnionMember140.UnionMember132
+      | UnionMember140.UnionMember133
+      | UnionMember140.UnionMember134
+      | UnionMember140.UnionMember135
+      | UnionMember140.UnionMember136
+      | UnionMember140.UnionMember137
+      | UnionMember140.UnionMember138
+      | UnionMember140.UnionMember139
+    >;
+
+    op: 'And' | 'Or';
+  }
+
+  export namespace UnionMember140 {
+    export interface UnionMember0 {
+      field: 'githubId';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember1 {
+      field: 'githubId';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember2 {
+      field: 'githubId';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember3 {
+      field: 'githubId';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember4 {
+      field: 'githubId';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember5 {
+      field: 'githubId';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember6 {
+      field: 'githubId';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember7 {
+      field: 'githubId';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember8 {
+      field: 'githubId';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember9 {
+      field: 'githubId';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember10 {
+      field: 'githubId';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember11 {
+      field: 'githubId';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember12 {
+      field: 'githubId';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember13 {
+      field: 'login';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember14 {
+      field: 'login';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember15 {
+      field: 'login';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember16 {
+      field: 'login';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember17 {
+      field: 'login';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember18 {
+      field: 'login';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember19 {
+      field: 'login';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember20 {
+      field: 'login';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember21 {
+      field: 'login';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember22 {
+      field: 'login';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember23 {
+      field: 'login';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember24 {
+      field: 'login';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember25 {
+      field: 'login';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember26 {
+      field: 'login';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember27 {
+      field: 'displayName';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember28 {
+      field: 'displayName';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember29 {
+      field: 'displayName';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember30 {
+      field: 'displayName';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember31 {
+      field: 'displayName';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember32 {
+      field: 'displayName';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember33 {
+      field: 'displayName';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember34 {
+      field: 'displayName';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember35 {
+      field: 'displayName';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember36 {
+      field: 'displayName';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember37 {
+      field: 'displayName';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember38 {
+      field: 'displayName';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember39 {
+      field: 'displayName';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember40 {
+      field: 'displayName';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember41 {
+      field: 'bio';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember42 {
+      field: 'bio';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember43 {
+      field: 'bio';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember44 {
+      field: 'bio';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember45 {
+      field: 'bio';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember46 {
+      field: 'bio';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember47 {
+      field: 'bio';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember48 {
+      field: 'bio';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember49 {
+      field: 'bio';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember50 {
+      field: 'bio';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember51 {
+      field: 'bio';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember52 {
+      field: 'bio';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember53 {
+      field: 'bio';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember54 {
+      field: 'bio';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember55 {
+      field: 'company';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember56 {
+      field: 'company';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember57 {
+      field: 'company';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember58 {
+      field: 'company';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember59 {
+      field: 'company';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember60 {
+      field: 'company';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember61 {
+      field: 'company';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember62 {
+      field: 'company';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember63 {
+      field: 'company';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember64 {
+      field: 'company';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember65 {
+      field: 'company';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember66 {
+      field: 'company';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember67 {
+      field: 'company';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember68 {
+      field: 'company';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember69 {
+      field: 'location';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember70 {
+      field: 'location';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember71 {
+      field: 'location';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember72 {
+      field: 'location';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember73 {
+      field: 'location';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember74 {
+      field: 'location';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember75 {
+      field: 'location';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember76 {
+      field: 'location';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember77 {
+      field: 'location';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember78 {
+      field: 'location';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember79 {
+      field: 'location';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember80 {
+      field: 'location';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember81 {
+      field: 'location';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember82 {
+      field: 'location';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember83 {
+      field: 'emails';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember84 {
+      field: 'emails';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember85 {
+      field: 'emails';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember86 {
+      field: 'emails';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember87 {
+      field: 'emails';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember88 {
+      field: 'emails';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember89 {
+      field: 'emails';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember90 {
+      field: 'emails';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember91 {
+      field: 'emails';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember92 {
+      field: 'emails';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember93 {
+      field: 'emails';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember94 {
+      field: 'emails';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember95 {
+      field: 'emails';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember96 {
+      field: 'emails';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember97 {
+      field: 'resolvedCountry';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember98 {
+      field: 'resolvedCountry';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember99 {
+      field: 'resolvedCountry';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember100 {
+      field: 'resolvedCountry';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember101 {
+      field: 'resolvedCountry';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember102 {
+      field: 'resolvedCountry';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember103 {
+      field: 'resolvedCountry';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember104 {
+      field: 'resolvedCountry';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember105 {
+      field: 'resolvedCountry';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember106 {
+      field: 'resolvedCountry';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember107 {
+      field: 'resolvedCountry';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember108 {
+      field: 'resolvedCountry';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember109 {
+      field: 'resolvedCountry';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember110 {
+      field: 'resolvedCountry';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember111 {
+      field: 'resolvedState';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember112 {
+      field: 'resolvedState';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember113 {
+      field: 'resolvedState';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember114 {
+      field: 'resolvedState';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember115 {
+      field: 'resolvedState';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember116 {
+      field: 'resolvedState';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember117 {
+      field: 'resolvedState';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember118 {
+      field: 'resolvedState';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember119 {
+      field: 'resolvedState';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember120 {
+      field: 'resolvedState';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember121 {
+      field: 'resolvedState';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember122 {
+      field: 'resolvedState';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember123 {
+      field: 'resolvedState';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember124 {
+      field: 'resolvedState';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember125 {
+      field: 'resolvedCity';
+
+      op: 'Eq';
+
+      value: string;
+    }
+
+    export interface UnionMember126 {
+      field: 'resolvedCity';
+
+      op: 'NotEq';
+
+      value: string;
+    }
+
+    export interface UnionMember127 {
+      field: 'resolvedCity';
+
+      op: 'In';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember128 {
+      field: 'resolvedCity';
+
+      op: 'NotIn';
+
+      value: Array<string>;
+    }
+
+    export interface UnionMember129 {
+      field: 'resolvedCity';
+
+      op: 'Lt';
+
+      value: string;
+    }
+
+    export interface UnionMember130 {
+      field: 'resolvedCity';
+
+      op: 'Lte';
+
+      value: string;
+    }
+
+    export interface UnionMember131 {
+      field: 'resolvedCity';
+
+      op: 'Gt';
+
+      value: string;
+    }
+
+    export interface UnionMember132 {
+      field: 'resolvedCity';
+
+      op: 'Gte';
+
+      value: string;
+    }
+
+    export interface UnionMember133 {
+      field: 'resolvedCity';
+
+      op: 'Glob';
+
+      value: string;
+    }
+
+    export interface UnionMember134 {
+      field: 'resolvedCity';
+
+      op: 'NotGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember135 {
+      field: 'resolvedCity';
+
+      op: 'IGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember136 {
+      field: 'resolvedCity';
+
+      op: 'NotIGlob';
+
+      value: string;
+    }
+
+    export interface UnionMember137 {
+      field: 'resolvedCity';
+
+      op: 'Regex';
+
+      value: string;
+    }
+
+    export interface UnionMember138 {
+      field: 'resolvedCity';
+
+      op: 'ContainsAllTokens';
+
+      value: string;
+    }
+
+    export interface UnionMember139 {
+      filters: Array<
+        | UnionMember139.UnionMember0
+        | UnionMember139.UnionMember1
+        | UnionMember139.UnionMember2
+        | UnionMember139.UnionMember3
+        | UnionMember139.UnionMember4
+        | UnionMember139.UnionMember5
+        | UnionMember139.UnionMember6
+        | UnionMember139.UnionMember7
+        | UnionMember139.UnionMember8
+        | UnionMember139.UnionMember9
+        | UnionMember139.UnionMember10
+        | UnionMember139.UnionMember11
+        | UnionMember139.UnionMember12
+        | UnionMember139.UnionMember13
+        | UnionMember139.UnionMember14
+        | UnionMember139.UnionMember15
+        | UnionMember139.UnionMember16
+        | UnionMember139.UnionMember17
+        | UnionMember139.UnionMember18
+        | UnionMember139.UnionMember19
+        | UnionMember139.UnionMember20
+        | UnionMember139.UnionMember21
+        | UnionMember139.UnionMember22
+        | UnionMember139.UnionMember23
+        | UnionMember139.UnionMember24
+        | UnionMember139.UnionMember25
+        | UnionMember139.UnionMember26
+        | UnionMember139.UnionMember27
+        | UnionMember139.UnionMember28
+        | UnionMember139.UnionMember29
+        | UnionMember139.UnionMember30
+        | UnionMember139.UnionMember31
+        | UnionMember139.UnionMember32
+        | UnionMember139.UnionMember33
+        | UnionMember139.UnionMember34
+        | UnionMember139.UnionMember35
+        | UnionMember139.UnionMember36
+        | UnionMember139.UnionMember37
+        | UnionMember139.UnionMember38
+        | UnionMember139.UnionMember39
+        | UnionMember139.UnionMember40
+        | UnionMember139.UnionMember41
+        | UnionMember139.UnionMember42
+        | UnionMember139.UnionMember43
+        | UnionMember139.UnionMember44
+        | UnionMember139.UnionMember45
+        | UnionMember139.UnionMember46
+        | UnionMember139.UnionMember47
+        | UnionMember139.UnionMember48
+        | UnionMember139.UnionMember49
+        | UnionMember139.UnionMember50
+        | UnionMember139.UnionMember51
+        | UnionMember139.UnionMember52
+        | UnionMember139.UnionMember53
+        | UnionMember139.UnionMember54
+        | UnionMember139.UnionMember55
+        | UnionMember139.UnionMember56
+        | UnionMember139.UnionMember57
+        | UnionMember139.UnionMember58
+        | UnionMember139.UnionMember59
+        | UnionMember139.UnionMember60
+        | UnionMember139.UnionMember61
+        | UnionMember139.UnionMember62
+        | UnionMember139.UnionMember63
+        | UnionMember139.UnionMember64
+        | UnionMember139.UnionMember65
+        | UnionMember139.UnionMember66
+        | UnionMember139.UnionMember67
+        | UnionMember139.UnionMember68
+        | UnionMember139.UnionMember69
+        | UnionMember139.UnionMember70
+        | UnionMember139.UnionMember71
+        | UnionMember139.UnionMember72
+        | UnionMember139.UnionMember73
+        | UnionMember139.UnionMember74
+        | UnionMember139.UnionMember75
+        | UnionMember139.UnionMember76
+        | UnionMember139.UnionMember77
+        | UnionMember139.UnionMember78
+        | UnionMember139.UnionMember79
+        | UnionMember139.UnionMember80
+        | UnionMember139.UnionMember81
+        | UnionMember139.UnionMember82
+        | UnionMember139.UnionMember83
+        | UnionMember139.UnionMember84
+        | UnionMember139.UnionMember85
+        | UnionMember139.UnionMember86
+        | UnionMember139.UnionMember87
+        | UnionMember139.UnionMember88
+        | UnionMember139.UnionMember89
+        | UnionMember139.UnionMember90
+        | UnionMember139.UnionMember91
+        | UnionMember139.UnionMember92
+        | UnionMember139.UnionMember93
+        | UnionMember139.UnionMember94
+        | UnionMember139.UnionMember95
+        | UnionMember139.UnionMember96
+        | UnionMember139.UnionMember97
+        | UnionMember139.UnionMember98
+        | UnionMember139.UnionMember99
+        | UnionMember139.UnionMember100
+        | UnionMember139.UnionMember101
+        | UnionMember139.UnionMember102
+        | UnionMember139.UnionMember103
+        | UnionMember139.UnionMember104
+        | UnionMember139.UnionMember105
+        | UnionMember139.UnionMember106
+        | UnionMember139.UnionMember107
+        | UnionMember139.UnionMember108
+        | UnionMember139.UnionMember109
+        | UnionMember139.UnionMember110
+        | UnionMember139.UnionMember111
+        | UnionMember139.UnionMember112
+        | UnionMember139.UnionMember113
+        | UnionMember139.UnionMember114
+        | UnionMember139.UnionMember115
+        | UnionMember139.UnionMember116
+        | UnionMember139.UnionMember117
+        | UnionMember139.UnionMember118
+        | UnionMember139.UnionMember119
+        | UnionMember139.UnionMember120
+        | UnionMember139.UnionMember121
+        | UnionMember139.UnionMember122
+        | UnionMember139.UnionMember123
+        | UnionMember139.UnionMember124
+        | UnionMember139.UnionMember125
+        | UnionMember139.UnionMember126
+        | UnionMember139.UnionMember127
+        | UnionMember139.UnionMember128
+        | UnionMember139.UnionMember129
+        | UnionMember139.UnionMember130
+        | UnionMember139.UnionMember131
+        | UnionMember139.UnionMember132
+        | UnionMember139.UnionMember133
+        | UnionMember139.UnionMember134
+        | UnionMember139.UnionMember135
+        | UnionMember139.UnionMember136
+        | UnionMember139.UnionMember137
+        | UnionMember139.UnionMember138
+      >;
+
+      op: 'And' | 'Or';
+    }
+
+    export namespace UnionMember139 {
+      export interface UnionMember0 {
+        field: 'githubId';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember1 {
+        field: 'githubId';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember2 {
+        field: 'githubId';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember3 {
+        field: 'githubId';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember4 {
+        field: 'githubId';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember5 {
+        field: 'githubId';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember6 {
+        field: 'githubId';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember7 {
+        field: 'githubId';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember8 {
+        field: 'githubId';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember9 {
+        field: 'githubId';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember10 {
+        field: 'githubId';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember11 {
+        field: 'githubId';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember12 {
+        field: 'githubId';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember13 {
+        field: 'login';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember14 {
+        field: 'login';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember15 {
+        field: 'login';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember16 {
+        field: 'login';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember17 {
+        field: 'login';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember18 {
+        field: 'login';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember19 {
+        field: 'login';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember20 {
+        field: 'login';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember21 {
+        field: 'login';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember22 {
+        field: 'login';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember23 {
+        field: 'login';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember24 {
+        field: 'login';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember25 {
+        field: 'login';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember26 {
+        field: 'login';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember27 {
+        field: 'displayName';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember28 {
+        field: 'displayName';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember29 {
+        field: 'displayName';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember30 {
+        field: 'displayName';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember31 {
+        field: 'displayName';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember32 {
+        field: 'displayName';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember33 {
+        field: 'displayName';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember34 {
+        field: 'displayName';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember35 {
+        field: 'displayName';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember36 {
+        field: 'displayName';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember37 {
+        field: 'displayName';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember38 {
+        field: 'displayName';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember39 {
+        field: 'displayName';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember40 {
+        field: 'displayName';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember41 {
+        field: 'bio';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember42 {
+        field: 'bio';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember43 {
+        field: 'bio';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember44 {
+        field: 'bio';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember45 {
+        field: 'bio';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember46 {
+        field: 'bio';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember47 {
+        field: 'bio';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember48 {
+        field: 'bio';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember49 {
+        field: 'bio';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember50 {
+        field: 'bio';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember51 {
+        field: 'bio';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember52 {
+        field: 'bio';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember53 {
+        field: 'bio';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember54 {
+        field: 'bio';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember55 {
+        field: 'company';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember56 {
+        field: 'company';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember57 {
+        field: 'company';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember58 {
+        field: 'company';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember59 {
+        field: 'company';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember60 {
+        field: 'company';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember61 {
+        field: 'company';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember62 {
+        field: 'company';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember63 {
+        field: 'company';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember64 {
+        field: 'company';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember65 {
+        field: 'company';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember66 {
+        field: 'company';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember67 {
+        field: 'company';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember68 {
+        field: 'company';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember69 {
+        field: 'location';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember70 {
+        field: 'location';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember71 {
+        field: 'location';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember72 {
+        field: 'location';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember73 {
+        field: 'location';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember74 {
+        field: 'location';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember75 {
+        field: 'location';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember76 {
+        field: 'location';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember77 {
+        field: 'location';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember78 {
+        field: 'location';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember79 {
+        field: 'location';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember80 {
+        field: 'location';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember81 {
+        field: 'location';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember82 {
+        field: 'location';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember83 {
+        field: 'emails';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember84 {
+        field: 'emails';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember85 {
+        field: 'emails';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember86 {
+        field: 'emails';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember87 {
+        field: 'emails';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember88 {
+        field: 'emails';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember89 {
+        field: 'emails';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember90 {
+        field: 'emails';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember91 {
+        field: 'emails';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember92 {
+        field: 'emails';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember93 {
+        field: 'emails';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember94 {
+        field: 'emails';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember95 {
+        field: 'emails';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember96 {
+        field: 'emails';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember97 {
+        field: 'resolvedCountry';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember98 {
+        field: 'resolvedCountry';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember99 {
+        field: 'resolvedCountry';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember100 {
+        field: 'resolvedCountry';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember101 {
+        field: 'resolvedCountry';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember102 {
+        field: 'resolvedCountry';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember103 {
+        field: 'resolvedCountry';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember104 {
+        field: 'resolvedCountry';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember105 {
+        field: 'resolvedCountry';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember106 {
+        field: 'resolvedCountry';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember107 {
+        field: 'resolvedCountry';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember108 {
+        field: 'resolvedCountry';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember109 {
+        field: 'resolvedCountry';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember110 {
+        field: 'resolvedCountry';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember111 {
+        field: 'resolvedState';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember112 {
+        field: 'resolvedState';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember113 {
+        field: 'resolvedState';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember114 {
+        field: 'resolvedState';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember115 {
+        field: 'resolvedState';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember116 {
+        field: 'resolvedState';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember117 {
+        field: 'resolvedState';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember118 {
+        field: 'resolvedState';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember119 {
+        field: 'resolvedState';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember120 {
+        field: 'resolvedState';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember121 {
+        field: 'resolvedState';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember122 {
+        field: 'resolvedState';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember123 {
+        field: 'resolvedState';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember124 {
+        field: 'resolvedState';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+
+      export interface UnionMember125 {
+        field: 'resolvedCity';
+
+        op: 'Eq';
+
+        value: string;
+      }
+
+      export interface UnionMember126 {
+        field: 'resolvedCity';
+
+        op: 'NotEq';
+
+        value: string;
+      }
+
+      export interface UnionMember127 {
+        field: 'resolvedCity';
+
+        op: 'In';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember128 {
+        field: 'resolvedCity';
+
+        op: 'NotIn';
+
+        value: Array<string>;
+      }
+
+      export interface UnionMember129 {
+        field: 'resolvedCity';
+
+        op: 'Lt';
+
+        value: string;
+      }
+
+      export interface UnionMember130 {
+        field: 'resolvedCity';
+
+        op: 'Lte';
+
+        value: string;
+      }
+
+      export interface UnionMember131 {
+        field: 'resolvedCity';
+
+        op: 'Gt';
+
+        value: string;
+      }
+
+      export interface UnionMember132 {
+        field: 'resolvedCity';
+
+        op: 'Gte';
+
+        value: string;
+      }
+
+      export interface UnionMember133 {
+        field: 'resolvedCity';
+
+        op: 'Glob';
+
+        value: string;
+      }
+
+      export interface UnionMember134 {
+        field: 'resolvedCity';
+
+        op: 'NotGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember135 {
+        field: 'resolvedCity';
+
+        op: 'IGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember136 {
+        field: 'resolvedCity';
+
+        op: 'NotIGlob';
+
+        value: string;
+      }
+
+      export interface UnionMember137 {
+        field: 'resolvedCity';
+
+        op: 'Regex';
+
+        value: string;
+      }
+
+      export interface UnionMember138 {
+        field: 'resolvedCity';
+
+        op: 'ContainsAllTokens';
+
+        value: string;
+      }
+    }
+  }
+}
+
 export interface RawUserGraphParams {
   /**
    * Path param: GitHub node ID or BountyLab ID of the user
@@ -95785,9 +100859,11 @@ export declare namespace RawUsers {
   export {
     type RawUserRetrieveResponse as RawUserRetrieveResponse,
     type RawUserByLoginResponse as RawUserByLoginResponse,
+    type RawUserCountResponse as RawUserCountResponse,
     type RawUserGraphResponse as RawUserGraphResponse,
     type RawUserRetrieveParams as RawUserRetrieveParams,
     type RawUserByLoginParams as RawUserByLoginParams,
+    type RawUserCountParams as RawUserCountParams,
     type RawUserGraphParams as RawUserGraphParams,
   };
 }
