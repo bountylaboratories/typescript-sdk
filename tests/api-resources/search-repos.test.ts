@@ -78,9 +78,9 @@ describe('resource searchRepos', () => {
       after: 'Y3Vyc29yOjEyMzQ1',
       enablePagination: true,
       filters: {
-        field: 'language',
+        field: 'githubId',
         op: 'Eq',
-        value: 'TypeScript',
+        value: 'value',
       },
       first: 50,
       includeAttributes: {
