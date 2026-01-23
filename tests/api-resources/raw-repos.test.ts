@@ -31,9 +31,9 @@ describe('resource rawRepos', () => {
           first: 10,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         owner: true,
@@ -42,9 +42,9 @@ describe('resource rawRepos', () => {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
       },
@@ -74,9 +74,9 @@ describe('resource rawRepos', () => {
           first: 10,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         owner: true,
@@ -85,9 +85,9 @@ describe('resource rawRepos', () => {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
       },
@@ -98,9 +98,9 @@ describe('resource rawRepos', () => {
   test.skip('count: only required params', async () => {
     const responsePromise = client.rawRepos.count({
       filters: {
-        field: 'githubId',
+        field: 'field',
         op: 'Eq',
-        value: 'value',
+        value: 'string',
       },
     });
     const rawResponse = await responsePromise.asResponse();
@@ -116,9 +116,9 @@ describe('resource rawRepos', () => {
   test.skip('count: required and optional params', async () => {
     const response = await client.rawRepos.count({
       filters: {
-        field: 'githubId',
+        field: 'field',
         op: 'Eq',
-        value: 'value',
+        value: 'string',
       },
     });
   });
@@ -146,18 +146,18 @@ describe('resource rawRepos', () => {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         contributors: {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         devrank: true,
@@ -165,18 +165,18 @@ describe('resource rawRepos', () => {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         following: {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         owner: true,
@@ -185,27 +185,27 @@ describe('resource rawRepos', () => {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         starrers: {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
         stars: {
           first: 1,
           after: 'after',
           filters: {
-            field: 'githubId',
+            field: 'field',
             op: 'Eq',
-            value: 'value',
+            value: 'string',
           },
         },
       },
