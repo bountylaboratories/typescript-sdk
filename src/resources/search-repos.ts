@@ -16943,21 +16943,7 @@ export interface SearchRepoSearchParams {
   enablePagination?: boolean;
 
   /**
-   * Optional filters for narrowing search results. Supports filtering on: githubId,
-   * ownerLogin, ownerLocation, name, stargazerCount, language, totalIssuesCount,
-   * totalIssuesOpen, totalIssuesClosed, lastContributorLocations.
-   *
-   * Filter structure:
-   *
-   * - Field filters: { field: "fieldName", op: "Eq"|"In"|"Gte"|"Lte", value:
-   *   string|number|array }
-   * - Composite filters: { op: "And"|"Or", filters: [...] }
-   *
-   * Supported operators:
-   *
-   * - String fields: Eq (exact match), In (one of array)
-   * - Number fields: Eq (exact), In (one of array), Gte (>=), Lte (<=)
-   * - Use And/Or to combine multiple filters
+   * Filters to apply (required)
    */
   filters?:
     | SearchRepoSearchParams.UnionMember0
@@ -17068,8 +17054,7 @@ export interface SearchRepoSearchParams {
     | SearchRepoSearchParams.UnionMember105
     | SearchRepoSearchParams.UnionMember106
     | SearchRepoSearchParams.UnionMember107
-    | SearchRepoSearchParams.UnionMember108
-    | null;
+    | SearchRepoSearchParams.UnionMember108;
 
   /**
    * Alias for maxResults (takes precedence if both provided)

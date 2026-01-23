@@ -60321,7 +60321,9 @@ export namespace RawUserByLoginParams {
 
 export interface RawUserCountParams {
   /**
-   * Filters to apply (required)
+   * Optional filters for users. Supports fields like login, company, location,
+   * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+   * Lt, Lte, Gt, Gte.
    */
   filters:
     | RawUserCountParams.UnionMember0

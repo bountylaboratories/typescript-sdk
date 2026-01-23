@@ -29446,22 +29446,9 @@ export interface SearchUserSearchParams {
   enablePagination?: boolean;
 
   /**
-   * Optional filters for narrowing search results. Supports filtering on: githubId,
-   * login, displayName, bio, company, location, emails, resolvedCountry,
-   * resolvedState, resolvedCity.
-   *
-   * Full-text searchable fields (automatically searched): login, displayName, bio,
-   * company, location, emails, resolvedCountry, resolvedState, resolvedCity.
-   *
-   * Filter structure:
-   *
-   * - Field filters: { field: "fieldName", op: "Eq"|"In", value: string|string[] }
-   * - Composite filters: { op: "And"|"Or", filters: [...] }
-   *
-   * Supported operators:
-   *
-   * - String fields: Eq (exact match), In (one of array)
-   * - Use And/Or to combine multiple filters
+   * Optional filters for users. Supports fields like login, company, location,
+   * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+   * Lt, Lte, Gt, Gte.
    */
   filters?:
     | SearchUserSearchParams.UnionMember0
@@ -29604,8 +29591,7 @@ export interface SearchUserSearchParams {
     | SearchUserSearchParams.UnionMember137
     | SearchUserSearchParams.UnionMember138
     | SearchUserSearchParams.UnionMember139
-    | SearchUserSearchParams.UnionMember140
-    | null;
+    | SearchUserSearchParams.UnionMember140;
 
   /**
    * Alias for maxResults (takes precedence if both provided)
