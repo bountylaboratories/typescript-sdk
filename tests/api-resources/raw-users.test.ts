@@ -62,6 +62,7 @@ describe('resource rawUsers', () => {
             value: 'string',
           },
         },
+        professional: true,
         stars: {
           first: 10,
           after: 'after',
@@ -129,6 +130,7 @@ describe('resource rawUsers', () => {
             value: 'string',
           },
         },
+        professional: true,
         stars: {
           first: 10,
           after: 'after',
@@ -229,6 +231,7 @@ describe('resource rawUsers', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         owns: {
           first: 1,
           after: 'after',
@@ -238,6 +241,7 @@ describe('resource rawUsers', () => {
             value: 'string',
           },
         },
+        professional: true,
         starrers: {
           first: 1,
           after: 'after',

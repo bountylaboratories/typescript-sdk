@@ -38,6 +38,7 @@ describe('resource rawRepos', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -81,6 +82,7 @@ describe('resource rawRepos', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -181,6 +183,7 @@ describe('resource rawRepos', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         owns: {
           first: 1,
           after: 'after',
@@ -190,6 +193,7 @@ describe('resource rawRepos', () => {
             value: 'string',
           },
         },
+        professional: true,
         starrers: {
           first: 1,
           after: 'after',

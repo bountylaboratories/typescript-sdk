@@ -45,6 +45,7 @@ describe('resource searchRepos', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -97,6 +98,7 @@ describe('resource searchRepos', () => {
         },
         owner: true,
         ownerDevrank: true,
+        ownerProfessional: true,
         starrers: {
           first: 1,
           after: 'after',
