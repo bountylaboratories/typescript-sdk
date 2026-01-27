@@ -67,6 +67,7 @@ describe('resource searchUsers', () => {
             value: 'string',
           },
         },
+        professional: true,
         stars: {
           first: 10,
           after: 'after',
@@ -143,6 +144,7 @@ describe('resource searchUsers', () => {
             value: 'string',
           },
         },
+        professional: true,
         stars: {
           first: 10,
           after: 'after',

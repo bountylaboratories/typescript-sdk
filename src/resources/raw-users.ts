@@ -129,7 +129,7 @@ export namespace RawUserRetrieveResponse {
     createdAt?: string | null;
 
     /**
-     * Developer ranking data (only present when fetched from devrank endpoints)
+     * Developer ranking data (only present when includeAttributes.devrank = true)
      */
     devrank?: User.Devrank;
 
@@ -169,6 +169,12 @@ export namespace RawUserRetrieveResponse {
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
     owns?: User.Owns;
+
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    professional?: User.Professional;
 
     /**
      * Resolved city from location
@@ -309,6 +315,12 @@ export namespace RawUserRetrieveResponse {
          * true)
          */
         ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
 
         /**
          * Preview of repository README (first ~500 chars)
@@ -588,6 +600,218 @@ export namespace RawUserRetrieveResponse {
         }
 
         /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
+        }
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         export interface Starrers {
@@ -734,7 +958,7 @@ export namespace RawUserRetrieveResponse {
     }
 
     /**
-     * Developer ranking data (only present when fetched from devrank endpoints)
+     * Developer ranking data (only present when includeAttributes.devrank = true)
      */
     export interface Devrank {
       community: number;
@@ -1115,6 +1339,12 @@ export namespace RawUserRetrieveResponse {
         ownerDevrank?: Edge.OwnerDevrank;
 
         /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -1389,6 +1619,218 @@ export namespace RawUserRetrieveResponse {
           trust: number;
 
           updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
         }
 
         /**
@@ -1537,6 +1979,218 @@ export namespace RawUserRetrieveResponse {
       }
     }
 
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    export interface Professional {
+      /**
+       * Professional awards
+       */
+      awards: Array<string> | null;
+
+      /**
+       * Professional certifications
+       */
+      certifications: Array<string> | null;
+
+      /**
+       * City
+       */
+      city: string | null;
+
+      /**
+       * Number of LinkedIn connections
+       */
+      connectionsCount: number | null;
+
+      /**
+       * Country
+       */
+      country: string | null;
+
+      /**
+       * Current industry sector
+       */
+      currentIndustry: string | null;
+
+      /**
+       * Departments worked in
+       */
+      departments: Array<string> | null;
+
+      /**
+       * Education history
+       */
+      education: Array<Professional.Education>;
+
+      /**
+       * Work experience history
+       */
+      experience: Array<Professional.Experience>;
+
+      /**
+       * Areas of expertise
+       */
+      expertise: Array<string> | null;
+
+      /**
+       * First name
+       */
+      firstName: string | null;
+
+      /**
+       * Number of LinkedIn followers
+       */
+      followerCount: number | null;
+
+      /**
+       * Functional area (e.g., Engineering, Product)
+       */
+      functionalArea: string | null;
+
+      /**
+       * Professional headline
+       */
+      headline: string | null;
+
+      /**
+       * Languages spoken
+       */
+      languages: Array<string> | null;
+
+      /**
+       * Last name
+       */
+      lastName: string | null;
+
+      /**
+       * LinkedIn profile URL
+       */
+      linkedinUrl: string;
+
+      /**
+       * Full location string
+       */
+      location: string | null;
+
+      /**
+       * Professional organization memberships
+       */
+      memberships: Array<string> | null;
+
+      /**
+       * Current organization/company
+       */
+      organization: string | null;
+
+      /**
+       * Patents held
+       */
+      patents: Array<string> | null;
+
+      /**
+       * Previous industries worked in
+       */
+      priorIndustries: Array<string> | null;
+
+      /**
+       * Publications authored
+       */
+      publications: Array<string> | null;
+
+      /**
+       * Seniority classification
+       */
+      seniority: string | null;
+
+      /**
+       * Seniority level (e.g., Senior, Manager)
+       */
+      seniorityLevel: string | null;
+
+      /**
+       * State or province
+       */
+      state: string | null;
+
+      /**
+       * Current job title
+       */
+      title: string | null;
+    }
+
+    export namespace Professional {
+      export interface Education {
+        /**
+         * Name of the educational institution
+         */
+        campus: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format)
+         */
+        endDate: string | null;
+
+        /**
+         * Field of study or degree program
+         */
+        major: string | null;
+
+        /**
+         * Area of specialization
+         */
+        specialization: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+      }
+
+      export interface Experience {
+        /**
+         * Company or organization name
+         */
+        company: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format, null if current)
+         */
+        endDate: string | null;
+
+        /**
+         * Industry sector
+         */
+        industry: string | null;
+
+        /**
+         * Whether this is the current position
+         */
+        isCurrent: boolean | null;
+
+        /**
+         * Work location
+         */
+        location: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+
+        /**
+         * Description of role and responsibilities
+         */
+        summary: string | null;
+
+        /**
+         * Job title or position
+         */
+        title: string | null;
+      }
+    }
+
     export interface SocialAccount {
       provider: string;
 
@@ -1640,6 +2294,12 @@ export namespace RawUserRetrieveResponse {
          * true)
          */
         ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
 
         /**
          * Preview of repository README (first ~500 chars)
@@ -1916,6 +2576,218 @@ export namespace RawUserRetrieveResponse {
           trust: number;
 
           updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
         }
 
         /**
@@ -2116,7 +2988,7 @@ export namespace RawUserByLoginResponse {
     createdAt?: string | null;
 
     /**
-     * Developer ranking data (only present when fetched from devrank endpoints)
+     * Developer ranking data (only present when includeAttributes.devrank = true)
      */
     devrank?: User.Devrank;
 
@@ -2156,6 +3028,12 @@ export namespace RawUserByLoginResponse {
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
     owns?: User.Owns;
+
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    professional?: User.Professional;
 
     /**
      * Resolved city from location
@@ -2296,6 +3174,12 @@ export namespace RawUserByLoginResponse {
          * true)
          */
         ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
 
         /**
          * Preview of repository README (first ~500 chars)
@@ -2575,6 +3459,218 @@ export namespace RawUserByLoginResponse {
         }
 
         /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
+        }
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         export interface Starrers {
@@ -2721,7 +3817,7 @@ export namespace RawUserByLoginResponse {
     }
 
     /**
-     * Developer ranking data (only present when fetched from devrank endpoints)
+     * Developer ranking data (only present when includeAttributes.devrank = true)
      */
     export interface Devrank {
       community: number;
@@ -3102,6 +4198,12 @@ export namespace RawUserByLoginResponse {
         ownerDevrank?: Edge.OwnerDevrank;
 
         /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
+
+        /**
          * Preview of repository README (first ~500 chars)
          */
         readmePreview?: string | null;
@@ -3376,6 +4478,218 @@ export namespace RawUserByLoginResponse {
           trust: number;
 
           updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
         }
 
         /**
@@ -3524,6 +4838,218 @@ export namespace RawUserByLoginResponse {
       }
     }
 
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    export interface Professional {
+      /**
+       * Professional awards
+       */
+      awards: Array<string> | null;
+
+      /**
+       * Professional certifications
+       */
+      certifications: Array<string> | null;
+
+      /**
+       * City
+       */
+      city: string | null;
+
+      /**
+       * Number of LinkedIn connections
+       */
+      connectionsCount: number | null;
+
+      /**
+       * Country
+       */
+      country: string | null;
+
+      /**
+       * Current industry sector
+       */
+      currentIndustry: string | null;
+
+      /**
+       * Departments worked in
+       */
+      departments: Array<string> | null;
+
+      /**
+       * Education history
+       */
+      education: Array<Professional.Education>;
+
+      /**
+       * Work experience history
+       */
+      experience: Array<Professional.Experience>;
+
+      /**
+       * Areas of expertise
+       */
+      expertise: Array<string> | null;
+
+      /**
+       * First name
+       */
+      firstName: string | null;
+
+      /**
+       * Number of LinkedIn followers
+       */
+      followerCount: number | null;
+
+      /**
+       * Functional area (e.g., Engineering, Product)
+       */
+      functionalArea: string | null;
+
+      /**
+       * Professional headline
+       */
+      headline: string | null;
+
+      /**
+       * Languages spoken
+       */
+      languages: Array<string> | null;
+
+      /**
+       * Last name
+       */
+      lastName: string | null;
+
+      /**
+       * LinkedIn profile URL
+       */
+      linkedinUrl: string;
+
+      /**
+       * Full location string
+       */
+      location: string | null;
+
+      /**
+       * Professional organization memberships
+       */
+      memberships: Array<string> | null;
+
+      /**
+       * Current organization/company
+       */
+      organization: string | null;
+
+      /**
+       * Patents held
+       */
+      patents: Array<string> | null;
+
+      /**
+       * Previous industries worked in
+       */
+      priorIndustries: Array<string> | null;
+
+      /**
+       * Publications authored
+       */
+      publications: Array<string> | null;
+
+      /**
+       * Seniority classification
+       */
+      seniority: string | null;
+
+      /**
+       * Seniority level (e.g., Senior, Manager)
+       */
+      seniorityLevel: string | null;
+
+      /**
+       * State or province
+       */
+      state: string | null;
+
+      /**
+       * Current job title
+       */
+      title: string | null;
+    }
+
+    export namespace Professional {
+      export interface Education {
+        /**
+         * Name of the educational institution
+         */
+        campus: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format)
+         */
+        endDate: string | null;
+
+        /**
+         * Field of study or degree program
+         */
+        major: string | null;
+
+        /**
+         * Area of specialization
+         */
+        specialization: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+      }
+
+      export interface Experience {
+        /**
+         * Company or organization name
+         */
+        company: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format, null if current)
+         */
+        endDate: string | null;
+
+        /**
+         * Industry sector
+         */
+        industry: string | null;
+
+        /**
+         * Whether this is the current position
+         */
+        isCurrent: boolean | null;
+
+        /**
+         * Work location
+         */
+        location: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+
+        /**
+         * Description of role and responsibilities
+         */
+        summary: string | null;
+
+        /**
+         * Job title or position
+         */
+        title: string | null;
+      }
+    }
+
     export interface SocialAccount {
       provider: string;
 
@@ -3627,6 +5153,12 @@ export namespace RawUserByLoginResponse {
          * true)
          */
         ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
 
         /**
          * Preview of repository README (first ~500 chars)
@@ -3903,6 +5435,218 @@ export namespace RawUserByLoginResponse {
           trust: number;
 
           updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
         }
 
         /**
@@ -4138,7 +5882,7 @@ export namespace RawUserGraphResponse {
       createdAt?: string | null;
 
       /**
-       * Developer ranking data (only present when fetched from devrank endpoints)
+       * Developer ranking data (only present when includeAttributes.devrank = true)
        */
       devrank?: User.Devrank;
 
@@ -4178,6 +5922,12 @@ export namespace RawUserGraphResponse {
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
       owns?: User.Owns;
+
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      professional?: User.Professional;
 
       /**
        * Resolved city from location
@@ -4318,6 +6068,12 @@ export namespace RawUserGraphResponse {
            * true)
            */
           ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
 
           /**
            * Preview of repository README (first ~500 chars)
@@ -4597,6 +6353,218 @@ export namespace RawUserGraphResponse {
           }
 
           /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
+          }
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           export interface Starrers {
@@ -4743,7 +6711,7 @@ export namespace RawUserGraphResponse {
       }
 
       /**
-       * Developer ranking data (only present when fetched from devrank endpoints)
+       * Developer ranking data (only present when includeAttributes.devrank = true)
        */
       export interface Devrank {
         community: number;
@@ -5124,6 +7092,12 @@ export namespace RawUserGraphResponse {
           ownerDevrank?: Edge.OwnerDevrank;
 
           /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -5398,6 +7372,218 @@ export namespace RawUserGraphResponse {
             trust: number;
 
             updatedAt: string;
+          }
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
           }
 
           /**
@@ -5546,6 +7732,218 @@ export namespace RawUserGraphResponse {
         }
       }
 
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      export interface Professional {
+        /**
+         * Professional awards
+         */
+        awards: Array<string> | null;
+
+        /**
+         * Professional certifications
+         */
+        certifications: Array<string> | null;
+
+        /**
+         * City
+         */
+        city: string | null;
+
+        /**
+         * Number of LinkedIn connections
+         */
+        connectionsCount: number | null;
+
+        /**
+         * Country
+         */
+        country: string | null;
+
+        /**
+         * Current industry sector
+         */
+        currentIndustry: string | null;
+
+        /**
+         * Departments worked in
+         */
+        departments: Array<string> | null;
+
+        /**
+         * Education history
+         */
+        education: Array<Professional.Education>;
+
+        /**
+         * Work experience history
+         */
+        experience: Array<Professional.Experience>;
+
+        /**
+         * Areas of expertise
+         */
+        expertise: Array<string> | null;
+
+        /**
+         * First name
+         */
+        firstName: string | null;
+
+        /**
+         * Number of LinkedIn followers
+         */
+        followerCount: number | null;
+
+        /**
+         * Functional area (e.g., Engineering, Product)
+         */
+        functionalArea: string | null;
+
+        /**
+         * Professional headline
+         */
+        headline: string | null;
+
+        /**
+         * Languages spoken
+         */
+        languages: Array<string> | null;
+
+        /**
+         * Last name
+         */
+        lastName: string | null;
+
+        /**
+         * LinkedIn profile URL
+         */
+        linkedinUrl: string;
+
+        /**
+         * Full location string
+         */
+        location: string | null;
+
+        /**
+         * Professional organization memberships
+         */
+        memberships: Array<string> | null;
+
+        /**
+         * Current organization/company
+         */
+        organization: string | null;
+
+        /**
+         * Patents held
+         */
+        patents: Array<string> | null;
+
+        /**
+         * Previous industries worked in
+         */
+        priorIndustries: Array<string> | null;
+
+        /**
+         * Publications authored
+         */
+        publications: Array<string> | null;
+
+        /**
+         * Seniority classification
+         */
+        seniority: string | null;
+
+        /**
+         * Seniority level (e.g., Senior, Manager)
+         */
+        seniorityLevel: string | null;
+
+        /**
+         * State or province
+         */
+        state: string | null;
+
+        /**
+         * Current job title
+         */
+        title: string | null;
+      }
+
+      export namespace Professional {
+        export interface Education {
+          /**
+           * Name of the educational institution
+           */
+          campus: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format)
+           */
+          endDate: string | null;
+
+          /**
+           * Field of study or degree program
+           */
+          major: string | null;
+
+          /**
+           * Area of specialization
+           */
+          specialization: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+        }
+
+        export interface Experience {
+          /**
+           * Company or organization name
+           */
+          company: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format, null if current)
+           */
+          endDate: string | null;
+
+          /**
+           * Industry sector
+           */
+          industry: string | null;
+
+          /**
+           * Whether this is the current position
+           */
+          isCurrent: boolean | null;
+
+          /**
+           * Work location
+           */
+          location: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+
+          /**
+           * Description of role and responsibilities
+           */
+          summary: string | null;
+
+          /**
+           * Job title or position
+           */
+          title: string | null;
+        }
+      }
+
       export interface SocialAccount {
         provider: string;
 
@@ -5649,6 +8047,12 @@ export namespace RawUserGraphResponse {
            * true)
            */
           ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
 
           /**
            * Preview of repository README (first ~500 chars)
@@ -5925,6 +8329,218 @@ export namespace RawUserGraphResponse {
             trust: number;
 
             updatedAt: string;
+          }
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
           }
 
           /**
@@ -6140,7 +8756,7 @@ export namespace RawUserGraphResponse {
       createdAt?: string | null;
 
       /**
-       * Developer ranking data (only present when fetched from devrank endpoints)
+       * Developer ranking data (only present when includeAttributes.devrank = true)
        */
       devrank?: User.Devrank;
 
@@ -6180,6 +8796,12 @@ export namespace RawUserGraphResponse {
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
       owns?: User.Owns;
+
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      professional?: User.Professional;
 
       /**
        * Resolved city from location
@@ -6320,6 +8942,12 @@ export namespace RawUserGraphResponse {
            * true)
            */
           ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
 
           /**
            * Preview of repository README (first ~500 chars)
@@ -6599,6 +9227,218 @@ export namespace RawUserGraphResponse {
           }
 
           /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
+          }
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           export interface Starrers {
@@ -6745,7 +9585,7 @@ export namespace RawUserGraphResponse {
       }
 
       /**
-       * Developer ranking data (only present when fetched from devrank endpoints)
+       * Developer ranking data (only present when includeAttributes.devrank = true)
        */
       export interface Devrank {
         community: number;
@@ -7126,6 +9966,12 @@ export namespace RawUserGraphResponse {
           ownerDevrank?: Edge.OwnerDevrank;
 
           /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
+
+          /**
            * Preview of repository README (first ~500 chars)
            */
           readmePreview?: string | null;
@@ -7400,6 +10246,218 @@ export namespace RawUserGraphResponse {
             trust: number;
 
             updatedAt: string;
+          }
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
           }
 
           /**
@@ -7548,6 +10606,218 @@ export namespace RawUserGraphResponse {
         }
       }
 
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      export interface Professional {
+        /**
+         * Professional awards
+         */
+        awards: Array<string> | null;
+
+        /**
+         * Professional certifications
+         */
+        certifications: Array<string> | null;
+
+        /**
+         * City
+         */
+        city: string | null;
+
+        /**
+         * Number of LinkedIn connections
+         */
+        connectionsCount: number | null;
+
+        /**
+         * Country
+         */
+        country: string | null;
+
+        /**
+         * Current industry sector
+         */
+        currentIndustry: string | null;
+
+        /**
+         * Departments worked in
+         */
+        departments: Array<string> | null;
+
+        /**
+         * Education history
+         */
+        education: Array<Professional.Education>;
+
+        /**
+         * Work experience history
+         */
+        experience: Array<Professional.Experience>;
+
+        /**
+         * Areas of expertise
+         */
+        expertise: Array<string> | null;
+
+        /**
+         * First name
+         */
+        firstName: string | null;
+
+        /**
+         * Number of LinkedIn followers
+         */
+        followerCount: number | null;
+
+        /**
+         * Functional area (e.g., Engineering, Product)
+         */
+        functionalArea: string | null;
+
+        /**
+         * Professional headline
+         */
+        headline: string | null;
+
+        /**
+         * Languages spoken
+         */
+        languages: Array<string> | null;
+
+        /**
+         * Last name
+         */
+        lastName: string | null;
+
+        /**
+         * LinkedIn profile URL
+         */
+        linkedinUrl: string;
+
+        /**
+         * Full location string
+         */
+        location: string | null;
+
+        /**
+         * Professional organization memberships
+         */
+        memberships: Array<string> | null;
+
+        /**
+         * Current organization/company
+         */
+        organization: string | null;
+
+        /**
+         * Patents held
+         */
+        patents: Array<string> | null;
+
+        /**
+         * Previous industries worked in
+         */
+        priorIndustries: Array<string> | null;
+
+        /**
+         * Publications authored
+         */
+        publications: Array<string> | null;
+
+        /**
+         * Seniority classification
+         */
+        seniority: string | null;
+
+        /**
+         * Seniority level (e.g., Senior, Manager)
+         */
+        seniorityLevel: string | null;
+
+        /**
+         * State or province
+         */
+        state: string | null;
+
+        /**
+         * Current job title
+         */
+        title: string | null;
+      }
+
+      export namespace Professional {
+        export interface Education {
+          /**
+           * Name of the educational institution
+           */
+          campus: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format)
+           */
+          endDate: string | null;
+
+          /**
+           * Field of study or degree program
+           */
+          major: string | null;
+
+          /**
+           * Area of specialization
+           */
+          specialization: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+        }
+
+        export interface Experience {
+          /**
+           * Company or organization name
+           */
+          company: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format, null if current)
+           */
+          endDate: string | null;
+
+          /**
+           * Industry sector
+           */
+          industry: string | null;
+
+          /**
+           * Whether this is the current position
+           */
+          isCurrent: boolean | null;
+
+          /**
+           * Work location
+           */
+          location: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+
+          /**
+           * Description of role and responsibilities
+           */
+          summary: string | null;
+
+          /**
+           * Job title or position
+           */
+          title: string | null;
+        }
+      }
+
       export interface SocialAccount {
         provider: string;
 
@@ -7651,6 +10921,12 @@ export namespace RawUserGraphResponse {
            * true)
            */
           ownerDevrank?: Edge.OwnerDevrank;
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          ownerProfessional?: Edge.OwnerProfessional;
 
           /**
            * Preview of repository README (first ~500 chars)
@@ -7927,6 +11203,218 @@ export namespace RawUserGraphResponse {
             trust: number;
 
             updatedAt: string;
+          }
+
+          /**
+           * LinkedIn professional profile data (only present when
+           * includeAttributes.professional = true)
+           */
+          export interface OwnerProfessional {
+            /**
+             * Professional awards
+             */
+            awards: Array<string> | null;
+
+            /**
+             * Professional certifications
+             */
+            certifications: Array<string> | null;
+
+            /**
+             * City
+             */
+            city: string | null;
+
+            /**
+             * Number of LinkedIn connections
+             */
+            connectionsCount: number | null;
+
+            /**
+             * Country
+             */
+            country: string | null;
+
+            /**
+             * Current industry sector
+             */
+            currentIndustry: string | null;
+
+            /**
+             * Departments worked in
+             */
+            departments: Array<string> | null;
+
+            /**
+             * Education history
+             */
+            education: Array<OwnerProfessional.Education>;
+
+            /**
+             * Work experience history
+             */
+            experience: Array<OwnerProfessional.Experience>;
+
+            /**
+             * Areas of expertise
+             */
+            expertise: Array<string> | null;
+
+            /**
+             * First name
+             */
+            firstName: string | null;
+
+            /**
+             * Number of LinkedIn followers
+             */
+            followerCount: number | null;
+
+            /**
+             * Functional area (e.g., Engineering, Product)
+             */
+            functionalArea: string | null;
+
+            /**
+             * Professional headline
+             */
+            headline: string | null;
+
+            /**
+             * Languages spoken
+             */
+            languages: Array<string> | null;
+
+            /**
+             * Last name
+             */
+            lastName: string | null;
+
+            /**
+             * LinkedIn profile URL
+             */
+            linkedinUrl: string;
+
+            /**
+             * Full location string
+             */
+            location: string | null;
+
+            /**
+             * Professional organization memberships
+             */
+            memberships: Array<string> | null;
+
+            /**
+             * Current organization/company
+             */
+            organization: string | null;
+
+            /**
+             * Patents held
+             */
+            patents: Array<string> | null;
+
+            /**
+             * Previous industries worked in
+             */
+            priorIndustries: Array<string> | null;
+
+            /**
+             * Publications authored
+             */
+            publications: Array<string> | null;
+
+            /**
+             * Seniority classification
+             */
+            seniority: string | null;
+
+            /**
+             * Seniority level (e.g., Senior, Manager)
+             */
+            seniorityLevel: string | null;
+
+            /**
+             * State or province
+             */
+            state: string | null;
+
+            /**
+             * Current job title
+             */
+            title: string | null;
+          }
+
+          export namespace OwnerProfessional {
+            export interface Education {
+              /**
+               * Name of the educational institution
+               */
+              campus: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format)
+               */
+              endDate: string | null;
+
+              /**
+               * Field of study or degree program
+               */
+              major: string | null;
+
+              /**
+               * Area of specialization
+               */
+              specialization: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+            }
+
+            export interface Experience {
+              /**
+               * Company or organization name
+               */
+              company: string | null;
+
+              /**
+               * End date (YYYY-MM-DD format, null if current)
+               */
+              endDate: string | null;
+
+              /**
+               * Industry sector
+               */
+              industry: string | null;
+
+              /**
+               * Whether this is the current position
+               */
+              isCurrent: boolean | null;
+
+              /**
+               * Work location
+               */
+              location: string | null;
+
+              /**
+               * Start date (YYYY-MM-DD format)
+               */
+              startDate: string | null;
+
+              /**
+               * Description of role and responsibilities
+               */
+              summary: string | null;
+
+              /**
+               * Job title or position
+               */
+              title: string | null;
+            }
           }
 
           /**
@@ -8188,6 +11676,12 @@ export namespace RawUserGraphResponse {
       ownerDevrank?: Repository.OwnerDevrank;
 
       /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      ownerProfessional?: Repository.OwnerProfessional;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -8462,6 +11956,218 @@ export namespace RawUserGraphResponse {
         trust: number;
 
         updatedAt: string;
+      }
+
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      export interface OwnerProfessional {
+        /**
+         * Professional awards
+         */
+        awards: Array<string> | null;
+
+        /**
+         * Professional certifications
+         */
+        certifications: Array<string> | null;
+
+        /**
+         * City
+         */
+        city: string | null;
+
+        /**
+         * Number of LinkedIn connections
+         */
+        connectionsCount: number | null;
+
+        /**
+         * Country
+         */
+        country: string | null;
+
+        /**
+         * Current industry sector
+         */
+        currentIndustry: string | null;
+
+        /**
+         * Departments worked in
+         */
+        departments: Array<string> | null;
+
+        /**
+         * Education history
+         */
+        education: Array<OwnerProfessional.Education>;
+
+        /**
+         * Work experience history
+         */
+        experience: Array<OwnerProfessional.Experience>;
+
+        /**
+         * Areas of expertise
+         */
+        expertise: Array<string> | null;
+
+        /**
+         * First name
+         */
+        firstName: string | null;
+
+        /**
+         * Number of LinkedIn followers
+         */
+        followerCount: number | null;
+
+        /**
+         * Functional area (e.g., Engineering, Product)
+         */
+        functionalArea: string | null;
+
+        /**
+         * Professional headline
+         */
+        headline: string | null;
+
+        /**
+         * Languages spoken
+         */
+        languages: Array<string> | null;
+
+        /**
+         * Last name
+         */
+        lastName: string | null;
+
+        /**
+         * LinkedIn profile URL
+         */
+        linkedinUrl: string;
+
+        /**
+         * Full location string
+         */
+        location: string | null;
+
+        /**
+         * Professional organization memberships
+         */
+        memberships: Array<string> | null;
+
+        /**
+         * Current organization/company
+         */
+        organization: string | null;
+
+        /**
+         * Patents held
+         */
+        patents: Array<string> | null;
+
+        /**
+         * Previous industries worked in
+         */
+        priorIndustries: Array<string> | null;
+
+        /**
+         * Publications authored
+         */
+        publications: Array<string> | null;
+
+        /**
+         * Seniority classification
+         */
+        seniority: string | null;
+
+        /**
+         * Seniority level (e.g., Senior, Manager)
+         */
+        seniorityLevel: string | null;
+
+        /**
+         * State or province
+         */
+        state: string | null;
+
+        /**
+         * Current job title
+         */
+        title: string | null;
+      }
+
+      export namespace OwnerProfessional {
+        export interface Education {
+          /**
+           * Name of the educational institution
+           */
+          campus: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format)
+           */
+          endDate: string | null;
+
+          /**
+           * Field of study or degree program
+           */
+          major: string | null;
+
+          /**
+           * Area of specialization
+           */
+          specialization: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+        }
+
+        export interface Experience {
+          /**
+           * Company or organization name
+           */
+          company: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format, null if current)
+           */
+          endDate: string | null;
+
+          /**
+           * Industry sector
+           */
+          industry: string | null;
+
+          /**
+           * Whether this is the current position
+           */
+          isCurrent: boolean | null;
+
+          /**
+           * Work location
+           */
+          location: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+
+          /**
+           * Description of role and responsibilities
+           */
+          summary: string | null;
+
+          /**
+           * Job title or position
+           */
+          title: string | null;
+        }
       }
 
       /**
@@ -8706,6 +12412,12 @@ export namespace RawUserGraphResponse {
       ownerDevrank?: Repository.OwnerDevrank;
 
       /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      ownerProfessional?: Repository.OwnerProfessional;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -8980,6 +12692,218 @@ export namespace RawUserGraphResponse {
         trust: number;
 
         updatedAt: string;
+      }
+
+      /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      export interface OwnerProfessional {
+        /**
+         * Professional awards
+         */
+        awards: Array<string> | null;
+
+        /**
+         * Professional certifications
+         */
+        certifications: Array<string> | null;
+
+        /**
+         * City
+         */
+        city: string | null;
+
+        /**
+         * Number of LinkedIn connections
+         */
+        connectionsCount: number | null;
+
+        /**
+         * Country
+         */
+        country: string | null;
+
+        /**
+         * Current industry sector
+         */
+        currentIndustry: string | null;
+
+        /**
+         * Departments worked in
+         */
+        departments: Array<string> | null;
+
+        /**
+         * Education history
+         */
+        education: Array<OwnerProfessional.Education>;
+
+        /**
+         * Work experience history
+         */
+        experience: Array<OwnerProfessional.Experience>;
+
+        /**
+         * Areas of expertise
+         */
+        expertise: Array<string> | null;
+
+        /**
+         * First name
+         */
+        firstName: string | null;
+
+        /**
+         * Number of LinkedIn followers
+         */
+        followerCount: number | null;
+
+        /**
+         * Functional area (e.g., Engineering, Product)
+         */
+        functionalArea: string | null;
+
+        /**
+         * Professional headline
+         */
+        headline: string | null;
+
+        /**
+         * Languages spoken
+         */
+        languages: Array<string> | null;
+
+        /**
+         * Last name
+         */
+        lastName: string | null;
+
+        /**
+         * LinkedIn profile URL
+         */
+        linkedinUrl: string;
+
+        /**
+         * Full location string
+         */
+        location: string | null;
+
+        /**
+         * Professional organization memberships
+         */
+        memberships: Array<string> | null;
+
+        /**
+         * Current organization/company
+         */
+        organization: string | null;
+
+        /**
+         * Patents held
+         */
+        patents: Array<string> | null;
+
+        /**
+         * Previous industries worked in
+         */
+        priorIndustries: Array<string> | null;
+
+        /**
+         * Publications authored
+         */
+        publications: Array<string> | null;
+
+        /**
+         * Seniority classification
+         */
+        seniority: string | null;
+
+        /**
+         * Seniority level (e.g., Senior, Manager)
+         */
+        seniorityLevel: string | null;
+
+        /**
+         * State or province
+         */
+        state: string | null;
+
+        /**
+         * Current job title
+         */
+        title: string | null;
+      }
+
+      export namespace OwnerProfessional {
+        export interface Education {
+          /**
+           * Name of the educational institution
+           */
+          campus: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format)
+           */
+          endDate: string | null;
+
+          /**
+           * Field of study or degree program
+           */
+          major: string | null;
+
+          /**
+           * Area of specialization
+           */
+          specialization: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+        }
+
+        export interface Experience {
+          /**
+           * Company or organization name
+           */
+          company: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format, null if current)
+           */
+          endDate: string | null;
+
+          /**
+           * Industry sector
+           */
+          industry: string | null;
+
+          /**
+           * Whether this is the current position
+           */
+          isCurrent: boolean | null;
+
+          /**
+           * Work location
+           */
+          location: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+
+          /**
+           * Description of role and responsibilities
+           */
+          summary: string | null;
+
+          /**
+           * Job title or position
+           */
+          title: string | null;
+        }
       }
 
       /**
@@ -9225,6 +13149,12 @@ export namespace RawUserGraphResponse {
       ownerDevrank?: Repository.OwnerDevrank;
 
       /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      ownerProfessional?: Repository.OwnerProfessional;
+
+      /**
        * Preview of repository README (first ~500 chars)
        */
       readmePreview?: string | null;
@@ -9502,6 +13432,218 @@ export namespace RawUserGraphResponse {
       }
 
       /**
+       * LinkedIn professional profile data (only present when
+       * includeAttributes.professional = true)
+       */
+      export interface OwnerProfessional {
+        /**
+         * Professional awards
+         */
+        awards: Array<string> | null;
+
+        /**
+         * Professional certifications
+         */
+        certifications: Array<string> | null;
+
+        /**
+         * City
+         */
+        city: string | null;
+
+        /**
+         * Number of LinkedIn connections
+         */
+        connectionsCount: number | null;
+
+        /**
+         * Country
+         */
+        country: string | null;
+
+        /**
+         * Current industry sector
+         */
+        currentIndustry: string | null;
+
+        /**
+         * Departments worked in
+         */
+        departments: Array<string> | null;
+
+        /**
+         * Education history
+         */
+        education: Array<OwnerProfessional.Education>;
+
+        /**
+         * Work experience history
+         */
+        experience: Array<OwnerProfessional.Experience>;
+
+        /**
+         * Areas of expertise
+         */
+        expertise: Array<string> | null;
+
+        /**
+         * First name
+         */
+        firstName: string | null;
+
+        /**
+         * Number of LinkedIn followers
+         */
+        followerCount: number | null;
+
+        /**
+         * Functional area (e.g., Engineering, Product)
+         */
+        functionalArea: string | null;
+
+        /**
+         * Professional headline
+         */
+        headline: string | null;
+
+        /**
+         * Languages spoken
+         */
+        languages: Array<string> | null;
+
+        /**
+         * Last name
+         */
+        lastName: string | null;
+
+        /**
+         * LinkedIn profile URL
+         */
+        linkedinUrl: string;
+
+        /**
+         * Full location string
+         */
+        location: string | null;
+
+        /**
+         * Professional organization memberships
+         */
+        memberships: Array<string> | null;
+
+        /**
+         * Current organization/company
+         */
+        organization: string | null;
+
+        /**
+         * Patents held
+         */
+        patents: Array<string> | null;
+
+        /**
+         * Previous industries worked in
+         */
+        priorIndustries: Array<string> | null;
+
+        /**
+         * Publications authored
+         */
+        publications: Array<string> | null;
+
+        /**
+         * Seniority classification
+         */
+        seniority: string | null;
+
+        /**
+         * Seniority level (e.g., Senior, Manager)
+         */
+        seniorityLevel: string | null;
+
+        /**
+         * State or province
+         */
+        state: string | null;
+
+        /**
+         * Current job title
+         */
+        title: string | null;
+      }
+
+      export namespace OwnerProfessional {
+        export interface Education {
+          /**
+           * Name of the educational institution
+           */
+          campus: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format)
+           */
+          endDate: string | null;
+
+          /**
+           * Field of study or degree program
+           */
+          major: string | null;
+
+          /**
+           * Area of specialization
+           */
+          specialization: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+        }
+
+        export interface Experience {
+          /**
+           * Company or organization name
+           */
+          company: string | null;
+
+          /**
+           * End date (YYYY-MM-DD format, null if current)
+           */
+          endDate: string | null;
+
+          /**
+           * Industry sector
+           */
+          industry: string | null;
+
+          /**
+           * Whether this is the current position
+           */
+          isCurrent: boolean | null;
+
+          /**
+           * Work location
+           */
+          location: string | null;
+
+          /**
+           * Start date (YYYY-MM-DD format)
+           */
+          startDate: string | null;
+
+          /**
+           * Description of role and responsibilities
+           */
+          summary: string | null;
+
+          /**
+           * Job title or position
+           */
+          title: string | null;
+        }
+      }
+
+      /**
        * Users who follow this user (when includeAttributes.followers is specified)
        */
       export interface Starrers {
@@ -9676,6 +13818,11 @@ export namespace RawUserRetrieveParams {
      * Include owned repositories with cursor pagination
      */
     owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include LinkedIn professional profile data (requires PROFESSIONAL service)
+     */
+    professional?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -10839,6 +14986,11 @@ export namespace RawUserByLoginParams {
      * Include owned repositories with cursor pagination
      */
     owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include LinkedIn professional profile data (requires PROFESSIONAL service)
+     */
+    professional?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -12240,9 +16392,20 @@ export namespace RawUserGraphParams {
     ownerDevrank?: boolean;
 
     /**
+     * Include LinkedIn professional profile for the repository owner (requires
+     * PROFESSIONAL service)
+     */
+    ownerProfessional?: boolean;
+
+    /**
      * Include owned repositories with cursor pagination
      */
     owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include LinkedIn professional profile data (requires PROFESSIONAL service)
+     */
+    professional?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
