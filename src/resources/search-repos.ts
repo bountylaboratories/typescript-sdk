@@ -1568,7 +1568,7 @@ export interface SearchRepoNaturalLanguageParams {
   first?: number;
 
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: SearchRepoNaturalLanguageParams.IncludeAttributes;
 
@@ -1595,7 +1595,7 @@ export interface SearchRepoNaturalLanguageParams {
 
 export namespace SearchRepoNaturalLanguageParams {
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
     /**
@@ -4272,7 +4272,7 @@ export interface SearchRepoSearchParams {
   first?: number;
 
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: SearchRepoSearchParams.IncludeAttributes;
 
@@ -4497,7 +4497,7 @@ export namespace SearchRepoSearchParams {
   }
 
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
     /**

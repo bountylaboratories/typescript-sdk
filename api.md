@@ -3,6 +3,7 @@
 Types:
 
 - <code><a href="./src/resources/raw-users.ts">RawUserRetrieveResponse</a></code>
+- <code><a href="./src/resources/raw-users.ts">RawUserByLinkedinResponse</a></code>
 - <code><a href="./src/resources/raw-users.ts">RawUserByLoginResponse</a></code>
 - <code><a href="./src/resources/raw-users.ts">RawUserCountResponse</a></code>
 - <code><a href="./src/resources/raw-users.ts">RawUserGraphResponse</a></code>
@@ -10,6 +11,7 @@ Types:
 Methods:
 
 - <code title="post /raw/users">client.rawUsers.<a href="./src/resources/raw-users.ts">retrieve</a>({ ...params }) -> RawUserRetrieveResponse</code>
+- <code title="post /raw/users/by-linkedin">client.rawUsers.<a href="./src/resources/raw-users.ts">byLinkedin</a>({ ...params }) -> RawUserByLinkedinResponse</code>
 - <code title="post /raw/users/by-login">client.rawUsers.<a href="./src/resources/raw-users.ts">byLogin</a>({ ...params }) -> RawUserByLoginResponse</code>
 - <code title="post /raw/users/count">client.rawUsers.<a href="./src/resources/raw-users.ts">count</a>({ ...params }) -> RawUserCountResponse</code>
 - <code title="post /raw/users/{id}/graph/{relationship}">client.rawUsers.<a href="./src/resources/raw-users.ts">graph</a>(relationship, { ...params }) -> RawUserGraphResponse</code>
