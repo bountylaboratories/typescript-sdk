@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.35.0 (2026-02-04)
+
+Full Changelog: [v0.34.1...v0.35.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.34.1...v0.35.0)
+
+### Features
+
+* **api:** api update ([4ef41b4](https://github.com/bountylaboratories/typescript-sdk/commit/4ef41b4a8fd61c1c094cbf3714f643b75d48906e))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([b67844d](https://github.com/bountylaboratories/typescript-sdk/commit/b67844d96bbd1079f585a67367242b290a6f401d))
+
 ## 0.34.1 (2026-02-03)
 
 Full Changelog: [v0.34.0...v0.34.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.34.0...v0.34.1)
