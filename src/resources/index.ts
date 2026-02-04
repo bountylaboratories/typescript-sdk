@@ -14,10 +14,12 @@ export {
 export {
   RawUsers,
   type RawUserRetrieveResponse,
+  type RawUserByLinkedinResponse,
   type RawUserByLoginResponse,
   type RawUserCountResponse,
   type RawUserGraphResponse,
   type RawUserRetrieveParams,
+  type RawUserByLinkedinParams,
   type RawUserByLoginParams,
   type RawUserCountParams,
   type RawUserGraphParams,

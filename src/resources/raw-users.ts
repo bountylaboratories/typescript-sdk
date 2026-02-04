@@ -7,9 +7,9 @@ import { path } from '../internal/utils/path';
 
 export class RawUsers extends APIResource {
   /**
-   * Fetch GitHub users by their node IDs. Supports batch requests (1-100 IDs).
-   * Requires RAW service. Credits: 1 per result returned + graph relationship
-   * credits if includeAttributes is specified.
+   * Fetch GitHub users by their node IDs. Returns a positional array matching input
+   * order (null for unmatched IDs). Supports batch requests (1-100 IDs). Credits: 1
+   * per non-null result + graph credits.
    *
    * @example
    * ```ts
@@ -23,8 +23,29 @@ export class RawUsers extends APIResource {
   }
 
   /**
-   * Fetch GitHub users by their usernames (login). Supports batch requests (1-100
-   * logins). Requires RAW service. Credits: 1 per result returned.
+   * Fetch GitHub users by their linked LinkedIn profile URLs. Returns a positional
+   * array matching input order (null for unmatched URLs). URLs are normalized to
+   * canonical format before lookup. Supports batch requests (1-100). Credits: 1 per
+   * non-null result + graph credits.
+   *
+   * @example
+   * ```ts
+   * const response = await client.rawUsers.byLinkedin({
+   *   linkedinUrls: [
+   *     'https://www.linkedin.com/in/octocat',
+   *     'https://www.linkedin.com/in/torvalds',
+   *   ],
+   * });
+   * ```
+   */
+  byLinkedin(body: RawUserByLinkedinParams, options?: RequestOptions): APIPromise<RawUserByLinkedinResponse> {
+    return this._client.post('/raw/users/by-linkedin', { body, ...options });
+  }
+
+  /**
+   * Fetch GitHub users by their usernames. Returns a positional array matching input
+   * order (null for unmatched logins). Supports batch requests (1-100). Credits: 1
+   * per non-null result + graph credits.
    *
    * @example
    * ```ts
@@ -39,7 +60,7 @@ export class RawUsers extends APIResource {
 
   /**
    * Count users in the database matching filters. Counts are capped at minimum (10k)
-   * and maximum (1M). Requires RAW service. Credits: 1 per request.
+   * and maximum (1M). Credits: 1 per request.
    *
    * @example
    * ```ts
@@ -81,14 +102,14 @@ export class RawUsers extends APIResource {
 
 export interface RawUserRetrieveResponse {
   /**
-   * Number of users returned
+   * Number of non-null users returned
    */
   count: number;
 
   /**
-   * Array of user objects
+   * Positional array of users (null for unmatched input entries)
    */
-  users: Array<RawUserRetrieveResponse.User>;
+  users: Array<RawUserRetrieveResponse.User | null>;
 }
 
 export namespace RawUserRetrieveResponse {
@@ -107,6 +128,11 @@ export namespace RawUserRetrieveResponse {
      * GitHub username
      */
     login: string;
+
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    aggregates?: User.Aggregates;
 
     /**
      * User biography
@@ -218,6 +244,2890 @@ export namespace RawUserRetrieveResponse {
   }
 
   export namespace User {
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    export interface Aggregates {
+      /**
+       * Total stars received across all owned repositories
+       */
+      totalStars: number;
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Contributes {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Contributes.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Contributes.PageInfo;
+    }
+
+    export namespace Contributes {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Developer ranking data (only present when includeAttributes.devrank = true)
+     */
+    export interface Devrank {
+      community: number;
+
+      crackedScore: number;
+
+      createdAt: string;
+
+      followersIn: number;
+
+      followingOut: number;
+
+      pc: number;
+
+      rawScore: number;
+
+      tier: string;
+
+      trust: number;
+
+      updatedAt: string;
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Followers {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Followers.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Followers.PageInfo;
+    }
+
+    export namespace Followers {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    export interface Following {
+      /**
+       * Array of user objects
+       */
+      edges: Array<Following.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Following.PageInfo;
+    }
+
+    export namespace Following {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * GitHub username
+         */
+        login: string;
+
+        /**
+         * User biography
+         */
+        bio?: string | null;
+
+        /**
+         * Company name
+         */
+        company?: string | null;
+
+        /**
+         * ISO 8601 timestamp when user account was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * User display name
+         */
+        displayName?: string | null;
+
+        /**
+         * Obfuscated email addresses showing only the last 2 characters of the local part
+         * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+         * for unobfuscated email access with intelligent selection.
+         */
+        emails?: Array<string> | null;
+
+        /**
+         * ISO 8601 timestamp when metadata was extracted
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * User location
+         */
+        location?: string | null;
+
+        /**
+         * Resolved city from location
+         */
+        resolvedCity?: string | null;
+
+        /**
+         * Resolved country from location
+         */
+        resolvedCountry?: string | null;
+
+        /**
+         * Resolved state/region from location
+         */
+        resolvedState?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for distance metrics)
+         */
+        score?: number;
+
+        /**
+         * Social media accounts
+         */
+        socialAccounts?: Array<Edge.SocialAccount> | null;
+
+        /**
+         * ISO 8601 timestamp when user was last updated
+         */
+        updatedAt?: string | null;
+
+        /**
+         * User website URL
+         */
+        websiteUrl?: string | null;
+      }
+
+      export namespace Edge {
+        export interface SocialAccount {
+          provider: string;
+
+          url: string;
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Owns {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Owns.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Owns.PageInfo;
+    }
+
+    export namespace Owns {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    export interface Professional {
+      /**
+       * Professional awards
+       */
+      awards: Array<string> | null;
+
+      /**
+       * Professional certifications
+       */
+      certifications: Array<string> | null;
+
+      /**
+       * City
+       */
+      city: string | null;
+
+      /**
+       * Number of LinkedIn connections
+       */
+      connectionsCount: number | null;
+
+      /**
+       * Country
+       */
+      country: string | null;
+
+      /**
+       * Current industry sector
+       */
+      currentIndustry: string | null;
+
+      /**
+       * Departments worked in
+       */
+      departments: Array<string> | null;
+
+      /**
+       * Education history
+       */
+      education: Array<Professional.Education>;
+
+      /**
+       * Work experience history
+       */
+      experience: Array<Professional.Experience>;
+
+      /**
+       * Areas of expertise
+       */
+      expertise: Array<string> | null;
+
+      /**
+       * First name
+       */
+      firstName: string | null;
+
+      /**
+       * Number of LinkedIn followers
+       */
+      followerCount: number | null;
+
+      /**
+       * Functional area (e.g., Engineering, Product)
+       */
+      functionalArea: string | null;
+
+      /**
+       * Professional headline
+       */
+      headline: string | null;
+
+      /**
+       * Languages spoken
+       */
+      languages: Array<string> | null;
+
+      /**
+       * Last name
+       */
+      lastName: string | null;
+
+      /**
+       * LinkedIn profile URL
+       */
+      linkedinUrl: string;
+
+      /**
+       * Full location string
+       */
+      location: string | null;
+
+      /**
+       * Professional organization memberships
+       */
+      memberships: Array<string> | null;
+
+      /**
+       * Current organization/company
+       */
+      organization: string | null;
+
+      /**
+       * Patents held
+       */
+      patents: Array<string> | null;
+
+      /**
+       * Previous industries worked in
+       */
+      priorIndustries: Array<string> | null;
+
+      /**
+       * Publications authored
+       */
+      publications: Array<string> | null;
+
+      /**
+       * Seniority classification
+       */
+      seniority: string | null;
+
+      /**
+       * Seniority level (e.g., Senior, Manager)
+       */
+      seniorityLevel: string | null;
+
+      /**
+       * State or province
+       */
+      state: string | null;
+
+      /**
+       * Current job title
+       */
+      title: string | null;
+    }
+
+    export namespace Professional {
+      export interface Education {
+        /**
+         * Name of the educational institution
+         */
+        campus: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format)
+         */
+        endDate: string | null;
+
+        /**
+         * Field of study or degree program
+         */
+        major: string | null;
+
+        /**
+         * Area of specialization
+         */
+        specialization: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+      }
+
+      export interface Experience {
+        /**
+         * Company or organization name
+         */
+        company: string | null;
+
+        /**
+         * End date (YYYY-MM-DD format, null if current)
+         */
+        endDate: string | null;
+
+        /**
+         * Industry sector
+         */
+        industry: string | null;
+
+        /**
+         * Whether this is the current position
+         */
+        isCurrent: boolean | null;
+
+        /**
+         * Work location
+         */
+        location: string | null;
+
+        /**
+         * Start date (YYYY-MM-DD format)
+         */
+        startDate: string | null;
+
+        /**
+         * Description of role and responsibilities
+         */
+        summary: string | null;
+
+        /**
+         * Job title or position
+         */
+        title: string | null;
+      }
+    }
+
+    export interface SocialAccount {
+      provider: string;
+
+      url: string;
+    }
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    export interface Stars {
+      /**
+       * Array of repository objects
+       */
+      edges: Array<Stars.Edge>;
+
+      /**
+       * Pagination information
+       */
+      pageInfo: Stars.PageInfo;
+    }
+
+    export namespace Stars {
+      export interface Edge {
+        /**
+         * BountyLab internal ID
+         */
+        id: string;
+
+        /**
+         * GitHub node ID
+         */
+        githubId: string;
+
+        /**
+         * Repository name
+         */
+        name: string;
+
+        /**
+         * Repository owner username
+         */
+        ownerLogin: string;
+
+        /**
+         * Number of stars
+         */
+        stargazerCount: number;
+
+        /**
+         * Number of closed issues
+         */
+        totalIssuesClosed: number;
+
+        /**
+         * Total number of issues (open + closed)
+         */
+        totalIssuesCount: number;
+
+        /**
+         * Number of open issues
+         */
+        totalIssuesOpen: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        contributors?: Edge.Contributors;
+
+        /**
+         * ISO 8601 timestamp when repository was created
+         */
+        createdAt?: string | null;
+
+        /**
+         * Repository description
+         */
+        description?: string | null;
+
+        /**
+         * ISO 8601 timestamp when embedding was created
+         */
+        embeddedAt?: string | null;
+
+        /**
+         * Primary programming language
+         */
+        language?: string | null;
+
+        /**
+         * Locations of last contributors to this repository
+         */
+        lastContributorLocations?: Array<string> | null;
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        owner?: Edge.Owner;
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        ownerDevrank?: Edge.OwnerDevrank;
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        ownerProfessional?: Edge.OwnerProfessional;
+
+        /**
+         * Preview of repository README (first ~500 chars)
+         */
+        readmePreview?: string | null;
+
+        /**
+         * Relevance score from search (0-1, lower is more relevant for cosine distance)
+         */
+        score?: number;
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        starrers?: Edge.Starrers;
+
+        /**
+         * ISO 8601 timestamp when repository was last updated
+         */
+        updatedAt?: string | null;
+      }
+
+      export namespace Edge {
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Contributors {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Contributors.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Contributors.PageInfo;
+        }
+
+        export namespace Contributors {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+
+        /**
+         * Repository owner (when includeAttributes.owner = true)
+         */
+        export interface Owner {
+          /**
+           * BountyLab internal ID
+           */
+          id: string;
+
+          /**
+           * GitHub node ID
+           */
+          githubId: string;
+
+          /**
+           * GitHub username
+           */
+          login: string;
+
+          /**
+           * User biography
+           */
+          bio?: string | null;
+
+          /**
+           * Company name
+           */
+          company?: string | null;
+
+          /**
+           * ISO 8601 timestamp when user account was created
+           */
+          createdAt?: string | null;
+
+          /**
+           * User display name
+           */
+          displayName?: string | null;
+
+          /**
+           * Obfuscated email addresses showing only the last 2 characters of the local part
+           * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+           * for unobfuscated email access with intelligent selection.
+           */
+          emails?: Array<string> | null;
+
+          /**
+           * ISO 8601 timestamp when metadata was extracted
+           */
+          embeddedAt?: string | null;
+
+          /**
+           * User location
+           */
+          location?: string | null;
+
+          /**
+           * Resolved city from location
+           */
+          resolvedCity?: string | null;
+
+          /**
+           * Resolved country from location
+           */
+          resolvedCountry?: string | null;
+
+          /**
+           * Resolved state/region from location
+           */
+          resolvedState?: string | null;
+
+          /**
+           * Relevance score from search (0-1, lower is more relevant for distance metrics)
+           */
+          score?: number;
+
+          /**
+           * Social media accounts
+           */
+          socialAccounts?: Array<Owner.SocialAccount> | null;
+
+          /**
+           * ISO 8601 timestamp when user was last updated
+           */
+          updatedAt?: string | null;
+
+          /**
+           * User website URL
+           */
+          websiteUrl?: string | null;
+        }
+
+        export namespace Owner {
+          export interface SocialAccount {
+            provider: string;
+
+            url: string;
+          }
+        }
+
+        /**
+         * Devrank data for the repository owner (when includeAttributes.ownerDevrank =
+         * true)
+         */
+        export interface OwnerDevrank {
+          community: number;
+
+          crackedScore: number;
+
+          createdAt: string;
+
+          followersIn: number;
+
+          followingOut: number;
+
+          pc: number;
+
+          rawScore: number;
+
+          tier: string;
+
+          trust: number;
+
+          updatedAt: string;
+        }
+
+        /**
+         * LinkedIn professional profile data (only present when
+         * includeAttributes.professional = true)
+         */
+        export interface OwnerProfessional {
+          /**
+           * Professional awards
+           */
+          awards: Array<string> | null;
+
+          /**
+           * Professional certifications
+           */
+          certifications: Array<string> | null;
+
+          /**
+           * City
+           */
+          city: string | null;
+
+          /**
+           * Number of LinkedIn connections
+           */
+          connectionsCount: number | null;
+
+          /**
+           * Country
+           */
+          country: string | null;
+
+          /**
+           * Current industry sector
+           */
+          currentIndustry: string | null;
+
+          /**
+           * Departments worked in
+           */
+          departments: Array<string> | null;
+
+          /**
+           * Education history
+           */
+          education: Array<OwnerProfessional.Education>;
+
+          /**
+           * Work experience history
+           */
+          experience: Array<OwnerProfessional.Experience>;
+
+          /**
+           * Areas of expertise
+           */
+          expertise: Array<string> | null;
+
+          /**
+           * First name
+           */
+          firstName: string | null;
+
+          /**
+           * Number of LinkedIn followers
+           */
+          followerCount: number | null;
+
+          /**
+           * Functional area (e.g., Engineering, Product)
+           */
+          functionalArea: string | null;
+
+          /**
+           * Professional headline
+           */
+          headline: string | null;
+
+          /**
+           * Languages spoken
+           */
+          languages: Array<string> | null;
+
+          /**
+           * Last name
+           */
+          lastName: string | null;
+
+          /**
+           * LinkedIn profile URL
+           */
+          linkedinUrl: string;
+
+          /**
+           * Full location string
+           */
+          location: string | null;
+
+          /**
+           * Professional organization memberships
+           */
+          memberships: Array<string> | null;
+
+          /**
+           * Current organization/company
+           */
+          organization: string | null;
+
+          /**
+           * Patents held
+           */
+          patents: Array<string> | null;
+
+          /**
+           * Previous industries worked in
+           */
+          priorIndustries: Array<string> | null;
+
+          /**
+           * Publications authored
+           */
+          publications: Array<string> | null;
+
+          /**
+           * Seniority classification
+           */
+          seniority: string | null;
+
+          /**
+           * Seniority level (e.g., Senior, Manager)
+           */
+          seniorityLevel: string | null;
+
+          /**
+           * State or province
+           */
+          state: string | null;
+
+          /**
+           * Current job title
+           */
+          title: string | null;
+        }
+
+        export namespace OwnerProfessional {
+          export interface Education {
+            /**
+             * Name of the educational institution
+             */
+            campus: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format)
+             */
+            endDate: string | null;
+
+            /**
+             * Field of study or degree program
+             */
+            major: string | null;
+
+            /**
+             * Area of specialization
+             */
+            specialization: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+          }
+
+          export interface Experience {
+            /**
+             * Company or organization name
+             */
+            company: string | null;
+
+            /**
+             * End date (YYYY-MM-DD format, null if current)
+             */
+            endDate: string | null;
+
+            /**
+             * Industry sector
+             */
+            industry: string | null;
+
+            /**
+             * Whether this is the current position
+             */
+            isCurrent: boolean | null;
+
+            /**
+             * Work location
+             */
+            location: string | null;
+
+            /**
+             * Start date (YYYY-MM-DD format)
+             */
+            startDate: string | null;
+
+            /**
+             * Description of role and responsibilities
+             */
+            summary: string | null;
+
+            /**
+             * Job title or position
+             */
+            title: string | null;
+          }
+        }
+
+        /**
+         * Users who follow this user (when includeAttributes.followers is specified)
+         */
+        export interface Starrers {
+          /**
+           * Array of user objects
+           */
+          edges: Array<Starrers.Edge>;
+
+          /**
+           * Pagination information
+           */
+          pageInfo: Starrers.PageInfo;
+        }
+
+        export namespace Starrers {
+          export interface Edge {
+            /**
+             * BountyLab internal ID
+             */
+            id: string;
+
+            /**
+             * GitHub node ID
+             */
+            githubId: string;
+
+            /**
+             * GitHub username
+             */
+            login: string;
+
+            /**
+             * User biography
+             */
+            bio?: string | null;
+
+            /**
+             * Company name
+             */
+            company?: string | null;
+
+            /**
+             * ISO 8601 timestamp when user account was created
+             */
+            createdAt?: string | null;
+
+            /**
+             * User display name
+             */
+            displayName?: string | null;
+
+            /**
+             * Obfuscated email addresses showing only the last 2 characters of the local part
+             * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+             * for unobfuscated email access with intelligent selection.
+             */
+            emails?: Array<string> | null;
+
+            /**
+             * ISO 8601 timestamp when metadata was extracted
+             */
+            embeddedAt?: string | null;
+
+            /**
+             * User location
+             */
+            location?: string | null;
+
+            /**
+             * Resolved city from location
+             */
+            resolvedCity?: string | null;
+
+            /**
+             * Resolved country from location
+             */
+            resolvedCountry?: string | null;
+
+            /**
+             * Resolved state/region from location
+             */
+            resolvedState?: string | null;
+
+            /**
+             * Relevance score from search (0-1, lower is more relevant for distance metrics)
+             */
+            score?: number;
+
+            /**
+             * Social media accounts
+             */
+            socialAccounts?: Array<Edge.SocialAccount> | null;
+
+            /**
+             * ISO 8601 timestamp when user was last updated
+             */
+            updatedAt?: string | null;
+
+            /**
+             * User website URL
+             */
+            websiteUrl?: string | null;
+          }
+
+          export namespace Edge {
+            export interface SocialAccount {
+              provider: string;
+
+              url: string;
+            }
+          }
+
+          /**
+           * Pagination information
+           */
+          export interface PageInfo {
+            /**
+             * Cursor to fetch next page (null if no more items)
+             */
+            endCursor: string | null;
+
+            /**
+             * Whether there are more items available
+             */
+            hasNextPage: boolean;
+          }
+        }
+      }
+
+      /**
+       * Pagination information
+       */
+      export interface PageInfo {
+        /**
+         * Cursor to fetch next page (null if no more items)
+         */
+        endCursor: string | null;
+
+        /**
+         * Whether there are more items available
+         */
+        hasNextPage: boolean;
+      }
+    }
+  }
+}
+
+export interface RawUserByLinkedinResponse {
+  /**
+   * Number of non-null users returned
+   */
+  count: number;
+
+  /**
+   * Positional array of users (null for unmatched input entries)
+   */
+  users: Array<RawUserByLinkedinResponse.User | null>;
+}
+
+export namespace RawUserByLinkedinResponse {
+  export interface User {
+    /**
+     * BountyLab internal ID
+     */
+    id: string;
+
+    /**
+     * GitHub node ID
+     */
+    githubId: string;
+
+    /**
+     * GitHub username
+     */
+    login: string;
+
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    aggregates?: User.Aggregates;
+
+    /**
+     * User biography
+     */
+    bio?: string | null;
+
+    /**
+     * Company name
+     */
+    company?: string | null;
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    contributes?: User.Contributes;
+
+    /**
+     * ISO 8601 timestamp when user account was created
+     */
+    createdAt?: string | null;
+
+    /**
+     * Developer ranking data (only present when includeAttributes.devrank = true)
+     */
+    devrank?: User.Devrank;
+
+    /**
+     * User display name
+     */
+    displayName?: string | null;
+
+    /**
+     * Obfuscated email addresses showing only the last 2 characters of the local part
+     * and full domain (e.g., "\*\*\*oe@gmail.com"). Use /api/users/best-email endpoint
+     * for unobfuscated email access with intelligent selection.
+     */
+    emails?: Array<string> | null;
+
+    /**
+     * ISO 8601 timestamp when metadata was extracted
+     */
+    embeddedAt?: string | null;
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    followers?: User.Followers;
+
+    /**
+     * Users who follow this user (when includeAttributes.followers is specified)
+     */
+    following?: User.Following;
+
+    /**
+     * User location
+     */
+    location?: string | null;
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    owns?: User.Owns;
+
+    /**
+     * LinkedIn professional profile data (only present when
+     * includeAttributes.professional = true)
+     */
+    professional?: User.Professional;
+
+    /**
+     * Resolved city from location
+     */
+    resolvedCity?: string | null;
+
+    /**
+     * Resolved country from location
+     */
+    resolvedCountry?: string | null;
+
+    /**
+     * Resolved state/region from location
+     */
+    resolvedState?: string | null;
+
+    /**
+     * Relevance score from search (0-1, lower is more relevant for distance metrics)
+     */
+    score?: number;
+
+    /**
+     * Social media accounts
+     */
+    socialAccounts?: Array<User.SocialAccount> | null;
+
+    /**
+     * Repositories this user starred (when includeAttributes.stars is specified)
+     */
+    stars?: User.Stars;
+
+    /**
+     * ISO 8601 timestamp when user was last updated
+     */
+    updatedAt?: string | null;
+
+    /**
+     * User website URL
+     */
+    websiteUrl?: string | null;
+  }
+
+  export namespace User {
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    export interface Aggregates {
+      /**
+       * Total stars received across all owned repositories
+       */
+      totalStars: number;
+    }
+
     /**
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
@@ -2940,14 +5850,14 @@ export namespace RawUserRetrieveResponse {
 
 export interface RawUserByLoginResponse {
   /**
-   * Number of users returned
+   * Number of non-null users returned
    */
   count: number;
 
   /**
-   * Array of user objects
+   * Positional array of users (null for unmatched input entries)
    */
-  users: Array<RawUserByLoginResponse.User>;
+  users: Array<RawUserByLoginResponse.User | null>;
 }
 
 export namespace RawUserByLoginResponse {
@@ -2966,6 +5876,11 @@ export namespace RawUserByLoginResponse {
      * GitHub username
      */
     login: string;
+
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    aggregates?: User.Aggregates;
 
     /**
      * User biography
@@ -3077,6 +5992,16 @@ export namespace RawUserByLoginResponse {
   }
 
   export namespace User {
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    export interface Aggregates {
+      /**
+       * Total stars received across all owned repositories
+       */
+      totalStars: number;
+    }
+
     /**
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
@@ -5826,7 +8751,7 @@ export namespace RawUserGraphResponse {
     /**
      * Array of users who follow this user (with optional graph relationships)
      */
-    users: Array<FollowersResponse.User>;
+    users: Array<FollowersResponse.User | null>;
   }
 
   export namespace FollowersResponse {
@@ -5860,6 +8785,11 @@ export namespace RawUserGraphResponse {
        * GitHub username
        */
       login: string;
+
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      aggregates?: User.Aggregates;
 
       /**
        * User biography
@@ -5971,6 +8901,16 @@ export namespace RawUserGraphResponse {
     }
 
     export namespace User {
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      export interface Aggregates {
+        /**
+         * Total stars received across all owned repositories
+         */
+        totalStars: number;
+      }
+
       /**
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
@@ -8700,7 +11640,7 @@ export namespace RawUserGraphResponse {
     /**
      * Array of users this user follows (with optional graph relationships)
      */
-    users: Array<FollowingResponse.User>;
+    users: Array<FollowingResponse.User | null>;
   }
 
   export namespace FollowingResponse {
@@ -8734,6 +11674,11 @@ export namespace RawUserGraphResponse {
        * GitHub username
        */
       login: string;
+
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      aggregates?: User.Aggregates;
 
       /**
        * User biography
@@ -8845,6 +11790,16 @@ export namespace RawUserGraphResponse {
     }
 
     export namespace User {
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      export interface Aggregates {
+        /**
+         * Total stars received across all owned repositories
+         */
+        totalStars: number;
+      }
+
       /**
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
@@ -13782,18 +16737,1192 @@ export interface RawUserRetrieveParams {
   githubIds: Array<string>;
 
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: RawUserRetrieveParams.IncludeAttributes;
 }
 
 export namespace RawUserRetrieveParams {
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    contributes?: IncludeAttributes.Contributes;
+
+    /**
+     * Include devrank data for the user
+     */
+    devrank?: boolean;
+
+    /**
+     * Include followers with cursor pagination
+     */
+    followers?: IncludeAttributes.Followers;
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    following?: IncludeAttributes.Following;
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    owns?: IncludeAttributes.Owns;
+
+    /**
+     * Include LinkedIn professional profile data (requires PROFESSIONAL service)
+     */
+    professional?: boolean;
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    stars?: IncludeAttributes.Stars;
+  }
+
+  export namespace IncludeAttributes {
+    /**
+     * Include contributed repositories with cursor pagination
+     */
+    export interface Contributes {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for users. Supports fields like login, company, location,
+       * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+       * Lt, Lte, Gt, Gte.
+       */
+      filters?: Contributes.UnionMember0 | Contributes.UnionMember1 | Contributes.UnionMember2;
+    }
+
+    export namespace Contributes {
+      export interface UnionMember0 {
+        /**
+         * Field name to filter on
+         */
+        field: string;
+
+        /**
+         * Filter operator
+         */
+        op:
+          | 'Eq'
+          | 'NotEq'
+          | 'In'
+          | 'NotIn'
+          | 'Lt'
+          | 'Lte'
+          | 'Gt'
+          | 'Gte'
+          | 'Glob'
+          | 'NotGlob'
+          | 'IGlob'
+          | 'NotIGlob'
+          | 'Regex'
+          | 'Contains'
+          | 'NotContains'
+          | 'ContainsAny'
+          | 'NotContainsAny'
+          | 'AnyLt'
+          | 'AnyLte'
+          | 'AnyGt'
+          | 'AnyGte'
+          | 'ContainsAllTokens';
+
+        /**
+         * Filter value (type depends on field and operator)
+         */
+        value: string | number | Array<string> | Array<number>;
+      }
+
+      export interface UnionMember1 {
+        /**
+         * Array of field filters
+         */
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+      }
+
+      export interface UnionMember2 {
+        /**
+         * Array of filters
+         */
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+
+        export interface UnionMember1 {
+          /**
+           * Array of field filters
+           */
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Composite operator
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Field name to filter on
+             */
+            field: string;
+
+            /**
+             * Filter operator
+             */
+            op:
+              | 'Eq'
+              | 'NotEq'
+              | 'In'
+              | 'NotIn'
+              | 'Lt'
+              | 'Lte'
+              | 'Gt'
+              | 'Gte'
+              | 'Glob'
+              | 'NotGlob'
+              | 'IGlob'
+              | 'NotIGlob'
+              | 'Regex'
+              | 'Contains'
+              | 'NotContains'
+              | 'ContainsAny'
+              | 'NotContainsAny'
+              | 'AnyLt'
+              | 'AnyLte'
+              | 'AnyGt'
+              | 'AnyGte'
+              | 'ContainsAllTokens';
+
+            /**
+             * Filter value (type depends on field and operator)
+             */
+            value: string | number | Array<string> | Array<number>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include followers with cursor pagination
+     */
+    export interface Followers {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for users. Supports fields like login, company, location,
+       * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+       * Lt, Lte, Gt, Gte.
+       */
+      filters?: Followers.UnionMember0 | Followers.UnionMember1 | Followers.UnionMember2;
+    }
+
+    export namespace Followers {
+      export interface UnionMember0 {
+        /**
+         * Field name to filter on
+         */
+        field: string;
+
+        /**
+         * Filter operator
+         */
+        op:
+          | 'Eq'
+          | 'NotEq'
+          | 'In'
+          | 'NotIn'
+          | 'Lt'
+          | 'Lte'
+          | 'Gt'
+          | 'Gte'
+          | 'Glob'
+          | 'NotGlob'
+          | 'IGlob'
+          | 'NotIGlob'
+          | 'Regex'
+          | 'Contains'
+          | 'NotContains'
+          | 'ContainsAny'
+          | 'NotContainsAny'
+          | 'AnyLt'
+          | 'AnyLte'
+          | 'AnyGt'
+          | 'AnyGte'
+          | 'ContainsAllTokens';
+
+        /**
+         * Filter value (type depends on field and operator)
+         */
+        value: string | number | Array<string> | Array<number>;
+      }
+
+      export interface UnionMember1 {
+        /**
+         * Array of field filters
+         */
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+      }
+
+      export interface UnionMember2 {
+        /**
+         * Array of filters
+         */
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+
+        export interface UnionMember1 {
+          /**
+           * Array of field filters
+           */
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Composite operator
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Field name to filter on
+             */
+            field: string;
+
+            /**
+             * Filter operator
+             */
+            op:
+              | 'Eq'
+              | 'NotEq'
+              | 'In'
+              | 'NotIn'
+              | 'Lt'
+              | 'Lte'
+              | 'Gt'
+              | 'Gte'
+              | 'Glob'
+              | 'NotGlob'
+              | 'IGlob'
+              | 'NotIGlob'
+              | 'Regex'
+              | 'Contains'
+              | 'NotContains'
+              | 'ContainsAny'
+              | 'NotContainsAny'
+              | 'AnyLt'
+              | 'AnyLte'
+              | 'AnyGt'
+              | 'AnyGte'
+              | 'ContainsAllTokens';
+
+            /**
+             * Filter value (type depends on field and operator)
+             */
+            value: string | number | Array<string> | Array<number>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include users this user follows with cursor pagination
+     */
+    export interface Following {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for users. Supports fields like login, company, location,
+       * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+       * Lt, Lte, Gt, Gte.
+       */
+      filters?: Following.UnionMember0 | Following.UnionMember1 | Following.UnionMember2;
+    }
+
+    export namespace Following {
+      export interface UnionMember0 {
+        /**
+         * Field name to filter on
+         */
+        field: string;
+
+        /**
+         * Filter operator
+         */
+        op:
+          | 'Eq'
+          | 'NotEq'
+          | 'In'
+          | 'NotIn'
+          | 'Lt'
+          | 'Lte'
+          | 'Gt'
+          | 'Gte'
+          | 'Glob'
+          | 'NotGlob'
+          | 'IGlob'
+          | 'NotIGlob'
+          | 'Regex'
+          | 'Contains'
+          | 'NotContains'
+          | 'ContainsAny'
+          | 'NotContainsAny'
+          | 'AnyLt'
+          | 'AnyLte'
+          | 'AnyGt'
+          | 'AnyGte'
+          | 'ContainsAllTokens';
+
+        /**
+         * Filter value (type depends on field and operator)
+         */
+        value: string | number | Array<string> | Array<number>;
+      }
+
+      export interface UnionMember1 {
+        /**
+         * Array of field filters
+         */
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+      }
+
+      export interface UnionMember2 {
+        /**
+         * Array of filters
+         */
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+
+        export interface UnionMember1 {
+          /**
+           * Array of field filters
+           */
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Composite operator
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Field name to filter on
+             */
+            field: string;
+
+            /**
+             * Filter operator
+             */
+            op:
+              | 'Eq'
+              | 'NotEq'
+              | 'In'
+              | 'NotIn'
+              | 'Lt'
+              | 'Lte'
+              | 'Gt'
+              | 'Gte'
+              | 'Glob'
+              | 'NotGlob'
+              | 'IGlob'
+              | 'NotIGlob'
+              | 'Regex'
+              | 'Contains'
+              | 'NotContains'
+              | 'ContainsAny'
+              | 'NotContainsAny'
+              | 'AnyLt'
+              | 'AnyLte'
+              | 'AnyGt'
+              | 'AnyGte'
+              | 'ContainsAllTokens';
+
+            /**
+             * Filter value (type depends on field and operator)
+             */
+            value: string | number | Array<string> | Array<number>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include owned repositories with cursor pagination
+     */
+    export interface Owns {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for users. Supports fields like login, company, location,
+       * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+       * Lt, Lte, Gt, Gte.
+       */
+      filters?: Owns.UnionMember0 | Owns.UnionMember1 | Owns.UnionMember2;
+    }
+
+    export namespace Owns {
+      export interface UnionMember0 {
+        /**
+         * Field name to filter on
+         */
+        field: string;
+
+        /**
+         * Filter operator
+         */
+        op:
+          | 'Eq'
+          | 'NotEq'
+          | 'In'
+          | 'NotIn'
+          | 'Lt'
+          | 'Lte'
+          | 'Gt'
+          | 'Gte'
+          | 'Glob'
+          | 'NotGlob'
+          | 'IGlob'
+          | 'NotIGlob'
+          | 'Regex'
+          | 'Contains'
+          | 'NotContains'
+          | 'ContainsAny'
+          | 'NotContainsAny'
+          | 'AnyLt'
+          | 'AnyLte'
+          | 'AnyGt'
+          | 'AnyGte'
+          | 'ContainsAllTokens';
+
+        /**
+         * Filter value (type depends on field and operator)
+         */
+        value: string | number | Array<string> | Array<number>;
+      }
+
+      export interface UnionMember1 {
+        /**
+         * Array of field filters
+         */
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+      }
+
+      export interface UnionMember2 {
+        /**
+         * Array of filters
+         */
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+
+        export interface UnionMember1 {
+          /**
+           * Array of field filters
+           */
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Composite operator
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Field name to filter on
+             */
+            field: string;
+
+            /**
+             * Filter operator
+             */
+            op:
+              | 'Eq'
+              | 'NotEq'
+              | 'In'
+              | 'NotIn'
+              | 'Lt'
+              | 'Lte'
+              | 'Gt'
+              | 'Gte'
+              | 'Glob'
+              | 'NotGlob'
+              | 'IGlob'
+              | 'NotIGlob'
+              | 'Regex'
+              | 'Contains'
+              | 'NotContains'
+              | 'ContainsAny'
+              | 'NotContainsAny'
+              | 'AnyLt'
+              | 'AnyLte'
+              | 'AnyGt'
+              | 'AnyGte'
+              | 'ContainsAllTokens';
+
+            /**
+             * Filter value (type depends on field and operator)
+             */
+            value: string | number | Array<string> | Array<number>;
+          }
+        }
+      }
+    }
+
+    /**
+     * Include starred repositories with cursor pagination
+     */
+    export interface Stars {
+      /**
+       * Number of items to return (max: 100)
+       */
+      first: number;
+
+      /**
+       * Cursor for pagination (opaque base64-encoded)
+       */
+      after?: string;
+
+      /**
+       * Optional filters for users. Supports fields like login, company, location,
+       * resolvedCountry, resolvedState, resolvedCity. Operators: Eq, NotEq, In, NotIn,
+       * Lt, Lte, Gt, Gte.
+       */
+      filters?: Stars.UnionMember0 | Stars.UnionMember1 | Stars.UnionMember2;
+    }
+
+    export namespace Stars {
+      export interface UnionMember0 {
+        /**
+         * Field name to filter on
+         */
+        field: string;
+
+        /**
+         * Filter operator
+         */
+        op:
+          | 'Eq'
+          | 'NotEq'
+          | 'In'
+          | 'NotIn'
+          | 'Lt'
+          | 'Lte'
+          | 'Gt'
+          | 'Gte'
+          | 'Glob'
+          | 'NotGlob'
+          | 'IGlob'
+          | 'NotIGlob'
+          | 'Regex'
+          | 'Contains'
+          | 'NotContains'
+          | 'ContainsAny'
+          | 'NotContainsAny'
+          | 'AnyLt'
+          | 'AnyLte'
+          | 'AnyGt'
+          | 'AnyGte'
+          | 'ContainsAllTokens';
+
+        /**
+         * Filter value (type depends on field and operator)
+         */
+        value: string | number | Array<string> | Array<number>;
+      }
+
+      export interface UnionMember1 {
+        /**
+         * Array of field filters
+         */
+        filters: Array<UnionMember1.Filter>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember1 {
+        export interface Filter {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+      }
+
+      export interface UnionMember2 {
+        /**
+         * Array of filters
+         */
+        filters: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+
+        /**
+         * Composite operator
+         */
+        op: 'And' | 'Or';
+      }
+
+      export namespace UnionMember2 {
+        export interface UnionMember0 {
+          /**
+           * Field name to filter on
+           */
+          field: string;
+
+          /**
+           * Filter operator
+           */
+          op:
+            | 'Eq'
+            | 'NotEq'
+            | 'In'
+            | 'NotIn'
+            | 'Lt'
+            | 'Lte'
+            | 'Gt'
+            | 'Gte'
+            | 'Glob'
+            | 'NotGlob'
+            | 'IGlob'
+            | 'NotIGlob'
+            | 'Regex'
+            | 'Contains'
+            | 'NotContains'
+            | 'ContainsAny'
+            | 'NotContainsAny'
+            | 'AnyLt'
+            | 'AnyLte'
+            | 'AnyGt'
+            | 'AnyGte'
+            | 'ContainsAllTokens';
+
+          /**
+           * Filter value (type depends on field and operator)
+           */
+          value: string | number | Array<string> | Array<number>;
+        }
+
+        export interface UnionMember1 {
+          /**
+           * Array of field filters
+           */
+          filters: Array<UnionMember1.Filter>;
+
+          /**
+           * Composite operator
+           */
+          op: 'And' | 'Or';
+        }
+
+        export namespace UnionMember1 {
+          export interface Filter {
+            /**
+             * Field name to filter on
+             */
+            field: string;
+
+            /**
+             * Filter operator
+             */
+            op:
+              | 'Eq'
+              | 'NotEq'
+              | 'In'
+              | 'NotIn'
+              | 'Lt'
+              | 'Lte'
+              | 'Gt'
+              | 'Gte'
+              | 'Glob'
+              | 'NotGlob'
+              | 'IGlob'
+              | 'NotIGlob'
+              | 'Regex'
+              | 'Contains'
+              | 'NotContains'
+              | 'ContainsAny'
+              | 'NotContainsAny'
+              | 'AnyLt'
+              | 'AnyLte'
+              | 'AnyGt'
+              | 'AnyGte'
+              | 'ContainsAllTokens';
+
+            /**
+             * Filter value (type depends on field and operator)
+             */
+            value: string | number | Array<string> | Array<number>;
+          }
+        }
+      }
+    }
+  }
+}
+
+export interface RawUserByLinkedinParams {
+  /**
+   * Array of LinkedIn profile URLs (1-100)
+   */
+  linkedinUrls: Array<string>;
+
+  /**
+   * Optional graph relationships and enrichment attributes
+   */
+  includeAttributes?: RawUserByLinkedinParams.IncludeAttributes;
+}
+
+export namespace RawUserByLinkedinParams {
+  /**
+   * Optional graph relationships and enrichment attributes
+   */
+  export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */
@@ -14950,18 +19079,21 @@ export interface RawUserByLoginParams {
   logins: Array<string>;
 
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: RawUserByLoginParams.IncludeAttributes;
 }
 
 export namespace RawUserByLoginParams {
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */
@@ -16356,6 +20488,11 @@ export namespace RawUserGraphParams {
    * attributes (owner, contributors, starrers) for repo-returning relationships.
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */
@@ -17978,10 +22115,12 @@ export namespace RawUserGraphParams {
 export declare namespace RawUsers {
   export {
     type RawUserRetrieveResponse as RawUserRetrieveResponse,
+    type RawUserByLinkedinResponse as RawUserByLinkedinResponse,
     type RawUserByLoginResponse as RawUserByLoginResponse,
     type RawUserCountResponse as RawUserCountResponse,
     type RawUserGraphResponse as RawUserGraphResponse,
     type RawUserRetrieveParams as RawUserRetrieveParams,
+    type RawUserByLinkedinParams as RawUserByLinkedinParams,
     type RawUserByLoginParams as RawUserByLoginParams,
     type RawUserCountParams as RawUserCountParams,
     type RawUserGraphParams as RawUserGraphParams,

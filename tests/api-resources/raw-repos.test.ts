@@ -28,7 +28,7 @@ describe('resource rawRepos', () => {
       githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
       includeAttributes: {
         contributors: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -72,7 +72,7 @@ describe('resource rawRepos', () => {
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
       includeAttributes: {
         contributors: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -144,6 +144,7 @@ describe('resource rawRepos', () => {
       after: 'eyJvZmZzZXQiOjEwMH0=',
       first: 100,
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',

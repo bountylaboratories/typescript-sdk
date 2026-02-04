@@ -58,7 +58,7 @@ export interface SearchUserNaturalLanguageResponse {
   /**
    * Array of user search results with relevance scores
    */
-  users: Array<SearchUserNaturalLanguageResponse.User>;
+  users: Array<SearchUserNaturalLanguageResponse.User | null>;
 
   /**
    * Pagination information
@@ -82,6 +82,11 @@ export namespace SearchUserNaturalLanguageResponse {
      * GitHub username
      */
     login: string;
+
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    aggregates?: User.Aggregates;
 
     /**
      * User biography
@@ -193,6 +198,16 @@ export namespace SearchUserNaturalLanguageResponse {
   }
 
   export namespace User {
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    export interface Aggregates {
+      /**
+       * Total stars received across all owned repositories
+       */
+      totalStars: number;
+    }
+
     /**
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
@@ -2937,7 +2952,7 @@ export interface SearchUserSearchResponse {
   /**
    * Array of user search results with relevance scores
    */
-  users: Array<SearchUserSearchResponse.User>;
+  users: Array<SearchUserSearchResponse.User | null>;
 
   /**
    * Pagination information
@@ -2961,6 +2976,11 @@ export namespace SearchUserSearchResponse {
      * GitHub username
      */
     login: string;
+
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    aggregates?: User.Aggregates;
 
     /**
      * User biography
@@ -3072,6 +3092,16 @@ export namespace SearchUserSearchResponse {
   }
 
   export namespace User {
+    /**
+     * Aggregate metrics (only present when includeAttributes.aggregates = true)
+     */
+    export interface Aggregates {
+      /**
+       * Total stars received across all owned repositories
+       */
+      totalStars: number;
+    }
+
     /**
      * Repositories this user starred (when includeAttributes.stars is specified)
      */
@@ -5829,8 +5859,7 @@ export interface SearchUserNaturalLanguageParams {
   first?: number;
 
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: SearchUserNaturalLanguageParams.IncludeAttributes;
 
@@ -5842,10 +5871,14 @@ export interface SearchUserNaturalLanguageParams {
 
 export namespace SearchUserNaturalLanguageParams {
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */
@@ -7030,8 +7063,7 @@ export interface SearchUserSearchParams {
   first?: number;
 
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: SearchUserSearchParams.IncludeAttributes;
 
@@ -7241,10 +7273,14 @@ export namespace SearchUserSearchParams {
   }
 
   /**
-   * Optional graph relationships to include (followers, following, stars, owns,
-   * contributes)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */

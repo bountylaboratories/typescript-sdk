@@ -30,6 +30,7 @@ describe('resource searchUsers', () => {
       enablePagination: true,
       first: 50,
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -41,7 +42,7 @@ describe('resource searchUsers', () => {
         },
         devrank: true,
         followers: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -69,7 +70,7 @@ describe('resource searchUsers', () => {
         },
         professional: true,
         stars: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -107,6 +108,7 @@ describe('resource searchUsers', () => {
       },
       first: 50,
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -118,7 +120,7 @@ describe('resource searchUsers', () => {
         },
         devrank: true,
         followers: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -146,7 +148,7 @@ describe('resource searchUsers', () => {
         },
         professional: true,
         stars: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
