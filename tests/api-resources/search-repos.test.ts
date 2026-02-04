@@ -100,7 +100,7 @@ describe('resource searchRepos', () => {
         ownerDevrank: true,
         ownerProfessional: true,
         starrers: {
-          first: 1,
+          first: 10,
           after: 'after',
           filters: {
             field: 'field',

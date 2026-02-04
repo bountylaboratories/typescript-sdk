@@ -25,6 +25,7 @@ describe('resource rawUsers', () => {
     const response = await client.rawUsers.retrieve({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -36,7 +37,7 @@ describe('resource rawUsers', () => {
         },
         devrank: true,
         followers: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -64,7 +65,78 @@ describe('resource rawUsers', () => {
         },
         professional: true,
         stars: {
-          first: 10,
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'field',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
+      },
+    });
+  });
+
+  // Prism tests are disabled
+  test.skip('byLinkedin: only required params', async () => {
+    const responsePromise = client.rawUsers.byLinkedin({
+      linkedinUrls: ['https://www.linkedin.com/in/octocat', 'https://www.linkedin.com/in/torvalds'],
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('byLinkedin: required and optional params', async () => {
+    const response = await client.rawUsers.byLinkedin({
+      linkedinUrls: ['https://www.linkedin.com/in/octocat', 'https://www.linkedin.com/in/torvalds'],
+      includeAttributes: {
+        aggregates: true,
+        contributes: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'field',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
+        devrank: true,
+        followers: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'field',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
+        following: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'field',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
+        owns: {
+          first: 1,
+          after: 'after',
+          filters: {
+            field: 'field',
+            op: 'Eq',
+            value: 'string',
+          },
+        },
+        professional: true,
+        stars: {
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -93,6 +165,7 @@ describe('resource rawUsers', () => {
     const response = await client.rawUsers.byLogin({
       logins: ['octocat', 'torvalds'],
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -104,7 +177,7 @@ describe('resource rawUsers', () => {
         },
         devrank: true,
         followers: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -132,7 +205,7 @@ describe('resource rawUsers', () => {
         },
         professional: true,
         stars: {
-          first: 10,
+          first: 1,
           after: 'after',
           filters: {
             field: 'field',
@@ -192,6 +265,7 @@ describe('resource rawUsers', () => {
       after: 'eyJvZmZzZXQiOjEwMH0=',
       first: 100,
       includeAttributes: {
+        aggregates: true,
         contributes: {
           first: 1,
           after: 'after',

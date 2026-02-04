@@ -7,9 +7,9 @@ import { path } from '../internal/utils/path';
 
 export class RawRepos extends APIResource {
   /**
-   * Fetch GitHub repositories by their node IDs. Supports batch requests (1-100
-   * IDs). Requires RAW service. Credits: 1 per result returned + graph relationship
-   * credits if includeAttributes is specified.
+   * Fetch GitHub repositories by their node IDs. Returns a positional array matching
+   * input order (null for unmatched IDs). Supports batch requests (1-100). Credits:
+   * 1 per non-null result + graph credits.
    *
    * @example
    * ```ts
@@ -26,9 +26,9 @@ export class RawRepos extends APIResource {
   }
 
   /**
-   * Fetch GitHub repositories by their full names (owner/repo format). Supports
-   * batch requests (1-100 repos). Requires RAW service. Credits: 1 per result
-   * returned.
+   * Fetch GitHub repositories by their full names (owner/repo). Returns a positional
+   * array matching input order (null for unmatched names). Supports batch requests
+   * (1-100). Credits: 1 per non-null result + graph credits.
    *
    * @example
    * ```ts
@@ -43,7 +43,7 @@ export class RawRepos extends APIResource {
 
   /**
    * Count repositories in the database matching filters. Counts are capped at
-   * minimum (10k) and maximum (1M). Requires RAW service. Credits: 1 per request.
+   * minimum (10k) and maximum (1M). Credits: 1 per request.
    *
    * @example
    * ```ts
@@ -84,12 +84,12 @@ export class RawRepos extends APIResource {
 
 export interface RawRepoRetrieveResponse {
   /**
-   * Number of repositories returned
+   * Number of non-null repositories returned
    */
   count: number;
 
   /**
-   * Array of repository objects
+   * Positional array of repositories (null for unmatched input entries)
    */
   repositories: Array<RawRepoRetrieveResponse.Repository>;
 }
@@ -805,12 +805,12 @@ export namespace RawRepoRetrieveResponse {
 
 export interface RawRepoByFullnameResponse {
   /**
-   * Number of repositories returned
+   * Number of non-null repositories returned
    */
   count: number;
 
   /**
-   * Array of repository objects
+   * Positional array of repositories (null for unmatched input entries)
    */
   repositories: Array<RawRepoByFullnameResponse.Repository>;
 }
@@ -1551,7 +1551,7 @@ export namespace RawRepoGraphResponse {
     /**
      * Array of users who starred this repository (with optional graph relationships)
      */
-    users: Array<RepoStarsResponse.User>;
+    users: Array<RepoStarsResponse.User | null>;
   }
 
   export namespace RepoStarsResponse {
@@ -1585,6 +1585,11 @@ export namespace RawRepoGraphResponse {
        * GitHub username
        */
       login: string;
+
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      aggregates?: User.Aggregates;
 
       /**
        * User biography
@@ -1696,6 +1701,16 @@ export namespace RawRepoGraphResponse {
     }
 
     export namespace User {
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      export interface Aggregates {
+        /**
+         * Total stars received across all owned repositories
+         */
+        totalStars: number;
+      }
+
       /**
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
@@ -4426,7 +4441,7 @@ export namespace RawRepoGraphResponse {
      * Array of users who contribute to this repository (with optional graph
      * relationships)
      */
-    users: Array<RepoContributesResponse.User>;
+    users: Array<RepoContributesResponse.User | null>;
   }
 
   export namespace RepoContributesResponse {
@@ -4460,6 +4475,11 @@ export namespace RawRepoGraphResponse {
        * GitHub username
        */
       login: string;
+
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      aggregates?: User.Aggregates;
 
       /**
        * User biography
@@ -4571,6 +4591,16 @@ export namespace RawRepoGraphResponse {
     }
 
     export namespace User {
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      export interface Aggregates {
+        /**
+         * Total stars received across all owned repositories
+         */
+        totalStars: number;
+      }
+
       /**
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
@@ -7301,7 +7331,7 @@ export namespace RawRepoGraphResponse {
      * Array of users who own this repository (typically 1, with optional graph
      * relationships)
      */
-    users: Array<RepoOwnsResponse.User>;
+    users: Array<RepoOwnsResponse.User | null>;
   }
 
   export namespace RepoOwnsResponse {
@@ -7335,6 +7365,11 @@ export namespace RawRepoGraphResponse {
        * GitHub username
        */
       login: string;
+
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      aggregates?: User.Aggregates;
 
       /**
        * User biography
@@ -7446,6 +7481,16 @@ export namespace RawRepoGraphResponse {
     }
 
     export namespace User {
+      /**
+       * Aggregate metrics (only present when includeAttributes.aggregates = true)
+       */
+      export interface Aggregates {
+        /**
+         * Total stars received across all owned repositories
+         */
+        totalStars: number;
+      }
+
       /**
        * Repositories this user starred (when includeAttributes.stars is specified)
        */
@@ -10174,14 +10219,14 @@ export interface RawRepoRetrieveParams {
   githubIds: Array<string>;
 
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: RawRepoRetrieveParams.IncludeAttributes;
 }
 
 export namespace RawRepoRetrieveParams {
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
     /**
@@ -10665,14 +10710,14 @@ export interface RawRepoByFullnameParams {
   fullNames: Array<string>;
 
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   includeAttributes?: RawRepoByFullnameParams.IncludeAttributes;
 }
 
 export namespace RawRepoByFullnameParams {
   /**
-   * Optional graph relationships to include (owner, contributors, starrers)
+   * Optional graph relationships and enrichment attributes
    */
   export interface IncludeAttributes {
     /**
@@ -11392,6 +11437,11 @@ export namespace RawRepoGraphParams {
    * attributes (owner, contributors, starrers) for repo-returning relationships.
    */
   export interface IncludeAttributes {
+    /**
+     * Include aggregate metrics (e.g. totalStars) for the user
+     */
+    aggregates?: boolean;
+
     /**
      * Include contributed repositories with cursor pagination
      */
