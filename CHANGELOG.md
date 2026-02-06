@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.35.1 (2026-02-06)
+
+Full Changelog: [v0.35.0...v0.35.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.35.0...v0.35.1)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([7e5c994](https://github.com/bountylaboratories/typescript-sdk/commit/7e5c994d567903959d49067bcc38570c35577069))
+
+
+### Chores
+
+* **client:** restructure abort controller binding ([2a2838a](https://github.com/bountylaboratories/typescript-sdk/commit/2a2838a971cb0dac900c5fd9067f0287109d86d0))
+
 ## 0.35.0 (2026-02-04)
 
 Full Changelog: [v0.34.1...v0.35.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.34.1...v0.35.0)
