@@ -96,9 +96,14 @@ export namespace UserEmailBestEmailResponse {
     login: string;
 
     /**
-     * Other email addresses that were not selected as the best email
+     * Deprecated. Always returns an empty array.
      */
     otherCandidates: Array<string>;
+
+    /**
+     * Whether the email is a work or personal address
+     */
+    profile: 'WORK' | 'PERSONAL' | null;
   }
 }
 
@@ -132,9 +137,14 @@ export namespace UserEmailBestEmailByLoginResponse {
     login: string;
 
     /**
-     * Other email addresses that were not selected as the best email
+     * Deprecated. Always returns an empty array.
      */
     otherCandidates: Array<string>;
+
+    /**
+     * Whether the email is a work or personal address
+     */
+    profile: 'WORK' | 'PERSONAL' | null;
   }
 }
 
