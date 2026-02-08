@@ -103,7 +103,7 @@ export namespace UserEmailBestEmailResponse {
     /**
      * Whether the email is a work or personal address
      */
-    profile: 'WORK' | 'PERSONAL' | null;
+    profile: 'WORK' | 'PERSONAL' | 'SCHOOL' | null;
   }
 }
 
@@ -144,7 +144,7 @@ export namespace UserEmailBestEmailByLoginResponse {
     /**
      * Whether the email is a work or personal address
      */
-    profile: 'WORK' | 'PERSONAL' | null;
+    profile: 'WORK' | 'PERSONAL' | 'SCHOOL' | null;
   }
 }
 
