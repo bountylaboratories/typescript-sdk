@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.38.1 (2026-02-12)
+
+Full Changelog: [v0.38.0...v0.38.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.38.0...v0.38.1)
+
+### Chores
+
+* **internal:** avoid type checking errors with ts-reset ([5628a52](https://github.com/bountylaboratories/typescript-sdk/commit/5628a520d1ab86ef9d3bf3959ca177f8b3aee38d))
+
 ## 0.38.0 (2026-02-10)
 
 Full Changelog: [v0.37.0...v0.38.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.37.0...v0.38.0)
