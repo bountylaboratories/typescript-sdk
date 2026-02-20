@@ -8,7 +8,7 @@ const client = new Bountylab({
 });
 
 describe('resource rawRepos', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.rawRepos.retrieve({
       githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
@@ -22,7 +22,7 @@ describe('resource rawRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.rawRepos.retrieve({
       githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
@@ -52,7 +52,7 @@ describe('resource rawRepos', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byFullname: only required params', async () => {
     const responsePromise = client.rawRepos.byFullname({
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
@@ -66,7 +66,7 @@ describe('resource rawRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byFullname: required and optional params', async () => {
     const response = await client.rawRepos.byFullname({
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
@@ -96,7 +96,7 @@ describe('resource rawRepos', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('count: only required params', async () => {
     const responsePromise = client.rawRepos.count({
       filters: {
@@ -114,7 +114,7 @@ describe('resource rawRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('count: required and optional params', async () => {
     const response = await client.rawRepos.count({
       filters: {
@@ -125,7 +125,7 @@ describe('resource rawRepos', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('graph: only required params', async () => {
     const responsePromise = client.rawRepos.graph('stars', { id: 'id' });
     const rawResponse = await responsePromise.asResponse();
@@ -137,7 +137,7 @@ describe('resource rawRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('graph: required and optional params', async () => {
     const response = await client.rawRepos.graph('stars', {
       id: 'id',
