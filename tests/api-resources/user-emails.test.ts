@@ -8,7 +8,7 @@ const client = new Bountylab({
 });
 
 describe('resource userEmails', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bestEmail: only required params', async () => {
     const responsePromise = client.userEmails.bestEmail({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
@@ -22,7 +22,7 @@ describe('resource userEmails', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bestEmail: required and optional params', async () => {
     const response = await client.userEmails.bestEmail({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
@@ -36,7 +36,7 @@ describe('resource userEmails', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bestEmailByLogin: only required params', async () => {
     const responsePromise = client.userEmails.bestEmailByLogin({ logins: ['octocat', 'torvalds'] });
     const rawResponse = await responsePromise.asResponse();
@@ -48,7 +48,7 @@ describe('resource userEmails', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bestEmailByLogin: required and optional params', async () => {
     const response = await client.userEmails.bestEmailByLogin({
       logins: ['octocat', 'torvalds'],
@@ -62,7 +62,7 @@ describe('resource userEmails', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('replySignal: only required params', async () => {
     const responsePromise = client.userEmails.replySignal({ githubIds: ['MDQ6VXNlcjU4MzIzMQ=='] });
     const rawResponse = await responsePromise.asResponse();
@@ -74,7 +74,7 @@ describe('resource userEmails', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('replySignal: required and optional params', async () => {
     const response = await client.userEmails.replySignal({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ=='],
