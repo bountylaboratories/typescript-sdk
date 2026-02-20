@@ -8,7 +8,7 @@ const client = new Bountylab({
 });
 
 describe('resource rawUsers', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.rawUsers.retrieve({ githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='] });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource rawUsers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.rawUsers.retrieve({
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
@@ -77,7 +77,7 @@ describe('resource rawUsers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byLinkedin: only required params', async () => {
     const responsePromise = client.rawUsers.byLinkedin({
       linkedinUrls: ['https://www.linkedin.com/in/octocat', 'https://www.linkedin.com/in/torvalds'],
@@ -91,7 +91,7 @@ describe('resource rawUsers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byLinkedin: required and optional params', async () => {
     const response = await client.rawUsers.byLinkedin({
       linkedinUrls: ['https://www.linkedin.com/in/octocat', 'https://www.linkedin.com/in/torvalds'],
@@ -148,7 +148,7 @@ describe('resource rawUsers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byLogin: only required params', async () => {
     const responsePromise = client.rawUsers.byLogin({ logins: ['octocat', 'torvalds'] });
     const rawResponse = await responsePromise.asResponse();
@@ -160,7 +160,7 @@ describe('resource rawUsers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byLogin: required and optional params', async () => {
     const response = await client.rawUsers.byLogin({
       logins: ['octocat', 'torvalds'],
@@ -217,7 +217,7 @@ describe('resource rawUsers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('count: only required params', async () => {
     const responsePromise = client.rawUsers.count({
       filters: {
@@ -235,7 +235,7 @@ describe('resource rawUsers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('count: required and optional params', async () => {
     const response = await client.rawUsers.count({
       filters: {
@@ -246,7 +246,7 @@ describe('resource rawUsers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('graph: only required params', async () => {
     const responsePromise = client.rawUsers.graph('followers', { id: 'id' });
     const rawResponse = await responsePromise.asResponse();
@@ -258,7 +258,7 @@ describe('resource rawUsers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('graph: required and optional params', async () => {
     const response = await client.rawUsers.graph('followers', {
       id: 'id',

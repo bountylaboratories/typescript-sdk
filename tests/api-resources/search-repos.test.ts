@@ -8,7 +8,7 @@ const client = new Bountylab({
 });
 
 describe('resource searchRepos', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('naturalLanguage: only required params', async () => {
     const responsePromise = client.searchRepos.naturalLanguage({
       query:
@@ -23,7 +23,7 @@ describe('resource searchRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('naturalLanguage: required and optional params', async () => {
     const response = await client.searchRepos.naturalLanguage({
       query:
@@ -61,7 +61,7 @@ describe('resource searchRepos', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: only required params', async () => {
     const responsePromise = client.searchRepos.search({ query: 'react component library with typescript' });
     const rawResponse = await responsePromise.asResponse();
@@ -73,7 +73,7 @@ describe('resource searchRepos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: required and optional params', async () => {
     const response = await client.searchRepos.search({
       query: 'react component library with typescript',
