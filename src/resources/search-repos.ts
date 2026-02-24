@@ -2073,7 +2073,7 @@ export namespace SearchRepoNaturalLanguageParams {
   }
 
   export interface Attr {
-    name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+    name: string;
 
     type: 'Attr';
   }
@@ -2102,7 +2102,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace Sum {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -2131,7 +2131,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2150,7 +2150,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2182,7 +2182,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2202,7 +2202,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2224,7 +2224,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2248,7 +2248,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2291,7 +2291,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2310,7 +2310,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2342,7 +2342,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2362,7 +2362,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2384,7 +2384,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2408,7 +2408,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2439,7 +2439,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2458,7 +2458,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2490,7 +2490,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2510,7 +2510,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2532,7 +2532,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2556,7 +2556,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2588,7 +2588,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2607,7 +2607,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2639,7 +2639,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2659,7 +2659,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2681,7 +2681,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2705,7 +2705,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2739,7 +2739,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2758,7 +2758,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2790,7 +2790,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2810,7 +2810,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2832,7 +2832,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2856,7 +2856,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2900,7 +2900,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace Max {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -2929,7 +2929,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -2948,7 +2948,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -2980,7 +2980,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3000,7 +3000,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3022,7 +3022,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3046,7 +3046,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3089,7 +3089,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3108,7 +3108,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3140,7 +3140,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3160,7 +3160,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3182,7 +3182,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3206,7 +3206,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3237,7 +3237,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3256,7 +3256,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3288,7 +3288,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3308,7 +3308,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3330,7 +3330,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3354,7 +3354,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3386,7 +3386,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3405,7 +3405,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3437,7 +3437,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3457,7 +3457,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3479,7 +3479,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3503,7 +3503,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3537,7 +3537,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3556,7 +3556,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3588,7 +3588,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3608,7 +3608,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3630,7 +3630,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3654,7 +3654,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3686,7 +3686,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace Min {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -3715,7 +3715,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3734,7 +3734,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3766,7 +3766,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3786,7 +3786,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3808,7 +3808,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3832,7 +3832,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3875,7 +3875,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -3894,7 +3894,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3926,7 +3926,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3946,7 +3946,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3968,7 +3968,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -3992,7 +3992,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4023,7 +4023,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4042,7 +4042,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4074,7 +4074,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4094,7 +4094,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4116,7 +4116,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4140,7 +4140,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4172,7 +4172,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4191,7 +4191,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4223,7 +4223,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4243,7 +4243,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4265,7 +4265,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4289,7 +4289,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4323,7 +4323,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4342,7 +4342,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4374,7 +4374,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4394,7 +4394,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4416,7 +4416,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4440,7 +4440,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4473,7 +4473,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace Log {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -4502,7 +4502,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4521,7 +4521,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4553,7 +4553,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4573,7 +4573,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4595,7 +4595,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4619,7 +4619,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4662,7 +4662,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4681,7 +4681,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4713,7 +4713,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4733,7 +4733,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4755,7 +4755,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4779,7 +4779,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4810,7 +4810,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4829,7 +4829,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4861,7 +4861,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4881,7 +4881,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4903,7 +4903,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4927,7 +4927,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -4959,7 +4959,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -4978,7 +4978,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5010,7 +5010,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5030,7 +5030,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5052,7 +5052,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5076,7 +5076,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5110,7 +5110,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5129,7 +5129,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5161,7 +5161,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5181,7 +5181,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5203,7 +5203,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5227,7 +5227,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5262,7 +5262,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
   export namespace Saturate {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -5291,7 +5291,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5310,7 +5310,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5342,7 +5342,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5362,7 +5362,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5384,7 +5384,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5408,7 +5408,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5451,7 +5451,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5470,7 +5470,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5502,7 +5502,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5522,7 +5522,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5544,7 +5544,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5568,7 +5568,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5599,7 +5599,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5618,7 +5618,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5650,7 +5650,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5670,7 +5670,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5692,7 +5692,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5716,7 +5716,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5748,7 +5748,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5767,7 +5767,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5799,7 +5799,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5819,7 +5819,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5841,7 +5841,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5865,7 +5865,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5899,7 +5899,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -5918,7 +5918,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5950,7 +5950,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5970,7 +5970,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -5992,7 +5992,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6016,7 +6016,7 @@ export namespace SearchRepoNaturalLanguageParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6773,7 +6773,7 @@ export namespace SearchRepoSearchParams {
   }
 
   export interface Attr {
-    name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+    name: string;
 
     type: 'Attr';
   }
@@ -6802,7 +6802,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace Sum {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -6831,7 +6831,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -6850,7 +6850,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6882,7 +6882,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6902,7 +6902,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6924,7 +6924,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6948,7 +6948,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -6991,7 +6991,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7010,7 +7010,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7042,7 +7042,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7062,7 +7062,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7084,7 +7084,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7108,7 +7108,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7139,7 +7139,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7158,7 +7158,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7190,7 +7190,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7210,7 +7210,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7232,7 +7232,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7256,7 +7256,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7288,7 +7288,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7307,7 +7307,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7339,7 +7339,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7359,7 +7359,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7381,7 +7381,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7405,7 +7405,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7439,7 +7439,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7458,7 +7458,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7490,7 +7490,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7510,7 +7510,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7532,7 +7532,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7556,7 +7556,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7600,7 +7600,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace Max {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -7629,7 +7629,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7648,7 +7648,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7680,7 +7680,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7700,7 +7700,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7722,7 +7722,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7746,7 +7746,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7789,7 +7789,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7808,7 +7808,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7840,7 +7840,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7860,7 +7860,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7882,7 +7882,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7906,7 +7906,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7937,7 +7937,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -7956,7 +7956,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -7988,7 +7988,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8008,7 +8008,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8030,7 +8030,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8054,7 +8054,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8086,7 +8086,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8105,7 +8105,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8137,7 +8137,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8157,7 +8157,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8179,7 +8179,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8203,7 +8203,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8237,7 +8237,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8256,7 +8256,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8288,7 +8288,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8308,7 +8308,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8330,7 +8330,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8354,7 +8354,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8386,7 +8386,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace Min {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -8415,7 +8415,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8434,7 +8434,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8466,7 +8466,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8486,7 +8486,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8508,7 +8508,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8532,7 +8532,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8575,7 +8575,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8594,7 +8594,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8626,7 +8626,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8646,7 +8646,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8668,7 +8668,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8692,7 +8692,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8723,7 +8723,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8742,7 +8742,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8774,7 +8774,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8794,7 +8794,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8816,7 +8816,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8840,7 +8840,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8872,7 +8872,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -8891,7 +8891,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8923,7 +8923,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8943,7 +8943,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8965,7 +8965,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -8989,7 +8989,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9023,7 +9023,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9042,7 +9042,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9074,7 +9074,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9094,7 +9094,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9116,7 +9116,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9140,7 +9140,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9173,7 +9173,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace Log {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -9202,7 +9202,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9221,7 +9221,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9253,7 +9253,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9273,7 +9273,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9295,7 +9295,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9319,7 +9319,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9362,7 +9362,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9381,7 +9381,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9413,7 +9413,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9433,7 +9433,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9455,7 +9455,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9479,7 +9479,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9510,7 +9510,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9529,7 +9529,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9561,7 +9561,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9581,7 +9581,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9603,7 +9603,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9627,7 +9627,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9659,7 +9659,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9678,7 +9678,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9710,7 +9710,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9730,7 +9730,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9752,7 +9752,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9776,7 +9776,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9810,7 +9810,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -9829,7 +9829,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9861,7 +9861,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9881,7 +9881,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9903,7 +9903,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9927,7 +9927,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -9962,7 +9962,7 @@ export namespace SearchRepoSearchParams {
 
   export namespace Saturate {
     export interface UnionMember0 {
-      name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+      name: string;
 
       type: 'Attr';
     }
@@ -9991,7 +9991,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember2 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -10010,7 +10010,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10042,7 +10042,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10062,7 +10062,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10084,7 +10084,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10108,7 +10108,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10151,7 +10151,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember5 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -10170,7 +10170,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10202,7 +10202,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10222,7 +10222,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10244,7 +10244,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10268,7 +10268,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10299,7 +10299,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember6 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -10318,7 +10318,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10350,7 +10350,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10370,7 +10370,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10392,7 +10392,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10416,7 +10416,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10448,7 +10448,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember7 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -10467,7 +10467,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10499,7 +10499,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10519,7 +10519,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10541,7 +10541,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10565,7 +10565,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10599,7 +10599,7 @@ export namespace SearchRepoSearchParams {
 
     export namespace UnionMember8 {
       export interface UnionMember0 {
-        name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+        name: string;
 
         type: 'Attr';
       }
@@ -10618,7 +10618,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember2 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10650,7 +10650,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember5 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10670,7 +10670,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember6 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10692,7 +10692,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember7 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
@@ -10716,7 +10716,7 @@ export namespace SearchRepoSearchParams {
 
       export namespace UnionMember8 {
         export interface UnionMember0 {
-          name: 'ann' | 'stars' | 'issues_closed' | 'age' | 'recency';
+          name: string;
 
           type: 'Attr';
         }
