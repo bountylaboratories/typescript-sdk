@@ -57,7 +57,7 @@ describe('resource searchRepos', () => {
         },
       },
       maxResults: 50,
-      rankBy: { name: 'ann', type: 'Attr' },
+      rankBy: { name: 'x', type: 'Attr' },
     });
   });
 
@@ -110,7 +110,7 @@ describe('resource searchRepos', () => {
         },
       },
       maxResults: 50,
-      rankBy: { name: 'ann', type: 'Attr' },
+      rankBy: { name: 'x', type: 'Attr' },
     });
   });
 });
