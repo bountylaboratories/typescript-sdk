@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.39.0 (2026-02-24)
+
+Full Changelog: [v0.38.1...v0.39.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.38.1...v0.39.0)
+
+### Features
+
+* **api:** api update ([332bf32](https://github.com/bountylaboratories/typescript-sdk/commit/332bf324051aaf8f55e87091e1e2191bb11c8925))
+
 ## 0.38.1 (2026-02-24)
 
 Full Changelog: [v0.38.0...v0.38.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.38.0...v0.38.1)
