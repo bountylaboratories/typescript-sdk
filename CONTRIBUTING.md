@@ -60,7 +60,7 @@ $ yarn link @bountylab/bountylab
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global @bountylab/bountylab
+$ pnpm link --global @bountylab/bountylab
 ```
 
 ## Running tests
