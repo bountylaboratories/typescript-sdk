@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.38.1 (2026-02-24)
+
+Full Changelog: [v0.38.0...v0.38.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.38.0...v0.38.1)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([0450bce](https://github.com/bountylaboratories/typescript-sdk/commit/0450bce0d097e37ba526ad542d6e0c5499b0211f))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([71466af](https://github.com/bountylaboratories/typescript-sdk/commit/71466afcdb175075ebc2a2a16bc1fc41c5ad3cc2))
+* **internal:** avoid type checking errors with ts-reset ([5628a52](https://github.com/bountylaboratories/typescript-sdk/commit/5628a520d1ab86ef9d3bf3959ca177f8b3aee38d))
+* **internal:** remove mock server code ([b5fec03](https://github.com/bountylaboratories/typescript-sdk/commit/b5fec035d5ba40234374217ef5e176594923fffb))
+* update mock server docs ([7ccf25d](https://github.com/bountylaboratories/typescript-sdk/commit/7ccf25d9aa6f6169c46ec516d0b54a89d98c03ef))
+
 ## 0.38.0 (2026-02-10)
 
 Full Changelog: [v0.37.0...v0.38.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.37.0...v0.38.0)
