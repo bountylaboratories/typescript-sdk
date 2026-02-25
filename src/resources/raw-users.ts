@@ -7,14 +7,18 @@ import { path } from '../internal/utils/path';
 
 export class RawUsers extends APIResource {
   /**
-   * Fetch GitHub users by their node IDs. Returns a positional array matching input
-   * order (null for unmatched IDs). Supports batch requests (1-100 IDs). Credits: 1
-   * per non-null result + graph credits.
+   * Fetch GitHub users by their IDs. Accepts both GitHub node IDs (e.g.
+   * MDQ6VXNlcjE=) and BountyLab IDs (32-char hex). Returns a positional array
+   * matching input order (null for unmatched IDs). Supports batch requests (1-100
+   * IDs). Credits: 1 per non-null result + graph credits.
    *
    * @example
    * ```ts
    * const rawUser = await client.rawUsers.retrieve({
-   *   githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
+   *   githubIds: [
+   *     'MDQ6VXNlcjU4MzIzMQ==',
+   *     'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4',
+   *   ],
    * });
    * ```
    */
@@ -16732,7 +16736,8 @@ export namespace RawUserGraphResponse {
 
 export interface RawUserRetrieveParams {
   /**
-   * Array of GitHub node IDs (1-100)
+   * Array of IDs — GitHub node IDs (e.g. MDQ6VXNlcjE=) or BountyLab IDs (32-char
+   * hex). Can be mixed.
    */
   githubIds: Array<string>;
 
