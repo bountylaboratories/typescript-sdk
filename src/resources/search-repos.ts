@@ -1687,7 +1687,7 @@ export namespace SearchRepoNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -1739,7 +1739,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -1792,7 +1792,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -1844,7 +1844,7 @@ export namespace SearchRepoNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -1909,7 +1909,7 @@ export namespace SearchRepoNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -1961,7 +1961,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -2014,7 +2014,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -2066,7 +2066,7 @@ export namespace SearchRepoNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -7413,7 +7413,7 @@ export namespace SearchRepoSearchParams {
     /**
      * Filter value (type depends on field and operator)
      */
-    value: string | number | Array<string> | Array<number>;
+    value: string | number | boolean | Array<string> | Array<number>;
   }
 
   export interface UnionMember1 {
@@ -7465,7 +7465,7 @@ export namespace SearchRepoSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
   }
 
@@ -7518,7 +7518,7 @@ export namespace SearchRepoSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
 
     export interface UnionMember1 {
@@ -7570,7 +7570,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
     }
   }
@@ -7666,7 +7666,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -7718,7 +7718,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -7771,7 +7771,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -7823,7 +7823,7 @@ export namespace SearchRepoSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -7888,7 +7888,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -7940,7 +7940,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -7993,7 +7993,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -8045,7 +8045,7 @@ export namespace SearchRepoSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }

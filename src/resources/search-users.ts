@@ -5975,7 +5975,7 @@ export namespace SearchUserNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6027,7 +6027,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6080,7 +6080,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6132,7 +6132,7 @@ export namespace SearchUserNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -6197,7 +6197,7 @@ export namespace SearchUserNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6249,7 +6249,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6302,7 +6302,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6354,7 +6354,7 @@ export namespace SearchUserNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -6419,7 +6419,7 @@ export namespace SearchUserNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6471,7 +6471,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6524,7 +6524,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6576,7 +6576,7 @@ export namespace SearchUserNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -6641,7 +6641,7 @@ export namespace SearchUserNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6693,7 +6693,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6746,7 +6746,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6798,7 +6798,7 @@ export namespace SearchUserNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -6863,7 +6863,7 @@ export namespace SearchUserNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6915,7 +6915,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6968,7 +6968,7 @@ export namespace SearchUserNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -7020,7 +7020,7 @@ export namespace SearchUserNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -7110,7 +7110,7 @@ export namespace SearchUserSearchParams {
     /**
      * Filter value (type depends on field and operator)
      */
-    value: string | number | Array<string> | Array<number>;
+    value: string | number | boolean | Array<string> | Array<number>;
   }
 
   export interface UnionMember1 {
@@ -7162,7 +7162,7 @@ export namespace SearchUserSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
   }
 
@@ -7215,7 +7215,7 @@ export namespace SearchUserSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
 
     export interface UnionMember1 {
@@ -7267,7 +7267,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
     }
   }
@@ -7377,7 +7377,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -7429,7 +7429,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -7482,7 +7482,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -7534,7 +7534,7 @@ export namespace SearchUserSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -7599,7 +7599,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -7651,7 +7651,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -7704,7 +7704,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -7756,7 +7756,7 @@ export namespace SearchUserSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -7821,7 +7821,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -7873,7 +7873,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -7926,7 +7926,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -7978,7 +7978,7 @@ export namespace SearchUserSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -8043,7 +8043,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -8095,7 +8095,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -8148,7 +8148,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -8200,7 +8200,7 @@ export namespace SearchUserSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -8265,7 +8265,7 @@ export namespace SearchUserSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -8317,7 +8317,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -8370,7 +8370,7 @@ export namespace SearchUserSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -8422,7 +8422,7 @@ export namespace SearchUserSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }

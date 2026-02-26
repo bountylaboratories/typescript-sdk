@@ -10318,7 +10318,7 @@ export namespace RawRepoRetrieveParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -10370,7 +10370,7 @@ export namespace RawRepoRetrieveParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -10423,7 +10423,7 @@ export namespace RawRepoRetrieveParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -10475,7 +10475,7 @@ export namespace RawRepoRetrieveParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -10540,7 +10540,7 @@ export namespace RawRepoRetrieveParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -10592,7 +10592,7 @@ export namespace RawRepoRetrieveParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -10645,7 +10645,7 @@ export namespace RawRepoRetrieveParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -10697,7 +10697,7 @@ export namespace RawRepoRetrieveParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -10809,7 +10809,7 @@ export namespace RawRepoByFullnameParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -10861,7 +10861,7 @@ export namespace RawRepoByFullnameParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -10914,7 +10914,7 @@ export namespace RawRepoByFullnameParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -10966,7 +10966,7 @@ export namespace RawRepoByFullnameParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -11031,7 +11031,7 @@ export namespace RawRepoByFullnameParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -11083,7 +11083,7 @@ export namespace RawRepoByFullnameParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -11136,7 +11136,7 @@ export namespace RawRepoByFullnameParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -11188,7 +11188,7 @@ export namespace RawRepoByFullnameParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -11243,7 +11243,7 @@ export namespace RawRepoCountParams {
     /**
      * Filter value (type depends on field and operator)
      */
-    value: string | number | Array<string> | Array<number>;
+    value: string | number | boolean | Array<string> | Array<number>;
   }
 
   export interface UnionMember1 {
@@ -11295,7 +11295,7 @@ export namespace RawRepoCountParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
   }
 
@@ -11348,7 +11348,7 @@ export namespace RawRepoCountParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
 
     export interface UnionMember1 {
@@ -11400,7 +11400,7 @@ export namespace RawRepoCountParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
     }
   }
@@ -11566,7 +11566,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -11618,7 +11618,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -11671,7 +11671,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -11723,7 +11723,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -11788,7 +11788,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -11840,7 +11840,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -11893,7 +11893,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -11945,7 +11945,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -12010,7 +12010,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -12062,7 +12062,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -12115,7 +12115,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -12167,7 +12167,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -12232,7 +12232,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -12284,7 +12284,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -12337,7 +12337,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -12389,7 +12389,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -12454,7 +12454,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -12506,7 +12506,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -12559,7 +12559,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -12611,7 +12611,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -12676,7 +12676,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -12728,7 +12728,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -12781,7 +12781,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -12833,7 +12833,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -12898,7 +12898,7 @@ export namespace RawRepoGraphParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -12950,7 +12950,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -13003,7 +13003,7 @@ export namespace RawRepoGraphParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -13055,7 +13055,7 @@ export namespace RawRepoGraphParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
