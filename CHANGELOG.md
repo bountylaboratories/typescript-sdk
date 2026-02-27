@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.40.0 (2026-02-27)
+
+Full Changelog: [v0.39.0...v0.40.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.39.0...v0.40.0)
+
+### Features
+
+* **api:** api update ([07fd2d3](https://github.com/bountylaboratories/typescript-sdk/commit/07fd2d34790f6250d7bfe6d8aaf4816d15012f12))
+* **api:** api update ([1dff845](https://github.com/bountylaboratories/typescript-sdk/commit/1dff845aa5c6012f548282a1b7023225fb5200d4))
+* **api:** api update ([8400eed](https://github.com/bountylaboratories/typescript-sdk/commit/8400eedf6b610347cf5c6c11663ba0ac9602fcd7))
+
+
+### Chores
+
+* **internal:** move stringifyQuery implementation to internal function ([6a07011](https://github.com/bountylaboratories/typescript-sdk/commit/6a07011ce6639ff3214a9fed805ac402878fd5fb))
+
 ## 0.39.0 (2026-02-24)
 
 Full Changelog: [v0.38.1...v0.39.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.38.1...v0.39.0)
