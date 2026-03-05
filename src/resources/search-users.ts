@@ -5849,6 +5849,12 @@ export interface SearchUserNaturalLanguageParams {
   after?: string;
 
   /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional professional fields.
+   */
+  dataset?: 'standard' | 'professional';
+
+  /**
    * Enable cursor-based pagination to fetch results across multiple requests
    */
   enablePagination?: boolean;
@@ -7041,6 +7047,12 @@ export interface SearchUserSearchParams {
    * Cursor for pagination (from previous response pageInfo.endCursor)
    */
   after?: string;
+
+  /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional professional fields.
+   */
+  dataset?: 'standard' | 'professional';
 
   /**
    * Enable cursor-based pagination to fetch results across multiple requests

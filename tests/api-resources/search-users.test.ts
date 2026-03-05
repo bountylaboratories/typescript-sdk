@@ -27,6 +27,7 @@ describe('resource searchUsers', () => {
     const response = await client.searchUsers.naturalLanguage({
       query: 'Find machine learning engineers at Google who work on AI infrastructure',
       after: 'Y3Vyc29yOjEyMzQ1',
+      dataset: 'standard',
       enablePagination: true,
       first: 50,
       includeAttributes: {
@@ -100,6 +101,7 @@ describe('resource searchUsers', () => {
     const response = await client.searchUsers.search({
       query: 'machine learning engineer san francisco',
       after: 'Y3Vyc29yOjEyMzQ1',
+      dataset: 'standard',
       enablePagination: true,
       filters: {
         field: 'field',
