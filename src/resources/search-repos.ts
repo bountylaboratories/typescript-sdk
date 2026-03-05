@@ -1551,6 +1551,12 @@ export interface SearchRepoNaturalLanguageParams {
   applyFiltersToIncludeAttributes?: boolean;
 
   /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional owner LinkedIn fields.
+   */
+  dataset?: 'standard' | 'professional';
+
+  /**
    * Enable cursor-based pagination to fetch results across multiple requests
    */
   enablePagination?: boolean;
@@ -7329,6 +7335,12 @@ export interface SearchRepoSearchParams {
    * criteria.
    */
   applyFiltersToIncludeAttributes?: boolean;
+
+  /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional owner LinkedIn fields.
+   */
+  dataset?: 'standard' | 'professional';
 
   /**
    * Enable cursor-based pagination to fetch results across multiple requests
