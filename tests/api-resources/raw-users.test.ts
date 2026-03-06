@@ -10,7 +10,9 @@ const client = new Bountylab({
 describe('resource rawUsers', () => {
   // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
-    const responsePromise = client.rawUsers.retrieve({ githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='] });
+    const responsePromise = client.rawUsers.retrieve({
+      githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -23,7 +25,7 @@ describe('resource rawUsers', () => {
   // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.rawUsers.retrieve({
-      githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'MDQ6VXNlcjE='],
+      githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
       includeAttributes: {
         aggregates: true,
         contributes: {

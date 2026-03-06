@@ -11,7 +11,7 @@ describe('resource rawRepos', () => {
   // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.rawRepos.retrieve({
-      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
+      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -25,7 +25,7 @@ describe('resource rawRepos', () => {
   // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.rawRepos.retrieve({
-      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'MDEwOlJlcG9zaXRvcnkxMDI3'],
+      githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
       includeAttributes: {
         contributors: {
           first: 1,

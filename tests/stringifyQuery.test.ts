@@ -1,8 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Bountylab } from '@bountylab/bountylab';
-
-const { stringifyQuery } = Bountylab.prototype as any;
+import { stringifyQuery } from '@bountylab/bountylab/internal/utils/query';
 
 describe(stringifyQuery, () => {
   for (const [input, expected] of [
@@ -15,7 +13,7 @@ describe(stringifyQuery, () => {
         'e=f',
       )}=${encodeURIComponent('g&h')}`,
     ],
-  ]) {
+  ] as const) {
     it(`${JSON.stringify(input)} -> ${expected}`, () => {
       expect(stringifyQuery(input)).toEqual(expected);
     });

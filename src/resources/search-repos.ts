@@ -1551,6 +1551,12 @@ export interface SearchRepoNaturalLanguageParams {
   applyFiltersToIncludeAttributes?: boolean;
 
   /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional owner LinkedIn fields.
+   */
+  dataset?: 'standard' | 'professional';
+
+  /**
    * Enable cursor-based pagination to fetch results across multiple requests
    */
   enablePagination?: boolean;
@@ -1583,15 +1589,16 @@ export interface SearchRepoNaturalLanguageParams {
    * activity).
    */
   rankBy?:
-    | SearchRepoNaturalLanguageParams.Attr
-    | SearchRepoNaturalLanguageParams.Const
-    | SearchRepoNaturalLanguageParams.Sum
-    | SearchRepoNaturalLanguageParams.Mult
-    | SearchRepoNaturalLanguageParams.Div
-    | SearchRepoNaturalLanguageParams.Max
-    | SearchRepoNaturalLanguageParams.Min
-    | SearchRepoNaturalLanguageParams.Log
-    | SearchRepoNaturalLanguageParams.Saturate;
+    | SearchRepoNaturalLanguageParams.UnionMember0
+    | SearchRepoNaturalLanguageParams.UnionMember1
+    | SearchRepoNaturalLanguageParams.UnionMember2
+    | SearchRepoNaturalLanguageParams.UnionMember3
+    | SearchRepoNaturalLanguageParams.UnionMember4
+    | SearchRepoNaturalLanguageParams.UnionMember5
+    | SearchRepoNaturalLanguageParams.UnionMember6
+    | SearchRepoNaturalLanguageParams.UnionMember7
+    | SearchRepoNaturalLanguageParams.UnionMember8
+    | SearchRepoNaturalLanguageParams.UnionMember9;
 }
 
 export namespace SearchRepoNaturalLanguageParams {
@@ -1686,7 +1693,7 @@ export namespace SearchRepoNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -1738,7 +1745,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -1791,7 +1798,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -1843,7 +1850,7 @@ export namespace SearchRepoNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -1908,7 +1915,7 @@ export namespace SearchRepoNaturalLanguageParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -1960,7 +1967,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -2013,7 +2020,7 @@ export namespace SearchRepoNaturalLanguageParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -2065,42 +2072,51 @@ export namespace SearchRepoNaturalLanguageParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
     }
   }
 
-  export interface Attr {
+  export interface UnionMember0 {
     name: string;
 
     type: 'Attr';
   }
 
-  export interface Const {
+  export interface UnionMember1 {
     type: 'Const';
 
     value: number;
   }
 
-  export interface Sum {
+  export interface UnionMember2 {
+    field: string;
+
+    query: string;
+
+    type: 'BM25';
+  }
+
+  export interface UnionMember3 {
     exprs: Array<
-      | Sum.UnionMember0
-      | Sum.UnionMember1
-      | Sum.UnionMember2
-      | Sum.UnionMember3
-      | Sum.UnionMember4
-      | Sum.UnionMember5
-      | Sum.UnionMember6
-      | Sum.UnionMember7
-      | Sum.UnionMember8
+      | UnionMember3.UnionMember0
+      | UnionMember3.UnionMember1
+      | UnionMember3.UnionMember2
+      | UnionMember3.UnionMember3
+      | UnionMember3.UnionMember4
+      | UnionMember3.UnionMember5
+      | UnionMember3.UnionMember6
+      | UnionMember3.UnionMember7
+      | UnionMember3.UnionMember8
+      | UnionMember3.UnionMember9
     >;
 
     type: 'Sum';
   }
 
-  export namespace Sum {
+  export namespace UnionMember3 {
     export interface UnionMember0 {
       name: string;
 
@@ -2114,22 +2130,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -2143,12 +2168,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -2160,44 +2193,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -2212,14 +2233,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -2234,16 +2261,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -2258,167 +2291,59 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -2432,9 +2357,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -2451,12 +2377,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -2468,44 +2402,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -2520,14 +2442,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -2542,16 +2470,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -2566,13 +2500,51 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -2581,9 +2553,11 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -2600,12 +2574,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -2617,44 +2599,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -2669,14 +2639,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -2691,16 +2667,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -2715,10 +2697,52 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -2728,13 +2752,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -2751,12 +2772,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -2768,44 +2797,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -2820,14 +2837,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -2842,16 +2865,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -2866,39 +2895,280 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Mult {
+  export interface UnionMember4 {
     exprs: Array<unknown>;
 
     type: 'Mult';
   }
 
-  export interface Div {
+  export interface UnionMember5 {
     exprs: Array<unknown>;
 
     type: 'Div';
   }
 
-  export interface Max {
+  export interface UnionMember6 {
     exprs: Array<
-      | Max.UnionMember0
-      | Max.UnionMember1
-      | Max.UnionMember2
-      | Max.UnionMember3
-      | Max.UnionMember4
-      | Max.UnionMember5
-      | Max.UnionMember6
-      | Max.UnionMember7
-      | Max.UnionMember8
+      | UnionMember6.UnionMember0
+      | UnionMember6.UnionMember1
+      | UnionMember6.UnionMember2
+      | UnionMember6.UnionMember3
+      | UnionMember6.UnionMember4
+      | UnionMember6.UnionMember5
+      | UnionMember6.UnionMember6
+      | UnionMember6.UnionMember7
+      | UnionMember6.UnionMember8
+      | UnionMember6.UnionMember9
     >;
 
     type: 'Max';
   }
 
-  export namespace Max {
+  export namespace UnionMember6 {
     export interface UnionMember0 {
       name: string;
 
@@ -2912,22 +3182,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -2941,12 +3220,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -2958,44 +3245,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -3010,14 +3285,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -3032,16 +3313,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -3056,167 +3343,59 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -3230,9 +3409,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -3249,12 +3429,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -3266,44 +3454,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -3318,14 +3494,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -3340,16 +3522,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -3364,13 +3552,51 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -3379,9 +3605,11 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -3398,12 +3626,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -3415,44 +3651,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -3467,14 +3691,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -3489,16 +3719,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -3513,10 +3749,52 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -3526,13 +3804,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -3549,12 +3824,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -3566,44 +3849,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -3618,14 +3889,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -3640,16 +3917,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -3664,27 +3947,268 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Min {
+  export interface UnionMember7 {
     exprs: Array<
-      | Min.UnionMember0
-      | Min.UnionMember1
-      | Min.UnionMember2
-      | Min.UnionMember3
-      | Min.UnionMember4
-      | Min.UnionMember5
-      | Min.UnionMember6
-      | Min.UnionMember7
-      | Min.UnionMember8
+      | UnionMember7.UnionMember0
+      | UnionMember7.UnionMember1
+      | UnionMember7.UnionMember2
+      | UnionMember7.UnionMember3
+      | UnionMember7.UnionMember4
+      | UnionMember7.UnionMember5
+      | UnionMember7.UnionMember6
+      | UnionMember7.UnionMember7
+      | UnionMember7.UnionMember8
+      | UnionMember7.UnionMember9
     >;
 
     type: 'Min';
   }
 
-  export namespace Min {
+  export namespace UnionMember7 {
     export interface UnionMember0 {
       name: string;
 
@@ -3698,22 +4222,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -3727,12 +4260,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -3744,44 +4285,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -3796,14 +4325,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -3818,16 +4353,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -3842,167 +4383,59 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -4016,9 +4449,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -4035,12 +4469,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4052,44 +4494,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -4104,14 +4534,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -4126,16 +4562,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -4150,13 +4592,51 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -4165,9 +4645,11 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -4184,12 +4666,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4201,44 +4691,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -4253,14 +4731,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -4275,16 +4759,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -4299,10 +4789,52 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -4312,13 +4844,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -4335,12 +4864,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4352,44 +4889,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -4404,14 +4929,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -4426,16 +4957,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -4450,28 +4987,269 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Log {
+  export interface UnionMember8 {
     base: number;
 
     expr:
-      | Log.UnionMember0
-      | Log.UnionMember1
-      | Log.UnionMember2
-      | Log.UnionMember3
-      | Log.UnionMember4
-      | Log.UnionMember5
-      | Log.UnionMember6
-      | Log.UnionMember7
-      | Log.UnionMember8;
+      | UnionMember8.UnionMember0
+      | UnionMember8.UnionMember1
+      | UnionMember8.UnionMember2
+      | UnionMember8.UnionMember3
+      | UnionMember8.UnionMember4
+      | UnionMember8.UnionMember5
+      | UnionMember8.UnionMember6
+      | UnionMember8.UnionMember7
+      | UnionMember8.UnionMember8
+      | UnionMember8.UnionMember9;
 
     type: 'Log';
   }
 
-  export namespace Log {
+  export namespace UnionMember8 {
     export interface UnionMember0 {
       name: string;
 
@@ -4485,22 +5263,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -4514,12 +5301,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4531,44 +5326,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -4583,14 +5366,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -4605,16 +5394,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -4629,167 +5424,59 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -4803,9 +5490,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -4822,12 +5510,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4839,44 +5535,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -4891,14 +5575,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -4913,16 +5603,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -4937,13 +5633,51 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -4952,9 +5686,11 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -4971,12 +5707,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -4988,44 +5732,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5040,14 +5772,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -5062,16 +5800,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -5086,10 +5830,52 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -5099,13 +5885,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -5122,12 +5905,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -5139,44 +5930,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5191,14 +5970,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -5213,16 +5998,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -5237,21 +6028,262 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Saturate {
+  export interface UnionMember9 {
     expr:
-      | Saturate.UnionMember0
-      | Saturate.UnionMember1
-      | Saturate.UnionMember2
-      | Saturate.UnionMember3
-      | Saturate.UnionMember4
-      | Saturate.UnionMember5
-      | Saturate.UnionMember6
-      | Saturate.UnionMember7
-      | Saturate.UnionMember8;
+      | UnionMember9.UnionMember0
+      | UnionMember9.UnionMember1
+      | UnionMember9.UnionMember2
+      | UnionMember9.UnionMember3
+      | UnionMember9.UnionMember4
+      | UnionMember9.UnionMember5
+      | UnionMember9.UnionMember6
+      | UnionMember9.UnionMember7
+      | UnionMember9.UnionMember8
+      | UnionMember9.UnionMember9;
 
     midpoint: number;
 
@@ -5260,7 +6292,7 @@ export namespace SearchRepoNaturalLanguageParams {
     exponent?: number;
   }
 
-  export namespace Saturate {
+  export namespace UnionMember9 {
     export interface UnionMember0 {
       name: string;
 
@@ -5274,22 +6306,31 @@ export namespace SearchRepoNaturalLanguageParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -5303,12 +6344,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -5320,44 +6369,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5372,14 +6409,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -5394,16 +6437,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -5418,167 +6467,59 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -5592,9 +6533,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -5611,12 +6553,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -5628,44 +6578,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5680,14 +6618,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -5702,16 +6646,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -5726,13 +6676,51 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -5741,9 +6729,11 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -5760,12 +6750,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -5777,44 +6775,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5829,14 +6815,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -5851,16 +6843,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -5875,10 +6873,52 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -5888,13 +6928,10 @@ export namespace SearchRepoNaturalLanguageParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -5911,12 +6948,20 @@ export namespace SearchRepoNaturalLanguageParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -5928,44 +6973,32 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -5980,14 +7013,20 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -6002,16 +7041,22 @@ export namespace SearchRepoNaturalLanguageParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -6025,6 +7070,246 @@ export namespace SearchRepoNaturalLanguageParams {
           type: 'Const';
 
           value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
         }
       }
     }
@@ -6050,6 +7335,12 @@ export interface SearchRepoSearchParams {
    * criteria.
    */
   applyFiltersToIncludeAttributes?: boolean;
+
+  /**
+   * Which dataset to search. 'standard' uses the base namespace; 'professional' uses
+   * the LinkedIn-enriched namespace with additional owner LinkedIn fields.
+   */
+  dataset?: 'standard' | 'professional';
 
   /**
    * Enable cursor-based pagination to fetch results across multiple requests
@@ -6085,15 +7376,16 @@ export interface SearchRepoSearchParams {
    * activity).
    */
   rankBy?:
-    | SearchRepoSearchParams.Attr
-    | SearchRepoSearchParams.Const
-    | SearchRepoSearchParams.Sum
-    | SearchRepoSearchParams.Mult
-    | SearchRepoSearchParams.Div
-    | SearchRepoSearchParams.Max
-    | SearchRepoSearchParams.Min
-    | SearchRepoSearchParams.Log
-    | SearchRepoSearchParams.Saturate;
+    | SearchRepoSearchParams.UnionMember0
+    | SearchRepoSearchParams.UnionMember1
+    | SearchRepoSearchParams.UnionMember2
+    | SearchRepoSearchParams.UnionMember3
+    | SearchRepoSearchParams.UnionMember4
+    | SearchRepoSearchParams.UnionMember5
+    | SearchRepoSearchParams.UnionMember6
+    | SearchRepoSearchParams.UnionMember7
+    | SearchRepoSearchParams.UnionMember8
+    | SearchRepoSearchParams.UnionMember9;
 }
 
 export namespace SearchRepoSearchParams {
@@ -6133,7 +7425,7 @@ export namespace SearchRepoSearchParams {
     /**
      * Filter value (type depends on field and operator)
      */
-    value: string | number | Array<string> | Array<number>;
+    value: string | number | boolean | Array<string> | Array<number>;
   }
 
   export interface UnionMember1 {
@@ -6185,7 +7477,7 @@ export namespace SearchRepoSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
   }
 
@@ -6238,7 +7530,7 @@ export namespace SearchRepoSearchParams {
       /**
        * Filter value (type depends on field and operator)
        */
-      value: string | number | Array<string> | Array<number>;
+      value: string | number | boolean | Array<string> | Array<number>;
     }
 
     export interface UnionMember1 {
@@ -6290,7 +7582,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
     }
   }
@@ -6386,7 +7678,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6438,7 +7730,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6491,7 +7783,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6543,7 +7835,7 @@ export namespace SearchRepoSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
@@ -6608,7 +7900,7 @@ export namespace SearchRepoSearchParams {
         /**
          * Filter value (type depends on field and operator)
          */
-        value: string | number | Array<string> | Array<number>;
+        value: string | number | boolean | Array<string> | Array<number>;
       }
 
       export interface UnionMember1 {
@@ -6660,7 +7952,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
       }
 
@@ -6713,7 +8005,7 @@ export namespace SearchRepoSearchParams {
           /**
            * Filter value (type depends on field and operator)
            */
-          value: string | number | Array<string> | Array<number>;
+          value: string | number | boolean | Array<string> | Array<number>;
         }
 
         export interface UnionMember1 {
@@ -6765,42 +8057,51 @@ export namespace SearchRepoSearchParams {
             /**
              * Filter value (type depends on field and operator)
              */
-            value: string | number | Array<string> | Array<number>;
+            value: string | number | boolean | Array<string> | Array<number>;
           }
         }
       }
     }
   }
 
-  export interface Attr {
+  export interface UnionMember0 {
     name: string;
 
     type: 'Attr';
   }
 
-  export interface Const {
+  export interface UnionMember1 {
     type: 'Const';
 
     value: number;
   }
 
-  export interface Sum {
+  export interface UnionMember2 {
+    field: string;
+
+    query: string;
+
+    type: 'BM25';
+  }
+
+  export interface UnionMember3 {
     exprs: Array<
-      | Sum.UnionMember0
-      | Sum.UnionMember1
-      | Sum.UnionMember2
-      | Sum.UnionMember3
-      | Sum.UnionMember4
-      | Sum.UnionMember5
-      | Sum.UnionMember6
-      | Sum.UnionMember7
-      | Sum.UnionMember8
+      | UnionMember3.UnionMember0
+      | UnionMember3.UnionMember1
+      | UnionMember3.UnionMember2
+      | UnionMember3.UnionMember3
+      | UnionMember3.UnionMember4
+      | UnionMember3.UnionMember5
+      | UnionMember3.UnionMember6
+      | UnionMember3.UnionMember7
+      | UnionMember3.UnionMember8
+      | UnionMember3.UnionMember9
     >;
 
     type: 'Sum';
   }
 
-  export namespace Sum {
+  export namespace UnionMember3 {
     export interface UnionMember0 {
       name: string;
 
@@ -6814,22 +8115,31 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -6843,12 +8153,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -6860,44 +8178,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -6912,14 +8218,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -6934,16 +8246,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -6958,167 +8276,59 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -7132,9 +8342,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -7151,12 +8362,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -7168,44 +8387,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -7220,14 +8427,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -7242,16 +8455,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -7266,13 +8485,51 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -7281,9 +8538,11 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -7300,12 +8559,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -7317,44 +8584,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -7369,14 +8624,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -7391,16 +8652,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -7415,10 +8682,52 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -7428,13 +8737,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -7451,12 +8757,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -7468,44 +8782,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -7520,14 +8822,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -7542,16 +8850,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -7566,39 +8880,280 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Mult {
+  export interface UnionMember4 {
     exprs: Array<unknown>;
 
     type: 'Mult';
   }
 
-  export interface Div {
+  export interface UnionMember5 {
     exprs: Array<unknown>;
 
     type: 'Div';
   }
 
-  export interface Max {
+  export interface UnionMember6 {
     exprs: Array<
-      | Max.UnionMember0
-      | Max.UnionMember1
-      | Max.UnionMember2
-      | Max.UnionMember3
-      | Max.UnionMember4
-      | Max.UnionMember5
-      | Max.UnionMember6
-      | Max.UnionMember7
-      | Max.UnionMember8
+      | UnionMember6.UnionMember0
+      | UnionMember6.UnionMember1
+      | UnionMember6.UnionMember2
+      | UnionMember6.UnionMember3
+      | UnionMember6.UnionMember4
+      | UnionMember6.UnionMember5
+      | UnionMember6.UnionMember6
+      | UnionMember6.UnionMember7
+      | UnionMember6.UnionMember8
+      | UnionMember6.UnionMember9
     >;
 
     type: 'Max';
   }
 
-  export namespace Max {
+  export namespace UnionMember6 {
     export interface UnionMember0 {
       name: string;
 
@@ -7612,22 +9167,31 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -7641,12 +9205,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -7658,44 +9230,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -7710,14 +9270,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -7732,16 +9298,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -7756,167 +9328,59 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -7930,9 +9394,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -7949,12 +9414,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -7966,44 +9439,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8018,14 +9479,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8040,16 +9507,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8064,13 +9537,51 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -8079,9 +9590,11 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -8098,12 +9611,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -8115,44 +9636,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8167,14 +9676,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8189,16 +9704,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8213,10 +9734,52 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -8226,13 +9789,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -8249,12 +9809,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -8266,44 +9834,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8318,14 +9874,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8340,16 +9902,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8364,27 +9932,268 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Min {
+  export interface UnionMember7 {
     exprs: Array<
-      | Min.UnionMember0
-      | Min.UnionMember1
-      | Min.UnionMember2
-      | Min.UnionMember3
-      | Min.UnionMember4
-      | Min.UnionMember5
-      | Min.UnionMember6
-      | Min.UnionMember7
-      | Min.UnionMember8
+      | UnionMember7.UnionMember0
+      | UnionMember7.UnionMember1
+      | UnionMember7.UnionMember2
+      | UnionMember7.UnionMember3
+      | UnionMember7.UnionMember4
+      | UnionMember7.UnionMember5
+      | UnionMember7.UnionMember6
+      | UnionMember7.UnionMember7
+      | UnionMember7.UnionMember8
+      | UnionMember7.UnionMember9
     >;
 
     type: 'Min';
   }
 
-  export namespace Min {
+  export namespace UnionMember7 {
     export interface UnionMember0 {
       name: string;
 
@@ -8398,22 +10207,31 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -8427,12 +10245,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -8444,44 +10270,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8496,14 +10310,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8518,16 +10338,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8542,167 +10368,59 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -8716,9 +10434,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -8735,12 +10454,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -8752,44 +10479,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8804,14 +10519,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8826,16 +10547,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8850,13 +10577,51 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -8865,9 +10630,11 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -8884,12 +10651,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -8901,44 +10676,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -8953,14 +10716,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -8975,16 +10744,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -8999,10 +10774,52 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -9012,13 +10829,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -9035,12 +10849,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -9052,44 +10874,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -9104,14 +10914,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -9126,16 +10942,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -9150,28 +10972,269 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Log {
+  export interface UnionMember8 {
     base: number;
 
     expr:
-      | Log.UnionMember0
-      | Log.UnionMember1
-      | Log.UnionMember2
-      | Log.UnionMember3
-      | Log.UnionMember4
-      | Log.UnionMember5
-      | Log.UnionMember6
-      | Log.UnionMember7
-      | Log.UnionMember8;
+      | UnionMember8.UnionMember0
+      | UnionMember8.UnionMember1
+      | UnionMember8.UnionMember2
+      | UnionMember8.UnionMember3
+      | UnionMember8.UnionMember4
+      | UnionMember8.UnionMember5
+      | UnionMember8.UnionMember6
+      | UnionMember8.UnionMember7
+      | UnionMember8.UnionMember8
+      | UnionMember8.UnionMember9;
 
     type: 'Log';
   }
 
-  export namespace Log {
+  export namespace UnionMember8 {
     export interface UnionMember0 {
       name: string;
 
@@ -9185,22 +11248,31 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -9214,12 +11286,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -9231,44 +11311,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -9283,14 +11351,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -9305,16 +11379,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -9329,167 +11409,59 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -9503,9 +11475,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -9522,12 +11495,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -9539,44 +11520,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -9591,14 +11560,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -9613,16 +11588,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -9637,13 +11618,51 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -9652,9 +11671,11 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -9671,12 +11692,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -9688,44 +11717,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -9740,14 +11757,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -9762,16 +11785,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -9786,10 +11815,52 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -9799,13 +11870,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -9822,12 +11890,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -9839,44 +11915,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -9891,14 +11955,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -9913,16 +11983,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -9937,21 +12013,262 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
   }
 
-  export interface Saturate {
+  export interface UnionMember9 {
     expr:
-      | Saturate.UnionMember0
-      | Saturate.UnionMember1
-      | Saturate.UnionMember2
-      | Saturate.UnionMember3
-      | Saturate.UnionMember4
-      | Saturate.UnionMember5
-      | Saturate.UnionMember6
-      | Saturate.UnionMember7
-      | Saturate.UnionMember8;
+      | UnionMember9.UnionMember0
+      | UnionMember9.UnionMember1
+      | UnionMember9.UnionMember2
+      | UnionMember9.UnionMember3
+      | UnionMember9.UnionMember4
+      | UnionMember9.UnionMember5
+      | UnionMember9.UnionMember6
+      | UnionMember9.UnionMember7
+      | UnionMember9.UnionMember8
+      | UnionMember9.UnionMember9;
 
     midpoint: number;
 
@@ -9960,7 +12277,7 @@ export namespace SearchRepoSearchParams {
     exponent?: number;
   }
 
-  export namespace Saturate {
+  export namespace UnionMember9 {
     export interface UnionMember0 {
       name: string;
 
@@ -9974,22 +12291,31 @@ export namespace SearchRepoSearchParams {
     }
 
     export interface UnionMember2 {
+      field: string;
+
+      query: string;
+
+      type: 'BM25';
+    }
+
+    export interface UnionMember3 {
       exprs: Array<
-        | UnionMember2.UnionMember0
-        | UnionMember2.UnionMember1
-        | UnionMember2.UnionMember2
-        | UnionMember2.UnionMember3
-        | UnionMember2.UnionMember4
-        | UnionMember2.UnionMember5
-        | UnionMember2.UnionMember6
-        | UnionMember2.UnionMember7
-        | UnionMember2.UnionMember8
+        | UnionMember3.UnionMember0
+        | UnionMember3.UnionMember1
+        | UnionMember3.UnionMember2
+        | UnionMember3.UnionMember3
+        | UnionMember3.UnionMember4
+        | UnionMember3.UnionMember5
+        | UnionMember3.UnionMember6
+        | UnionMember3.UnionMember7
+        | UnionMember3.UnionMember8
+        | UnionMember3.UnionMember9
       >;
 
       type: 'Sum';
     }
 
-    export namespace UnionMember2 {
+    export namespace UnionMember3 {
       export interface UnionMember0 {
         name: string;
 
@@ -10003,12 +12329,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -10020,44 +12354,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -10072,14 +12394,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -10094,16 +12422,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -10118,167 +12452,59 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
-    }
 
-    export interface UnionMember3 {
-      exprs: Array<unknown>;
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
 
-      type: 'Mult';
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
     }
 
     export interface UnionMember4 {
       exprs: Array<unknown>;
 
-      type: 'Div';
+      type: 'Mult';
     }
 
     export interface UnionMember5 {
-      exprs: Array<
-        | UnionMember5.UnionMember0
-        | UnionMember5.UnionMember1
-        | UnionMember5.UnionMember2
-        | UnionMember5.UnionMember3
-        | UnionMember5.UnionMember4
-        | UnionMember5.UnionMember5
-        | UnionMember5.UnionMember6
-        | UnionMember5.UnionMember7
-        | UnionMember5.UnionMember8
-      >;
+      exprs: Array<unknown>;
 
-      type: 'Max';
-    }
-
-    export namespace UnionMember5 {
-      export interface UnionMember0 {
-        name: string;
-
-        type: 'Attr';
-      }
-
-      export interface UnionMember1 {
-        type: 'Const';
-
-        value: number;
-      }
-
-      export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
-
-        type: 'Sum';
-      }
-
-      export namespace UnionMember2 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
-
-        type: 'Mult';
-      }
-
-      export interface UnionMember4 {
-        exprs: Array<unknown>;
-
-        type: 'Div';
-      }
-
-      export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
-
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
-
-        type: 'Min';
-      }
-
-      export namespace UnionMember6 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember7 {
-        base: number;
-
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
-      }
-
-      export namespace UnionMember7 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
-
-      export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
-
-        midpoint: number;
-
-        type: 'Saturate';
-
-        exponent?: number;
-      }
-
-      export namespace UnionMember8 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
-      }
+      type: 'Div';
     }
 
     export interface UnionMember6 {
@@ -10292,9 +12518,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember6.UnionMember6
         | UnionMember6.UnionMember7
         | UnionMember6.UnionMember8
+        | UnionMember6.UnionMember9
       >;
 
-      type: 'Min';
+      type: 'Max';
     }
 
     export namespace UnionMember6 {
@@ -10311,12 +12538,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -10328,44 +12563,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -10380,14 +12603,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -10402,16 +12631,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -10426,13 +12661,51 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember7 {
-      base: number;
-
-      expr:
+      exprs: Array<
         | UnionMember7.UnionMember0
         | UnionMember7.UnionMember1
         | UnionMember7.UnionMember2
@@ -10441,9 +12714,11 @@ export namespace SearchRepoSearchParams {
         | UnionMember7.UnionMember5
         | UnionMember7.UnionMember6
         | UnionMember7.UnionMember7
-        | UnionMember7.UnionMember8;
+        | UnionMember7.UnionMember8
+        | UnionMember7.UnionMember9
+      >;
 
-      type: 'Log';
+      type: 'Min';
     }
 
     export namespace UnionMember7 {
@@ -10460,12 +12735,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -10477,44 +12760,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -10529,14 +12800,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -10551,16 +12828,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -10575,10 +12858,52 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
     }
 
     export interface UnionMember8 {
+      base: number;
+
       expr:
         | UnionMember8.UnionMember0
         | UnionMember8.UnionMember1
@@ -10588,13 +12913,10 @@ export namespace SearchRepoSearchParams {
         | UnionMember8.UnionMember5
         | UnionMember8.UnionMember6
         | UnionMember8.UnionMember7
-        | UnionMember8.UnionMember8;
+        | UnionMember8.UnionMember8
+        | UnionMember8.UnionMember9;
 
-      midpoint: number;
-
-      type: 'Saturate';
-
-      exponent?: number;
+      type: 'Log';
     }
 
     export namespace UnionMember8 {
@@ -10611,12 +12933,20 @@ export namespace SearchRepoSearchParams {
       }
 
       export interface UnionMember2 {
-        exprs: Array<UnionMember2.UnionMember0 | UnionMember2.UnionMember1>;
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
 
         type: 'Sum';
       }
 
-      export namespace UnionMember2 {
+      export namespace UnionMember3 {
         export interface UnionMember0 {
           name: string;
 
@@ -10628,44 +12958,32 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
-      }
 
-      export interface UnionMember3 {
-        exprs: Array<unknown>;
+        export interface UnionMember2 {
+          field: string;
 
-        type: 'Mult';
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember4 {
         exprs: Array<unknown>;
 
-        type: 'Div';
+        type: 'Mult';
       }
 
       export interface UnionMember5 {
-        exprs: Array<UnionMember5.UnionMember0 | UnionMember5.UnionMember1>;
+        exprs: Array<unknown>;
 
-        type: 'Max';
-      }
-
-      export namespace UnionMember5 {
-        export interface UnionMember0 {
-          name: string;
-
-          type: 'Attr';
-        }
-
-        export interface UnionMember1 {
-          type: 'Const';
-
-          value: number;
-        }
+        type: 'Div';
       }
 
       export interface UnionMember6 {
-        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1>;
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
 
-        type: 'Min';
+        type: 'Max';
       }
 
       export namespace UnionMember6 {
@@ -10680,14 +12998,20 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember7 {
-        base: number;
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
 
-        expr: UnionMember7.UnionMember0 | UnionMember7.UnionMember1;
-
-        type: 'Log';
+        type: 'Min';
       }
 
       export namespace UnionMember7 {
@@ -10702,16 +13026,22 @@ export namespace SearchRepoSearchParams {
 
           value: number;
         }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
       }
 
       export interface UnionMember8 {
-        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1;
+        base: number;
 
-        midpoint: number;
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
 
-        type: 'Saturate';
-
-        exponent?: number;
+        type: 'Log';
       }
 
       export namespace UnionMember8 {
@@ -10725,6 +13055,246 @@ export namespace SearchRepoSearchParams {
           type: 'Const';
 
           value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+    }
+
+    export interface UnionMember9 {
+      expr:
+        | UnionMember9.UnionMember0
+        | UnionMember9.UnionMember1
+        | UnionMember9.UnionMember2
+        | UnionMember9.UnionMember3
+        | UnionMember9.UnionMember4
+        | UnionMember9.UnionMember5
+        | UnionMember9.UnionMember6
+        | UnionMember9.UnionMember7
+        | UnionMember9.UnionMember8
+        | UnionMember9.UnionMember9;
+
+      midpoint: number;
+
+      type: 'Saturate';
+
+      exponent?: number;
+    }
+
+    export namespace UnionMember9 {
+      export interface UnionMember0 {
+        name: string;
+
+        type: 'Attr';
+      }
+
+      export interface UnionMember1 {
+        type: 'Const';
+
+        value: number;
+      }
+
+      export interface UnionMember2 {
+        field: string;
+
+        query: string;
+
+        type: 'BM25';
+      }
+
+      export interface UnionMember3 {
+        exprs: Array<UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2>;
+
+        type: 'Sum';
+      }
+
+      export namespace UnionMember3 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember4 {
+        exprs: Array<unknown>;
+
+        type: 'Mult';
+      }
+
+      export interface UnionMember5 {
+        exprs: Array<unknown>;
+
+        type: 'Div';
+      }
+
+      export interface UnionMember6 {
+        exprs: Array<UnionMember6.UnionMember0 | UnionMember6.UnionMember1 | UnionMember6.UnionMember2>;
+
+        type: 'Max';
+      }
+
+      export namespace UnionMember6 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember7 {
+        exprs: Array<UnionMember7.UnionMember0 | UnionMember7.UnionMember1 | UnionMember7.UnionMember2>;
+
+        type: 'Min';
+      }
+
+      export namespace UnionMember7 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember8 {
+        base: number;
+
+        expr: UnionMember8.UnionMember0 | UnionMember8.UnionMember1 | UnionMember8.UnionMember2;
+
+        type: 'Log';
+      }
+
+      export namespace UnionMember8 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
+        }
+      }
+
+      export interface UnionMember9 {
+        expr: UnionMember9.UnionMember0 | UnionMember9.UnionMember1 | UnionMember9.UnionMember2;
+
+        midpoint: number;
+
+        type: 'Saturate';
+
+        exponent?: number;
+      }
+
+      export namespace UnionMember9 {
+        export interface UnionMember0 {
+          name: string;
+
+          type: 'Attr';
+        }
+
+        export interface UnionMember1 {
+          type: 'Const';
+
+          value: number;
+        }
+
+        export interface UnionMember2 {
+          field: string;
+
+          query: string;
+
+          type: 'BM25';
         }
       }
     }
