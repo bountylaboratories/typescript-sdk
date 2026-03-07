@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.40.1 (2026-03-07)
+
+Full Changelog: [v0.40.0...v0.40.1](https://github.com/bountylaboratories/typescript-sdk/compare/v0.40.0...v0.40.1)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([5d15105](https://github.com/bountylaboratories/typescript-sdk/commit/5d1510508cb178abda657148ead2ca641bbc889d))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([3944871](https://github.com/bountylaboratories/typescript-sdk/commit/394487174224f06e64b179ea79b4ff500accca25))
+* **internal:** codegen related update ([d709c4c](https://github.com/bountylaboratories/typescript-sdk/commit/d709c4c8ade8bf2648fd776f3a57d916d0796bf8))
+* update SDK settings ([63600c1](https://github.com/bountylaboratories/typescript-sdk/commit/63600c1bf1328e30419efdfdd45d46440331a001))
+
 ## 0.40.0 (2026-03-05)
 
 Full Changelog: [v0.39.0...v0.40.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.39.0...v0.40.0)
