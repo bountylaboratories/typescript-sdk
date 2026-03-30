@@ -160,6 +160,8 @@ describe('resource searchUsers', () => {
         },
       },
       maxResults: 50,
+      recentActivityDays: 30,
+      sortBy: 'relevance',
     });
   });
 });

@@ -7386,6 +7386,18 @@ export interface SearchRepoSearchParams {
     | SearchRepoSearchParams.UnionMember7
     | SearchRepoSearchParams.UnionMember8
     | SearchRepoSearchParams.UnionMember9;
+
+  /**
+   * Filter results to repos pushed within this many days. Filters on updatedAt (last
+   * push timestamp).
+   */
+  recentActivityDays?: number;
+
+  /**
+   * Sort mode. "relevance" uses the default 70/20/10 formula. "recentActivity" flips
+   * to 60% activity + 30% popularity + 10% semantic match.
+   */
+  sortBy?: 'relevance' | 'recentActivity';
 }
 
 export namespace SearchRepoSearchParams {

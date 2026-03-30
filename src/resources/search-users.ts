@@ -7083,6 +7083,18 @@ export interface SearchUserSearchParams {
    * Maximum number of results to return (default: 100, max: 1000)
    */
   maxResults?: number;
+
+  /**
+   * Filter results to users whose profile was last updated within this many days.
+   * Uses updatedAt as a proxy for recent activity.
+   */
+  recentActivityDays?: number;
+
+  /**
+   * Sort mode. "relevance" ranks by text match (BM25). "recentActivity" ranks by
+   * most recently updated profile first.
+   */
+  sortBy?: 'relevance' | 'recentActivity';
 }
 
 export namespace SearchUserSearchParams {

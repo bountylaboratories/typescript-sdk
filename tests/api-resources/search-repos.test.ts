@@ -113,6 +113,8 @@ describe('resource searchRepos', () => {
       },
       maxResults: 50,
       rankBy: { name: 'x', type: 'Attr' },
+      recentActivityDays: 30,
+      sortBy: 'relevance',
     });
   });
 });
