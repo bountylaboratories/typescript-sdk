@@ -10268,6 +10268,11 @@ export namespace RawRepoRetrieveParams {
     ownerProfessional?: boolean;
 
     /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include users who starred the repository with cursor pagination
      */
     starrers?: IncludeAttributes.Starrers;
@@ -10757,6 +10762,11 @@ export namespace RawRepoByFullnameParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -11514,6 +11524,11 @@ export namespace RawRepoGraphParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

@@ -39,6 +39,7 @@ describe('resource rawRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -83,6 +84,7 @@ describe('resource rawRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -196,6 +198,7 @@ describe('resource rawRepos', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',

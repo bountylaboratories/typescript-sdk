@@ -5931,6 +5931,11 @@ export namespace SearchUserNaturalLanguageParams {
     professional?: boolean;
 
     /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include starred repositories with cursor pagination
      */
     stars?: IncludeAttributes.Stars;
@@ -7342,6 +7347,11 @@ export namespace SearchUserSearchParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
