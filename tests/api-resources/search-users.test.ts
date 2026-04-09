@@ -71,6 +71,7 @@ describe('resource searchUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -151,6 +152,7 @@ describe('resource searchUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',

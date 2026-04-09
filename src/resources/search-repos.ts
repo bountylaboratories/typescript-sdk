@@ -1628,6 +1628,11 @@ export namespace SearchRepoNaturalLanguageParams {
     ownerProfessional?: boolean;
 
     /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include users who starred the repository with cursor pagination
      */
     starrers?: IncludeAttributes.Starrers;
@@ -7611,6 +7616,11 @@ export namespace SearchRepoSearchParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

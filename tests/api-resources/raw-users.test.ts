@@ -67,6 +67,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -139,6 +140,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -209,6 +211,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -322,6 +325,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',

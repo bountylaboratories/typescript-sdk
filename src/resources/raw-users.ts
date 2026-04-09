@@ -16818,6 +16818,11 @@ export namespace RawUserRetrieveParams {
     professional?: boolean;
 
     /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include starred repositories with cursor pagination
      */
     stars?: IncludeAttributes.Stars;
@@ -17994,6 +17999,11 @@ export namespace RawUserByLinkedinParams {
     professional?: boolean;
 
     /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include starred repositories with cursor pagination
      */
     stars?: IncludeAttributes.Stars;
@@ -19168,6 +19178,11 @@ export namespace RawUserByLoginParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -20593,6 +20608,11 @@ export namespace RawUserGraphParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
