@@ -89,6 +89,11 @@ export namespace SearchUserNaturalLanguageResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -2981,6 +2986,11 @@ export namespace SearchUserSearchResponse {
      * Aggregate metrics (only present when includeAttributes.aggregates = true)
      */
     aggregates?: User.Aggregates;
+
+    /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
 
     /**
      * User biography
@@ -5886,6 +5896,11 @@ export namespace SearchUserNaturalLanguageParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -7083,18 +7098,6 @@ export interface SearchUserSearchParams {
    * Maximum number of results to return (default: 100, max: 1000)
    */
   maxResults?: number;
-
-  /**
-   * Filter results to users whose profile was last updated within this many days.
-   * Uses updatedAt as a proxy for recent activity.
-   */
-  recentActivityDays?: number;
-
-  /**
-   * Sort mode. "relevance" ranks by text match (BM25). "recentActivity" ranks by
-   * most recently updated profile first.
-   */
-  sortBy?: 'relevance' | 'recentActivity';
 }
 
 export namespace SearchUserSearchParams {
@@ -7304,6 +7307,11 @@ export namespace SearchUserSearchParams {
      * Include aggregate metrics (e.g. totalStars) for the user
      */
     aggregates?: boolean;
+
+    /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
 
     /**
      * Include contributed repositories with cursor pagination

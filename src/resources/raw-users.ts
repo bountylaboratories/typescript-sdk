@@ -139,6 +139,11 @@ export namespace RawUserRetrieveResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -3013,6 +3018,11 @@ export namespace RawUserByLinkedinResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -5885,6 +5895,11 @@ export namespace RawUserByLoginResponse {
      * Aggregate metrics (only present when includeAttributes.aggregates = true)
      */
     aggregates?: User.Aggregates;
+
+    /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
 
     /**
      * User biography
@@ -8796,6 +8811,11 @@ export namespace RawUserGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -11683,6 +11703,11 @@ export namespace RawUserGraphResponse {
        * Aggregate metrics (only present when includeAttributes.aggregates = true)
        */
       aggregates?: User.Aggregates;
+
+      /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
 
       /**
        * User biography
@@ -16758,6 +16783,11 @@ export namespace RawUserRetrieveParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -17929,6 +17959,11 @@ export namespace RawUserByLinkedinParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -19098,6 +19133,11 @@ export namespace RawUserByLoginParams {
      * Include aggregate metrics (e.g. totalStars) for the user
      */
     aggregates?: boolean;
+
+    /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
 
     /**
      * Include contributed repositories with cursor pagination
@@ -20497,6 +20537,11 @@ export namespace RawUserGraphParams {
      * Include aggregate metrics (e.g. totalStars) for the user
      */
     aggregates?: boolean;
+
+    /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
 
     /**
      * Include contributed repositories with cursor pagination

@@ -32,6 +32,7 @@ describe('resource searchUsers', () => {
       first: 50,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -111,6 +112,7 @@ describe('resource searchUsers', () => {
       first: 50,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -160,8 +162,6 @@ describe('resource searchUsers', () => {
         },
       },
       maxResults: 50,
-      recentActivityDays: 30,
-      sortBy: 'relevance',
     });
   });
 });

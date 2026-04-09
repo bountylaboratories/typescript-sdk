@@ -1593,6 +1593,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -4483,6 +4488,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -7371,6 +7381,11 @@ export namespace RawRepoGraphResponse {
        * Aggregate metrics (only present when includeAttributes.aggregates = true)
        */
       aggregates?: User.Aggregates;
+
+      /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
 
       /**
        * User biography
@@ -11443,6 +11458,11 @@ export namespace RawRepoGraphParams {
      * Include aggregate metrics (e.g. totalStars) for the user
      */
     aggregates?: boolean;
+
+    /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
 
     /**
      * Include contributed repositories with cursor pagination
