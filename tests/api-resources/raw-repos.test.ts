@@ -145,6 +145,7 @@ describe('resource rawRepos', () => {
       first: 100,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
