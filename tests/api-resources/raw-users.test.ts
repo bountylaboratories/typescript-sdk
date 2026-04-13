@@ -28,6 +28,7 @@ describe('resource rawUsers', () => {
       githubIds: ['MDQ6VXNlcjU4MzIzMQ==', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -66,6 +67,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -99,6 +101,7 @@ describe('resource rawUsers', () => {
       linkedinUrls: ['https://www.linkedin.com/in/octocat', 'https://www.linkedin.com/in/torvalds'],
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -137,6 +140,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -168,6 +172,7 @@ describe('resource rawUsers', () => {
       logins: ['octocat', 'torvalds'],
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -206,6 +211,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -268,6 +274,7 @@ describe('resource rawUsers', () => {
       first: 100,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -318,6 +325,7 @@ describe('resource rawUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
