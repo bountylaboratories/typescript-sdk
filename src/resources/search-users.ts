@@ -89,6 +89,11 @@ export namespace SearchUserNaturalLanguageResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -2981,6 +2986,11 @@ export namespace SearchUserSearchResponse {
      * Aggregate metrics (only present when includeAttributes.aggregates = true)
      */
     aggregates?: User.Aggregates;
+
+    /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
 
     /**
      * User biography
@@ -5886,6 +5896,11 @@ export namespace SearchUserNaturalLanguageParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -5914,6 +5929,11 @@ export namespace SearchUserNaturalLanguageParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -7294,6 +7314,11 @@ export namespace SearchUserSearchParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -7322,6 +7347,11 @@ export namespace SearchUserSearchParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination

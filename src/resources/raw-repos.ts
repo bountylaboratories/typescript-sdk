@@ -1593,6 +1593,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -4481,6 +4486,11 @@ export namespace RawRepoGraphResponse {
        * Aggregate metrics (only present when includeAttributes.aggregates = true)
        */
       aggregates?: User.Aggregates;
+
+      /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
 
       /**
        * User biography
@@ -7373,6 +7383,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -10253,6 +10268,11 @@ export namespace RawRepoRetrieveParams {
     ownerProfessional?: boolean;
 
     /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
+
+    /**
      * Include users who starred the repository with cursor pagination
      */
     starrers?: IncludeAttributes.Starrers;
@@ -10742,6 +10762,11 @@ export namespace RawRepoByFullnameParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -11445,6 +11470,11 @@ export namespace RawRepoGraphParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -11494,6 +11524,11 @@ export namespace RawRepoGraphParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

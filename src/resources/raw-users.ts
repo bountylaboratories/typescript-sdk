@@ -139,6 +139,11 @@ export namespace RawUserRetrieveResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -3013,6 +3018,11 @@ export namespace RawUserByLinkedinResponse {
     aggregates?: User.Aggregates;
 
     /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
+
+    /**
      * User biography
      */
     bio?: string | null;
@@ -5885,6 +5895,11 @@ export namespace RawUserByLoginResponse {
      * Aggregate metrics (only present when includeAttributes.aggregates = true)
      */
     aggregates?: User.Aggregates;
+
+    /**
+     * Best verified email address for the user
+     */
+    bestEmail?: string | null;
 
     /**
      * User biography
@@ -8796,6 +8811,11 @@ export namespace RawUserGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -11683,6 +11703,11 @@ export namespace RawUserGraphResponse {
        * Aggregate metrics (only present when includeAttributes.aggregates = true)
        */
       aggregates?: User.Aggregates;
+
+      /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
 
       /**
        * User biography
@@ -16758,6 +16783,11 @@ export namespace RawUserRetrieveParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -16786,6 +16816,11 @@ export namespace RawUserRetrieveParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -17929,6 +17964,11 @@ export namespace RawUserByLinkedinParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -17957,6 +17997,11 @@ export namespace RawUserByLinkedinParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -19100,6 +19145,11 @@ export namespace RawUserByLoginParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -19128,6 +19178,11 @@ export namespace RawUserByLoginParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails instead of masked (e.g. \*\*\*oe@gmail.com)
+     */
+    revealEmails?: boolean;
 
     /**
      * Include starred repositories with cursor pagination
@@ -20499,6 +20554,11 @@ export namespace RawUserGraphParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
@@ -20548,6 +20608,11 @@ export namespace RawUserGraphParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

@@ -47,6 +47,7 @@ describe('resource searchRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -101,6 +102,7 @@ describe('resource searchRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 10,
           after: 'after',
