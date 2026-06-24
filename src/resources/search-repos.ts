@@ -508,6 +508,11 @@ export namespace SearchRepoNaturalLanguageResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -531,6 +536,11 @@ export namespace SearchRepoNaturalLanguageResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -631,6 +641,11 @@ export namespace SearchRepoNaturalLanguageResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -1250,6 +1265,11 @@ export namespace SearchRepoSearchResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -1273,6 +1293,11 @@ export namespace SearchRepoSearchResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -1373,6 +1398,11 @@ export namespace SearchRepoSearchResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities

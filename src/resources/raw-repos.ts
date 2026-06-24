@@ -537,6 +537,11 @@ export namespace RawRepoRetrieveResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -560,6 +565,11 @@ export namespace RawRepoRetrieveResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -660,6 +670,11 @@ export namespace RawRepoRetrieveResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -1258,6 +1273,11 @@ export namespace RawRepoByFullnameResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -1281,6 +1301,11 @@ export namespace RawRepoByFullnameResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -1381,6 +1406,11 @@ export namespace RawRepoByFullnameResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -2174,6 +2204,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -2197,6 +2232,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -2297,6 +2337,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -3196,6 +3241,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -3219,6 +3269,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -3319,6 +3374,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -3554,6 +3614,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -3577,6 +3642,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -3677,6 +3747,11 @@ export namespace RawRepoGraphResponse {
            * Start date (YYYY-MM-DD format)
            */
           startDate: string | null;
+
+          /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
 
           /**
            * Description of role and responsibilities
@@ -4153,6 +4228,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -4176,6 +4256,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -4276,6 +4361,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -5069,6 +5159,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -5092,6 +5187,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -5192,6 +5292,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -6091,6 +6196,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -6114,6 +6224,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -6214,6 +6329,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -6449,6 +6569,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -6472,6 +6597,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -6572,6 +6702,11 @@ export namespace RawRepoGraphResponse {
            * Start date (YYYY-MM-DD format)
            */
           startDate: string | null;
+
+          /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
 
           /**
            * Description of role and responsibilities
@@ -7048,6 +7183,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -7071,6 +7211,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -7171,6 +7316,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -7964,6 +8114,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -7987,6 +8142,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -8087,6 +8247,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -8986,6 +9151,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -9009,6 +9179,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -9109,6 +9284,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -9344,6 +9524,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -9367,6 +9552,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -9467,6 +9657,11 @@ export namespace RawRepoGraphResponse {
            * Start date (YYYY-MM-DD format)
            */
           startDate: string | null;
+
+          /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
 
           /**
            * Description of role and responsibilities
@@ -9943,6 +10138,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -9966,6 +10166,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -10066,6 +10271,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
