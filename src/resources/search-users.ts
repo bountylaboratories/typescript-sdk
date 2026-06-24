@@ -670,6 +670,11 @@ export namespace SearchUserNaturalLanguageResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -693,6 +698,11 @@ export namespace SearchUserNaturalLanguageResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -793,6 +803,11 @@ export namespace SearchUserNaturalLanguageResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
@@ -1692,6 +1707,11 @@ export namespace SearchUserNaturalLanguageResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -1715,6 +1735,11 @@ export namespace SearchUserNaturalLanguageResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -1815,6 +1840,11 @@ export namespace SearchUserNaturalLanguageResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
@@ -2050,6 +2080,11 @@ export namespace SearchUserNaturalLanguageResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -2073,6 +2108,11 @@ export namespace SearchUserNaturalLanguageResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -2173,6 +2213,11 @@ export namespace SearchUserNaturalLanguageResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -2649,6 +2694,11 @@ export namespace SearchUserNaturalLanguageResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -2672,6 +2722,11 @@ export namespace SearchUserNaturalLanguageResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -2772,6 +2827,11 @@ export namespace SearchUserNaturalLanguageResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
@@ -3569,6 +3629,11 @@ export namespace SearchUserSearchResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -3592,6 +3657,11 @@ export namespace SearchUserSearchResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -3692,6 +3762,11 @@ export namespace SearchUserSearchResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
@@ -4591,6 +4666,11 @@ export namespace SearchUserSearchResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -4614,6 +4694,11 @@ export namespace SearchUserSearchResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -4714,6 +4799,11 @@ export namespace SearchUserSearchResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
@@ -4949,6 +5039,11 @@ export namespace SearchUserSearchResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -4972,6 +5067,11 @@ export namespace SearchUserSearchResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -5072,6 +5172,11 @@ export namespace SearchUserSearchResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -5548,6 +5653,11 @@ export namespace SearchUserSearchResponse {
           headline: string | null;
 
           /**
+           * Whether the person indicates they are hiring
+           */
+          hiring: boolean | null;
+
+          /**
            * Languages spoken
            */
           languages: Array<string> | null;
@@ -5571,6 +5681,11 @@ export namespace SearchUserSearchResponse {
            * Professional organization memberships
            */
           memberships: Array<string> | null;
+
+          /**
+           * Whether the person indicates they are open to work
+           */
+          openToWork: boolean | null;
 
           /**
            * Current organization/company
@@ -5671,6 +5786,11 @@ export namespace SearchUserSearchResponse {
              * Start date (YYYY-MM-DD format)
              */
             startDate: string | null;
+
+            /**
+             * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+             */
+            startDateConfidence: string | null;
 
             /**
              * Description of role and responsibilities
