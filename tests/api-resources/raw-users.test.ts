@@ -284,6 +284,7 @@ describe('resource rawUsers', () => {
             value: 'string',
           },
         },
+        contributorProfiles: true,
         contributors: {
           first: 1,
           after: 'after',

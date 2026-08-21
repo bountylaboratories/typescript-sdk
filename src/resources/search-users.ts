@@ -271,6 +271,14 @@ export namespace SearchUserNaturalLanguageResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -339,6 +347,65 @@ export namespace SearchUserNaturalLanguageResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
@@ -1308,6 +1375,14 @@ export namespace SearchUserNaturalLanguageResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -1376,6 +1451,65 @@ export namespace SearchUserNaturalLanguageResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
@@ -2295,6 +2429,14 @@ export namespace SearchUserNaturalLanguageResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -2363,6 +2505,65 @@ export namespace SearchUserNaturalLanguageResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
@@ -3230,6 +3431,14 @@ export namespace SearchUserSearchResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -3298,6 +3507,65 @@ export namespace SearchUserSearchResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
@@ -4267,6 +4535,14 @@ export namespace SearchUserSearchResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -4335,6 +4611,65 @@ export namespace SearchUserSearchResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
@@ -5254,6 +5589,14 @@ export namespace SearchUserSearchResponse {
         totalIssuesOpen: number;
 
         /**
+         * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+         * overlay), hydrated in the SAME call so callers skip a separate by-ids
+         * round-trip. Join to `contributors` by login. Present when
+         * includeAttributes.contributorProfiles = true.
+         */
+        contributorProfiles?: Array<Edge.ContributorProfile>;
+
+        /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
         contributors?: Edge.Contributors;
@@ -5322,6 +5665,65 @@ export namespace SearchUserSearchResponse {
       }
 
       export namespace Edge {
+        export interface ContributorProfile {
+          login: string;
+
+          /**
+           * Most-starred repos this login owns, from our index.
+           */
+          topRepos: Array<ContributorProfile.TopRepo>;
+
+          accountCreatedAt?: string;
+
+          bio?: string;
+
+          company?: string;
+
+          devrank?: ContributorProfile.Devrank;
+
+          displayName?: string;
+
+          githubId?: string;
+
+          linkedin?: ContributorProfile.Linkedin;
+
+          location?: string;
+
+          userId?: string;
+        }
+
+        export namespace ContributorProfile {
+          export interface TopRepo {
+            name: string;
+
+            stargazerCount: number;
+          }
+
+          export interface Devrank {
+            crackedScore: number;
+
+            followersIn: number;
+
+            followingOut: number;
+
+            tier: string;
+          }
+
+          export interface Linkedin {
+            connectionsCount?: number;
+
+            currentCompany?: string;
+
+            currentTitle?: string;
+
+            seniorityLevel?: string;
+
+            totalExperienceYears?: number;
+
+            url?: string;
+          }
+        }
+
         /**
          * Users who follow this user (when includeAttributes.followers is specified)
          */
