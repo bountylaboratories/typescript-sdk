@@ -1,5 +1,50 @@
 # Changelog
 
+## 0.41.0 (2026-08-31)
+
+Full Changelog: [v0.40.0...v0.41.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.40.0...v0.41.0)
+
+### Features
+
+* **api:** api update ([7e5e0fc](https://github.com/bountylaboratories/typescript-sdk/commit/7e5e0fc88e93bc9bdc465988102dc6c45cd8b51a))
+* **api:** api update ([6df7c83](https://github.com/bountylaboratories/typescript-sdk/commit/6df7c83a4bbd98cadf68ede4c9c2cc4653fa8286))
+* **api:** api update ([76001f7](https://github.com/bountylaboratories/typescript-sdk/commit/76001f72c638b1ca32e1f9404b411eccb702616d))
+* **api:** api update ([9aa8db1](https://github.com/bountylaboratories/typescript-sdk/commit/9aa8db1f67e24abfefad19cf64b9f9df014bb4b6))
+* **api:** api update ([63a4779](https://github.com/bountylaboratories/typescript-sdk/commit/63a4779710abf34e19db9f6aab198a4005f4435e))
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([f35dfb0](https://github.com/bountylaboratories/typescript-sdk/commit/f35dfb069ae9e2f1de1d7e9cc999fd394dcb0247))
+* support setting headers via env ([fda06ee](https://github.com/bountylaboratories/typescript-sdk/commit/fda06eebd9220135d2e5e135cb0c8f1dc3c8632a))
+
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([5d15105](https://github.com/bountylaboratories/typescript-sdk/commit/5d1510508cb178abda657148ead2ca641bbc889d))
+* **client:** send content-type header for requests with an omitted optional body ([fff50ea](https://github.com/bountylaboratories/typescript-sdk/commit/fff50ea9a1b81a3ddbbb237ca62d080ae664abdc))
+* **internal:** gitignore generated `oidc` dir ([06eb037](https://github.com/bountylaboratories/typescript-sdk/commit/06eb0372dcc64d46bc6cc8ee8ae2b74978d247b4))
+* **stlc:** stop hand-edited CI workflows from blocking seals and builds ([d6bf14b](https://github.com/bountylaboratories/typescript-sdk/commit/d6bf14be38ce02c90b69a188a4f20ea03f1671e7))
+* treat text/plan with format: binary as raw upload ([39a7564](https://github.com/bountylaboratories/typescript-sdk/commit/39a7564571d112b762dda77e56e407e3ff623fe2))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([9c2a5f6](https://github.com/bountylaboratories/typescript-sdk/commit/9c2a5f6213f79de31145ffe59f1830327b549560))
+* **ci:** skip uploading artifacts on stainless-internal branches ([3944871](https://github.com/bountylaboratories/typescript-sdk/commit/394487174224f06e64b179ea79b4ff500accca25))
+* **format:** run eslint and prettier separately ([054b293](https://github.com/bountylaboratories/typescript-sdk/commit/054b2930120090951fef02c8fa0de57ae7e36d2a))
+* **internal:** codegen related update ([5abead5](https://github.com/bountylaboratories/typescript-sdk/commit/5abead5b003430df572fb0267f485b7b179245bd))
+* **internal:** codegen related update ([bba16d1](https://github.com/bountylaboratories/typescript-sdk/commit/bba16d1c77d0ce62b20b04fea2842f07a868fdf3))
+* **internal:** codegen related update ([e61b01b](https://github.com/bountylaboratories/typescript-sdk/commit/e61b01b59e4431ca68dc938f0fe01c3b5aea32e2))
+* **internal:** codegen related update ([e6490af](https://github.com/bountylaboratories/typescript-sdk/commit/e6490afdfa3663b3c631f094a4e490214cd98e0b))
+* **internal:** codegen related update ([1fa9438](https://github.com/bountylaboratories/typescript-sdk/commit/1fa94381df99fe8c88d25e5bd41b1aeff27e19b6))
+* **internal:** codegen related update ([82fb347](https://github.com/bountylaboratories/typescript-sdk/commit/82fb347c541a9dcf1fe70cc9cb4a4cca7332685b))
+* **internal:** codegen related update ([8f1d64a](https://github.com/bountylaboratories/typescript-sdk/commit/8f1d64ae3bc52d75835f0b91f9e156e5ece746db))
+* **internal:** codegen related update ([633a577](https://github.com/bountylaboratories/typescript-sdk/commit/633a577ce6dff27c546a9bb9133a32fd8364c2c7))
+* **internal:** codegen related update ([a8e78ba](https://github.com/bountylaboratories/typescript-sdk/commit/a8e78ba3ec96fa0e08f867c4262f8db3e0252266))
+* **internal:** codegen related update ([d709c4c](https://github.com/bountylaboratories/typescript-sdk/commit/d709c4c8ade8bf2648fd776f3a57d916d0796bf8))
+* **internal:** more robust bootstrap script ([f27938a](https://github.com/bountylaboratories/typescript-sdk/commit/f27938a1c324bc1ab641758bf16c9d68cecb0654))
+* **internal:** tweak CI branches ([8ed2635](https://github.com/bountylaboratories/typescript-sdk/commit/8ed2635a4792f033aaed7a4fe022c897d9845b93))
+* **internal:** update dependencies to address dependabot vulnerabilities ([7b7e3d3](https://github.com/bountylaboratories/typescript-sdk/commit/7b7e3d38bd1a7c12b8facfa9a4d27bcd68937229))
+* **internal:** update gitignore ([3fb51da](https://github.com/bountylaboratories/typescript-sdk/commit/3fb51dae58851d1b906d6be9f59f16380b500d9e))
+* update SDK settings ([63600c1](https://github.com/bountylaboratories/typescript-sdk/commit/63600c1bf1328e30419efdfdd45d46440331a001))
+
 ## 0.40.0 (2026-03-05)
 
 Full Changelog: [v0.39.0...v0.40.0](https://github.com/bountylaboratories/typescript-sdk/compare/v0.39.0...v0.40.0)

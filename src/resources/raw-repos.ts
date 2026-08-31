@@ -138,6 +138,14 @@ export namespace RawRepoRetrieveResponse {
     totalIssuesOpen: number;
 
     /**
+     * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+     * overlay), hydrated in the SAME call so callers skip a separate by-ids
+     * round-trip. Join to `contributors` by login. Present when
+     * includeAttributes.contributorProfiles = true.
+     */
+    contributorProfiles?: Array<Repository.ContributorProfile>;
+
+    /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
     contributors?: Repository.Contributors;
@@ -206,6 +214,65 @@ export namespace RawRepoRetrieveResponse {
   }
 
   export namespace Repository {
+    export interface ContributorProfile {
+      login: string;
+
+      /**
+       * Most-starred repos this login owns, from our index.
+       */
+      topRepos: Array<ContributorProfile.TopRepo>;
+
+      accountCreatedAt?: string;
+
+      bio?: string;
+
+      company?: string;
+
+      devrank?: ContributorProfile.Devrank;
+
+      displayName?: string;
+
+      githubId?: string;
+
+      linkedin?: ContributorProfile.Linkedin;
+
+      location?: string;
+
+      userId?: string;
+    }
+
+    export namespace ContributorProfile {
+      export interface TopRepo {
+        name: string;
+
+        stargazerCount: number;
+      }
+
+      export interface Devrank {
+        crackedScore: number;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        tier: string;
+      }
+
+      export interface Linkedin {
+        connectionsCount?: number;
+
+        currentCompany?: string;
+
+        currentTitle?: string;
+
+        seniorityLevel?: string;
+
+        totalExperienceYears?: number;
+
+        url?: string;
+      }
+    }
+
     /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
@@ -537,6 +604,11 @@ export namespace RawRepoRetrieveResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -560,6 +632,11 @@ export namespace RawRepoRetrieveResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -660,6 +737,11 @@ export namespace RawRepoRetrieveResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -859,6 +941,14 @@ export namespace RawRepoByFullnameResponse {
     totalIssuesOpen: number;
 
     /**
+     * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+     * overlay), hydrated in the SAME call so callers skip a separate by-ids
+     * round-trip. Join to `contributors` by login. Present when
+     * includeAttributes.contributorProfiles = true.
+     */
+    contributorProfiles?: Array<Repository.ContributorProfile>;
+
+    /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
     contributors?: Repository.Contributors;
@@ -927,6 +1017,65 @@ export namespace RawRepoByFullnameResponse {
   }
 
   export namespace Repository {
+    export interface ContributorProfile {
+      login: string;
+
+      /**
+       * Most-starred repos this login owns, from our index.
+       */
+      topRepos: Array<ContributorProfile.TopRepo>;
+
+      accountCreatedAt?: string;
+
+      bio?: string;
+
+      company?: string;
+
+      devrank?: ContributorProfile.Devrank;
+
+      displayName?: string;
+
+      githubId?: string;
+
+      linkedin?: ContributorProfile.Linkedin;
+
+      location?: string;
+
+      userId?: string;
+    }
+
+    export namespace ContributorProfile {
+      export interface TopRepo {
+        name: string;
+
+        stargazerCount: number;
+      }
+
+      export interface Devrank {
+        crackedScore: number;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        tier: string;
+      }
+
+      export interface Linkedin {
+        connectionsCount?: number;
+
+        currentCompany?: string;
+
+        currentTitle?: string;
+
+        seniorityLevel?: string;
+
+        totalExperienceYears?: number;
+
+        url?: string;
+      }
+    }
+
     /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
@@ -1258,6 +1407,11 @@ export namespace RawRepoByFullnameResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -1281,6 +1435,11 @@ export namespace RawRepoByFullnameResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -1381,6 +1540,11 @@ export namespace RawRepoByFullnameResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -1593,6 +1757,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -1770,6 +1939,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -1838,6 +2015,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -2169,6 +2405,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -2192,6 +2433,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -2292,6 +2538,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -2792,6 +3043,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -2860,6 +3119,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -3191,6 +3509,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -3214,6 +3537,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -3314,6 +3642,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -3549,6 +3882,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -3572,6 +3910,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -3674,6 +4017,11 @@ export namespace RawRepoGraphResponse {
           startDate: string | null;
 
           /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
+
+          /**
            * Description of role and responsibilities
            */
           summary: string | null;
@@ -3749,6 +4097,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -3817,6 +4173,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -4148,6 +4563,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -4171,6 +4591,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -4271,6 +4696,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -4483,6 +4913,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -4660,6 +5095,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -4728,6 +5171,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -5059,6 +5561,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -5082,6 +5589,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -5182,6 +5694,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -5682,6 +6199,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -5750,6 +6275,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -6081,6 +6665,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -6104,6 +6693,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -6204,6 +6798,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -6439,6 +7038,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -6462,6 +7066,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -6564,6 +7173,11 @@ export namespace RawRepoGraphResponse {
           startDate: string | null;
 
           /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
+
+          /**
            * Description of role and responsibilities
            */
           summary: string | null;
@@ -6639,6 +7253,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -6707,6 +7329,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -7038,6 +7719,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -7061,6 +7747,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -7161,6 +7852,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -7373,6 +8069,11 @@ export namespace RawRepoGraphResponse {
       aggregates?: User.Aggregates;
 
       /**
+       * Best verified email address for the user
+       */
+      bestEmail?: string | null;
+
+      /**
        * User biography
        */
       bio?: string | null;
@@ -7550,6 +8251,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -7618,6 +8327,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -7949,6 +8717,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -7972,6 +8745,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -8072,6 +8850,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -8572,6 +9355,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -8640,6 +9431,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -8971,6 +9821,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -8994,6 +9849,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -9094,6 +9954,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -9329,6 +10194,11 @@ export namespace RawRepoGraphResponse {
         headline: string | null;
 
         /**
+         * Whether the person indicates they are hiring
+         */
+        hiring: boolean | null;
+
+        /**
          * Languages spoken
          */
         languages: Array<string> | null;
@@ -9352,6 +10222,11 @@ export namespace RawRepoGraphResponse {
          * Professional organization memberships
          */
         memberships: Array<string> | null;
+
+        /**
+         * Whether the person indicates they are open to work
+         */
+        openToWork: boolean | null;
 
         /**
          * Current organization/company
@@ -9454,6 +10329,11 @@ export namespace RawRepoGraphResponse {
           startDate: string | null;
 
           /**
+           * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+           */
+          startDateConfidence: string | null;
+
+          /**
            * Description of role and responsibilities
            */
           summary: string | null;
@@ -9529,6 +10409,14 @@ export namespace RawRepoGraphResponse {
           totalIssuesOpen: number;
 
           /**
+           * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+           * overlay), hydrated in the SAME call so callers skip a separate by-ids
+           * round-trip. Join to `contributors` by login. Present when
+           * includeAttributes.contributorProfiles = true.
+           */
+          contributorProfiles?: Array<Edge.ContributorProfile>;
+
+          /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
           contributors?: Edge.Contributors;
@@ -9597,6 +10485,65 @@ export namespace RawRepoGraphResponse {
         }
 
         export namespace Edge {
+          export interface ContributorProfile {
+            login: string;
+
+            /**
+             * Most-starred repos this login owns, from our index.
+             */
+            topRepos: Array<ContributorProfile.TopRepo>;
+
+            accountCreatedAt?: string;
+
+            bio?: string;
+
+            company?: string;
+
+            devrank?: ContributorProfile.Devrank;
+
+            displayName?: string;
+
+            githubId?: string;
+
+            linkedin?: ContributorProfile.Linkedin;
+
+            location?: string;
+
+            userId?: string;
+          }
+
+          export namespace ContributorProfile {
+            export interface TopRepo {
+              name: string;
+
+              stargazerCount: number;
+            }
+
+            export interface Devrank {
+              crackedScore: number;
+
+              followersIn: number;
+
+              followingOut: number;
+
+              tier: string;
+            }
+
+            export interface Linkedin {
+              connectionsCount?: number;
+
+              currentCompany?: string;
+
+              currentTitle?: string;
+
+              seniorityLevel?: string;
+
+              totalExperienceYears?: number;
+
+              url?: string;
+            }
+          }
+
           /**
            * Users who follow this user (when includeAttributes.followers is specified)
            */
@@ -9928,6 +10875,11 @@ export namespace RawRepoGraphResponse {
             headline: string | null;
 
             /**
+             * Whether the person indicates they are hiring
+             */
+            hiring: boolean | null;
+
+            /**
              * Languages spoken
              */
             languages: Array<string> | null;
@@ -9951,6 +10903,11 @@ export namespace RawRepoGraphResponse {
              * Professional organization memberships
              */
             memberships: Array<string> | null;
+
+            /**
+             * Whether the person indicates they are open to work
+             */
+            openToWork: boolean | null;
 
             /**
              * Current organization/company
@@ -10051,6 +11008,11 @@ export namespace RawRepoGraphResponse {
                * Start date (YYYY-MM-DD format)
                */
               startDate: string | null;
+
+              /**
+               * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+               */
+              startDateConfidence: string | null;
 
               /**
                * Description of role and responsibilities
@@ -10232,6 +11194,14 @@ export namespace RawRepoRetrieveParams {
    */
   export interface IncludeAttributes {
     /**
+     * Hydrate rich profiles (identity, top owned repos, devrank, LinkedIn overlay) for
+     * the contributors in the SAME call, returned as `contributorProfiles`. Requires
+     * `contributors` to be requested. Requires DEVRANK + PROFESSIONAL services for the
+     * devrank/LinkedIn sections (each degrades independently).
+     */
+    contributorProfiles?: boolean;
+
+    /**
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
@@ -10251,6 +11221,11 @@ export namespace RawRepoRetrieveParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -10723,6 +11698,14 @@ export namespace RawRepoByFullnameParams {
    */
   export interface IncludeAttributes {
     /**
+     * Hydrate rich profiles (identity, top owned repos, devrank, LinkedIn overlay) for
+     * the contributors in the SAME call, returned as `contributorProfiles`. Requires
+     * `contributors` to be requested. Requires DEVRANK + PROFESSIONAL services for the
+     * devrank/LinkedIn sections (each degrades independently).
+     */
+    contributorProfiles?: boolean;
+
+    /**
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
@@ -10742,6 +11725,11 @@ export namespace RawRepoByFullnameParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -11445,9 +12433,22 @@ export namespace RawRepoGraphParams {
     aggregates?: boolean;
 
     /**
+     * Include best verified email address for the user
+     */
+    bestEmail?: boolean;
+
+    /**
      * Include contributed repositories with cursor pagination
      */
     contributes?: IncludeAttributes.Contributes;
+
+    /**
+     * Hydrate rich profiles (identity, top owned repos, devrank, LinkedIn overlay) for
+     * the contributors in the SAME call, returned as `contributorProfiles`. Requires
+     * `contributors` to be requested. Requires DEVRANK + PROFESSIONAL services for the
+     * devrank/LinkedIn sections (each degrades independently).
+     */
+    contributorProfiles?: boolean;
 
     /**
      * Include repository contributors with cursor pagination
@@ -11494,6 +12495,11 @@ export namespace RawRepoGraphParams {
      * Include LinkedIn professional profile data (requires PROFESSIONAL service)
      */
     professional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination

@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from '@bountylab/bountylab/internal/to-file';
 import { toFile } from '@bountylab/bountylab/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';

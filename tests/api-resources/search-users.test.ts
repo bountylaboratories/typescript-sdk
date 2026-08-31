@@ -32,6 +32,7 @@ describe('resource searchUsers', () => {
       first: 50,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -70,6 +71,7 @@ describe('resource searchUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',
@@ -111,6 +113,7 @@ describe('resource searchUsers', () => {
       first: 50,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -149,6 +152,7 @@ describe('resource searchUsers', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         stars: {
           first: 1,
           after: 'after',

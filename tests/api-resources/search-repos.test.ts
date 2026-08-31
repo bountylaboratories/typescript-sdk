@@ -35,6 +35,7 @@ describe('resource searchRepos', () => {
       filterUserIncludeAttributes: true,
       first: 50,
       includeAttributes: {
+        contributorProfiles: true,
         contributors: {
           first: 10,
           after: 'after',
@@ -47,6 +48,7 @@ describe('resource searchRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -89,6 +91,7 @@ describe('resource searchRepos', () => {
       },
       first: 50,
       includeAttributes: {
+        contributorProfiles: true,
         contributors: {
           first: 10,
           after: 'after',
@@ -101,6 +104,7 @@ describe('resource searchRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 10,
           after: 'after',

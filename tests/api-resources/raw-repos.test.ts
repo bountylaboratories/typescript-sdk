@@ -27,6 +27,7 @@ describe('resource rawRepos', () => {
     const response = await client.rawRepos.retrieve({
       githubIds: ['MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'],
       includeAttributes: {
+        contributorProfiles: true,
         contributors: {
           first: 1,
           after: 'after',
@@ -39,6 +40,7 @@ describe('resource rawRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -71,6 +73,7 @@ describe('resource rawRepos', () => {
     const response = await client.rawRepos.byFullname({
       fullNames: ['octocat/Hello-World', 'torvalds/linux'],
       includeAttributes: {
+        contributorProfiles: true,
         contributors: {
           first: 1,
           after: 'after',
@@ -83,6 +86,7 @@ describe('resource rawRepos', () => {
         owner: true,
         ownerDevrank: true,
         ownerProfessional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',
@@ -145,6 +149,7 @@ describe('resource rawRepos', () => {
       first: 100,
       includeAttributes: {
         aggregates: true,
+        bestEmail: true,
         contributes: {
           first: 1,
           after: 'after',
@@ -154,6 +159,7 @@ describe('resource rawRepos', () => {
             value: 'string',
           },
         },
+        contributorProfiles: true,
         contributors: {
           first: 1,
           after: 'after',
@@ -195,6 +201,7 @@ describe('resource rawRepos', () => {
           },
         },
         professional: true,
+        revealEmails: true,
         starrers: {
           first: 1,
           after: 'after',

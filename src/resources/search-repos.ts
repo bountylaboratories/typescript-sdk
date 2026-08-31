@@ -109,6 +109,14 @@ export namespace SearchRepoNaturalLanguageResponse {
     totalIssuesOpen: number;
 
     /**
+     * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+     * overlay), hydrated in the SAME call so callers skip a separate by-ids
+     * round-trip. Join to `contributors` by login. Present when
+     * includeAttributes.contributorProfiles = true.
+     */
+    contributorProfiles?: Array<Repository.ContributorProfile>;
+
+    /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
     contributors?: Repository.Contributors;
@@ -177,6 +185,65 @@ export namespace SearchRepoNaturalLanguageResponse {
   }
 
   export namespace Repository {
+    export interface ContributorProfile {
+      login: string;
+
+      /**
+       * Most-starred repos this login owns, from our index.
+       */
+      topRepos: Array<ContributorProfile.TopRepo>;
+
+      accountCreatedAt?: string;
+
+      bio?: string;
+
+      company?: string;
+
+      devrank?: ContributorProfile.Devrank;
+
+      displayName?: string;
+
+      githubId?: string;
+
+      linkedin?: ContributorProfile.Linkedin;
+
+      location?: string;
+
+      userId?: string;
+    }
+
+    export namespace ContributorProfile {
+      export interface TopRepo {
+        name: string;
+
+        stargazerCount: number;
+      }
+
+      export interface Devrank {
+        crackedScore: number;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        tier: string;
+      }
+
+      export interface Linkedin {
+        connectionsCount?: number;
+
+        currentCompany?: string;
+
+        currentTitle?: string;
+
+        seniorityLevel?: string;
+
+        totalExperienceYears?: number;
+
+        url?: string;
+      }
+    }
+
     /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
@@ -508,6 +575,11 @@ export namespace SearchRepoNaturalLanguageResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -531,6 +603,11 @@ export namespace SearchRepoNaturalLanguageResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -631,6 +708,11 @@ export namespace SearchRepoNaturalLanguageResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -851,6 +933,14 @@ export namespace SearchRepoSearchResponse {
     totalIssuesOpen: number;
 
     /**
+     * Rich profiles for the contributors (identity, top owned repos, devrank, LinkedIn
+     * overlay), hydrated in the SAME call so callers skip a separate by-ids
+     * round-trip. Join to `contributors` by login. Present when
+     * includeAttributes.contributorProfiles = true.
+     */
+    contributorProfiles?: Array<Repository.ContributorProfile>;
+
+    /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
     contributors?: Repository.Contributors;
@@ -919,6 +1009,65 @@ export namespace SearchRepoSearchResponse {
   }
 
   export namespace Repository {
+    export interface ContributorProfile {
+      login: string;
+
+      /**
+       * Most-starred repos this login owns, from our index.
+       */
+      topRepos: Array<ContributorProfile.TopRepo>;
+
+      accountCreatedAt?: string;
+
+      bio?: string;
+
+      company?: string;
+
+      devrank?: ContributorProfile.Devrank;
+
+      displayName?: string;
+
+      githubId?: string;
+
+      linkedin?: ContributorProfile.Linkedin;
+
+      location?: string;
+
+      userId?: string;
+    }
+
+    export namespace ContributorProfile {
+      export interface TopRepo {
+        name: string;
+
+        stargazerCount: number;
+      }
+
+      export interface Devrank {
+        crackedScore: number;
+
+        followersIn: number;
+
+        followingOut: number;
+
+        tier: string;
+      }
+
+      export interface Linkedin {
+        connectionsCount?: number;
+
+        currentCompany?: string;
+
+        currentTitle?: string;
+
+        seniorityLevel?: string;
+
+        totalExperienceYears?: number;
+
+        url?: string;
+      }
+    }
+
     /**
      * Users who follow this user (when includeAttributes.followers is specified)
      */
@@ -1250,6 +1399,11 @@ export namespace SearchRepoSearchResponse {
       headline: string | null;
 
       /**
+       * Whether the person indicates they are hiring
+       */
+      hiring: boolean | null;
+
+      /**
        * Languages spoken
        */
       languages: Array<string> | null;
@@ -1273,6 +1427,11 @@ export namespace SearchRepoSearchResponse {
        * Professional organization memberships
        */
       memberships: Array<string> | null;
+
+      /**
+       * Whether the person indicates they are open to work
+       */
+      openToWork: boolean | null;
 
       /**
        * Current organization/company
@@ -1373,6 +1532,11 @@ export namespace SearchRepoSearchResponse {
          * Start date (YYYY-MM-DD format)
          */
         startDate: string | null;
+
+        /**
+         * Vendor confidence in the start date: "validated" or "low" (null if unknown)
+         */
+        startDateConfidence: string | null;
 
         /**
          * Description of role and responsibilities
@@ -1607,6 +1771,14 @@ export namespace SearchRepoNaturalLanguageParams {
    */
   export interface IncludeAttributes {
     /**
+     * Hydrate rich profiles (identity, top owned repos, devrank, LinkedIn overlay) for
+     * the contributors in the SAME call, returned as `contributorProfiles`. Requires
+     * `contributors` to be requested. Requires DEVRANK + PROFESSIONAL services for the
+     * devrank/LinkedIn sections (each degrades independently).
+     */
+    contributorProfiles?: boolean;
+
+    /**
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
@@ -1626,6 +1798,11 @@ export namespace SearchRepoNaturalLanguageParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
@@ -7592,6 +7769,14 @@ export namespace SearchRepoSearchParams {
    */
   export interface IncludeAttributes {
     /**
+     * Hydrate rich profiles (identity, top owned repos, devrank, LinkedIn overlay) for
+     * the contributors in the SAME call, returned as `contributorProfiles`. Requires
+     * `contributors` to be requested. Requires DEVRANK + PROFESSIONAL services for the
+     * devrank/LinkedIn sections (each degrades independently).
+     */
+    contributorProfiles?: boolean;
+
+    /**
      * Include repository contributors with cursor pagination
      */
     contributors?: IncludeAttributes.Contributors;
@@ -7611,6 +7796,11 @@ export namespace SearchRepoSearchParams {
      * PROFESSIONAL service)
      */
     ownerProfessional?: boolean;
+
+    /**
+     * Return unobfuscated emails for owner/contributors instead of masked
+     */
+    revealEmails?: boolean;
 
     /**
      * Include users who starred the repository with cursor pagination
